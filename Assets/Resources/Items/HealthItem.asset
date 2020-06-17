@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ae85f61c00551e4da5640aa5bfb0378, type: 3}
+  m_Name: HealthItem
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1733015217935246, guid: cd5c0b2fcb217164497466227858ace3, type: 2}
+  icon: {fileID: 21300000, guid: a2386d0b77312b347a2d2e4d42778c93, type: 3}
+  nameText: Health
+  tag: Health
+  additionalText: 100/100
+  showName: Health pack
+  size: {x: 3, y: 3}

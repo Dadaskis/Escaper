@@ -1,0 +1,57 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\GUIItem.cs">
+    <Files>
+      <File FileName="Assets\Resources\Scripts\ItemData.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Player.cs" Line="21" Column="39" />
+      <File FileName="Assets\Resources\Scripts\PhysicalItem.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\IUsableObject.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIItem.cs" Line="267" Column="3" />
+      <File FileName="Assets\Resources\Scripts\GUIInventorySlots.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIContainer.cs" Line="55" Column="30" />
+      <File FileName="Assets\Resources\Scripts\GUIInventory.cs" Line="28" Column="3" />
+      <File FileName="Assets\Resources\Scripts\GUISlot.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIDropOutActionRegister.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIItemActionBase.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIItemDropOutWindow.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GraphicsSettings.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIItemDropOutButton.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\SerializableMonoBehaviour.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\SerializableData.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Serializer.cs" Line="55" Column="3" />
+      <File FileName="Assets\Resources\Scripts\SerializableMaterial.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\SerializableRigidbody.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\MinecraftGun.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\IFirearm.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\RaycastFirearm.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\InGameMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\SerializableRectTransform.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\MarkAsNotDeletableOnLoad.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\ResourceUtility.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\AwakeAndStartDisabledChildrens.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\MessageUtility.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\EnableObjectInOneFrame.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\WeaponShooter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\SerializableTransform.cs" Line="1" Column="1" />
+      <File FileName="Assets\Editor\Inventory\GUIItemEditor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Character.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\InputData.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\IWeaponChanger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\ThirdPersonWeaponChanger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\FirstPersonWeaponChanger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\WeaponItemData.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\WeaponPhysicalItemEventHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\WeaponGUIItemEventHandler.cs" Line="27" Column="62" />
+      <File FileName="Assets\Resources\Scripts\WeaponManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\IWeapon.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIContainerWeaponEventHandler.cs" Line="19" Column="1" />
+      <File FileName="Assets\Resources\Scripts\PlayerWeaponSlots.cs" Line="28" Column="6" />
+      <File FileName="Assets\Resources\Scripts\SpriteManager.cs" Line="21" Column="19" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

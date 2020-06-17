@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{4D8D6104-992A-5F36-C9EC-BA45C2673035}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_7;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_32;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;UNITY_POST_PROCESSING_STACK_V2</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>D:/Games/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>D:/Games/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\BezierCurves\Scripts\BezierCurve.cs" />
+     <Compile Include="Assets\BezierCurves\Scripts\BezierPoint.cs" />
+     <Compile Include="Assets\BlurryRefraction\CommandBufferBlurRefraction.cs" />
+     <Compile Include="Assets\DeferredCustomLights\CustomLight.cs" />
+     <Compile Include="Assets\DeferredCustomLights\CustomLightRenderer.cs" />
+     <Compile Include="Assets\DeferredDecals\Decal.cs" />
+     <Compile Include="Assets\DeferredDecals\DeferredDecalRenderer.cs" />
+     <Compile Include="Assets\EModules\Auto-Save\AutoSave.cs" />
+     <Compile Include="Assets\OBJExport\OBJExporter.cs" />
+     <Compile Include="Assets\OBJImport\OBJLoader.cs" />
+     <Compile Include="Assets\OBJImport\TextureLoader.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Attributes\DisplayNameAttribute.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MaxAttribute.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinMaxAttribute.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Attributes\PostProcessAttribute.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Effects\AmbientOcclusion.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Effects\AutoExposure.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Effects\Bloom.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Effects\ChromaticAberration.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Effects\ColorGrading.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Effects\DepthOfField.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Effects\Dithering.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Effects\FastApproximateAntialiasing.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Effects\Fog.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Effects\Grain.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Effects\LensDistortion.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Effects\MotionBlur.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Effects\MultiScaleVO.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Effects\ScalableAO.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Effects\ScreenSpaceReflections.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Effects\SubpixelMorphologicalAntialiasing.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Effects\TemporalAntialiasing.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Effects\Vignette.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Monitors\HistogramMonitor.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Monitors\LightMeterMonitor.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Monitors\Monitor.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Monitors\VectorscopeMonitor.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Monitors\WaveformMonitor.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\ParameterOverride.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\PostProcessBundle.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\PostProcessDebug.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\PostProcessDebugLayer.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\PostProcessEffectRenderer.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\PostProcessEffectSettings.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\PostProcessEvent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\PostProcessLayer.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\PostProcessManager.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\PostProcessProfile.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\PostProcessRenderContext.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\PostProcessResources.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\PostProcessVolume.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Utils\ColorUtilities.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Utils\HableCurve.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Utils\HaltonSeq.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Utils\LogHistogram.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Utils\MeshUtilities.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Utils\PropertySheet.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Utils\PropertySheetFactory.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Utils\RuntimeUtilities.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Utils\ShaderIDs.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Utils\Spline.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Utils\TargetPool.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Utils\TextureFormatUtilities.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Utils\TextureLerper.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Utils\XRSettings.cs" />
+     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Constant.cs" />
+     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Enum.cs" />
+     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_IconUtility.cs" />
+     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_IgnoreSnapAttribute.cs" />
+     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
+     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Util.cs" />
+     <Compile Include="Assets\ProCore\ProGrids\MonoBehaviour\pg_IgnoreSnap.cs" />
+     <Compile Include="Assets\Resources\Scripts\AwakeAndStartDisabledChildrens.cs" />
+     <Compile Include="Assets\Resources\Scripts\Bullet.cs" />
+     <Compile Include="Assets\Resources\Scripts\CameraClearStencilAfterLightPass.cs" />
+     <Compile Include="Assets\Resources\Scripts\CameraPuncher.cs" />
+     <Compile Include="Assets\Resources\Scripts\ChanceRemoveObject.cs" />
+     <Compile Include="Assets\Resources\Scripts\ChanceSpawnObject.cs" />
+     <Compile Include="Assets\Resources\Scripts\Character.cs" />
+     <Compile Include="Assets\Resources\Scripts\CharacterDamagablePart.cs" />
+     <Compile Include="Assets\Resources\Scripts\CharacterManager.cs" />
+     <Compile Include="Assets\Resources\Scripts\CharacterMovement.cs" />
+     <Compile Include="Assets\Resources\Scripts\ConstantRotator.cs" />
+     <Compile Include="Assets\Resources\Scripts\CoroutineManager.cs" />
+     <Compile Include="Assets\Resources\Scripts\CursorReturner.cs" />
+     <Compile Include="Assets\Resources\Scripts\DeathPlayerObject.cs" />
+     <Compile Include="Assets\Resources\Scripts\DestroyableObject.cs" />
+     <Compile Include="Assets\Resources\Scripts\DynamicLightSwitcher.cs" />
+     <Compile Include="Assets\Resources\Scripts\EnableObjectInOneFrame.cs" />
+     <Compile Include="Assets\Resources\Scripts\EventManager.cs" />
+     <Compile Include="Assets\Resources\Scripts\ExplodeOnUse.cs" />
+     <Compile Include="Assets\Resources\Scripts\FPSTextChanger.cs" />
+     <Compile Include="Assets\Resources\Scripts\FirstPersonWeaponChanger.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIArmorChecker.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIContainer.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIContainerWeaponEventHandler.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUICustomUtility.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIDisableMouseLookOnInput.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIDropOutActionRegister.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIEnableOnKeyPress.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIEventsController.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIInventory.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIInventorySlots.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIItem.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIItemActionBase.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIItemDropOutButton.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIItemDropOutWindow.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUISlot.cs" />
+     <Compile Include="Assets\Resources\Scripts\GlobalLuaExecutor.cs" />
+     <Compile Include="Assets\Resources\Scripts\GraphicsSettings.cs" />
+     <Compile Include="Assets\Resources\Scripts\HealthTextUpdate.cs" />
+     <Compile Include="Assets\Resources\Scripts\HumanoidCharacter.cs" />
+     <Compile Include="Assets\Resources\Scripts\IFirearm.cs" />
+     <Compile Include="Assets\Resources\Scripts\INonPlayerCharacter.cs" />
+     <Compile Include="Assets\Resources\Scripts\IUsableObject.cs" />
+     <Compile Include="Assets\Resources\Scripts\IWeapon.cs" />
+     <Compile Include="Assets\Resources\Scripts\IWeaponChanger.cs" />
+     <Compile Include="Assets\Resources\Scripts\InGameMenu.cs" />
+     <Compile Include="Assets\Resources\Scripts\InSightDisabler.cs" />
+     <Compile Include="Assets\Resources\Scripts\InertialMoving.cs" />
+     <Compile Include="Assets\Resources\Scripts\InputData.cs" />
+     <Compile Include="Assets\Resources\Scripts\InputManager.cs" />
+     <Compile Include="Assets\Resources\Scripts\ItemData.cs" />
+     <Compile Include="Assets\Resources\Scripts\LootBox.cs" />
+     <Compile Include="Assets\Resources\Scripts\MainMenuCameraRotator.cs" />
+     <Compile Include="Assets\Resources\Scripts\MainMenuOnClick.cs" />
+     <Compile Include="Assets\Resources\Scripts\MapLevelTransition.cs" />
+     <Compile Include="Assets\Resources\Scripts\MapObject.cs" />
+     <Compile Include="Assets\Resources\Scripts\MarkAsNotDeletableOnLoad.cs" />
+     <Compile Include="Assets\Resources\Scripts\MaterialSettingsData.cs" />
+     <Compile Include="Assets\Resources\Scripts\MaterialSettingsManager.cs" />
+     <Compile Include="Assets\Resources\Scripts\MessageUtility.cs" />
+     <Compile Include="Assets\Resources\Scripts\MinecraftGun.cs" />
+     <Compile Include="Assets\Resources\Scripts\MinecraftObject.cs" />
+     <Compile Include="Assets\Resources\Scripts\MouseRotate.cs" />
+     <Compile Include="Assets\Resources\Scripts\OpenOnUse.cs" />
+     <Compile Include="Assets\Resources\Scripts\PhysicalItem.cs" />
+     <Compile Include="Assets\Resources\Scripts\Player.cs" />
+     <Compile Include="Assets\Resources\Scripts\PlayerDestroyer.cs" />
+     <Compile Include="Assets\Resources\Scripts\PlayerSpawner.cs" />
+     <Compile Include="Assets\Resources\Scripts\PlayerWeaponSlots.cs" />
+     <Compile Include="Assets\Resources\Scripts\Ragdollizer.cs" />
+     <Compile Include="Assets\Resources\Scripts\RaycastFirearm.cs" />
+     <Compile Include="Assets\Resources\Scripts\RemoveEvent.cs" />
+     <Compile Include="Assets\Resources\Scripts\ResourceMapLoader.cs" />
+     <Compile Include="Assets\Resources\Scripts\ResourceMaterialLoader.cs" />
+     <Compile Include="Assets\Resources\Scripts\ResourceModelLoader.cs" />
+     <Compile Include="Assets\Resources\Scripts\ResourceTextureLoader.cs" />
+     <Compile Include="Assets\Resources\Scripts\ResourceUtility.cs" />
+     <Compile Include="Assets\Resources\Scripts\RootMovingNavAgent.cs" />
+     <Compile Include="Assets\Resources\Scripts\Screenshot.cs" />
+     <Compile Include="Assets\Resources\Scripts\SerializableData.cs" />
+     <Compile Include="Assets\Resources\Scripts\SerializableDictionary.cs" />
+     <Compile Include="Assets\Resources\Scripts\SerializableMaterial.cs" />
+     <Compile Include="Assets\Resources\Scripts\SerializableMonoBehaviour.cs" />
+     <Compile Include="Assets\Resources\Scripts\SerializableRectTransform.cs" />
+     <Compile Include="Assets\Resources\Scripts\SerializableRigidbody.cs" />
+     <Compile Include="Assets\Resources\Scripts\SerializableTransform.cs" />
+     <Compile Include="Assets\Resources\Scripts\Serializer.cs" />
+     <Compile Include="Assets\Resources\Scripts\ShootPos.cs" />
+     <Compile Include="Assets\Resources\Scripts\Singletons.cs" />
+     <Compile Include="Assets\Resources\Scripts\SkeletalMeshUtility.cs" />
+     <Compile Include="Assets\Resources\Scripts\SpriteManager.cs" />
+     <Compile Include="Assets\Resources\Scripts\ThirdPersonWeaponChanger.cs" />
+     <Compile Include="Assets\Resources\Scripts\Timer.cs" />
+     <Compile Include="Assets\Resources\Scripts\UsableObject.cs" />
+     <Compile Include="Assets\Resources\Scripts\View.cs" />
+     <Compile Include="Assets\Resources\Scripts\WeaponGUIItemEventHandler.cs" />
+     <Compile Include="Assets\Resources\Scripts\WeaponItemData.cs" />
+     <Compile Include="Assets\Resources\Scripts\WeaponManager.cs" />
+     <Compile Include="Assets\Resources\Scripts\WeaponPhysicalItemEventHandler.cs" />
+     <Compile Include="Assets\Resources\Scripts\WeaponShooter.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Cameras\Scripts\AbstractTargetFollower.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Cameras\Scripts\AutoCam.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Cameras\Scripts\FreeLookCam.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Cameras\Scripts\HandHeldCam.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Cameras\Scripts\LookatTarget.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Cameras\Scripts\PivotBasedCameraRig.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Cameras\Scripts\ProtectCameraFromWallClip.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Cameras\Scripts\TargetFieldOfView.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Characters\FirstPersonCharacter\Scripts\HeadBob.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Characters\FirstPersonCharacter\Scripts\MouseLook.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Characters\FirstPersonCharacter\Scripts\RigidbodyFirstPersonController.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\CrossPlatformInput\Scripts\Joystick.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\CrossPlatformInput\Scripts\MobileControlRig.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Environment\Water (Basic)\Scripts\WaterBasic.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Environment\Water\Water\Scripts\Displace.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Environment\Water\Water\Scripts\GerstnerDisplace.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Environment\Water\Water\Scripts\MeshContainer.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Environment\Water\Water\Scripts\PlanarReflection.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Environment\Water\Water\Scripts\SpecularLighting.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Environment\Water\Water\Scripts\Water.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Environment\Water\Water\Scripts\WaterBase.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Environment\Water\Water\Scripts\WaterTile.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\ParticleSystems\Scripts\AfterburnerPhysicsForce.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\ParticleSystems\Scripts\ExplosionFireAndDebris.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\ParticleSystems\Scripts\ExplosionPhysicsForce.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\ParticleSystems\Scripts\Explosive.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\ParticleSystems\Scripts\ExtinguishableParticleSystem.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\ParticleSystems\Scripts\FireLight.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\ParticleSystems\Scripts\Hose.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\ParticleSystems\Scripts\ParticleSystemMultiplier.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\ParticleSystems\Scripts\SmokeParticles.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\ParticleSystems\Scripts\WaterHoseParticles.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\ActivateTrigger.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\AlphaButtonClickMask.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\AutoMobileShaderSwitch.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\AutoMoveAndRotate.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\CameraRefocus.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\CurveControlledBob.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\DragRigidbody.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\DynamicShadowSettings.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\EventSystemChecker.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\FOVKick.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\FPSCounter.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\FollowTarget.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\ForcedReset.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\LerpControlledBob.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\ObjectResetter.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\ParticleSystemDestroyer.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\PlatformSpecificContent.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\SimpleActivatorMenu.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\SimpleMouseRotator.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\SmoothFollow.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\TimedObjectActivator.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\TimedObjectDestructor.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\WaypointCircuit.cs" />
+     <Compile Include="Assets\Resources\Standard Assets\Utility\WaypointProgressTracker.cs" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\FinalPass.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Debug\Waveform.compute" />
+     <None Include="Assets\ProCore\ProGrids\Shader\pg_GridShader.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\Uber.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\Texture3DLerp.compute" />
+     <None Include="Assets\DeferredDecals\DecalShaderDiffuseOnly.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\CopyStd.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\Bloom.shader" />
+     <None Include="Assets\Resources\Shaders\CollimatorSightMark.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\CopyStdFromDoubleWide.shader" />
+     <None Include="Assets\PostProcessing\Shaders\xRLib.hlsl" />
+     <None Include="Assets\DeferredCustomLights\_ReadMe.txt" />
+     <None Include="Assets\PostProcessing\Shaders\API\Switch.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVOUpsample.compute" />
+     <None Include="Assets\Resources\Shaders\Text.shader" />
+     <None Include="Assets\PostProcessing\Shaders\API\PSSL.hlsl" />
+     <None Include="Assets\BlurryRefraction\GlassWithoutGrab.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Debug\Vectorscope.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\GaussianDownsample.compute" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\ScreenSpaceReflections.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\DepthOfField.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\DiscardAlpha.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\Lut3DBaker.compute" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\Dithering.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Colors.hlsl" />
+     <None Include="Assets\Resources\Shaders\NoiseBlend.shader" />
+     <None Include="Assets\Resources\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
+     <None Include="Assets\PostProcessing\Shaders\API\Vulkan.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\GrainBaker.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\ExposureHistogram.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Editor\Trackball.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Debug\LightMeter.shader" />
+     <None Include="Assets\BlurryRefraction\SeparableBlur.shader" />
+     <None Include="Assets\Resources\Shaders\CollimatorSightGlass.shader" />
+     <None Include="Assets\DeferredDecals\DecalShaderDiffuseNormals.shader" />
+     <None Include="Assets\PostProcessing\Shaders\API\D3D12.hlsl" />
+     <None Include="Assets\Resources\Shaders\Decal.shader" />
+     <None Include="Assets\PostProcessing\Shaders\API\OpenGL.hlsl" />
+     <None Include="Assets\BlurryRefraction\_ReadMe.txt" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\DiskKernels.hlsl" />
+     <None Include="Assets\Resources\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVODownsample2.compute" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\ScalableAO.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\ACES.hlsl" />
+     <None Include="Assets\Resources\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVODownsample1.compute" />
+     <None Include="Assets\PostProcessing\Shaders\StdLib.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVO.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\DepthOfField.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\FastApproximateAntialiasing.hlsl" />
+     <None Include="Assets\PostProcessing\Editor\Unity.Postprocessing.Editor.asmdef" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\Fog.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVORender.compute" />
+     <None Include="Assets\Resources\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\ScalableAO.shader" />
+     <None Include="Assets\JsonDotNet\link.xml" />
+     <None Include="Assets\OBJImport\readme.txt" />
+     <None Include="Assets\Resources\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasing.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\MotionBlur.shader" />
+     <None Include="Assets\Resources\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasing.shader" />
+     <None Include="Assets\DeferredDecals\DecalShaderNormalsOnly.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\Texture2DLerp.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\DeferredFog.shader" />
+     <None Include="Assets\Resources\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\CopyStdFromTexArray.shader" />
+     <None Include="Assets\PostProcessing\Runtime\Unity.Postprocessing.Runtime.asmdef" />
+     <None Include="Assets\PostProcessing\Shaders\API\D3D9.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\Lut2DBaker.shader" />
+     <None Include="Assets\DeferredDecals\_ReadMe.txt" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\AutoExposure.compute" />
+     <None Include="Assets\PostProcessing\Shaders\Debug\Overlays.shader" />
+     <None Include="Assets\PostProcessing\Shaders\API\Metal.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\Distortion.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Debug\Vectorscope.compute" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\TemporalAntialiasing.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasingBridge.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\ScreenSpaceReflections.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\Copy.shader" />
+     <None Include="Assets\Resources\Standard Assets\Cameras\CameraGuidelines.txt" />
+     <None Include="Assets\Resources\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
+     <None Include="Assets\PostProcessing\Shaders\API\D3D11.hlsl" />
+     <None Include="Assets\Resources\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
+     <None Include="Assets\Resources\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Editor\ConvertToLog.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Debug\Waveform.shader" />
+     <None Include="Assets\Resources\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
+     <None Include="Assets\PostProcessing\Shaders\API\XboxOne.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Sampling.hlsl" />
+     <None Include="Assets\Resources\Shaders\StandartSpecularTwoSided.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Editor\CurveGrid.shader" />
+     <None Include="Assets\DeferredCustomLights\CustomLightShader.shader" />
+     <None Include="Assets\PostProcessing\Shaders\API\PSP2.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Debug\Histogram.compute" />
+     <None Include="Assets\PostProcessing\Shaders\Debug\Histogram.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\ExposureHistogram.compute" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>D:/Games/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>D:/Games/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TestRunner">
+ <HintPath>D:/Games/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="nunit.framework">
+ <HintPath>D:/Games/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>D:/Games/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>D:/Games/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VR">
+ <HintPath>D:/Games/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>D:/Games/Unity Projects/FPS Tester/Tester/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{297A7529-7E1C-81F2-D01D-5BCA2FC1339A}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

@@ -1,0 +1,258 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1542044411092318}
+  m_IsPrefabParent: 1
+--- !u!1 &1325910508696868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4996794329431126}
+  m_Layer: 0
+  m_Name: __Sight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1542044411092318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4310593014446282}
+  - component: {fileID: 33219171452734768}
+  - component: {fileID: 23011730902343672}
+  - component: {fileID: 114334735882841976}
+  - component: {fileID: 95612928791234390}
+  - component: {fileID: 114114681421565590}
+  - component: {fileID: 114936657641759948}
+  - component: {fileID: 114684021828819518}
+  - component: {fileID: 54772223463140836}
+  - component: {fileID: 65167318258855446}
+  m_Layer: 0
+  m_Name: MinecraftGun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4310593014446282
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1542044411092318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 59.623, y: 1.66, z: 48.04}
+  m_LocalScale: {x: 0.22793114, y: 0.37102485, z: 0.86777943}
+  m_Children:
+  - {fileID: 4996794329431126}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4996794329431126
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1325910508696868}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4310593014446282}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23011730902343672
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1542044411092318}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 7d29b7d6ac230804094fa60666b2b77b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &33219171452734768
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1542044411092318}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54772223463140836
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1542044411092318}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65167318258855446
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1542044411092318}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.99999994}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &95612928791234390
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1542044411092318}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 95220a14a810a0547b90f5593203542d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114114681421565590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1542044411092318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe254a815aefeac488b7cdafe6aaa738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveName: MinecraftGun
+  prefabName: MinecraftGun
+  idFromRoot: 1
+--- !u!114 &114334735882841976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1542044411092318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 699570f42cb3e134a88118bd75f98636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationPlaying: 0
+  animator: {fileID: 95612928791234390}
+  animatorOverride: {fileID: 22100000, guid: 8dde65c806905644ca12819dbdbae485, type: 2}
+  owner: {fileID: 0}
+  firstPerson: 0
+  maxAmmo: 1
+  currentAmmo: 1
+  durability: 100
+  fireRate: 100
+  idleClipFP: {fileID: 0}
+  fireClipFP: {fileID: 0}
+  fireFPDuration: 0
+  drawClipFP: {fileID: 0}
+  drawFPDuration: 0
+  runClipFP: {fileID: 0}
+  runFPDuration: 0
+  reloadClipFP: {fileID: 0}
+  reloadFPDuration: 0
+  fullReloadClipFP: {fileID: 0}
+  fullReloadFPDuration: 0
+  idleClipTP: {fileID: 0}
+  fireClipTP: {fileID: 0}
+  fireTPDuration: 0
+  drawClipTP: {fileID: 0}
+  drawTPDuration: 0
+  runClipTP: {fileID: 0}
+  runTPDuration: 0
+  reloadClipTP: {fileID: 0}
+  reloadTPDuration: 0
+  fullReloadClipTP: {fileID: 0}
+  fullReloadTPDuration: 0
+  sightPosition: {x: 0, y: 0, z: 0}
+  nonSightPosition: {x: 0, y: 0, z: 0}
+  inSight: 0
+  nextShootTime: 0
+  maxXRecoil: 3
+  minXRecoil: -3
+  maxYRecoil: 2
+  minYRecoil: 2
+  maxZRecoil: 2
+  minZRecoil: 2
+  onHitObjects:
+  - {fileID: 1606553370804506, guid: 9951f6c5d42a6454db584d650361166b, type: 2}
+--- !u!114 &114684021828819518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1542044411092318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b30907266c294448e002f6571215b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 114936657641759948}
+--- !u!114 &114936657641759948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1542044411092318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8d94c72d0ef6e45bc1d9f088f4f882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveName: MinecraftGun
+  prefabName: MinecraftGun
+  idFromRoot: 1
+  data: {fileID: 11400000, guid: 218683bc7f6fb934dadde859927517d4, type: 2}
+  destroyAfterPickingUp: 1

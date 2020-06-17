@@ -1,0 +1,3896 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1872089115643520}
+  m_IsPrefabParent: 1
+--- !u!1 &1083552648931880
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4157227717508922}
+  - component: {fileID: 114912119323265302}
+  m_Layer: 0
+  m_Name: Timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!1 &1118163722600830
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4326608192755840}
+  - component: {fileID: 114351775250807398}
+  m_Layer: 0
+  m_Name: CharacterManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!1 &1152160263147462
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4469286558969506}
+  - component: {fileID: 114991795823301440}
+  m_Layer: 0
+  m_Name: MaterialSettingsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!1 &1211634633552888
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4869731413692212}
+  - component: {fileID: 114364964444740188}
+  m_Layer: 0
+  m_Name: ScavLogic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!1 &1236685788384978
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4327022038389042}
+  - component: {fileID: 114558150959703822}
+  m_Layer: 0
+  m_Name: RoadEndManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1285037524810308
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4513461400331378}
+  - component: {fileID: 114686625120474290}
+  m_Layer: 0
+  m_Name: InGameMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!1 &1286807061974216
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4064987633586050}
+  - component: {fileID: 114271938433517514}
+  m_Layer: 0
+  m_Name: ItemManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!1 &1393619229466402
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4383242869891878}
+  - component: {fileID: 114747966794262018}
+  m_Layer: 0
+  m_Name: ItemRenderer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!1 &1404189976739614
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4297224705758152}
+  - component: {fileID: 114467402936217466}
+  - component: {fileID: 114873709573767190}
+  m_Layer: 0
+  m_Name: UIEventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1440470639216532
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4612266936089922}
+  - component: {fileID: 114901428242428072}
+  m_Layer: 0
+  m_Name: SaveSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!1 &1459277864858118
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4582549682419092}
+  - component: {fileID: 20126150803962982}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!1 &1459389492186360
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4271519582870692}
+  - component: {fileID: 114425922248185420}
+  m_Layer: 0
+  m_Name: DeferredDecalRenderer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1487158454293618
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4311174548958946}
+  - component: {fileID: 108740965821658416}
+  m_Layer: 0
+  m_Name: Point light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!1 &1517487652409412
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4298951738998506}
+  - component: {fileID: 114119093477792926}
+  m_Layer: 0
+  m_Name: QuestSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!1 &1521393363633014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4703904037089990}
+  - component: {fileID: 20299924667852408}
+  - component: {fileID: 124334086266080094}
+  - component: {fileID: 92318772960105950}
+  - component: {fileID: 81660836317503338}
+  - component: {fileID: 65500003496772598}
+  - component: {fileID: 114776582949362450}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1729084478567876
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4492825815042888}
+  - component: {fileID: 114879909600515432}
+  m_Layer: 0
+  m_Name: WeaponGeneratorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!1 &1804590145283366
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4749989267279066}
+  - component: {fileID: 114546225699900266}
+  - component: {fileID: 65128255692194338}
+  m_Layer: 8
+  m_Name: PostProcessingVolume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!1 &1812490648918544
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4213203777546868}
+  - component: {fileID: 114295760261771770}
+  m_Layer: 0
+  m_Name: InputManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!1 &1846418231571048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4335187982998552}
+  m_Layer: 0
+  m_Name: Singletons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!1 &1872089115643520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4470136133635036}
+  - component: {fileID: 54906400975489066}
+  - component: {fileID: 114822080945178738}
+  m_Layer: 0
+  m_Name: DeathPlayer
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1984909478904250
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4565464290128674}
+  - component: {fileID: 114711332951060952}
+  m_Layer: 0
+  m_Name: GraphicsSettings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &4064987633586050
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1286807061974216}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4335187982998552}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4157227717508922
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1083552648931880}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -91.86755, y: -10.215427, z: 40.624203}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4335187982998552}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4213203777546868
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1812490648918544}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4335187982998552}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4271519582870692
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1459389492186360}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4335187982998552}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4297224705758152
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1404189976739614}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4335187982998552}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4298951738998506
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1517487652409412}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4335187982998552}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4311174548958946
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1487158454293618}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1, y: 1.01, z: -1.41}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4582549682419092}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4326608192755840
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1118163722600830}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -93.76, y: -8.568864, z: 44.83}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4335187982998552}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4327022038389042
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1236685788384978}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4335187982998552}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4335187982998552
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1846418231571048}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.242625, y: -7.351468, z: 23.52944}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4492825815042888}
+  - {fileID: 4326608192755840}
+  - {fileID: 4869731413692212}
+  - {fileID: 4383242869891878}
+  - {fileID: 4157227717508922}
+  - {fileID: 4612266936089922}
+  - {fileID: 4064987633586050}
+  - {fileID: 4298951738998506}
+  - {fileID: 4749989267279066}
+  - {fileID: 4565464290128674}
+  - {fileID: 4213203777546868}
+  - {fileID: 4513461400331378}
+  - {fileID: 4469286558969506}
+  - {fileID: 4271519582870692}
+  - {fileID: 4327022038389042}
+  - {fileID: 4297224705758152}
+  m_Father: {fileID: 4470136133635036}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4383242869891878
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1393619229466402}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 500, y: 500, z: 500}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4582549682419092}
+  m_Father: {fileID: 4335187982998552}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4469286558969506
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1152160263147462}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4335187982998552}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4470136133635036
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1872089115643520}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4703904037089990}
+  - {fileID: 4335187982998552}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4492825815042888
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1729084478567876}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -99.36, y: -17, z: 40.83}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4335187982998552}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4513461400331378
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1285037524810308}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4335187982998552}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4565464290128674
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1984909478904250}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4335187982998552}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4582549682419092
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1459277864858118}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1.24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4311174548958946}
+  m_Father: {fileID: 4383242869891878}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4612266936089922
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1440470639216532}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4335187982998552}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4703904037089990
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1521393363633014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.942, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4470136133635036}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4749989267279066
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1804590145283366}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4335187982998552}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4869731413692212
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1211634633552888}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -93.76, y: -8.568864, z: 44.83}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4335187982998552}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &20126150803962982
+Camera:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1459277864858118}
+  m_Enabled: 0
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.21293104, g: 0.25, b: 0.1875, a: 0.308}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.01
+  far clip plane: 10
+  field of view: 60
+  orthographic: 0
+  orthographic size: 2.22
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: 0
+  m_TargetTexture: {fileID: 8400000, guid: 45735a187e0ffcb4a8165a5373595dae, type: 2}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_AllowMSAA: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
+--- !u!20 &20299924667852408
+Camera:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1521393363633014}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.01
+  far clip plane: 1000
+  field of view: 90
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_ForceIntoRT: 1
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
+--- !u!54 &54906400975489066
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1872089115643520}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65128255692194338
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1804590145283366}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65500003496772598
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1521393363633014}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6, y: 0.6, z: 0.6}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!81 &81660836317503338
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1521393363633014}
+  m_Enabled: 1
+--- !u!92 &92318772960105950
+Behaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1521393363633014}
+  m_Enabled: 1
+--- !u!108 &108740965821658416
+Light:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1487158454293618}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 2.5
+  m_Range: 41.65
+  m_SpotAngle: 95.29697
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &114119093477792926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1517487652409412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c8ad4caf819c9044b251df7ac881742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quests: []
+--- !u!114 &114271938433517514
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1286807061974216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b5dec26cd50c5e42a90aaad5c7faddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: Prefabs/Items
+  timerDelay: 1
+  minDistance: 10
+--- !u!114 &114295760261771770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1812490648918544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3271cc9e6a19ed4a8722ffe8ed7be86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 3e9e9916f38646c4f9314a23dcaf72f9, type: 2}
+--- !u!114 &114351775250807398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1118163722600830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 666fbd4cb3638fc4c9a52a67db87e990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characters:
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &114364964444740188
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1211634633552888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa79be3c5d5ef9c43bb6c0072c1a4ae1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateRaidPointDelay: 30
+  raidPointPlayerDistance: 20
+  scavSpawnDistanceToPlayer: 150
+  spawnScavDelay: 30
+  scavs:
+  - {fileID: 114205731091744146, guid: 59842186b6103c14a83d500663fab0bc, type: 2}
+  - {fileID: 114801630961729394, guid: dcd5a49aeb5b7b9478d764cb0a0c9625, type: 2}
+--- !u!114 &114425922248185420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1459389492186360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e6fa5f2e7607459ba395388ad01d8f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CubeMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114467402936217466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1404189976739614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 5
+--- !u!114 &114546225699900266
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1804590145283366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: d967f358e60c81a45a2f10c3f2b5e585, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
+--- !u!114 &114558150959703822
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1236685788384978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf5dec2c03e219544a543ce2bc36596e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  requestPath: 
+--- !u!114 &114686625120474290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1285037524810308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8249bd6cb8dce3a449a0425200cd1d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMenu: 1
+  controller: {fileID: 0}
+  isOpened: 0
+  settingsScrollPosition: {x: 0, y: 0}
+  isListeningSettingsButton: 0
+  listeningButton: 
+--- !u!114 &114711332951060952
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1984909478904250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01055ab4d2e89bb4f906db726840ebe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 11400000, guid: d967f358e60c81a45a2f10c3f2b5e585, type: 2}
+--- !u!114 &114747966794262018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1393619229466402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c5c5e3eee3fab4b814b5d65df64b49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 20126150803962982}
+  renderTexture: {fileID: 8400000, guid: 45735a187e0ffcb4a8165a5373595dae, type: 2}
+  borderTexture: {fileID: 2800000, guid: bb75061dfb2f796468d5fe412e3e07b2, type: 3}
+--- !u!114 &114776582949362450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1521393363633014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 4703904037089990}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
+--- !u!114 &114822080945178738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1872089115643520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 636cac8b661899f4e950385cd31d9e2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114873709573767190
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1404189976739614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &114879909600515432
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1729084478567876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c28b9b14f6ae5740a12ff65c1b78084, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: Prefabs/Weapons/Parts
+--- !u!114 &114901428242428072
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1440470639216532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db717829b09b2c34a8951f958ac83f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saved: 0
+  emptyScav: {fileID: 1986850196060356, guid: c3684fbef5e97cd4c95bd6aedb7d767a, type: 2}
+  playerSpawnObject: {fileID: 1463439828905582, guid: 5ce9af1497543534e82c2f1a29c9777b,
+    type: 2}
+  saves:
+  - name: 3/5/2020 6:16:22 AM Quick Save
+    sceneName: CityLiveSector0_0
+    playerData:
+      position: {x: -333.84705, y: 3.1098888, z: -313.41132}
+      cameraRotation: {x: 0.00034112943, y: 0.999604, z: -0.024430294, w: 0.01395785}
+      weaponsInInventory: []
+      itemsInInventory:
+      - inventoryID: 0
+        containerID: -1
+        size: {x: 4, y: 2}
+        position: {x: 0, y: 0}
+        rotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
+        offsetX: -0.036590576
+        offsetZ: -0.60772246
+        pickable: 0
+        name: Medkit
+        tag: Medkit
+        rotated: 0
+        maxCount: 1
+        currentCount: 1
+        keyName: MedkitStandart
+        worldPosition: {x: -333.75073, y: 2.2481337, z: -311.3716}
+        removable: 1
+        sizeMultiplier: 0.7
+      - inventoryID: 0
+        containerID: -1
+        size: {x: 3, y: 2}
+        position: {x: 12, y: 0}
+        rotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
+        offsetX: -0.0013427734
+        offsetZ: -0.57980955
+        pickable: 0
+        name: Ammo
+        tag: Ammo
+        rotated: 0
+        maxCount: 120
+        currentCount: 90
+        keyName: Rifle0Ammo.MagicalUse
+        worldPosition: {x: -333.71255, y: 2.2454093, z: -311.3055}
+        removable: 1
+        sizeMultiplier: 0.5
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: MainPart
+          id: 3
+          connections:
+          - filled: 1
+            filledPart:
+              name: 
+              id: 0
+              connections: []
+          - filled: 1
+            filledPart:
+              name: 
+              id: 0
+              connections: []
+          - filled: 1
+            filledPart:
+              name: 
+              id: 0
+              connections: []
+          - filled: 1
+            filledPart:
+              name: 
+              id: 0
+              connections: []
+          - filled: 1
+            filledPart:
+              name: 
+              id: 0
+              connections: []
+          - filled: 1
+            filledPart:
+              name: 
+              id: 0
+              connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: -333.9386, y: 3.8370998, z: -313.7148}
+        rotation: {x: 0.00034112684, y: 0.999604, z: -0.02443028, w: 0.013957849}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: 0
+          size: {x: 4, y: 2}
+          position: {x: 11, y: 2}
+          rotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
+          offsetX: -0.08428955
+          offsetZ: -0.48490906
+          pickable: 0
+          name: Assault Rifle Model 3
+          tag: Weapon
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: AssaultRifle2
+          worldPosition: {x: -333.9386, y: 3.8370998, z: -313.7148}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 16
+      character:
+        faction: Player
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 5
+    droppedWeaponsData: []
+    droppedItemsData:
+    - inventoryID: -1
+      containerID: -1
+      size: {x: 6, y: 6}
+      position: {x: 0, y: 0}
+      rotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
+      offsetX: -0.0052490234
+      offsetZ: -1.5822906
+      pickable: 1
+      name: Armor
+      tag: Armor
+      rotated: 0
+      maxCount: 1
+      currentCount: 1
+      keyName: Armor
+      worldPosition: {x: -333.77008, y: 2.8619082, z: -317.38046}
+      removable: 1
+      sizeMultiplier: 0.4
+    questSystemSaveData:
+      quests:
+      - completed: 0
+        tag: 30MedkitsQuest
+        displayName: Bring 30 medkits to the chest (red smoke)
+      - completed: 0
+        tag: 30WeaponsQuest
+        displayName: Bring 30 weapons to the chest (red smoke)
+    questGiversSaveData:
+    - questAdded: 1
+    - questAdded: 1
+    questChestsSaveData:
+    - currentCount: 0
+      saveName: 
+    - currentCount: 0
+      saveName: 
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+  - name: 
+    sceneName: 
+    playerData:
+      position: {x: 0, y: 0, z: 0}
+      cameraRotation: {x: 0, y: 0, z: 0, w: 0}
+      weaponsInInventory: []
+      itemsInInventory: []
+      currentWeapon:
+        data:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        originalData:
+          idlePosition: {x: 0, y: 0, z: 0}
+          idleRotation: {x: 0, y: 0, z: 0, w: 0}
+          sightPosition: {x: 0, y: 0, z: 0}
+          sightRotation: {x: 0, y: 0, z: 0, w: 0}
+          downRecoil: 0
+          upRecoil: 0
+          leftRecoil: 0
+          rightRecoil: 0
+          minimalRecoilPushBackPower: 0
+          maximalRecoilPushBackPower: 0
+          fireRate: 0
+          damage: 0
+        rootPart:
+          name: 
+          id: 0
+          connections: []
+        botCase: 0
+        dropped: 0
+        position: {x: 0, y: 0, z: 0}
+        rotation: {x: 0, y: 0, z: 0, w: 0}
+        scale: {x: 0, y: 0, z: 0}
+        item:
+          inventoryID: -1
+          containerID: -1
+          size: {x: 1, y: 1}
+          position: {x: 0, y: 0}
+          rotation: {x: 0, y: 0, z: 0, w: 1}
+          offsetX: 0
+          offsetZ: 0
+          pickable: 1
+          name: 
+          tag: 
+          rotated: 0
+          maxCount: 1
+          currentCount: 1
+          keyName: 
+          worldPosition: {x: 0, y: 0, z: 0}
+          removable: 1
+          sizeMultiplier: 1
+        currentAmmo: 0
+      character:
+        faction: 
+        godMode: 0
+        killed: 0
+        health: 100
+        armor: 0
+    scavsCount: 0
+    droppedWeaponsData: []
+    droppedItemsData: []
+    questSystemSaveData:
+      quests: []
+    questGiversSaveData: []
+    questChestsSaveData: []
+    destroyableObjectsSaveData: []
+--- !u!114 &114912119323265302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1083552648931880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac80ea4f3688ef14c9e197969275ed39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114991795823301440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1152160263147462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e33a4888cbd11d41b4c06a4abaf3346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - material: {fileID: 2100000, guid: 936bc81a0c5723946a9ece67216a0d2d, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 8d23ab2489589c747bcb4ee3e90ce991, type: 3}
+    normalMap: {fileID: 2800000, guid: 170e336df0f9ce14482c178acea79185, type: 3}
+    specularMap: {fileID: 2800000, guid: a175a546b25ba7049bd2068f3db2b007, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 8a8c2dae8637c4549b8c3e11a269e132,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 8c970c6309973c840a978d6e7cc9255a, type: 3}
+  - material: {fileID: 2100000, guid: f285a0c74d1c1544f80c78b41fa8bd26, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 1001af66f692aaf41bffa65b78c940bb, type: 3}
+    normalMap: {fileID: 2800000, guid: 350ae9a4fe06a14468ecf8e2a8670d24, type: 3}
+    specularMap: {fileID: 2800000, guid: 2999f1a8970ca34419d1e0b2b617fc0b, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 1fa0709ddb8690c4c88f2f7a030e9b8c,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 66c62121f8d5164479e003e358dcfb4f, type: 3}
+  - material: {fileID: 2100000, guid: 8dcded0155888ad4e9ddc6891c3c6b8c, type: 2}
+    diffuseMap: {fileID: 2800000, guid: f6b18af73518c1449b82eca99fedacb1, type: 3}
+    normalMap: {fileID: 2800000, guid: e44ef7f0583532f4ba959442393185aa, type: 3}
+    specularMap: {fileID: 2800000, guid: 6b3caaf00db210a4c8ae84f8f95dd6d2, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 69073194a54c85e49a5c9819a5fd6280,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: c8b61f5bfa16c1a4c924c37c05add4ce, type: 3}
+  - material: {fileID: 2100000, guid: 3c836f56b009c1f408b1cd4f483843b0, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 6bdea4bb93b3d2842bc2fc2681e82036, type: 3}
+    normalMap: {fileID: 2800000, guid: 5a9c574352b866146912a34a8af21f9d, type: 3}
+    specularMap: {fileID: 2800000, guid: 525db2de84a6132449640e74dd8e0295, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 062f2c311f863544d818814a3a398b84,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 17e2247af2d38f545951d62dd5f754fd, type: 3}
+  - material: {fileID: 2100000, guid: 2e61b2190403c2b4a90ef1eedcf4900f, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 4b3bd395e118e0a4781e8ac68f1f0f17, type: 3}
+    normalMap: {fileID: 2800000, guid: 1999f1aab5d04db4dabd7f62f197d4ae, type: 3}
+    specularMap: {fileID: 2800000, guid: 021445899142aeb4db6e476c451f4564, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 273a6b2146db3fd46add3eebb7a5065a,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 8cf6fd48e6993fb479695406cd9d4020, type: 3}
+  - material: {fileID: 2100000, guid: 691b88457da4b65499647c4f132b8ced, type: 2}
+    diffuseMap: {fileID: 2800000, guid: da15a8602f76c8143a6ffda6df0dcbc2, type: 3}
+    normalMap: {fileID: 2800000, guid: 085df689057403043a82596458e33443, type: 3}
+    specularMap: {fileID: 2800000, guid: 8a9701c63d73e744284f9ef8ffb24dd9, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 33bf67ee00b2a114b810ef293921803a,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 852b9f2f73e63c240ba5ab55eb90ad72, type: 3}
+  - material: {fileID: 2100000, guid: 2d2b97c0af7140c4a91b6494a6b9fe86, type: 2}
+    diffuseMap: {fileID: 2800000, guid: e07476598e04242438d4352027218974, type: 3}
+    normalMap: {fileID: 2800000, guid: f1c11b4053630514cb4947e2e93f2496, type: 3}
+    specularMap: {fileID: 2800000, guid: 90f306205f118ae4b91eaa2a1857b05c, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 8d56e61a67d64ff43a72d8c987804cef,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: d8c6c473f0afa814da5c4da0369fc2e3, type: 3}
+  - material: {fileID: 2100000, guid: 0c9dd19258c1f114cb36b55693f52d3f, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 7cae2aa721fc7d042b8815cdc6c37057, type: 3}
+    normalMap: {fileID: 2800000, guid: 0995ceacb2b437545943c808af0e5ac1, type: 3}
+    specularMap: {fileID: 2800000, guid: 549e364dc87e9e94a87012962ab100b3, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 5c00407519ec89a409d8dd903bc53d2c,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 589510d91f016ec49b00b18d6ba64ace, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: cb3668447b5a6e448ad44c83c7fa31e5, type: 3}
+    normalMap: {fileID: 2800000, guid: 856965055d3367944bd9baccc3e92bc0, type: 3}
+    specularMap: {fileID: 2800000, guid: 07ae8e29b77ee43499665253fc1b4364, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 03d5faf38d942a1449a67d3c897e5f00,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: cdda80a8ed34ca6449ea939b842ac607, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: d38a85f8e3681c143b8983ba9638ed31, type: 3}
+    normalMap: {fileID: 2800000, guid: 72f0579324ea30547bc86f88dd2aefd3, type: 3}
+    specularMap: {fileID: 2800000, guid: 4a079e868c1ef9a42b29416dd305d516, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 79a7a41dd8c83a04a8ddbeeaef75a137,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 0acdf73809c096947b8f1691189e6893, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: 4e605afc68ae95e49a363cd56cb3bae0, type: 3}
+    normalMap: {fileID: 2800000, guid: 1a3696986f55bd745a5b703841148089, type: 3}
+    specularMap: {fileID: 2800000, guid: 76b0a1341adf48e42a9e712b880b6c8e, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: e2cba58d8b9069340808c57173e8ebda,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: e3d768bb11125f745b98e36b0ba7bdcb, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: e108a41e3cbdfa041ae61e280ed51d9b, type: 3}
+    normalMap: {fileID: 2800000, guid: 8b8110b12f37c014e8a86533f27948e5, type: 3}
+    specularMap: {fileID: 2800000, guid: 84d2ec0c5ac841b4e99aa09610c2e34d, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 62cf1e61cfa15194caf7bf89aefaf007,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 7181f040a0c83c142b1eff3edda47046, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: d17a9ff91495a9c439f0e8eea2bc4b75, type: 3}
+    normalMap: {fileID: 2800000, guid: a4d9d405908137a4797ba74ede6be2eb, type: 3}
+    specularMap: {fileID: 2800000, guid: c95f785ed305db445ba652b4eb1880ca, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: bbc7d3db61bf77c4b9bb5f794da7ed57,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 68b58f1403566014590366ed8b397944, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: 3f9292bd63a80714bb62de5eb09d0d38, type: 3}
+    normalMap: {fileID: 2800000, guid: 8881e070207fa874687e59f45d137c30, type: 3}
+    specularMap: {fileID: 2800000, guid: 7b0308a85180e284999c4ad966ef848a, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 04357b3d96bc81b4085c1b729b4002ec,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 4e4ff51e78dd55d4ba42725011da2902, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: 29aab1165be7ce64fbc40915f26d0ac6, type: 3}
+    normalMap: {fileID: 2800000, guid: 0dc9d3beecee4ea4ebbdca2f530dc4c1, type: 3}
+    specularMap: {fileID: 2800000, guid: f6cccb4f5a1008d4bbc81ab0ee6555c4, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: bf05283a0e0a7104d8cb529130456ea1,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 47d18e9050b82834ea2e97c15f9c7c72, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: d23e1f113e61a224e96152509fc32db2, type: 3}
+    normalMap: {fileID: 2800000, guid: 14309071025a8eb43a262ad5421a6665, type: 3}
+    specularMap: {fileID: 2800000, guid: fff2e072b185bf6419ad620f117addf0, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 14fa9c2a7fed23e4bb45e8bb17dd4a56,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 4f7765f89d46d6248a3448d0ee13ed1e, type: 3}
+  - material: {fileID: 2100000, guid: f50ebf5b9bdc55f42bd1a90aed7cd663, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 31a1721ada265ff43959e80ef4ac9d92, type: 3}
+    normalMap: {fileID: 2800000, guid: ffc7e7a317116584aa04b429f4cae66c, type: 3}
+    specularMap: {fileID: 2800000, guid: 8bdf8410059fe8144aecc6cf354bb86f, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 7dc972d5508237440bd79a621330a2d3,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 562ea1444042efb4aa70d60d2c799a61, type: 3}
+  - material: {fileID: 2100000, guid: 4fb5a11781aeb244ca06b75f310275fc, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 57da16b46db63354a994ed089c0a28ec, type: 3}
+    normalMap: {fileID: 2800000, guid: dbbcccb483b6ce44b955841ea08c6905, type: 3}
+    specularMap: {fileID: 2800000, guid: cac7cffc1b81dfe4a98482bbde2d64d6, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 1c4b0dcc7af7eee4a95ef83478f7bb22,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: a20771c482f3345468556be6e6f4e8bf, type: 3}
+  - material: {fileID: 2100000, guid: b2d7aa8d963f6284d93ac1835a4caee6, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 772472d51d1a220498ed77a345285dc6, type: 3}
+    normalMap: {fileID: 2800000, guid: d28c61c950580f143a3fc5c19d43a2be, type: 3}
+    specularMap: {fileID: 2800000, guid: b0f967e31234b1247bbc9b4d74fca4f4, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 4dd9c9b066874ea4090e6cd2023979c7,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 24b0cfcca59ab2b498a1dfcf7fe14a72, type: 3}
+  - material: {fileID: 2100000, guid: cae3d11d03eb7454e99d78c29cf4837a, type: 2}
+    diffuseMap: {fileID: 2800000, guid: f15ed048cbfefd646930ad4e74e8c5b7, type: 3}
+    normalMap: {fileID: 2800000, guid: daf0be0ce7faf214f81e250f29dbe0fd, type: 3}
+    specularMap: {fileID: 2800000, guid: 91650d61af7412347b3e0d7a657852e6, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: dac6cf597cae0194aa2d0c2749dd9491,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 04302684031fb63438d39fbb48e858c8, type: 3}
+  - material: {fileID: 2100000, guid: 28d7cc102d0fb4242ace6fc18ad81960, type: 2}
+    diffuseMap: {fileID: 2800000, guid: c52e1e393849ebf47b6f2f4bcc406b61, type: 3}
+    normalMap: {fileID: 2800000, guid: 46ea5d0f70368c74ba28dfca29a36c62, type: 3}
+    specularMap: {fileID: 2800000, guid: 80baa2fe3d1eb88478f8ce7f92bce01b, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 6d75eb7c2ee7ca0409a755d96d3137d0,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 579bdde1691726f4eaa3688ab887b5cd, type: 3}
+  - material: {fileID: 2100000, guid: 50d23094744fe614c9c2d8535729c2d2, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 4808153f7dc22ec418fc49b830c70dbe, type: 3}
+    normalMap: {fileID: 2800000, guid: 4f2b4b9e283b7e942b161bc80be0c344, type: 3}
+    specularMap: {fileID: 2800000, guid: 9a5e8d201e1cb8a4ea711003d16167b2, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 6d094b9268e3feb47b9a51c365098ed5,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 8d9a654ae5170c441ad50d1111524bfe, type: 3}
+  - material: {fileID: 2100000, guid: dd46023de8c7e244aad283b069c91a63, type: 2}
+    diffuseMap: {fileID: 2800000, guid: bcefdaf04b94116459039669545b18c9, type: 3}
+    normalMap: {fileID: 2800000, guid: 3382b8a08458d3f46abfaf7d72f66c80, type: 3}
+    specularMap: {fileID: 2800000, guid: e82c0f7d83c63554ebf85608954fd7cb, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 713d67dff60fc944aa0ce3a9b6e419ec,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 26dd8261f6ba95f408d47e489f7804d6, type: 3}
+  - material: {fileID: 2100000, guid: 9cea15b0ed3d621439161b2e759796d4, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 142aa7910ace81549b483dd51218ba46, type: 3}
+    normalMap: {fileID: 2800000, guid: 0afe733c4af63c147aa50b7a4d17f781, type: 3}
+    specularMap: {fileID: 2800000, guid: b56d48f33b8211040abcf459b8669b7a, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 016e61de6e7652c4b881597be3fa3f63,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 2b03624065e2dc443b241ac143b62d50, type: 3}
+  - material: {fileID: 2100000, guid: 272531108c2e84846964842ed449caeb, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 812f40b519015eb4c98308290d005723, type: 3}
+    normalMap: {fileID: 2800000, guid: 58fa8cf6b17dd8c4089583d682af224e, type: 3}
+    specularMap: {fileID: 2800000, guid: e3be7a222f3393b4b9dc513d081a0838, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 546741c8de3a8df4b8c6ed64fb642d95,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 36200617581023f4aa92c6e73c776cf6, type: 3}
+  - material: {fileID: 2100000, guid: d62a318b620de0245bbc16252543535f, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 5d2669ac04224ca42b0c91ee34233e54, type: 3}
+    normalMap: {fileID: 2800000, guid: 78c08ffbdce5f654889569268cc6b743, type: 3}
+    specularMap: {fileID: 2800000, guid: 6323f5d1044798141a19fb022c2e17b0, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 6a0d8efa2e773f14196a8ffc0911ae60,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: a18b7f3e2d3f6e946879311b7e9ae255, type: 3}
+  - material: {fileID: 2100000, guid: 1b9c4b4ca7615a5479d76df9326194f1, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 812f40b519015eb4c98308290d005723, type: 3}
+    normalMap: {fileID: 2800000, guid: 58fa8cf6b17dd8c4089583d682af224e, type: 3}
+    specularMap: {fileID: 2800000, guid: e3be7a222f3393b4b9dc513d081a0838, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 546741c8de3a8df4b8c6ed64fb642d95,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 36200617581023f4aa92c6e73c776cf6, type: 3}
+  - material: {fileID: 2100000, guid: 72d76e0f80a94de469c32cae0c0826c1, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 67e292db9ee0ffd44a2d51b7bb9ebd91, type: 3}
+    normalMap: {fileID: 2800000, guid: 850df4783a45d2d4da92af32b1219a99, type: 3}
+    specularMap: {fileID: 2800000, guid: c6a3ec2703ccf124f8d003883d0457c1, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 84c5e44a4563c1b408256f9489c60b27,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: a532d45b023d0c6498289695b656e239, type: 3}
+  - material: {fileID: 2100000, guid: 86b3af5f95a37c24ba52513ec339f0fe, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 5f803811c98221147b27a832a763c91f, type: 3}
+    normalMap: {fileID: 2800000, guid: 6cc6ddfeec2364641ba54c89e49d82d6, type: 3}
+    specularMap: {fileID: 2800000, guid: 2c9262af682e39d4eb88cc13324e13e1, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 8e60e2e974094c44c9fe4e5cad382686,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 2676278e93b2cd0489a4d2e5c4e9567e, type: 3}
+  - material: {fileID: 2100000, guid: c7d089583080c7048a35e01f6b44af84, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 07d33a558fcb45042af62db6af9d951e, type: 3}
+    normalMap: {fileID: 2800000, guid: ad9d4192aab724140863af75e7c5f5ce, type: 3}
+    specularMap: {fileID: 2800000, guid: 06666d5482ca60043b7b12377a5cfedf, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 8a93929bdc6078f4080e2d59b2a8468a,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: f008205b2f762c64ba10de82dafddb26, type: 3}
+  - material: {fileID: 2100000, guid: d169b5447311f6c48a6c339a1e46d68c, type: 2}
+    diffuseMap: {fileID: 2800000, guid: dea8e43932f5fc344912414e3201ba1e, type: 3}
+    normalMap: {fileID: 2800000, guid: 76f45cefa8a9eca40bf834a96944e8ee, type: 3}
+    specularMap: {fileID: 2800000, guid: f3931bd4de62f3b42959990862cb1681, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 1e2636192ec3af24bae72a815d23e34d,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 3ac9c80b7870b024eaab5e68012d9c8c, type: 3}
+  - material: {fileID: 2100000, guid: 2776db07a84e0bd4087ac9fb0b872fcf, type: 2}
+    diffuseMap: {fileID: 2800000, guid: e3c510c15e48dca4c8400853cbf630b3, type: 3}
+    normalMap: {fileID: 2800000, guid: 8d84c070f148327419c611b38672c4a1, type: 3}
+    specularMap: {fileID: 2800000, guid: 53f2f4252aed2344298ae07eced45cb9, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 55184ebbf93bea14a9e46b628e036942,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: fdb199b6ba999eb47bc0340aee9c643e, type: 3}
+  - material: {fileID: 2100000, guid: 8b32853667bce7c48a0ad68db57a4b8f, type: 2}
+    diffuseMap: {fileID: 2800000, guid: e7da9a4683ecbc1449f06d54a7a5c652, type: 3}
+    normalMap: {fileID: 2800000, guid: 8d84c070f148327419c611b38672c4a1, type: 3}
+    specularMap: {fileID: 2800000, guid: 53f2f4252aed2344298ae07eced45cb9, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 55184ebbf93bea14a9e46b628e036942,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: fdb199b6ba999eb47bc0340aee9c643e, type: 3}
+  - material: {fileID: 2100000, guid: 8d43533138df28e4190fb31104394ce5, type: 2}
+    diffuseMap: {fileID: 2800000, guid: e4d0523ccb6556a449e9b458f5d37837, type: 3}
+    normalMap: {fileID: 2800000, guid: 13f4f89e28ece8844bbffb51ff901436, type: 3}
+    specularMap: {fileID: 2800000, guid: b9c259a816e4c27478083c0ea0120a54, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 4064aa42f9ab6d047a6a7de1e74a24a2,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: c6c623ac85cea464db592fc67c870eb6, type: 3}
+  - material: {fileID: 2100000, guid: 8d43533138df28e4190fb31104394ce5, type: 2}
+    diffuseMap: {fileID: 2800000, guid: e4d0523ccb6556a449e9b458f5d37837, type: 3}
+    normalMap: {fileID: 2800000, guid: 13f4f89e28ece8844bbffb51ff901436, type: 3}
+    specularMap: {fileID: 2800000, guid: b9c259a816e4c27478083c0ea0120a54, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 4064aa42f9ab6d047a6a7de1e74a24a2,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: c6c623ac85cea464db592fc67c870eb6, type: 3}
+  - material: {fileID: 2100000, guid: 2bff9992423a7be40ae1e739388643fd, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 12f2e4bdf8f351a46b9f3d47b82d95c2, type: 3}
+    normalMap: {fileID: 2800000, guid: 3116ad176ba1cf54bb03993c84aae767, type: 3}
+    specularMap: {fileID: 2800000, guid: 265eb8286fe9aed40814d7888e188a7d, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: c474537a66888b740b422a0d72873d5f,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 1effdb9336e4ce644a5f7a245efb6441, type: 3}
+  - material: {fileID: 2100000, guid: d3f8a7cf2c7b6a44999637ded5b6f207, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 3129b67c98d123042a1b16030a2b97de, type: 3}
+    normalMap: {fileID: 2800000, guid: dd009f8819e669a4889c6529e362cb20, type: 3}
+    specularMap: {fileID: 2800000, guid: 5b82c52556213924c839312593f4553b, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 83ab7f3b3fd5c884fbc555fe34dad7ea,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: a881dc55938c1f64a8ce08257614ad41, type: 3}
+  - material: {fileID: 2100000, guid: 9b584f19fc8bc3445afc5909854d515e, type: 2}
+    diffuseMap: {fileID: 2800000, guid: f27b01b52299ce045b1c71e4b178e87f, type: 3}
+    normalMap: {fileID: 2800000, guid: e6a4b381cb64e8c469fe7aefcf8a7a3a, type: 3}
+    specularMap: {fileID: 2800000, guid: 6852302561d8f3b4b9e65c0369644a2b, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: f38d00832ee554a4cbe2a12fb9cd9fb2,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 8e11d20398ed69949ab728f5530911b5, type: 3}
+  - material: {fileID: 2100000, guid: 79e7d83766be84a489f3fabfda1d9a54, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 6f7b1ca9ba75816489582f8c52a22b7a, type: 3}
+    normalMap: {fileID: 2800000, guid: 9a2b57121e4987e44bd4c4f8c69c40c9, type: 3}
+    specularMap: {fileID: 2800000, guid: 0f63e0ec64c03c5479a14c0de599f6e6, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: a979505564ad3e84a98ee833851f7f18,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 9c9ba55dcc5f9ae4baf26c13dd2e6c97, type: 3}
+  - material: {fileID: 2100000, guid: b2486fc94aa8e664cbea756016bbf0b2, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 998b1ff6b8b823d46a2148a95daeeb12, type: 3}
+    normalMap: {fileID: 2800000, guid: 490bc46b6c938eb46a02d99cf85b6a20, type: 3}
+    specularMap: {fileID: 2800000, guid: 0e4d4a03a251a734e928e96b764bb7c1, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: b01854896397f8e4d857c26f39917d24,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 5cfaf9630ed0b7a4f823402f25569c15, type: 3}
+  - material: {fileID: 2100000, guid: 169d72695e4d36843b46f9ccf7ddf2d4, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 8c9fcb99a34901d45b86b3c2fbf6e890, type: 3}
+    normalMap: {fileID: 2800000, guid: b09e933cefc04cc429ed9e1ba3aea5ec, type: 3}
+    specularMap: {fileID: 2800000, guid: e912ab43a9b59c34c9d4f20d31e34c39, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: e3a9e53aedd25a74a8c524d525c9f97e,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 34a7960ef40c3cf4fb3318f9e92217b7, type: 3}
+  - material: {fileID: 2100000, guid: 2f39eeedc69cb674a805adaea04d55ed, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 912c3b225c8a32a4dab86ffcf82bbb7e, type: 3}
+    normalMap: {fileID: 2800000, guid: d7ebc16ce01b8774298f356a8fa9910f, type: 3}
+    specularMap: {fileID: 2800000, guid: cfd9e57c400e7f342b1e7698fdddacdf, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 8ea1c29546d66d64e894541c496a0ef8,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 3069707560207d14ea2e07cb61809c60, type: 3}
+  - material: {fileID: 2100000, guid: 3fcabbe9fa0858340ad6bcdea505abcb, type: 2}
+    diffuseMap: {fileID: 2800000, guid: fac28d148ccb2a840866540da5a511f2, type: 3}
+    normalMap: {fileID: 2800000, guid: 669e0ec0a9a731248b8625dd0b73d20e, type: 3}
+    specularMap: {fileID: 2800000, guid: 978e1b44ce0d3ad40b8faff49c0c7d9b, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: d47001a568776ef4397eb2a7e7f8a17b,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 1f08a910baedd7f4191495a2457ec5b5, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: c2dc8a7317bf2e244b915dd8c2387c2e, type: 3}
+    normalMap: {fileID: 2800000, guid: 1b63522d85969344888e8571b19d2302, type: 3}
+    specularMap: {fileID: 2800000, guid: 51641d8ca6215104da419912c02349e2, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 8c4cc3ae6447e1b49856eed9df877b55,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: c2639ec3c0197144bb138fad1816648f, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: c5e0bbfc3e826fa4fad3dd15933d38fb, type: 3}
+    normalMap: {fileID: 2800000, guid: 417cc51a0add9da438db0902c901befa, type: 3}
+    specularMap: {fileID: 2800000, guid: e57457f9fa0649b44a396e414251cac1, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 5657729bb0bb78a4a9e48da91224c9fc,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 14c6e15ad37c92a4483594e1edbfb65c, type: 3}
+  - material: {fileID: 2100000, guid: 7cdfe369e4c64d34485a83e379b81cf2, type: 2}
+    diffuseMap: {fileID: 2800000, guid: aaf69166816615b4381ca58ba48b105f, type: 3}
+    normalMap: {fileID: 2800000, guid: 7e5589610ecc00c408789f9c14a7c249, type: 3}
+    specularMap: {fileID: 2800000, guid: b3cf7930325b0a74d889f227edd8a620, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 2139bb2eda487ca49affd241764abf34,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: bc1125b1a41222c4787679b88ac2ec5b, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: 9618b221e64802145976de5fdc35c02e, type: 3}
+    normalMap: {fileID: 2800000, guid: ed901c1be8eceda439df620a8186991c, type: 3}
+    specularMap: {fileID: 2800000, guid: ff4947ab1daad6449bd728a5317ec99e, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 38477f3ce4e83734aa34729595ffc29c,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 8a031574fdfec3e41b098a00de9b7eca, type: 3}
+  - material: {fileID: 2100000, guid: 47b074773ede53e40bb73c3d195f050f, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 5a7876b13e720dd4c85f402d2f8b72b1, type: 3}
+    normalMap: {fileID: 2800000, guid: e7987ab73e8b42e4ea65eb0dae66b2e5, type: 3}
+    specularMap: {fileID: 2800000, guid: 279145cbd4c02924bb7600c85485ed0b, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: adb888500559edb49b9d2375b83029c6,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 6c98271bb914f8a48a2f075e56b68ced, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: 7fa0ba67f0af1da459e7a00ecf8c9973, type: 3}
+    normalMap: {fileID: 2800000, guid: b2bf64ed32783684e9ab73f4677689ff, type: 3}
+    specularMap: {fileID: 2800000, guid: 332e531178152184b87a723590f87b15, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 46b308ba919302743a846daeae8d81e5,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 8fd1f0c70c1587e4990aef75d31b4d2b, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: 07e474c712f411b44b54de54a43652e2, type: 3}
+    normalMap: {fileID: 2800000, guid: 32183694df14e374693ab708aca351f9, type: 3}
+    specularMap: {fileID: 2800000, guid: 8745d6028e59cb845b80b49c87dd9be4, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 865c9a65a15bc9041bb836ca2c241832,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 584cab1a4af1e3642b87dd0e9fd778df, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: d482a7378f4a847429e47390651ca340, type: 3}
+    normalMap: {fileID: 2800000, guid: c96a207ddbd6d9948bf0d41ac0e3b391, type: 3}
+    specularMap: {fileID: 2800000, guid: cdc9f394feb69b74e94bf2b9debeab2d, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 28d8516f0c4e1c247844fe1024533410,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: c83c492838ed6564f93ff9a8fbcc9753, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: b8f83b3f0eea33c48bff7b7a4a54476e, type: 3}
+    normalMap: {fileID: 2800000, guid: 5b48895598a4b704b822828fd29523c9, type: 3}
+    specularMap: {fileID: 2800000, guid: df04c60d97b003646a41cf3883d9c350, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 151807ebfbc722c4a9c3ca36683ae766,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: b0031943233aefa4fa59964d0d903bed, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: 86c178ba332a9ea4fb5f20663803c5cd, type: 3}
+    normalMap: {fileID: 2800000, guid: 7fc6e77bf09781f4380cfd32f329229b, type: 3}
+    specularMap: {fileID: 2800000, guid: 4ef51559e323e0c4995fc28419c620a7, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 93fd2b9db931b5e4e81d40cf6d79cabe,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 2b85dde8c17d70044bae42156e95dfc0, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: d1f094b9ae8bbf848928c99c82c401b8, type: 3}
+    normalMap: {fileID: 2800000, guid: 15e305f32a00b4949925a605dd3d5975, type: 3}
+    specularMap: {fileID: 2800000, guid: 6585eded8a9fa414cb21020299cd43e5, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 2cba6eb3a8b34bf44992bcc196488b3e,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 4f6eda1094732d749b12d6fe76e3c206, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: 9d8afe0d925e38b4d90634227508270a, type: 3}
+    normalMap: {fileID: 2800000, guid: 1fa22ad22a5c12d479e7cdcef0c4ec70, type: 3}
+    specularMap: {fileID: 2800000, guid: 905556bb483766a44b3007453ab8a27f, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: d887216924db9c74fa9b3a3d535d7d26,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 2e1cc922926304e41a151f3d04368248, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: 829f5bae0ee32eb42bdd9ca7bdd7478c, type: 3}
+    normalMap: {fileID: 2800000, guid: 6d6f35e5a2f473a408c91c6ab40b3609, type: 3}
+    specularMap: {fileID: 2800000, guid: 0a6da554cd6d77240b312f167ad9f01a, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: d2dd10bb8ca6b8342a51c7c5d9006f44,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 26c648b27393ae04b9f0fed9af9d6760, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: 86465eb0625e55844be11feffe01fd91, type: 3}
+    normalMap: {fileID: 2800000, guid: 83ab19ff18259ba4684e5fc807c96a9f, type: 3}
+    specularMap: {fileID: 2800000, guid: 6fedfc53696fb194787078e3ad767d03, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: c96fe0b9b496e1045baa0fadbcd52495,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 0661a30250620694d955b1e96e164261, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: 2000a93048cf4af45a0935c458fb60e4, type: 3}
+    normalMap: {fileID: 2800000, guid: 5d589a5c227aa4648915995db85fe732, type: 3}
+    specularMap: {fileID: 2800000, guid: 8b9f6361fcff4e443bc8c7cc2a53efff, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: b37a9b8a6c0494f488e5a668ddbf4057,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 0}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: 97367f6a94c62cb4ca3c3ec7f6b85833, type: 3}
+    normalMap: {fileID: 2800000, guid: b8df2363af4755a43a8f694938c87dec, type: 3}
+    specularMap: {fileID: 2800000, guid: 51ae30f6cede989418efa76fa731e3f1, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 80114393ea4deed4ba5ccfc3873d9d7b,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 0}
+  - material: {fileID: 2100000, guid: d845ad0b167704b458e32bafcd1f977d, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 538d7f5bbc335f5489586144846774f7, type: 3}
+    normalMap: {fileID: 2800000, guid: c8cf883f858e68a44b1569a8fbe430e6, type: 3}
+    specularMap: {fileID: 2800000, guid: 4d9acf350a6e04c468a5c5a438e8a5ed, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 338b1a151dc930c4c9b2fe7b45807ae3,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: a240cb6712d002a4e9040ab0aa0c835e, type: 3}
+  - material: {fileID: 2100000, guid: 8386e624b69fd314ab9d8b7e85be6e11, type: 2}
+    diffuseMap: {fileID: 2800000, guid: a88ba87b415ee9b41ae2ee6aac4d128f, type: 3}
+    normalMap: {fileID: 2800000, guid: f9b3618afb1b9344bb776009d5a11ee2, type: 3}
+    specularMap: {fileID: 2800000, guid: e1327b1d5f9ef6a48a04663836689ee1, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: a5e04fea85ee4b9409ee4fd35ababebb,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: d5d362fdafb6fc9489db9e5e087825c7, type: 3}
+  - material: {fileID: 2100000, guid: 85fb274f69a07ce46b4a64db17c03a67, type: 2}
+    diffuseMap: {fileID: 2800000, guid: cc706eb2a0851804589b18a686ba6faf, type: 3}
+    normalMap: {fileID: 2800000, guid: b3546c94c299f28418af5a82e9770753, type: 3}
+    specularMap: {fileID: 2800000, guid: 3dab6280bbb573d45a8e6a35acf016e1, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 7211eed1485be0546978a2325aa4dd8f,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 7f8a5dd7d33deeb44952bc0e01d4ef42, type: 3}
+  - material: {fileID: 2100000, guid: 70dd125cd543ca84a809b503d9e3f5e1, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 4ab020575ffaf894da54e3559e5095ce, type: 3}
+    normalMap: {fileID: 2800000, guid: ca3137c23dab46943b89fd41d164d634, type: 3}
+    specularMap: {fileID: 2800000, guid: 92d840d9e47c24e4bba5b61a2f977817, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: e474a29b456114b4fb62a42cec30bbd0,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: e1b1bd88e02e87346a9ef0e2f9bd65ee, type: 3}
+  - material: {fileID: 2100000, guid: 8c81e26ae22f9b948be38e3c86a7e56e, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 5faf19f9b97225c459a55d4196994625, type: 3}
+    normalMap: {fileID: 2800000, guid: 81ba259e4e1a24845af13ddd91129321, type: 3}
+    specularMap: {fileID: 2800000, guid: a80142aea56695a4d9dae06806175320, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 6bf3fb4edc79b6a4fb524b504bf4d165,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 1406690535c510741bda333636a5731e, type: 3}
+  - material: {fileID: 2100000, guid: b93148d72a2dd7e46bc312a575c4adeb, type: 2}
+    diffuseMap: {fileID: 2800000, guid: cf3ee137fdf21ea49a8dfa1f2ca13b82, type: 3}
+    normalMap: {fileID: 2800000, guid: de018f301499d2d4897daaa21eefa3bc, type: 3}
+    specularMap: {fileID: 2800000, guid: faa5940e3dd072645967553d1ef32cb3, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 7b67471fe89391f40b091d023fc63c7e,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 8f3edc9ca6b916c40b905be54d8b105d, type: 3}
+  - material: {fileID: 2100000, guid: 54256a2c157c20e4782d3ff8a4a0d66e, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 1445a5fe734057f4aa20e47c55dc62c8, type: 3}
+    normalMap: {fileID: 2800000, guid: 245c20bd434169143ae82853fea96ab2, type: 3}
+    specularMap: {fileID: 2800000, guid: 2e3062746ae19854881446e0a676ca07, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: c92fc9bfa9742bf40bffdd11ceb3f8af,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 911cbce6c941c4f48ae4b182a6eaab16, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: 378d6b42fd073394d95adc41d3ce5521, type: 3}
+    normalMap: {fileID: 2800000, guid: e6c2352f08c98ae42b11eac630fa7ca2, type: 3}
+    specularMap: {fileID: 2800000, guid: c6a55630f24107a439047fc5b77f2477, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 69526422c558067489f68c247fdce4cf,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 1579b2c44b284c44c92262f22dee9577, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: 32579d2c23f90924d9b76d7fe0eea39c, type: 3}
+    normalMap: {fileID: 2800000, guid: 392c6eedfa48e8b41ae96185da9af305, type: 3}
+    specularMap: {fileID: 2800000, guid: 11c2361c0b1fc1e4fbff3ae7505606d2, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: a3d005caee050c04d9b18f93b2be8806,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: ef87f6ef7225de942954bcdf49343adc, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: 8716f1f69dbf2eb4c96668bec0486d51, type: 3}
+    normalMap: {fileID: 2800000, guid: fa4b0c08ddae67b47bfab455396933ce, type: 3}
+    specularMap: {fileID: 2800000, guid: 91ce350a12839184daea2e5180648e48, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 29c45441c94b11340831d070902c0e57,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: a731578a128f50349b4632fb9797cdce, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: 4b64e43de1d0d854c8d3fa5b863e2284, type: 3}
+    normalMap: {fileID: 2800000, guid: 746f3e4e1d6e0124c9285bef0a08591e, type: 3}
+    specularMap: {fileID: 2800000, guid: 0e6cb24402e3ba445b7173b8ebda2234, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 5a76d71566744b34095db26b287ee7e1,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 0db583ee53600ed479c07dd4dc2f204d, type: 3}
+  - material: {fileID: 0}
+    diffuseMap: {fileID: 2800000, guid: 2e8d7f94fcdf25f49be194cce1673b4d, type: 3}
+    normalMap: {fileID: 2800000, guid: 280159be1c003c94da09f68e9a9c3529, type: 3}
+    specularMap: {fileID: 2800000, guid: ba089c525ae51314eb168925fd3c5f82, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: b5369e482eebc524585288bef32dc5f4,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: d26e4a516121dfe41958c534e24bdf97, type: 3}
+  - material: {fileID: 2100000, guid: b5e2a954b47b9c2478d49909d42cecc5, type: 2}
+    diffuseMap: {fileID: 2800000, guid: d59cd152f5c47614cb836f643f5787c3, type: 3}
+    normalMap: {fileID: 2800000, guid: ba896de87302ce94a918265123fa3f5a, type: 3}
+    specularMap: {fileID: 2800000, guid: 4d8a0fc9b710d944d915426c51218be5, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 1732d907eabf59946a47455a2c0455e7,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: c5baedbd2b861fb4e95a1c7ad2332211, type: 3}
+  - material: {fileID: 2100000, guid: 73e73e21bf36afa4daaa0a837788ebcc, type: 2}
+    diffuseMap: {fileID: 2800000, guid: ceee1bc9660e84c4cb3f3b08d7cab03a, type: 3}
+    normalMap: {fileID: 2800000, guid: 907d1810505c31048ae9978e0187ac7a, type: 3}
+    specularMap: {fileID: 2800000, guid: 10f7a493ac95941439a3facb3a74a303, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 0d0990f9d4c33804fb717f85b843d597,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 798576ee8c456b340afc7a6a72bcbb4e, type: 3}
+  - material: {fileID: 2100000, guid: d35c0ab412047c04ebab357efd21aa07, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 116d46e1ec2bc144bb5bdfca24593243, type: 3}
+    normalMap: {fileID: 2800000, guid: 778f8ed4fcca12d42972b45f7f9753f4, type: 3}
+    specularMap: {fileID: 2800000, guid: 0eaa9ad25c3b35042a0042a6da0d8ba2, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 0d7a37656662a5b42b4011406df8f129,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 003864df3cf3dd04593891a0fb6de50e, type: 3}
+  - material: {fileID: 2100000, guid: f9e07680a5848c24083a1a6ec69693db, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 1412b101105caea4584788b6c5374a24, type: 3}
+    normalMap: {fileID: 2800000, guid: 226018f4af5f56a4483aad84feb00d6b, type: 3}
+    specularMap: {fileID: 2800000, guid: 22b95b9d14882d840b571a6912d032c8, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: c4ba60b4d12883f4991577f198bd9d34,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: ec3c823f3e401ee44922e86a3ebe8a70, type: 3}
+  - material: {fileID: 2100000, guid: 04565a36165e55849b367fefabdfa408, type: 2}
+    diffuseMap: {fileID: 2800000, guid: d2e7362253536b844882517fac3d036e, type: 3}
+    normalMap: {fileID: 2800000, guid: a73c38026c5e88c4295dddd545270677, type: 3}
+    specularMap: {fileID: 2800000, guid: 4743f91cb66976b4ab249df50236b3c2, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: d2edf473d32b85a41be02c5068a7dcfb,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: ec3c823f3e401ee44922e86a3ebe8a70, type: 3}
+  - material: {fileID: 2100000, guid: 28f6fedf2b428a846ae236c6764edae6, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 457dc06087d48354ab7f740ae7a4d352, type: 3}
+    normalMap: {fileID: 2800000, guid: 9b7c5b3d7200d17448b31793c690aca7, type: 3}
+    specularMap: {fileID: 2800000, guid: 7571c17175f462f478f8c83d2e9960ff, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: c1862643986fdaf41a8eb3afb0892891,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: b4070edc8b996c74785bd4b7dec35d13, type: 3}
+  - material: {fileID: 2100000, guid: 0adbcffdd17929641a9c2789dc5fa291, type: 2}
+    diffuseMap: {fileID: 2800000, guid: f6aaa622c61d4c1429a79e67cb821aa1, type: 3}
+    normalMap: {fileID: 2800000, guid: 090cd616882af6942909adedf3d965f6, type: 3}
+    specularMap: {fileID: 2800000, guid: d21df43ff7f86f14cb98ab0a0da2033d, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 1c845775d4982e14ab3840b894ba7647,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 3335323674e04de48af9e0df4db0e37d, type: 3}
+  - material: {fileID: 2100000, guid: 24117eae5a31e514d9dbe6acf5de3639, type: 2}
+    diffuseMap: {fileID: 2800000, guid: d9e8dadfe6ae7dd44b986b62ffe58b01, type: 3}
+    normalMap: {fileID: 2800000, guid: 53088cb124f97f04aa9ec591070bff0e, type: 3}
+    specularMap: {fileID: 2800000, guid: 794da95aef422d84e9056c895b14cdda, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 3934f374fbf455745ac25b764c1fab88,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 474f8f3cd06753d4488a75517526455e, type: 3}
+  - material: {fileID: 2100000, guid: 5f0fd9481c58c5347bc5c2faa96943b8, type: 2}
+    diffuseMap: {fileID: 2800000, guid: dd963a3a9e44e9646a484e60eec8ad19, type: 3}
+    normalMap: {fileID: 2800000, guid: 6b279bbb0400ec048a167b09d7de5d3a, type: 3}
+    specularMap: {fileID: 2800000, guid: 45acb66529c7c06478bab6c035a4cc1c, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: c57b02c75fbf1c34da6cd2e693129c57,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 632f9009cc7dfc64dbc88ca114c4a80c, type: 3}
+  - material: {fileID: 2100000, guid: 659c723e58e729b479218d82d97a616d, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 89d8eb858472eb74bb29e271aac1939f, type: 3}
+    normalMap: {fileID: 2800000, guid: 823ee598f70ba3a41b09aea4421a77f9, type: 3}
+    specularMap: {fileID: 2800000, guid: e218fe509d4d6e640ba40a146b81e2ab, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 4a4284a74fdf8f244b0e936564f34b09,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 163b218a91a468247b8d52fc8c43db73, type: 3}
+  - material: {fileID: 2100000, guid: 256d84184298ae0468de310624fe0eb5, type: 2}
+    diffuseMap: {fileID: 2800000, guid: 9fda84ca93ed7e64cae920569bd5355a, type: 3}
+    normalMap: {fileID: 2800000, guid: 53088cb124f97f04aa9ec591070bff0e, type: 3}
+    specularMap: {fileID: 2800000, guid: 794da95aef422d84e9056c895b14cdda, type: 3}
+    ambientOcclusionMap: {fileID: 2800000, guid: 3934f374fbf455745ac25b764c1fab88,
+      type: 3}
+    detailMap: {fileID: 0}
+    parallaxMap: {fileID: 2800000, guid: 1881835849e5b634db1424db5f40e657, type: 3}
+  noiseBlendMaterials:
+  - material: {fileID: 2100000, guid: 5a21b9a68d921c841a80b7f9232552aa, type: 2}
+    diffuseMap1: {fileID: 2800000, guid: f6b18af73518c1449b82eca99fedacb1, type: 3}
+    normalMap1: {fileID: 2800000, guid: e44ef7f0583532f4ba959442393185aa, type: 3}
+    specularMap1: {fileID: 2800000, guid: 6b3caaf00db210a4c8ae84f8f95dd6d2, type: 3}
+    parallaxMap1: {fileID: 2800000, guid: c8b61f5bfa16c1a4c924c37c05add4ce, type: 3}
+    diffuseMap2: {fileID: 2800000, guid: 5a7876b13e720dd4c85f402d2f8b72b1, type: 3}
+    normalMap2: {fileID: 2800000, guid: e7987ab73e8b42e4ea65eb0dae66b2e5, type: 3}
+    specularMap2: {fileID: 2800000, guid: 279145cbd4c02924bb7600c85485ed0b, type: 3}
+    parallaxMap2: {fileID: 2800000, guid: 6c98271bb914f8a48a2f075e56b68ced, type: 3}
+  - material: {fileID: 2100000, guid: 91b39b1ce25132444a3c9cff5e2813f5, type: 2}
+    diffuseMap1: {fileID: 2800000, guid: 94df562814f6ffb4e81138a78b3eb352, type: 3}
+    normalMap1: {fileID: 2800000, guid: b7a4f28c4f65512498c2b91bc96762e2, type: 3}
+    specularMap1: {fileID: 2800000, guid: 5476ef126a263c547a03549e00753986, type: 3}
+    parallaxMap1: {fileID: 2800000, guid: ec91eb0908095284a945896ad5c890f5, type: 3}
+    diffuseMap2: {fileID: 2800000, guid: 5a7876b13e720dd4c85f402d2f8b72b1, type: 3}
+    normalMap2: {fileID: 2800000, guid: e7987ab73e8b42e4ea65eb0dae66b2e5, type: 3}
+    specularMap2: {fileID: 2800000, guid: 279145cbd4c02924bb7600c85485ed0b, type: 3}
+    parallaxMap2: {fileID: 2800000, guid: 6c98271bb914f8a48a2f075e56b68ced, type: 3}
+  - material: {fileID: 2100000, guid: 429da322da65cc045844f3693caff321, type: 2}
+    diffuseMap1: {fileID: 2800000, guid: 1412b101105caea4584788b6c5374a24, type: 3}
+    normalMap1: {fileID: 2800000, guid: 226018f4af5f56a4483aad84feb00d6b, type: 3}
+    specularMap1: {fileID: 2800000, guid: 22b95b9d14882d840b571a6912d032c8, type: 3}
+    parallaxMap1: {fileID: 2800000, guid: ec3c823f3e401ee44922e86a3ebe8a70, type: 3}
+    diffuseMap2: {fileID: 2800000, guid: 5a7876b13e720dd4c85f402d2f8b72b1, type: 3}
+    normalMap2: {fileID: 2800000, guid: e7987ab73e8b42e4ea65eb0dae66b2e5, type: 3}
+    specularMap2: {fileID: 2800000, guid: 279145cbd4c02924bb7600c85485ed0b, type: 3}
+    parallaxMap2: {fileID: 2800000, guid: 6c98271bb914f8a48a2f075e56b68ced, type: 3}
+  - material: {fileID: 2100000, guid: 3a350f0c0849ded42914c690657118c0, type: 2}
+    diffuseMap1: {fileID: 2800000, guid: ceee1bc9660e84c4cb3f3b08d7cab03a, type: 3}
+    normalMap1: {fileID: 2800000, guid: 907d1810505c31048ae9978e0187ac7a, type: 3}
+    specularMap1: {fileID: 2800000, guid: 10f7a493ac95941439a3facb3a74a303, type: 3}
+    parallaxMap1: {fileID: 2800000, guid: 798576ee8c456b340afc7a6a72bcbb4e, type: 3}
+    diffuseMap2: {fileID: 2800000, guid: 5a7876b13e720dd4c85f402d2f8b72b1, type: 3}
+    normalMap2: {fileID: 2800000, guid: e7987ab73e8b42e4ea65eb0dae66b2e5, type: 3}
+    specularMap2: {fileID: 2800000, guid: 279145cbd4c02924bb7600c85485ed0b, type: 3}
+    parallaxMap2: {fileID: 2800000, guid: 6c98271bb914f8a48a2f075e56b68ced, type: 3}
+  - material: {fileID: 2100000, guid: a4730969bb71ce342b4031821a957a1c, type: 2}
+    diffuseMap1: {fileID: 2800000, guid: 457dc06087d48354ab7f740ae7a4d352, type: 3}
+    normalMap1: {fileID: 2800000, guid: 9b7c5b3d7200d17448b31793c690aca7, type: 3}
+    specularMap1: {fileID: 2800000, guid: 7571c17175f462f478f8c83d2e9960ff, type: 3}
+    parallaxMap1: {fileID: 2800000, guid: b4070edc8b996c74785bd4b7dec35d13, type: 3}
+    diffuseMap2: {fileID: 2800000, guid: 5a7876b13e720dd4c85f402d2f8b72b1, type: 3}
+    normalMap2: {fileID: 2800000, guid: e7987ab73e8b42e4ea65eb0dae66b2e5, type: 3}
+    specularMap2: {fileID: 2800000, guid: 279145cbd4c02924bb7600c85485ed0b, type: 3}
+    parallaxMap2: {fileID: 2800000, guid: 6c98271bb914f8a48a2f075e56b68ced, type: 3}
+  - material: {fileID: 2100000, guid: 25d121feb8852c04fbf8f55cce1d82f2, type: 2}
+    diffuseMap1: {fileID: 2800000, guid: 116d46e1ec2bc144bb5bdfca24593243, type: 3}
+    normalMap1: {fileID: 2800000, guid: 778f8ed4fcca12d42972b45f7f9753f4, type: 3}
+    specularMap1: {fileID: 2800000, guid: 0eaa9ad25c3b35042a0042a6da0d8ba2, type: 3}
+    parallaxMap1: {fileID: 2800000, guid: 003864df3cf3dd04593891a0fb6de50e, type: 3}
+    diffuseMap2: {fileID: 2800000, guid: 5a7876b13e720dd4c85f402d2f8b72b1, type: 3}
+    normalMap2: {fileID: 2800000, guid: e7987ab73e8b42e4ea65eb0dae66b2e5, type: 3}
+    specularMap2: {fileID: 2800000, guid: 279145cbd4c02924bb7600c85485ed0b, type: 3}
+    parallaxMap2: {fileID: 2800000, guid: 6c98271bb914f8a48a2f075e56b68ced, type: 3}
+  - material: {fileID: 2100000, guid: dddab4c121a629f4d91c98bd301c91c0, type: 2}
+    diffuseMap1: {fileID: 2800000, guid: 7cae2aa721fc7d042b8815cdc6c37057, type: 3}
+    normalMap1: {fileID: 2800000, guid: 0995ceacb2b437545943c808af0e5ac1, type: 3}
+    specularMap1: {fileID: 2800000, guid: 549e364dc87e9e94a87012962ab100b3, type: 3}
+    parallaxMap1: {fileID: 2800000, guid: 589510d91f016ec49b00b18d6ba64ace, type: 3}
+    diffuseMap2: {fileID: 2800000, guid: da15a8602f76c8143a6ffda6df0dcbc2, type: 3}
+    normalMap2: {fileID: 2800000, guid: 085df689057403043a82596458e33443, type: 3}
+    specularMap2: {fileID: 2800000, guid: 8a9701c63d73e744284f9ef8ffb24dd9, type: 3}
+    parallaxMap2: {fileID: 2800000, guid: 852b9f2f73e63c240ba5ab55eb90ad72, type: 3}
+  - material: {fileID: 2100000, guid: 58fd63f3e7b36ab48ac6ff5137268d57, type: 2}
+    diffuseMap1: {fileID: 2800000, guid: 5a7876b13e720dd4c85f402d2f8b72b1, type: 3}
+    normalMap1: {fileID: 2800000, guid: e7987ab73e8b42e4ea65eb0dae66b2e5, type: 3}
+    specularMap1: {fileID: 2800000, guid: 279145cbd4c02924bb7600c85485ed0b, type: 3}
+    parallaxMap1: {fileID: 2800000, guid: 6c98271bb914f8a48a2f075e56b68ced, type: 3}
+    diffuseMap2: {fileID: 2800000, guid: da15a8602f76c8143a6ffda6df0dcbc2, type: 3}
+    normalMap2: {fileID: 2800000, guid: 085df689057403043a82596458e33443, type: 3}
+    specularMap2: {fileID: 2800000, guid: 8a9701c63d73e744284f9ef8ffb24dd9, type: 3}
+    parallaxMap2: {fileID: 2800000, guid: 852b9f2f73e63c240ba5ab55eb90ad72, type: 3}
+  - material: {fileID: 2100000, guid: a5e5b793674806e4eacde429d7f5d8a6, type: 2}
+    diffuseMap1: {fileID: 2800000, guid: e07476598e04242438d4352027218974, type: 3}
+    normalMap1: {fileID: 2800000, guid: f1c11b4053630514cb4947e2e93f2496, type: 3}
+    specularMap1: {fileID: 2800000, guid: 90f306205f118ae4b91eaa2a1857b05c, type: 3}
+    parallaxMap1: {fileID: 2800000, guid: d8c6c473f0afa814da5c4da0369fc2e3, type: 3}
+    diffuseMap2: {fileID: 2800000, guid: e07476598e04242438d4352027218974, type: 3}
+    normalMap2: {fileID: 2800000, guid: f1c11b4053630514cb4947e2e93f2496, type: 3}
+    specularMap2: {fileID: 2800000, guid: 90f306205f118ae4b91eaa2a1857b05c, type: 3}
+    parallaxMap2: {fileID: 2800000, guid: d8c6c473f0afa814da5c4da0369fc2e3, type: 3}
+  - material: {fileID: 2100000, guid: ac61d179d57a09849a5a7092f5bc0b51, type: 2}
+    diffuseMap1: {fileID: 2800000, guid: 5a7876b13e720dd4c85f402d2f8b72b1, type: 3}
+    normalMap1: {fileID: 2800000, guid: e7987ab73e8b42e4ea65eb0dae66b2e5, type: 3}
+    specularMap1: {fileID: 2800000, guid: 279145cbd4c02924bb7600c85485ed0b, type: 3}
+    parallaxMap1: {fileID: 2800000, guid: 6c98271bb914f8a48a2f075e56b68ced, type: 3}
+    diffuseMap2: {fileID: 2800000, guid: da15a8602f76c8143a6ffda6df0dcbc2, type: 3}
+    normalMap2: {fileID: 2800000, guid: 085df689057403043a82596458e33443, type: 3}
+    specularMap2: {fileID: 2800000, guid: 8a9701c63d73e744284f9ef8ffb24dd9, type: 3}
+    parallaxMap2: {fileID: 2800000, guid: 852b9f2f73e63c240ba5ab55eb90ad72, type: 3}
+  - material: {fileID: 2100000, guid: b9f5b9a3325cfdc4d8054ba4be8a0a72, type: 2}
+    diffuseMap1: {fileID: 2800000, guid: 5a7876b13e720dd4c85f402d2f8b72b1, type: 3}
+    normalMap1: {fileID: 2800000, guid: e7987ab73e8b42e4ea65eb0dae66b2e5, type: 3}
+    specularMap1: {fileID: 2800000, guid: 279145cbd4c02924bb7600c85485ed0b, type: 3}
+    parallaxMap1: {fileID: 2800000, guid: 6c98271bb914f8a48a2f075e56b68ced, type: 3}
+    diffuseMap2: {fileID: 2800000, guid: da15a8602f76c8143a6ffda6df0dcbc2, type: 3}
+    normalMap2: {fileID: 2800000, guid: 085df689057403043a82596458e33443, type: 3}
+    specularMap2: {fileID: 2800000, guid: 8a9701c63d73e744284f9ef8ffb24dd9, type: 3}
+    parallaxMap2: {fileID: 2800000, guid: 852b9f2f73e63c240ba5ab55eb90ad72, type: 3}
+  - material: {fileID: 2100000, guid: fec04e40ef45100499077ef5bcba25ea, type: 2}
+    diffuseMap1: {fileID: 2800000, guid: 3129b67c98d123042a1b16030a2b97de, type: 3}
+    normalMap1: {fileID: 2800000, guid: dd009f8819e669a4889c6529e362cb20, type: 3}
+    specularMap1: {fileID: 2800000, guid: 5b82c52556213924c839312593f4553b, type: 3}
+    parallaxMap1: {fileID: 2800000, guid: a881dc55938c1f64a8ce08257614ad41, type: 3}
+    diffuseMap2: {fileID: 2800000, guid: 3129b67c98d123042a1b16030a2b97de, type: 3}
+    normalMap2: {fileID: 2800000, guid: dd009f8819e669a4889c6529e362cb20, type: 3}
+    specularMap2: {fileID: 2800000, guid: 5b82c52556213924c839312593f4553b, type: 3}
+    parallaxMap2: {fileID: 2800000, guid: a881dc55938c1f64a8ce08257614ad41, type: 3}
+  - material: {fileID: 2100000, guid: baddd88d8d0d8b142aabff495e707587, type: 2}
+    diffuseMap1: {fileID: 2800000, guid: 772472d51d1a220498ed77a345285dc6, type: 3}
+    normalMap1: {fileID: 2800000, guid: d28c61c950580f143a3fc5c19d43a2be, type: 3}
+    specularMap1: {fileID: 2800000, guid: b0f967e31234b1247bbc9b4d74fca4f4, type: 3}
+    parallaxMap1: {fileID: 2800000, guid: 24b0cfcca59ab2b498a1dfcf7fe14a72, type: 3}
+    diffuseMap2: {fileID: 2800000, guid: c52e1e393849ebf47b6f2f4bcc406b61, type: 3}
+    normalMap2: {fileID: 2800000, guid: 46ea5d0f70368c74ba28dfca29a36c62, type: 3}
+    specularMap2: {fileID: 2800000, guid: 80baa2fe3d1eb88478f8ce7f92bce01b, type: 3}
+    parallaxMap2: {fileID: 2800000, guid: 579bdde1691726f4eaa3688ab887b5cd, type: 3}
+  - material: {fileID: 2100000, guid: d0bfbc3956b6b9548b7471cd2030a266, type: 2}
+    diffuseMap1: {fileID: 2800000, guid: 772472d51d1a220498ed77a345285dc6, type: 3}
+    normalMap1: {fileID: 2800000, guid: d28c61c950580f143a3fc5c19d43a2be, type: 3}
+    specularMap1: {fileID: 2800000, guid: b0f967e31234b1247bbc9b4d74fca4f4, type: 3}
+    parallaxMap1: {fileID: 2800000, guid: 24b0cfcca59ab2b498a1dfcf7fe14a72, type: 3}
+    diffuseMap2: {fileID: 2800000, guid: c52e1e393849ebf47b6f2f4bcc406b61, type: 3}
+    normalMap2: {fileID: 2800000, guid: 46ea5d0f70368c74ba28dfca29a36c62, type: 3}
+    specularMap2: {fileID: 2800000, guid: 80baa2fe3d1eb88478f8ce7f92bce01b, type: 3}
+    parallaxMap2: {fileID: 2800000, guid: 579bdde1691726f4eaa3688ab887b5cd, type: 3}
+  - material: {fileID: 2100000, guid: 172e8254ca4f7a34c9e20f67348a7831, type: 2}
+    diffuseMap1: {fileID: 2800000, guid: 57da16b46db63354a994ed089c0a28ec, type: 3}
+    normalMap1: {fileID: 2800000, guid: dbbcccb483b6ce44b955841ea08c6905, type: 3}
+    specularMap1: {fileID: 2800000, guid: cac7cffc1b81dfe4a98482bbde2d64d6, type: 3}
+    parallaxMap1: {fileID: 2800000, guid: a20771c482f3345468556be6e6f4e8bf, type: 3}
+    diffuseMap2: {fileID: 2800000, guid: bcefdaf04b94116459039669545b18c9, type: 3}
+    normalMap2: {fileID: 2800000, guid: 3382b8a08458d3f46abfaf7d72f66c80, type: 3}
+    specularMap2: {fileID: 2800000, guid: e82c0f7d83c63554ebf85608954fd7cb, type: 3}
+    parallaxMap2: {fileID: 2800000, guid: 26dd8261f6ba95f408d47e489f7804d6, type: 3}
+  - material: {fileID: 2100000, guid: 85724b3440f36b844925973d8050b06a, type: 2}
+    diffuseMap1: {fileID: 2800000, guid: 57da16b46db63354a994ed089c0a28ec, type: 3}
+    normalMap1: {fileID: 2800000, guid: dbbcccb483b6ce44b955841ea08c6905, type: 3}
+    specularMap1: {fileID: 2800000, guid: cac7cffc1b81dfe4a98482bbde2d64d6, type: 3}
+    parallaxMap1: {fileID: 2800000, guid: a20771c482f3345468556be6e6f4e8bf, type: 3}
+    diffuseMap2: {fileID: 2800000, guid: bcefdaf04b94116459039669545b18c9, type: 3}
+    normalMap2: {fileID: 2800000, guid: 3382b8a08458d3f46abfaf7d72f66c80, type: 3}
+    specularMap2: {fileID: 2800000, guid: e82c0f7d83c63554ebf85608954fd7cb, type: 3}
+    parallaxMap2: {fileID: 2800000, guid: 26dd8261f6ba95f408d47e489f7804d6, type: 3}
+  - material: {fileID: 2100000, guid: ae380503792afc140bad996e994f05ba, type: 2}
+    diffuseMap1: {fileID: 2800000, guid: d38a85f8e3681c143b8983ba9638ed31, type: 3}
+    normalMap1: {fileID: 2800000, guid: 72f0579324ea30547bc86f88dd2aefd3, type: 3}
+    specularMap1: {fileID: 2800000, guid: 4a079e868c1ef9a42b29416dd305d516, type: 3}
+    parallaxMap1: {fileID: 2800000, guid: 0acdf73809c096947b8f1691189e6893, type: 3}
+    diffuseMap2: {fileID: 2800000, guid: d38a85f8e3681c143b8983ba9638ed31, type: 3}
+    normalMap2: {fileID: 2800000, guid: 72f0579324ea30547bc86f88dd2aefd3, type: 3}
+    specularMap2: {fileID: 2800000, guid: 4a079e868c1ef9a42b29416dd305d516, type: 3}
+    parallaxMap2: {fileID: 2800000, guid: 0acdf73809c096947b8f1691189e6893, type: 3}
+  - material: {fileID: 2100000, guid: 621bfcec4cd02fd43ae34e80de62fc38, type: 2}
+    diffuseMap1: {fileID: 2800000, guid: 07d33a558fcb45042af62db6af9d951e, type: 3}
+    normalMap1: {fileID: 2800000, guid: ad9d4192aab724140863af75e7c5f5ce, type: 3}
+    specularMap1: {fileID: 2800000, guid: 06666d5482ca60043b7b12377a5cfedf, type: 3}
+    parallaxMap1: {fileID: 2800000, guid: f008205b2f762c64ba10de82dafddb26, type: 3}
+    diffuseMap2: {fileID: 2800000, guid: dea8e43932f5fc344912414e3201ba1e, type: 3}
+    normalMap2: {fileID: 2800000, guid: 76f45cefa8a9eca40bf834a96944e8ee, type: 3}
+    specularMap2: {fileID: 2800000, guid: f3931bd4de62f3b42959990862cb1681, type: 3}
+    parallaxMap2: {fileID: 2800000, guid: 3ac9c80b7870b024eaab5e68012d9c8c, type: 3}
+  - material: {fileID: 2100000, guid: 2ad79594d9302b44c8d0888ffad8978e, type: 2}
+    diffuseMap1: {fileID: 2800000, guid: 31a1721ada265ff43959e80ef4ac9d92, type: 3}
+    normalMap1: {fileID: 2800000, guid: ffc7e7a317116584aa04b429f4cae66c, type: 3}
+    specularMap1: {fileID: 2800000, guid: 8bdf8410059fe8144aecc6cf354bb86f, type: 3}
+    parallaxMap1: {fileID: 2800000, guid: 562ea1444042efb4aa70d60d2c799a61, type: 3}
+    diffuseMap2: {fileID: 2800000, guid: a88ba87b415ee9b41ae2ee6aac4d128f, type: 3}
+    normalMap2: {fileID: 2800000, guid: f9b3618afb1b9344bb776009d5a11ee2, type: 3}
+    specularMap2: {fileID: 2800000, guid: e1327b1d5f9ef6a48a04663836689ee1, type: 3}
+    parallaxMap2: {fileID: 2800000, guid: d5d362fdafb6fc9489db9e5e087825c7, type: 3}
+  - material: {fileID: 2100000, guid: a3379128ea5764445a2db2760c8cf1b6, type: 2}
+    diffuseMap1: {fileID: 2800000, guid: fac28d148ccb2a840866540da5a511f2, type: 3}
+    normalMap1: {fileID: 2800000, guid: 669e0ec0a9a731248b8625dd0b73d20e, type: 3}
+    specularMap1: {fileID: 2800000, guid: 978e1b44ce0d3ad40b8faff49c0c7d9b, type: 3}
+    parallaxMap1: {fileID: 2800000, guid: 1f08a910baedd7f4191495a2457ec5b5, type: 3}
+    diffuseMap2: {fileID: 2800000, guid: fac28d148ccb2a840866540da5a511f2, type: 3}
+    normalMap2: {fileID: 2800000, guid: 669e0ec0a9a731248b8625dd0b73d20e, type: 3}
+    specularMap2: {fileID: 2800000, guid: 978e1b44ce0d3ad40b8faff49c0c7d9b, type: 3}
+    parallaxMap2: {fileID: 2800000, guid: 1f08a910baedd7f4191495a2457ec5b5, type: 3}
+  - material: {fileID: 2100000, guid: 83de1920d3c14a64c8811a5bb0c6b175, type: 2}
+    diffuseMap1: {fileID: 2800000, guid: 912c3b225c8a32a4dab86ffcf82bbb7e, type: 3}
+    normalMap1: {fileID: 2800000, guid: d7ebc16ce01b8774298f356a8fa9910f, type: 3}
+    specularMap1: {fileID: 2800000, guid: cfd9e57c400e7f342b1e7698fdddacdf, type: 3}
+    parallaxMap1: {fileID: 2800000, guid: 3069707560207d14ea2e07cb61809c60, type: 3}
+    diffuseMap2: {fileID: 2800000, guid: 912c3b225c8a32a4dab86ffcf82bbb7e, type: 3}
+    normalMap2: {fileID: 2800000, guid: d7ebc16ce01b8774298f356a8fa9910f, type: 3}
+    specularMap2: {fileID: 2800000, guid: cfd9e57c400e7f342b1e7698fdddacdf, type: 3}
+    parallaxMap2: {fileID: 2800000, guid: 3069707560207d14ea2e07cb61809c60, type: 3}
+  - material: {fileID: 2100000, guid: fc84162e25c5cfe49a593f17044e3a1e, type: 2}
+    diffuseMap1: {fileID: 2800000, guid: 912c3b225c8a32a4dab86ffcf82bbb7e, type: 3}
+    normalMap1: {fileID: 2800000, guid: d7ebc16ce01b8774298f356a8fa9910f, type: 3}
+    specularMap1: {fileID: 2800000, guid: cfd9e57c400e7f342b1e7698fdddacdf, type: 3}
+    parallaxMap1: {fileID: 2800000, guid: 3069707560207d14ea2e07cb61809c60, type: 3}
+    diffuseMap2: {fileID: 2800000, guid: 912c3b225c8a32a4dab86ffcf82bbb7e, type: 3}
+    normalMap2: {fileID: 2800000, guid: d7ebc16ce01b8774298f356a8fa9910f, type: 3}
+    specularMap2: {fileID: 2800000, guid: cfd9e57c400e7f342b1e7698fdddacdf, type: 3}
+    parallaxMap2: {fileID: 2800000, guid: 3069707560207d14ea2e07cb61809c60, type: 3}
+--- !u!124 &124334086266080094
+Behaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1521393363633014}
+  m_Enabled: 1

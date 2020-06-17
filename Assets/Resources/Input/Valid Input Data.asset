@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f3eaa77b3989d47a171d02ae20b802, type: 3}
+  m_Name: Valid Input Data
+  m_EditorClassIdentifier: 
+  keys:
+  - key: 306
+    name: PlayerCrouch
+    normalName: Crouch
+  - key: 97
+    name: PlayerLeft
+    normalName: Go left
+  - key: 119
+    name: PlayerForward
+    normalName: Go forward
+  - key: 115
+    name: PlayerBackward
+    normalName: Go backward
+  - key: 100
+    name: PlayerRight
+    normalName: Go right
+  - key: 114
+    name: PlayerReload
+    normalName: Reload
+  - key: 101
+    name: Use
+    normalName: Use
+  - key: 304
+    name: PlayerRun
+    normalName: Run
+  - key: 27
+    name: OpenMenu
+    normalName: Open Menu
+  - key: 32
+    name: PlayerJump
+    normalName: Jump
+  - key: 323
+    name: PlayerShoot
+    normalName: Shoot
+  - key: 324
+    name: PlayerSight
+    normalName: Sight
+  - key: 9
+    name: InventoryOpen
+    normalName: Open inventory
+  - key: 114
+    name: RotateItem
+    normalName: Rotate item
