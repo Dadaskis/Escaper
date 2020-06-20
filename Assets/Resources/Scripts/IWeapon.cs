@@ -28,6 +28,7 @@ public abstract class IWeapon : MonoBehaviour {
 	public bool firstPerson = true;
 	public int maxAmmo = 1;
 	public int currentAmmo = 1;
+	public bool restrictUsing = false;
 
 	public IEnumerator PlayAnimation(string name, float duration) {
 		animationPlaying = true;

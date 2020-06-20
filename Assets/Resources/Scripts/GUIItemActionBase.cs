@@ -10,8 +10,10 @@ public class GUIItemActionBase : MonoBehaviour {
 	}
 
 	public virtual void Apply(GUIItemDropOutWindow window, GUIItem item) { 
-		window.CreateNewButton ("Drop", delegate {
-			Destroy(item.gameObject);
+		window.CreateNewButton ("Close", delegate {});
+
+		window.CreateNewButton ("Info", delegate {
+			item.inventory.OpenItemInfoWindow(item);
 		});
 	}
 

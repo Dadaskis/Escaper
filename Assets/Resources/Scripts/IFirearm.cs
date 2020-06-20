@@ -63,6 +63,9 @@ public abstract class IFirearm : IWeapon {
 	public abstract void FirearmUpdate ();
 
 	public override void PrimaryFire () {
+		if (restrictUsing == true) {
+			return;
+		}
 		if (nextShootTime > (60.0f / fireRate)) {
 			nextShootTime = 0.0f;
 			Shoot ();
@@ -71,6 +74,9 @@ public abstract class IFirearm : IWeapon {
 	}
 
 	public override void SingleSecondaryFire () {
+		if (restrictUsing == true) {
+			return;
+		}
 		inSight = !inSight;
 	}
 

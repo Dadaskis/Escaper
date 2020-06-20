@@ -16,6 +16,12 @@ public class GUIDropOutActionRegister : MonoBehaviour {
 	}
 
 	public static GUIItemActionBase Get(string name) {
-		return instance.actions [name];
+		//return instance.actions [name];
+		GUIItemActionBase action;
+		if (instance.actions.TryGetValue (name, out action)) {
+			return action;
+		}
+		Debug.LogError ("[GUIDropOutActionRegister] Cant get action: " + name);
+		return null;
 	}
 }

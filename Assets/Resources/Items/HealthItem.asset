@@ -11,10 +11,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ae85f61c00551e4da5640aa5bfb0378, type: 3}
   m_Name: HealthItem
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1733015217935246, guid: cd5c0b2fcb217164497466227858ace3, type: 2}
+  prefabUI: {fileID: 1733015217935246, guid: cd5c0b2fcb217164497466227858ace3, type: 2}
+  physicalPrefab: {fileID: 1242199610688324, guid: 5442a8a865f72e7489a73635b0d13b3d,
+    type: 2}
   icon: {fileID: 21300000, guid: a2386d0b77312b347a2d2e4d42778c93, type: 3}
+  actionType: Simple
   nameText: Health
   tag: Health
   additionalText: 100/100
   showName: Health pack
+  fullName: 
+  description: 
   size: {x: 3, y: 3}

@@ -11,11 +11,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f756ea0399b4a6d45b1e7aa0038d19eb, type: 3}
   m_Name: MinecraftGunItem
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1269399987675464, guid: 5d29ea52e10802145b99cad868965eed, type: 2}
+  prefabUI: {fileID: 1269399987675464, guid: 5d29ea52e10802145b99cad868965eed, type: 2}
+  physicalPrefab: {fileID: 1542044411092318, guid: 7deece2243ce4cf41989b3d2ff57019a,
+    type: 2}
   icon: {fileID: 21300000, guid: 7b7a743be48c1be4abf57c5dfeaecf49, type: 3}
+  actionType: Base
   nameText: Minecraft gun
   tag: Weapon
   additionalText: 10/10
   showName: Minecraft gun
+  fullName: 
+  description: 
   size: {x: 6, y: 3}
   weaponClass: MinecraftGun

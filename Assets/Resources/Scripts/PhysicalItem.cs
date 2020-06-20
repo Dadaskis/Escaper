@@ -31,7 +31,7 @@ public class PhysicalItem : IUsableObject {
 	}
 
 	public override void Use () {
-		GameObject itemObject = Instantiate (data.prefab, Player.instance.inventory.transform);
+		GameObject itemObject = Instantiate (data.prefabUI, Player.instance.inventory.transform);
 
 		GUIItem item = itemObject.GetComponent<GUIItem> ();
 		item.nameText.text = data.nameText;
@@ -39,6 +39,10 @@ public class PhysicalItem : IUsableObject {
 		item.icon.sprite = data.icon;
 		item.size = data.size;
 		item.itemTag = data.tag;
+		item.fullName = data.fullName;
+		item.description = data.description;
+		item.actionsType = data.actionType;
+		item.physicalData = data;
 		item.Resize ();
 
 		customItemSetDataEvent.Invoke (item, data);

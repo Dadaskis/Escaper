@@ -12,7 +12,7 @@
 		
 		CGPROGRAM
 
-		#pragma surface surf StandardSpecular fullforwardshadows decal:blend
+		#pragma surface surf StandardSpecular decal:blend
 
 		#pragma target 3.0
 

@@ -142,10 +142,13 @@
      <Compile Include="Assets\Resources\Scripts\FPSTextChanger.cs" />
      <Compile Include="Assets\Resources\Scripts\FirstPersonWeaponChanger.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIArmorChecker.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUICloseButton.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIContainer.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIContainerWeaponEventHandler.cs" />
      <Compile Include="Assets\Resources\Scripts\GUICustomUtility.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIDisableMouseLookOnInput.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIDisableOnInput.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIDragable.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIDropOutActionRegister.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIEnableOnKeyPress.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIEventsController.cs" />
@@ -153,8 +156,11 @@
      <Compile Include="Assets\Resources\Scripts\GUIInventorySlots.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIItem.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIItemActionBase.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIItemActionSimple.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIItemDropOutButton.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIItemDropOutWindow.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIItemInfoWindow.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIRestrictWeaponUsingOnInput.cs" />
      <Compile Include="Assets\Resources\Scripts\GUISlot.cs" />
      <Compile Include="Assets\Resources\Scripts\GlobalLuaExecutor.cs" />
      <Compile Include="Assets\Resources\Scripts\GraphicsSettings.cs" />
@@ -286,6 +292,7 @@
      <Compile Include="Assets\Resources\Standard Assets\Utility\TimedObjectDestructor.cs" />
      <Compile Include="Assets\Resources\Standard Assets\Utility\WaypointCircuit.cs" />
      <Compile Include="Assets\Resources\Standard Assets\Utility\WaypointProgressTracker.cs" />
+     <None Include="Assets\Resources\Shaders\ProjectorAdditive.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\FinalPass.shader" />
      <None Include="Assets\PostProcessing\Shaders\Debug\Waveform.compute" />
      <None Include="Assets\ProCore\ProGrids\Shader\pg_GridShader.shader" />

@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Plugins\Unity-Logger\Editor\LoggerEditor.cs" />
+     <None Include="Assets\Resources\Shaders\ProjectorAdditive.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\FinalPass.shader" />
      <None Include="Assets\PostProcessing\Shaders\Debug\Waveform.compute" />
      <None Include="Assets\ProCore\ProGrids\Shader\pg_GridShader.shader" />

@@ -14,6 +14,8 @@ public class GUIItemData {
 	public string actionsType = "";
 	public string tag = "";
 	public string sprite = "";
+	public bool rotated = false;
+	public string physicalData = "";
 
 	public string inventory = "";
 
@@ -37,7 +39,13 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 	public Text additionalDataText;
 	public string actionsType = "";
 	public string itemTag = "";
+	public string fullName;
+	public string description;
 	public GUIInventory inventory;
+	public bool rotated = false;
+	public bool draging = false;
+	public bool rotatedOnBeginDrag = false;
+	public ItemData physicalData;
 
 	private RectTransform rectTransform;
 	private Canvas canvas;
@@ -61,6 +69,16 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 		saveName += serializableTransform.saveName + "Item";
 	}
 
+	void Update() {
+		if (!draging) { 
+			return;
+		}
+
+		if (InputManager.GetButtonDown ("RotateItem")) {
+			Rotate ();
+		}
+	}
+
 	public override void SetSerializableData (SerializableData rawData) {
 		GUIItemData data = ConvertTargetObject<GUIItemData>(rawData.target);
 
@@ -70,6 +88,9 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 		size = data.size;
 		itemTag = data.tag;
 		icon.sprite = SpriteManager.GetSprite (data.sprite);
+		physicalData = Serializer.GetScriptableObject (data.physicalData) as ItemData;
+
+		rotated = data.rotated;
 
 		if (data.placedInSlots) {
 			GUIInventorySlots slots = Serializer.GetComponent (data.inventorySlots) as GUIInventorySlots;
@@ -97,6 +118,8 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 		item.size = size;
 		item.tag = itemTag;
 		item.sprite = icon.sprite.name;
+		item.rotated = rotated;
+		item.physicalData = physicalData.name;
 
 		if (bindedSlot != null && bindedInventorySlots != null) {
 			item.placedInSlots = true;
@@ -119,9 +142,28 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 			rectTransform = GetComponent<RectTransform> ();
 		}
 		Vector2 size = rectTransform.sizeDelta;
-		size.x = GUISlot.SLOT_SIZE * this.size.x;
-		size.y = GUISlot.SLOT_SIZE * this.size.y;
+		if (!rotated) {
+			size.x = GUISlot.SLOT_SIZE * this.size.x;
+			size.y = GUISlot.SLOT_SIZE * this.size.y;
+		} else {
+			size.y = GUISlot.SLOT_SIZE * this.size.x;
+			size.x = GUISlot.SLOT_SIZE * this.size.y;
+		}
 		rectTransform.sizeDelta = size;
+	}
+
+	public void Rotate() {
+		rotated = !rotated;
+		float sizeX = size.x;
+		float sizeY = size.y;
+		size = new Vector2 (sizeY, sizeX);
+		if (rotated == true) {
+			rectTransform.pivot = new Vector2 (0.5f, 0.5f);
+			rectTransform.rotation = Quaternion.Euler (new Vector3 (0.0f, 0.0f, 90.0f));
+		} else {
+			rectTransform.rotation = Quaternion.Euler (new Vector3 (0.0f, 0.0f, 0.0f));
+			rectTransform.pivot = new Vector2 (0.0f, 0.0f);
+		}
 	}
 
 	public void OnBeginDrag (PointerEventData eventData) {
@@ -146,6 +188,9 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 				container.image.color = container.nonPuttableInContainerColor;
 			}
 		}
+
+		draging = true;
+		rotatedOnBeginDrag = rotated;
 	}
 
 	public void FindNeededData() {
@@ -200,6 +245,9 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 		rectTransform.anchorMax = Vector2.zero;
 		Transform previousParent = rectTransform.parent;
 		rectTransform.SetParent (slot.transform, false);
+		if (rotated) {
+			rectTransform.pivot = new Vector2 (0.0f, 1.0f);
+		}
 		rectTransform.anchoredPosition = Vector2.zero;
 		rectTransform.SetParent (previousParent, true);
 		List<GUISlot> slots = slot.inventory.GetSlots ((int) slot.position.x, (int) slot.position.y, (int) size.x - 1, (int) size.y - 1);
@@ -215,6 +263,11 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 
 	public void BindToContainer(GUIContainer container) {
 		FindNeededData ();
+
+		if (rotated) {
+			Rotate ();
+		}
+
 		rectTransform.SetParent (container.transform);
 		rectTransform.anchorMax = Vector2.one;
 		rectTransform.sizeDelta = Vector2.zero;
@@ -227,6 +280,8 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 	}
 
 	public void OnEndDrag (PointerEventData eventData) {
+		draging = false;
+
 		List<RaycastResult> raycastResults = GUICustomUtility.RaycastMouse ();
 		GUISlot slot = null;
 		GUIContainer container = null;
@@ -256,13 +311,14 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 		} 
 
 		if(!placed) {
+			if (rotatedOnBeginDrag != rotated) {
+				Rotate ();
+			} 
 			if (bindedContainer != null) {
 				BindToContainer (bindedContainer);
 			} else if (bindedSlot != null && bindedInventorySlots != null) {
 				BindToSlot (bindedSlot);
-			} //else {
-				//rectTransform.anchoredPosition = onBeginPosition;
-			//}
+			} 
 		}
 
 		foreach (GUIContainer containerToColor in inventory.containers) {

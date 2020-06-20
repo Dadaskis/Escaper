@@ -20,6 +20,7 @@ public class GUIInventory : SerializableMonoBehaviour {
 	public GUIInventoryData inventory;
 	public RectTransform dropOutTransform;
 	public GUIItemDropOutWindow dropOutWindow;
+	public GUIItemInfoWindow itemInfoWindow;
 
 	private Canvas canvas;
 
@@ -50,8 +51,6 @@ public class GUIInventory : SerializableMonoBehaviour {
 					dropOutWindow.Work (GUIDropOutActionRegister.Get(item.actionsType), item);
 				}
 			}
-		} else if(InputManager.GetButtonDown ("PlayerShoot") == true) {
-			dropOutTransform.gameObject.SetActive (false);
 		}
 	}
 
@@ -80,6 +79,12 @@ public class GUIInventory : SerializableMonoBehaviour {
 			containers.Add (container);
 			container.inventory = this;
 		}
+	}
+
+	public void OpenItemInfoWindow(GUIItem item) {
+		itemInfoWindow.gameObject.SetActive (true);
+		itemInfoWindow.SetItem (item);
+		transform.SetAsLastSibling ();
 	}
 
 }

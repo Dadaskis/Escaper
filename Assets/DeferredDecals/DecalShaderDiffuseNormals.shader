@@ -25,9 +25,10 @@ Shader "Decal/DecalShader Diffuse+Normals"
 			CGPROGRAM
 			#pragma target 3.0
 			#pragma vertex vert
-			#pragma fragment frag
+			//#pragma fragment frag
 			#pragma exclude_renderers nomrt
 			#pragma shader_feature __ _NORMALMAP
+			#pragma surface surf StandardSpecular fullforwardshadows
 			
 			#include "UnityCG.cginc"
 
@@ -65,11 +66,12 @@ Shader "Decal/DecalShader Diffuse+Normals"
 			sampler2D _NormalsCopy;
 			fixed4 _Color;
 
-			#ifdef _NORMALMAP
-			void frag(v2f i, out half4 outDiffuse : COLOR0, out half4 outNormal : COLOR1){
-			#else
-			void frag(v2f i, out half4 outDiffuse : COLOR0){
-			#endif
+			//#ifdef _NORMALMAP
+			//void frag(v2f i, out half4 outDiffuse : COLOR0, out half4 outNormal : COLOR1){
+			//#else
+			//void frag(v2f i, out half4 outDiffuse : COLOR0){
+			//#endif
+			void surf (Input IN, inout SurfaceOutputStandardSpecular o) {
 				i.ray = i.ray * (_ProjectionParams.z / i.ray.z);
 				float2 uv = i.screenUV.xy / i.screenUV.w;
 				// read depth and reconstruct world position
@@ -90,13 +92,13 @@ Shader "Decal/DecalShader Diffuse+Normals"
 
 				fixed4 col = tex2D (_MainTex, i.uv);
 				clip (col.a - 0.2);
-				outDiffuse = col * _Color;
+				o.Albedo = col * _Color;
 
 				#ifdef _NORMALMAP
 				fixed3 nor = UnpackNormal(tex2D(_BumpMap, i.uv));
 				half3x3 norMat = half3x3(i.orientationX, i.orientationZ, i.orientation);
 				nor = mul (nor, norMat);
-				outNormal = fixed4(nor*0.5+0.5,1);
+				o.Normal = fixed4(nor*0.5+0.5,1);
 				#endif
 
 			}
