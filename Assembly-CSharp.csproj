@@ -135,6 +135,7 @@
      <Compile Include="Assets\Resources\Scripts\CursorReturner.cs" />
      <Compile Include="Assets\Resources\Scripts\DeathPlayerObject.cs" />
      <Compile Include="Assets\Resources\Scripts\DestroyableObject.cs" />
+     <Compile Include="Assets\Resources\Scripts\DoorObject.cs" />
      <Compile Include="Assets\Resources\Scripts\DynamicLightSwitcher.cs" />
      <Compile Include="Assets\Resources\Scripts\EnableObjectInOneFrame.cs" />
      <Compile Include="Assets\Resources\Scripts\EventManager.cs" />

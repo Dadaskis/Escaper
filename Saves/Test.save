@@ -1,7 +1,87 @@
 {
   "data": {
-    "PhysicalCube4": {
-      "saveName": "PhysicalCube4",
+    "DoorDoor0Door": {
+      "saveName": "DoorDoor0Door",
+      "prefabName": "PhysicalCube",
+      "id": -13290,
+      "target": {
+        "opened": false
+      },
+      "type": "DoorObject, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "Door0": {
+      "saveName": "Door0",
+      "prefabName": "PhysicalCube",
+      "id": -13290,
+      "target": {
+        "position": {
+          "x": 68.0263062,
+          "y": 1.00000584,
+          "z": 52.7255478
+        },
+        "counter": 19,
+        "rotation": {
+          "x": -0.535004735,
+          "y": 0.4623527,
+          "z": 0.462352633,
+          "w": 0.5350047,
+          "eulerAngles": {
+            "x": 270.0,
+            "y": 81.66736,
+            "z": 0.0
+          }
+        },
+        "localScale": {
+          "x": 100.0,
+          "y": 100.0,
+          "z": 100.0
+        },
+        "parent": null
+      },
+      "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "MinecraftGun4": {
+      "saveName": "MinecraftGun4",
+      "prefabName": "MinecraftGun",
+      "id": -1232,
+      "target": {
+        "position": {
+          "x": 59.623,
+          "y": 1.18551517,
+          "z": 48.04
+        },
+        "counter": 19,
+        "rotation": {
+          "x": -1.91242E-07,
+          "y": 8.151733E-09,
+          "z": -4.828337E-07,
+          "w": 1.0,
+          "eulerAngles": {
+            "x": -2.19147187E-05,
+            "y": 9.34130355E-07,
+            "z": -5.53286663E-05
+          }
+        },
+        "localScale": {
+          "x": 0.227931142,
+          "y": 0.371024847,
+          "z": 0.867779434
+        },
+        "parent": null
+      },
+      "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "MinecraftGunMinecraftGun4PhysicalItem": {
+      "saveName": "MinecraftGunMinecraftGun4PhysicalItem",
+      "prefabName": "MinecraftGun",
+      "id": -1232,
+      "target": {
+        "itemDataName": "MinecraftGunItem"
+      },
+      "type": "PhysicalItem, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "PhysicalCube5": {
+      "saveName": "PhysicalCube5",
       "prefabName": "PhysicalCube",
       "id": -1178,
       "target": {
@@ -31,8 +111,8 @@
       },
       "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "PhysicalCube4Materials": {
-      "saveName": "PhysicalCube4Materials",
+    "PhysicalCube5Materials": {
+      "saveName": "PhysicalCube5Materials",
       "prefabName": "PhysicalCube",
       "id": -1178,
       "target": {
@@ -42,8 +122,8 @@
       },
       "type": "SerializableMaterial, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "PhysicalCubePhysicalCube4Rigidbody": {
-      "saveName": "PhysicalCubePhysicalCube4Rigidbody",
+    "PhysicalCubePhysicalCube5Rigidbody": {
+      "saveName": "PhysicalCubePhysicalCube5Rigidbody",
       "prefabName": "PhysicalCube",
       "id": -1178,
       "target": {
@@ -59,8 +139,8 @@
       },
       "type": "SerializableRigidbody, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "PhysicalCubePhysicalCube4PhysicalItem": {
-      "saveName": "PhysicalCubePhysicalCube4PhysicalItem",
+    "PhysicalCubePhysicalCube5PhysicalItem": {
+      "saveName": "PhysicalCubePhysicalCube5PhysicalItem",
       "prefabName": "PhysicalCube",
       "id": -1178,
       "target": {
@@ -68,8 +148,8 @@
       },
       "type": "PhysicalItem, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "PhysicalCube6": {
-      "saveName": "PhysicalCube6",
+    "PhysicalCube7": {
+      "saveName": "PhysicalCube7",
       "prefabName": "PhysicalCube",
       "id": -1130,
       "target": {
@@ -99,8 +179,8 @@
       },
       "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "PhysicalCube6Materials": {
-      "saveName": "PhysicalCube6Materials",
+    "PhysicalCube7Materials": {
+      "saveName": "PhysicalCube7Materials",
       "prefabName": "PhysicalCube",
       "id": -1130,
       "target": {
@@ -110,8 +190,8 @@
       },
       "type": "SerializableMaterial, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "PhysicalCubePhysicalCube6Rigidbody": {
-      "saveName": "PhysicalCubePhysicalCube6Rigidbody",
+    "PhysicalCubePhysicalCube7Rigidbody": {
+      "saveName": "PhysicalCubePhysicalCube7Rigidbody",
       "prefabName": "PhysicalCube",
       "id": -1130,
       "target": {
@@ -127,8 +207,8 @@
       },
       "type": "SerializableRigidbody, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "PhysicalCubePhysicalCube6PhysicalItem": {
-      "saveName": "PhysicalCubePhysicalCube6PhysicalItem",
+    "PhysicalCubePhysicalCube7PhysicalItem": {
+      "saveName": "PhysicalCubePhysicalCube7PhysicalItem",
       "prefabName": "PhysicalCube",
       "id": -1130,
       "target": {
@@ -136,8 +216,8 @@
       },
       "type": "PhysicalItem, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "PhysicalCube5": {
-      "saveName": "PhysicalCube5",
+    "PhysicalCube6": {
+      "saveName": "PhysicalCube6",
       "prefabName": "PhysicalCube",
       "id": -1154,
       "target": {
@@ -167,8 +247,8 @@
       },
       "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "PhysicalCube5Materials": {
-      "saveName": "PhysicalCube5Materials",
+    "PhysicalCube6Materials": {
+      "saveName": "PhysicalCube6Materials",
       "prefabName": "PhysicalCube",
       "id": -1154,
       "target": {
@@ -178,8 +258,8 @@
       },
       "type": "SerializableMaterial, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "PhysicalCubePhysicalCube5Rigidbody": {
-      "saveName": "PhysicalCubePhysicalCube5Rigidbody",
+    "PhysicalCubePhysicalCube6Rigidbody": {
+      "saveName": "PhysicalCubePhysicalCube6Rigidbody",
       "prefabName": "PhysicalCube",
       "id": -1154,
       "target": {
@@ -195,8 +275,8 @@
       },
       "type": "SerializableRigidbody, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "PhysicalCubePhysicalCube5PhysicalItem": {
-      "saveName": "PhysicalCubePhysicalCube5PhysicalItem",
+    "PhysicalCubePhysicalCube6PhysicalItem": {
+      "saveName": "PhysicalCubePhysicalCube6PhysicalItem",
       "prefabName": "PhysicalCube",
       "id": -1154,
       "target": {
@@ -204,8 +284,8 @@
       },
       "type": "PhysicalItem, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "PhysicalCube1": {
-      "saveName": "PhysicalCube1",
+    "PhysicalCube2": {
+      "saveName": "PhysicalCube2",
       "prefabName": "PhysicalCube",
       "id": -1280,
       "target": {
@@ -235,8 +315,8 @@
       },
       "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "PhysicalCube1Materials": {
-      "saveName": "PhysicalCube1Materials",
+    "PhysicalCube2Materials": {
+      "saveName": "PhysicalCube2Materials",
       "prefabName": "PhysicalCube",
       "id": -1280,
       "target": {
@@ -246,8 +326,8 @@
       },
       "type": "SerializableMaterial, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "PhysicalCubePhysicalCube1Rigidbody": {
-      "saveName": "PhysicalCubePhysicalCube1Rigidbody",
+    "PhysicalCubePhysicalCube2Rigidbody": {
+      "saveName": "PhysicalCubePhysicalCube2Rigidbody",
       "prefabName": "PhysicalCube",
       "id": -1280,
       "target": {
@@ -263,8 +343,8 @@
       },
       "type": "SerializableRigidbody, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "PhysicalCubePhysicalCube1PhysicalItem": {
-      "saveName": "PhysicalCubePhysicalCube1PhysicalItem",
+    "PhysicalCubePhysicalCube2PhysicalItem": {
+      "saveName": "PhysicalCubePhysicalCube2PhysicalItem",
       "prefabName": "PhysicalCube",
       "id": -1280,
       "target": {
@@ -272,8 +352,8 @@
       },
       "type": "PhysicalItem, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "PhysicalCube0": {
-      "saveName": "PhysicalCube0",
+    "PhysicalCube1": {
+      "saveName": "PhysicalCube1",
       "prefabName": "PhysicalCube",
       "id": -1304,
       "target": {
@@ -303,8 +383,8 @@
       },
       "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "PhysicalCube0Materials": {
-      "saveName": "PhysicalCube0Materials",
+    "PhysicalCube1Materials": {
+      "saveName": "PhysicalCube1Materials",
       "prefabName": "PhysicalCube",
       "id": -1304,
       "target": {
@@ -314,8 +394,8 @@
       },
       "type": "SerializableMaterial, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "PhysicalCubePhysicalCube0Rigidbody": {
-      "saveName": "PhysicalCubePhysicalCube0Rigidbody",
+    "PhysicalCubePhysicalCube1Rigidbody": {
+      "saveName": "PhysicalCubePhysicalCube1Rigidbody",
       "prefabName": "PhysicalCube",
       "id": -1304,
       "target": {
@@ -331,8 +411,8 @@
       },
       "type": "SerializableRigidbody, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "PhysicalCubePhysicalCube0PhysicalItem": {
-      "saveName": "PhysicalCubePhysicalCube0PhysicalItem",
+    "PhysicalCubePhysicalCube1PhysicalItem": {
+      "saveName": "PhysicalCubePhysicalCube1PhysicalItem",
       "prefabName": "PhysicalCube",
       "id": -1304,
       "target": {
@@ -340,8 +420,8 @@
       },
       "type": "PhysicalItem, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "StaticCube2": {
-      "saveName": "StaticCube2",
+    "StaticCube3": {
+      "saveName": "StaticCube3",
       "prefabName": "StaticCube",
       "id": -1258,
       "target": {
@@ -371,8 +451,8 @@
       },
       "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "StaticCube2Materials": {
-      "saveName": "StaticCube2Materials",
+    "StaticCube3Materials": {
+      "saveName": "StaticCube3Materials",
       "prefabName": "StaticCube",
       "id": -1258,
       "target": {
@@ -382,8 +462,8 @@
       },
       "type": "SerializableMaterial, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "StaticCubeStaticCube2Rigidbody": {
-      "saveName": "StaticCubeStaticCube2Rigidbody",
+    "StaticCubeStaticCube3Rigidbody": {
+      "saveName": "StaticCubeStaticCube3Rigidbody",
       "prefabName": "StaticCube",
       "id": -1258,
       "target": {
@@ -399,25 +479,25 @@
       },
       "type": "SerializableRigidbody, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "PlayerTransform10": {
-      "saveName": "PlayerTransform10",
+    "PlayerTransform11": {
+      "saveName": "PlayerTransform11",
       "prefabName": "Player",
-      "id": 16716,
+      "id": 16028,
       "target": {
         "position": {
-          "x": 66.40734,
-          "y": 2.01001644,
-          "z": 45.1086655
+          "x": 67.86644,
+          "y": 2.010019,
+          "z": 52.2338181
         },
         "counter": 19,
         "rotation": {
           "x": 0.0,
-          "y": -0.329690665,
+          "y": 0.004363296,
           "z": 0.0,
-          "w": 0.944089055,
+          "w": 0.9999905,
           "eulerAngles": {
             "x": 0.0,
-            "y": 321.5,
+            "y": 0.49999845,
             "z": 0.0
           }
         },
@@ -430,12 +510,12 @@
       },
       "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "PlayerRigidbodyPlayerTransform10Rigidbody": {
-      "saveName": "PlayerRigidbodyPlayerTransform10Rigidbody",
+    "PlayerRigidbodyPlayerTransform11Rigidbody": {
+      "saveName": "PlayerRigidbodyPlayerTransform11Rigidbody",
       "prefabName": "Player",
-      "id": 16716,
+      "id": 16028,
       "target": {
-        "isKinematic": true,
+        "isKinematic": false,
         "useGravity": true,
         "detectCollisions": true,
         "velocity": {
@@ -447,10 +527,10 @@
       },
       "type": "SerializableRigidbody, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "MouseLook8": {
-      "saveName": "MouseLook8",
+    "MouseLook9": {
+      "saveName": "MouseLook9",
       "prefabName": "Player",
-      "id": 16578,
+      "id": 15964,
       "target": {
         "position": {
           "x": 0.0,
@@ -459,12 +539,12 @@
         },
         "counter": 19,
         "rotation": {
-          "x": 0.166768759,
+          "x": 0.447759241,
           "y": 0.0,
           "z": 0.0,
-          "w": 0.985996068,
+          "w": 0.894154251,
           "eulerAngles": {
-            "x": 19.2000027,
+            "x": 53.2000275,
             "y": 0.0,
             "z": 0.0
           }
@@ -474,14 +554,14 @@
           "y": 1.0,
           "z": 1.0
         },
-        "parent": "PlayerTransform10"
+        "parent": "PlayerTransform11"
       },
       "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "CameraTransform7": {
-      "saveName": "CameraTransform7",
+    "CameraTransform8": {
+      "saveName": "CameraTransform8",
       "prefabName": "Player",
-      "id": 15690,
+      "id": 15244,
       "target": {
         "position": {
           "x": 0.0,
@@ -505,45 +585,45 @@
           "y": 1.0,
           "z": 1.0
         },
-        "parent": "MouseLook8"
+        "parent": "MouseLook9"
       },
       "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "PlayerCanvas9": {
-      "saveName": "PlayerCanvas9",
+    "PlayerCanvas10": {
+      "saveName": "PlayerCanvas10",
       "prefabName": "Player",
-      "id": 16716,
+      "id": 16028,
       "target": {
         "position": {
-          "x": 170.608917,
-          "y": 160.395828,
-          "z": -260.640442
+          "x": 252.579788,
+          "y": 102.020447,
+          "z": -219.895615
         },
         "counter": 19,
         "rotation": {
-          "x": -0.157444566,
-          "y": 0.3250737,
-          "z": -0.0549821034,
-          "w": 0.9308681,
+          "x": -0.447754949,
+          "y": -0.00390145928,
+          "z": 0.001953706,
+          "w": 0.894145668,
           "eulerAngles": {
-            "x": 345.085724,
-            "y": 40.107,
-            "z": 347.768524
+            "x": 306.802917,
+            "y": 359.165344,
+            "z": 0.668323338
           }
         },
         "localScale": {
-          "x": 0.8000001,
-          "y": 0.8,
+          "x": 0.8,
+          "y": 0.8000001,
           "z": 0.8000001
         },
-        "parent": "CameraTransform7"
+        "parent": "CameraTransform8"
       },
       "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "InventoryHelper11": {
-      "saveName": "InventoryHelper11",
+    "InventoryHelper12": {
+      "saveName": "InventoryHelper12",
       "prefabName": "Player",
-      "id": 16716,
+      "id": 16028,
       "target": {
         "position": {
           "x": -324.65,
@@ -567,34 +647,52 @@
           "y": 1.0,
           "z": 1.0
         },
-        "parent": "PlayerCanvas9"
+        "parent": "PlayerCanvas10"
       },
       "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "InventoryPanelInventoryPanel12Inventory": {
-      "saveName": "InventoryPanelInventoryPanel12Inventory",
+    "InventoryPanelInventoryPanel13Inventory": {
+      "saveName": "InventoryPanelInventoryPanel13Inventory",
       "prefabName": "Player",
-      "id": 18304,
+      "id": 17070,
       "target": {
         "containers": [
-          "InventoryContainerInventoryContainer14InventoryContainer",
           "InventoryContainerInventoryContainer15InventoryContainer",
           "InventoryContainerInventoryContainer16InventoryContainer",
-          "InventoryContainerInventoryContainer17InventoryContainer"
+          "InventoryContainerInventoryContainer17InventoryContainer",
+          "InventoryContainerInventoryContainer18InventoryContainer"
         ],
         "slots": [
-          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots13InventorySlots",
-          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots13InventorySlots",
-          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots13InventorySlots",
-          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots13InventorySlots"
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots",
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots",
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots",
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots",
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots",
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots",
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots",
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots",
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots",
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots",
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots",
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots",
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots",
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots",
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots",
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots",
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots",
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots",
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots",
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots",
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots",
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots"
         ]
       },
       "type": "GUIInventory, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "InventoryPanel12": {
-      "saveName": "InventoryPanel12",
+    "InventoryPanel13": {
+      "saveName": "InventoryPanel13",
       "prefabName": "Player",
-      "id": 18304,
+      "id": 17070,
       "target": {
         "position": {
           "x": 324.0,
@@ -618,14 +716,14 @@
           "y": 1.0,
           "z": 1.0
         },
-        "parent": "InventoryHelper11"
+        "parent": "InventoryHelper12"
       },
       "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "InventoryPanelRectInventoryPanel12RectTransform": {
-      "saveName": "InventoryPanelRectInventoryPanel12RectTransform",
+    "InventoryPanelRectInventoryPanel13RectTransform": {
+      "saveName": "InventoryPanelRectInventoryPanel13RectTransform",
       "prefabName": "Player",
-      "id": 18304,
+      "id": 17070,
       "target": {
         "position": {
           "x": 324.0,
@@ -658,17 +756,17 @@
       },
       "type": "SerializableRectTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots13InventorySlots": {
-      "saveName": "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots13InventorySlots",
+    "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots": {
+      "saveName": "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots14InventorySlots",
       "prefabName": "Player",
-      "id": 16422,
+      "id": 15844,
       "target": {},
       "type": "GUIInventorySlots, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "InventorySlots13": {
-      "saveName": "InventorySlots13",
+    "InventorySlots14": {
+      "saveName": "InventorySlots14",
       "prefabName": "Player",
-      "id": 16422,
+      "id": 15844,
       "target": {
         "position": {
           "x": 32.0,
@@ -692,14 +790,14 @@
           "y": 1.0,
           "z": 1.0
         },
-        "parent": "InventoryPanel12"
+        "parent": "InventoryPanel13"
       },
       "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "InventoryContainerInventoryContainer16InventoryContainer": {
-      "saveName": "InventoryContainerInventoryContainer16InventoryContainer",
+    "InventoryContainerInventoryContainer17InventoryContainer": {
+      "saveName": "InventoryContainerInventoryContainer17InventoryContainer",
       "prefabName": "Player",
-      "id": 16034,
+      "id": 15520,
       "target": {
         "whiteList": [
           "ArmorBody"
@@ -707,10 +805,10 @@
       },
       "type": "GUIContainer, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "InventoryContainer16": {
-      "saveName": "InventoryContainer16",
+    "InventoryContainer17": {
+      "saveName": "InventoryContainer17",
       "prefabName": "Player",
-      "id": 16034,
+      "id": 15520,
       "target": {
         "position": {
           "x": -282.0,
@@ -734,14 +832,14 @@
           "y": 0.99999994,
           "z": 0.99999994
         },
-        "parent": "InventoryPanel12"
+        "parent": "InventoryPanel13"
       },
       "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "InventoryContainerInventoryContainer16RectTransform": {
-      "saveName": "InventoryContainerInventoryContainer16RectTransform",
+    "InventoryContainerInventoryContainer17RectTransform": {
+      "saveName": "InventoryContainerInventoryContainer17RectTransform",
       "prefabName": "Player",
-      "id": 16034,
+      "id": 15520,
       "target": {
         "position": {
           "x": 58.5,
@@ -774,10 +872,10 @@
       },
       "type": "SerializableRectTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "InventoryContainerInventoryContainer17InventoryContainer": {
-      "saveName": "InventoryContainerInventoryContainer17InventoryContainer",
+    "InventoryContainerInventoryContainer18InventoryContainer": {
+      "saveName": "InventoryContainerInventoryContainer18InventoryContainer",
       "prefabName": "Player",
-      "id": 15742,
+      "id": 15278,
       "target": {
         "whiteList": [
           "ArmorHead"
@@ -785,10 +883,10 @@
       },
       "type": "GUIContainer, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "InventoryContainer17": {
-      "saveName": "InventoryContainer17",
+    "InventoryContainer18": {
+      "saveName": "InventoryContainer18",
       "prefabName": "Player",
-      "id": 15742,
+      "id": 15278,
       "target": {
         "position": {
           "x": -256.5,
@@ -812,14 +910,14 @@
           "y": 0.99999994,
           "z": 0.99999994
         },
-        "parent": "InventoryPanel12"
+        "parent": "InventoryPanel13"
       },
       "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "InventoryContainerInventoryContainer17RectTransform": {
-      "saveName": "InventoryContainerInventoryContainer17RectTransform",
+    "InventoryContainerInventoryContainer18RectTransform": {
+      "saveName": "InventoryContainerInventoryContainer18RectTransform",
       "prefabName": "Player",
-      "id": 15742,
+      "id": 15278,
       "target": {
         "position": {
           "x": 84.0,
@@ -852,10 +950,10 @@
       },
       "type": "SerializableRectTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "InventoryContainerInventoryContainer14InventoryContainer": {
-      "saveName": "InventoryContainerInventoryContainer14InventoryContainer",
+    "InventoryContainerInventoryContainer15InventoryContainer": {
+      "saveName": "InventoryContainerInventoryContainer15InventoryContainer",
       "prefabName": "Player",
-      "id": 16268,
+      "id": 15716,
       "target": {
         "whiteList": [
           "Weapon"
@@ -863,10 +961,10 @@
       },
       "type": "GUIContainer, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "InventoryContainer14": {
-      "saveName": "InventoryContainer14",
+    "InventoryContainer15": {
+      "saveName": "InventoryContainer15",
       "prefabName": "Player",
-      "id": 16268,
+      "id": 15716,
       "target": {
         "position": {
           "x": -294.15,
@@ -890,14 +988,14 @@
           "y": 0.99999994,
           "z": 0.99999994
         },
-        "parent": "InventoryPanel12"
+        "parent": "InventoryPanel13"
       },
       "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "InventoryContainerInventoryContainer14RectTransform": {
-      "saveName": "InventoryContainerInventoryContainer14RectTransform",
+    "InventoryContainerInventoryContainer15RectTransform": {
+      "saveName": "InventoryContainerInventoryContainer15RectTransform",
       "prefabName": "Player",
-      "id": 16268,
+      "id": 15716,
       "target": {
         "position": {
           "x": 46.35001,
@@ -930,10 +1028,10 @@
       },
       "type": "SerializableRectTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "InventoryContainerInventoryContainer15InventoryContainer": {
-      "saveName": "InventoryContainerInventoryContainer15InventoryContainer",
+    "InventoryContainerInventoryContainer16InventoryContainer": {
+      "saveName": "InventoryContainerInventoryContainer16InventoryContainer",
       "prefabName": "Player",
-      "id": 16110,
+      "id": 15626,
       "target": {
         "whiteList": [
           "Weapon"
@@ -941,10 +1039,10 @@
       },
       "type": "GUIContainer, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "InventoryContainer15": {
-      "saveName": "InventoryContainer15",
+    "InventoryContainer16": {
+      "saveName": "InventoryContainer16",
       "prefabName": "Player",
-      "id": 16110,
+      "id": 15626,
       "target": {
         "position": {
           "x": -294.15,
@@ -968,14 +1066,14 @@
           "y": 0.99999994,
           "z": 0.99999994
         },
-        "parent": "InventoryPanel12"
+        "parent": "InventoryPanel13"
       },
       "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     },
-    "InventoryContainerInventoryContainer15RectTransform": {
-      "saveName": "InventoryContainerInventoryContainer15RectTransform",
+    "InventoryContainerInventoryContainer16RectTransform": {
+      "saveName": "InventoryContainerInventoryContainer16RectTransform",
       "prefabName": "Player",
-      "id": 16110,
+      "id": 15626,
       "target": {
         "position": {
           "x": 46.35001,
@@ -1007,74 +1105,6 @@
         }
       },
       "type": "SerializableRectTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    "InventoryItemInventoryItem18Item": {
-      "saveName": "InventoryItemInventoryItem18Item",
-      "prefabName": "InventoryWeaponItem",
-      "id": -168258,
-      "target": {
-        "size": {
-          "x": 3.0,
-          "y": 6.0
-        },
-        "nameText": "Minecraft gun",
-        "additionalDataText": "10/10",
-        "actionsType": "base",
-        "tag": "Weapon",
-        "sprite": "ReflectiveMaterialIcon",
-        "rotated": true,
-        "inventory": "InventoryPanelInventoryPanel12Inventory",
-        "rectTransform": "",
-        "placedInSlots": true,
-        "inventorySlots": "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots13InventorySlots",
-        "slotPosition": {
-          "x": 3.0,
-          "y": 5.0
-        },
-        "placedInContainer": false,
-        "container": ""
-      },
-      "type": "GUIItem, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    "InventoryItem18": {
-      "saveName": "InventoryItem18",
-      "prefabName": "InventoryWeaponItem",
-      "id": -168258,
-      "target": {
-        "position": {
-          "x": 122.0,
-          "y": -69.0,
-          "z": 3.43322754E-05
-        },
-        "counter": 19,
-        "rotation": {
-          "x": -5.960463E-08,
-          "y": -5.960463E-08,
-          "z": 0.7071068,
-          "w": 0.707106769,
-          "eulerAngles": {
-            "x": 4.07111E-13,
-            "y": -9.659344E-06,
-            "z": 90.0
-          }
-        },
-        "localScale": {
-          "x": 1.00000048,
-          "y": 1.00000048,
-          "z": 1.00000024
-        },
-        "parent": "InventoryPanel12"
-      },
-      "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
-    },
-    "InventoryItemInventoryItem18WeaponGUIItemEventHandler": {
-      "saveName": "InventoryItemInventoryItem18WeaponGUIItemEventHandler",
-      "prefabName": "InventoryWeaponItem",
-      "id": -168258,
-      "target": {
-        "weaponClass": "MinecraftGun"
-      },
-      "type": "WeaponGUIItemEventHandler, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
     }
   }
 }
