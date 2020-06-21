@@ -178,6 +178,7 @@
      <Compile Include="Assets\Resources\Scripts\InputData.cs" />
      <Compile Include="Assets\Resources\Scripts\InputManager.cs" />
      <Compile Include="Assets\Resources\Scripts\ItemData.cs" />
+     <Compile Include="Assets\Resources\Scripts\LadderObject.cs" />
      <Compile Include="Assets\Resources\Scripts\LootBox.cs" />
      <Compile Include="Assets\Resources\Scripts\MainMenuCameraRotator.cs" />
      <Compile Include="Assets\Resources\Scripts\MainMenuOnClick.cs" />

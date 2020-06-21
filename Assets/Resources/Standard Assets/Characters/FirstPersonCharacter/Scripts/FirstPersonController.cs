@@ -16,7 +16,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] [Range(0f, 1f)] private float m_RunstepLenghten;
         [SerializeField] private float m_JumpSpeed;
         [SerializeField] private float m_StickToGroundForce;
-        [SerializeField] private float m_GravityMultiplier;
+        [SerializeField] public float gravityMultiplier;
 		public MouseLook mouseLook;
         [SerializeField] private bool m_UseFovKick;
         [SerializeField] private FOVKick m_FovKick = new FOVKick();
@@ -201,7 +201,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             else
             {
-                m_MoveDir += Physics.gravity*m_GravityMultiplier*Time.fixedDeltaTime;
+                m_MoveDir += Physics.gravity*gravityMultiplier*Time.fixedDeltaTime;
 				m_MoveDir.x = m_CharacterController.velocity.x + (desiredMove.x * inAirMoveMultiplier);
 				m_MoveDir.z = m_CharacterController.velocity.z + (desiredMove.z * inAirMoveMultiplier);
 				if (isCrouching) {

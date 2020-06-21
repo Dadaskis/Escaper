@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 
 [RequireComponent(typeof(Character))]
 public class Player : MonoBehaviour {
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour {
 	public float pickupDistance = 3.0f;
 	public GUIInventory inventory;
 	public PlayerWeaponSlots weaponSlots;
+	public FirstPersonController controller;
 
 	public GameObject WeaponObject {
 		set {
