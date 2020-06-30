@@ -21,10 +21,10 @@ QualitySettings:
     textureQuality: 0
     anisotropicTextures: 2
     antiAliasing: 0
-    softParticles: 0
+    softParticles: 1
     softVegetation: 1
-    realtimeReflectionProbes: 0
-    billboardsFaceCameraPosition: 0
+    realtimeReflectionProbes: 1
+    billboardsFaceCameraPosition: 1
     vSyncCount: 0
     lodBias: 2
     maximumLODLevel: 0
@@ -32,4 +32,5 @@ QualitySettings:
     asyncUploadTimeSlice: 2
     asyncUploadBufferSize: 16
     excludedTargetPlatforms: []
-  m_PerPlatformDefaultQuality: {}
+  m_PerPlatformDefaultQuality:
+    Standalone: 0
