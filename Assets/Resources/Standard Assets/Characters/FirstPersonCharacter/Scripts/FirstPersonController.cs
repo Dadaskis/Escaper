@@ -32,7 +32,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jump;
         private float m_YRotation;
         private Vector2 m_Input;
-        private Vector3 moveDir = Vector3.zero;
+        public Vector3 moveDir = Vector3.zero;
 		public CharacterController characterController;
         private CollisionFlags m_CollisionFlags;
         private bool m_PreviouslyGrounded;
@@ -49,6 +49,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 		public bool holdCrouch = true;
 		public float inAirMoveMultiplier = 0.3f;
 		public bool inertionInAir = true;
+		public bool enableLogic = true;
 
 		private bool isCrouching = false;
 		private float previousY = 0.0f;
@@ -78,6 +79,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			if (enableMouseLook) {
 				RotateView ();
 			}
+
+			if (!enableLogic) {
+				return;
+			}
+
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
             {
@@ -173,6 +179,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void FixedUpdate()
         {
+			if (!enableLogic) {
+				return;
+			}
+
             float speed;
             GetInput(out speed);
             // always move along the camera forward as it is the direction that it being aimed at
@@ -362,6 +372,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
+			if (!enableLogic) {
+				return;
+			}
             Rigidbody body = hit.collider.attachedRigidbody;
             //dont move the rigidbody if the character is on top of it
             if (m_CollisionFlags == CollisionFlags.Below)

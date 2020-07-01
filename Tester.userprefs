@@ -1,6 +1,6 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\NAF\LightVoxelColliderPainter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\WaterObject.cs">
     <Files>
       <File FileName="Assets\Resources\Scripts\ItemData.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\Player.cs" Line="1" Column="1" />
@@ -55,18 +55,18 @@
       <File FileName="Assets\Resources\Scripts\GUIDragable.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\GUIDisableOnInput.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\DoorObject.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\LadderObject.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\WaterObject.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\LadderObject.cs" Line="17" Column="38" />
+      <File FileName="Assets\Resources\Scripts\WaterObject.cs" Line="53" Column="47" />
       <File FileName="Assets\Resources\Scripts\PlayerFirstPersonController.cs" Line="1" Column="1" />
       <File FileName="Assets\DecalSystem\Plugins\DecalSystem\Decal.cs" Line="1" Column="1" />
       <File FileName="Assets\DecalSystem\Plugins\DecalSystem\Utils\DecalBuilder.cs" Line="1" Column="1" />
       <File FileName="Assets\DecalSystem\Plugins\DecalSystem\Utils\DecalUtils.cs" Line="1" Column="1" />
       <File FileName="Assets\DecalSystem\Plugins\DecalSystem\Utils\MeshBuilder.cs" Line="1" Column="1" />
       <File FileName="Assets\DecalSystem\Plugins\DecalSystem\Utils\PolygonClippingUtils.cs" Line="1" Column="1" />
-      <File FileName="Assets\InkPainter\Sample\Script\CollisionPainter.cs" Line="8" Column="3" />
-      <File FileName="Assets\Resources\Scripts\NAF\Lightmapper.cs" Line="17" Column="2" />
-      <File FileName="Assets\Resources\Scripts\NAF\LightVoxelColliderPainter.cs" Line="33" Column="3" />
+      <File FileName="Assets\InkPainter\Sample\Script\CollisionPainter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\NAF\Lightmapper.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\NAF\LightVoxelColliderPainter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="35" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -21,6 +21,7 @@ public class Player : MonoBehaviour {
 	public GUIInventory inventory;
 	public PlayerWeaponSlots weaponSlots;
 	public FirstPersonController controller;
+	//public Rigidbody rigidBody;
 
 	public GameObject WeaponObject {
 		set {
