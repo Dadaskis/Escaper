@@ -7562,8 +7562,7 @@ MonoBehaviour:
   pickupDistance: 3
   inventory: {fileID: 1637274694}
   weaponSlots: {fileID: 424684242}
-  controller: {fileID: 424684239}
-  rigidBody: {fileID: 424684241}
+  controller: {fileID: 0}
   killed: 0
 --- !u!82 &424684249
 AudioSource:
@@ -7752,6 +7751,7 @@ MonoBehaviour:
   m_JumpSound: {fileID: 0}
   m_LandSound: {fileID: 0}
   m_Camera: {fileID: 1295350456}
+  moveDir: {x: 0, y: 0, z: 0}
   characterController: {fileID: 424684252}
   enableMouseLook: 1
   targetHeight: 2
@@ -7760,6 +7760,7 @@ MonoBehaviour:
   holdCrouch: 1
   inAirMoveMultiplier: 0.3
   inertionInAir: 1
+  enableLogic: 1
 --- !u!143 &424684252
 CharacterController:
   m_ObjectHideFlags: 0

@@ -36,6 +36,13 @@ public class WaterObject : MonoBehaviour {
 		
 	}
 
+	void OnTriggerStay(Collider collider) {
+		Rigidbody body = collider.attachedRigidbody;
+		if (body != null) {
+			body.AddForce (Vector3.up * 1.8f);
+		}
+	}
+
 	void OnTriggerExit(Collider collider) {
 		if (playerInWater == false) {
 			return;

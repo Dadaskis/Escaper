@@ -135,6 +135,7 @@
      <None Include="Assets\PostProcessing\Shaders\Debug\LightMeter.shader" />
      <None Include="Assets\BlurryRefraction\SeparableBlur.shader" />
      <None Include="Assets\Resources\Shaders\CollimatorSightGlass.shader" />
+     <None Include="Assets\Resources\Shaders\WaterShader.shader" />
      <None Include="Assets\DeferredDecals\DecalShaderDiffuseNormals.shader" />
      <None Include="Assets\PostProcessing\Shaders\API\D3D12.hlsl" />
      <None Include="Assets\Resources\Shaders\Decal.shader" />

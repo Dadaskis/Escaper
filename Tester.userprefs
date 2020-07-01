@@ -1,12 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\WaterObject.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Shaders\WaterShader.shader">
     <Files>
       <File FileName="Assets\Resources\Scripts\ItemData.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\Player.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\PhysicalItem.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\IUsableObject.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIItem.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIItem.cs" Line="22" Column="35" />
       <File FileName="Assets\Resources\Scripts\GUIInventorySlots.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\GUIContainer.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\GUIInventory.cs" Line="1" Column="1" />
@@ -55,8 +55,8 @@
       <File FileName="Assets\Resources\Scripts\GUIDragable.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\GUIDisableOnInput.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\DoorObject.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\LadderObject.cs" Line="17" Column="38" />
-      <File FileName="Assets\Resources\Scripts\WaterObject.cs" Line="53" Column="47" />
+      <File FileName="Assets\Resources\Scripts\LadderObject.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\WaterObject.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\PlayerFirstPersonController.cs" Line="1" Column="1" />
       <File FileName="Assets\DecalSystem\Plugins\DecalSystem\Decal.cs" Line="1" Column="1" />
       <File FileName="Assets\DecalSystem\Plugins\DecalSystem\Utils\DecalBuilder.cs" Line="1" Column="1" />
@@ -66,7 +66,8 @@
       <File FileName="Assets\InkPainter\Sample\Script\CollisionPainter.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\NAF\Lightmapper.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\NAF\LightVoxelColliderPainter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="35" Column="15" />
+      <File FileName="Assets\Resources\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Shaders\WaterShader.shader" Line="205" Column="108" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
