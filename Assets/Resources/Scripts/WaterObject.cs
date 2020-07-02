@@ -12,11 +12,16 @@ public class WaterObject : MonoBehaviour {
 	private float timerWithoutPlayer = 0.0f;
 
 	void OnTriggerEnter(Collider collider) {
-		if (playerInWater == true) {
+
+		if (collider.gameObject.isStatic) {
 			return;
 		}
 
-		if (collider.gameObject.isStatic) {
+		if (collider.transform.gameObject.tag == "PlayerWaterEffect") {
+			Player.instance.underWaterPostProcessing.enabled = true;
+		}
+
+		if (playerInWater == true) {
 			return;
 		}
 
@@ -26,13 +31,13 @@ public class WaterObject : MonoBehaviour {
 			//Player.instance.controller.gravityMultiplier = 0.0f;
 			//Player.instance.controller.inertionInAir = false;
 			Player.instance.controller.enableLogic = false;
+			//Player.instance.underWaterPostProcessing.enabled = true;
 			if (timerWithoutPlayer > 1.0f) {
 				speed = Player.instance.controller.characterController.velocity.normalized * Time.deltaTime * 8.0f;
 				timerWithoutPlayer = 0.0f;
 			}
 			//Player.instance.rigidBody.useGravity = false;
 		}
-
 		
 	}
 
@@ -42,13 +47,18 @@ public class WaterObject : MonoBehaviour {
 			body.AddForce (Vector3.up * 1.8f);
 		}
 	}
-
+		
 	void OnTriggerExit(Collider collider) {
-		if (playerInWater == false) {
+
+		if (collider.gameObject.isStatic) {
 			return;
 		}
 
-		if (collider.gameObject.isStatic) {
+		if (collider.transform.gameObject.tag == "PlayerWaterEffect") {
+			Player.instance.underWaterPostProcessing.enabled = false;
+		}
+
+		if (playerInWater == false) {
 			return;
 		}
 

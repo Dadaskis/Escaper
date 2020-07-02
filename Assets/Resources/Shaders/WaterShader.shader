@@ -202,7 +202,7 @@ Shader "Custom/WaterShader" {
             //Colors
             float3 albedo = lerp(lerp(fixed3(0.0, 0.0, 0.0), _ShoreColor.rgb, sandWetness), tex2D(_GradientMap, float2(IN.color.x, 0.0)).rgb, shoreDepth) + foam * sandWetness;
             half3 frag;
-            frag = tex2Dproj(_GrabTexture, IN.screenPos + tex2Dproj(_DisplacementGuide, IN.worldPos.xyzy + (displ.xyxy * _Time.y * 0.5)));
+            frag = tex2Dproj(_GrabTexture, IN.screenPos + tex2Dproj(_DisplacementGuide, IN.worldPos.xyzy + (displ.xyxy * sin(_Time.y) * 0.5)));
             //frag = lerp(frag, fixed3(0.3, 0.3, 0.3), 0.2);
             o.Albedo = lerp(albedo, frag, _Refraction);
             o.Emission = o.Albedo * saturate(_WorldSpaceLightPos0.y) * _LightColor0 * _Emission;

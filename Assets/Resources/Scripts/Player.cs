@@ -21,6 +21,7 @@ public class Player : MonoBehaviour {
 	public GUIInventory inventory;
 	public PlayerWeaponSlots weaponSlots;
 	public FirstPersonController controller;
+	public PostProcessingCaller underWaterPostProcessing;
 	//public Rigidbody rigidBody;
 
 	public GameObject WeaponObject {
