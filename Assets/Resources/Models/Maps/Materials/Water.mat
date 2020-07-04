@@ -40,8 +40,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DisplacementGuide:
-        m_Texture: {fileID: 2800000, guid: 290ea2372bd11ed4982fb9979debc844, type: 3}
-        m_Scale: {x: 0.002, y: 0.001}
+        m_Texture: {fileID: 2800000, guid: 6b9498dfd92fc3a48bb42e8e64707551, type: 3}
+        m_Scale: {x: 0.5, y: 0.5}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
@@ -99,6 +99,7 @@ Material:
     - _OffsetAmount: 0
     - _Parallax: 0.08
     - _Refraction: 0.02
+    - _RefractionPower: -12
     - _ShoreColorThreshold: 0.027
     - _ShoreIntersectionThreshold: 5.6
     - _Smoothness: 0.847
@@ -113,7 +114,7 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - _Color: {r: 0, g: 0.37875265, b: 0.5661764, a: 0.909}
-    - _DisplacementProperties: {r: 0.005, g: 0.005, b: 0.005, a: 1}
+    - _DisplacementProperties: {r: 0.01, g: 0.01, b: 0.01, a: 1}
     - _Emission: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0.058661327, g: 0.10936192, b: 0.25735295, a: 1}
     - _FoamIntersectionProperties: {r: 0.3, g: 0.3, b: 0.3, a: 0.14}

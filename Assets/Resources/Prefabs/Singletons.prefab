@@ -11,6 +11,22 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1123383686939906}
   m_IsPrefabParent: 1
+--- !u!1 &1001267774481872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4864231930609502}
+  - component: {fileID: 114200600266192782}
+  m_Layer: 0
+  m_Name: SpriteManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1114251674762170
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1433466912408440
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,6 +188,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!1 &1706791775862870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4924320924325996}
+  - component: {fileID: 114742234968412408}
+  m_Layer: 0
+  m_Name: MaterialManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1782156739756758
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4087826032619298
 Transform:
   m_ObjectHideFlags: 1
@@ -373,6 +405,8 @@ Transform:
   - {fileID: 4197774799839444}
   - {fileID: 4358996676542430}
   - {fileID: 4321601866915328}
+  - {fileID: 4864231930609502}
+  - {fileID: 4924320924325996}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -401,6 +435,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4738835574972424}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4864231930609502
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1001267774481872}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4738835574972424}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4924320924325996
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1706791775862870}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4738835574972424}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &65736641468704430
 BoxCollider:
@@ -462,6 +522,20 @@ MonoBehaviour:
     detailMap: {fileID: 0}
     parallaxMap: {fileID: 2800000, guid: 5fe1abbb5bfd498438d379921555893c, type: 3}
   noiseBlendMaterials: []
+--- !u!114 &114200600266192782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1001267774481872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7b9439cb87c694ab141016727193ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spritesFoldersToCheck:
+  - Models/Maps/Materials/Textures
+  - Textures
 --- !u!114 &114205662872139396
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -595,6 +669,762 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
+--- !u!114 &114742234968412408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1706791775862870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67038c7767b9495458de7f4b79281c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shaderSettings:
+  - advancedName: Standard (Specular setup)
+    fastName: FastStandardSpecular
+    textures:
+    - textureName: _MainTex
+      bindedAtQuality: 0
+    - textureName: _SpecGlossMap
+      bindedAtQuality: 2
+    - textureName: _BumpMap
+      bindedAtQuality: 1
+    - textureName: _ParallaxMap
+      bindedAtQuality: 3
+    - textureName: _OcclusionMap
+      bindedAtQuality: 1
+    - textureName: _EmissionMap
+      bindedAtQuality: 0
+    - textureName: _DetailAlbedoMap
+      bindedAtQuality: 0
+    - textureName: _DetailNormalMap
+      bindedAtQuality: 1
+    keywords:
+    - keyWord: _NORMALMAP
+      bindedAtQuality: 1
+    - keyWord: _PARALLAXMAP
+      bindedAtQuality: 3
+    - keyWord: _DETAIL_MULX2
+      bindedAtQuality: 0
+    - keyWord: _SPECGLOSSMAP
+      bindedAtQuality: 2
+    - keyWord: _SPECULARHIGHLIGHTS_OFF
+      bindedAtQuality: 2
+  materialsSettings:
+  - name: SpecularTest
+    material: {fileID: 2100000, guid: ddb3dcf94dd82134b92ce25b0c56f4dc, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 75101c2fb0f12e04689bb5a5df20fa49, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+  - name: Bandit0Body
+    material: {fileID: 2100000, guid: b884d743f0c1dd740a26ff97765c0cd6, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 3edf4826829614d4d94c41bb8250ae28, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: bb13cbfa82e61f043be487e7e617110c, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: ed2349cea267dba4f9df143f8936bc9c, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+  - name: Brick0
+    material: {fileID: 2100000, guid: 943df3516dbb75247b8898bceabba0cb, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: efb50018bcad36548a7f181e2750f591, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: c254cd18a86525641b5c880c2caf5afc, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 64a3e2059523fe847b46964751cbb4da, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 0e3113c4a5a370e418232e90f0fa4435, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 310ec4661bf52ed4ea6537c2433baabb, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: Brick1
+    material: {fileID: 2100000, guid: ff9c040fff15ebb4d955fc49c60c9f4f, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 6411d41fd60888a46a5e6be1ff96db81, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 07011819096363b42bfbd38c6d89c914, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 5351377a701549c4c8edd0a672f09b29, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 607573ceddb571545b0f90b6ac8c4daa, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: ada73243aabaac545be897b3364a757c, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: Bricks0
+    material: {fileID: 2100000, guid: 82b694b93615bd845b3dd0bad7649c0d, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: dfee91157c229ae40b43de5051b8b12e, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+  - name: Car0
+    material: {fileID: 2100000, guid: fb6fca8bd5e5bf84fb741e63e90d0dcc, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 0024ae134ff07cc4f84cdba759335d9c, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: bfbea090a759ad4488a98cb2b008f712, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 1c0f435d16474664090f1e0c37033fa8, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 31acfe4ce33dcbf479a312dded14a744, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 559b5046057f3dd42b3803a48ed29b55, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: Cardboard0
+    material: {fileID: 2100000, guid: 384f06139a285844daac55286f4e2b23, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: e9d69bbcf515362499414527c4236f23, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 084636808d2ef6a48a75b8c15d9ff0e1, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: b1576a7a51215d24d96ba084c00e53bb, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 0eb5a359874cdb84b8d6e1baafa4ac33, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 7a4ecfb0c6b71fb4fa6966b1e8bfbfb1, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: Concrete0
+    material: {fileID: 2100000, guid: 91e30b6f7687e4042ae90971059469c0, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: ad67b1ec1537303459d8ddffc2e48dc6, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+  - name: Concrete1
+    material: {fileID: 2100000, guid: 5e3f59b5e74804e41967caa5a9ba4b45, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: caef4b3e5fecc6b43a43f4081ef9d2a3, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 44c2b286c9fe7304fbc4fb2ad82dfbb4, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 338bf0d3cc821cd45ac0b53467004966, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 1896889aef557ba4e9df2bbf2779d8ba, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 3f6242b5629b87144bde92dceeb497f0, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: Concrete3
+    material: {fileID: 2100000, guid: 50c7bcaa2d6f7854cb436b51fd78afcb, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: b48b55d2a45ad92429a88cb777155467, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 0f34505065284534d850d5f52fddb82d, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: c55816b63c277d54dacec15024265f4c, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: e8e6480936a4b674c9d8fb604a352678, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 1a7664de3bfe761449b9e7d1f468638c, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: Concrete4
+    material: {fileID: 2100000, guid: a2d7e423b6cee81488d9aa564de17ecf, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 2212bab2b60842e4fb7ab31dfab9e70b, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: d4aa220cd11f36d47acdb2cb6e53909c, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 421ed1b0f92172f4ea20befc512e4437, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: b65cbf002ce32ea4a9ca83a4a6900150, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+  - name: Concrete5
+    material: {fileID: 2100000, guid: 23ddf251eaf023e439e834f16f99dc0b, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 8debaba2f93a18640bb75a009ba03057, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 0fd63405c13721449a8c383d5d739337, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: dfced7050ce973345aba6d01d36a7eee, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 205bfebe8e6300e4e95cb38c835d654e, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 61a1091911ec32f43a35c73333476b5e, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: Concrete6
+    material: {fileID: 2100000, guid: d546626bc8f4eed408036d19be4b6195, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: a85a8ccb3bf020248868993733468b62, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: b47691265cd7c1e438f256e471384faa, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 44750943d54daeb44b27b472abe6d371, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: cf71545d3fa440b4ab924297701ecbb5, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: eef7fe4cf4a632344aa443a1845310e0, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: Concrete8
+    material: {fileID: 2100000, guid: bb7424d4f5d6db14690c8c44fd892c7c, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 09ba63696d24c50488806b03111705d2, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 9e9e90d690ce5eb4581d3a864c76032d, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 68bb99aeb8c24d545b6577dcf406dea8, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: fe2ec26427db6b441839b8ffbf888476, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: d76850df41199ac418d42614613d3eb2, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: Construction0
+    material: {fileID: 2100000, guid: ba474037e39a32248ac77e099e4b8483, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 5dc722c83fad5b6468abf6cf3e5a4615, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 82f38b2f8885817449b5a4f9483c50d6, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 382d8223c9cd3ce4cae4ebd5af1ed1cd, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: bfbdee1303a354640927566df62ae1a0, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: f192b7df3879c7f468f90837b8532f31, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: Debris0
+    material: {fileID: 2100000, guid: 2577995c26b64ca4485d709ca696b1fd, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 62db6a3044646ca468fa3806345b85e2, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: d18dd77fad0522346a825f953f43a12c, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: b71adc6921ab7ae4783647b62eec33ec, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: e2b71ea36246c024e8c9a081336e1898, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+  - name: Dirt0
+    material: {fileID: 2100000, guid: 0d8ae5d61568d52419b7e1eedd56e299, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 10ee3deddf30373418f98faf3a43ad2b, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+  - name: Grass0
+    material: {fileID: 2100000, guid: 1dab0aa22259405448618122d4b36e97, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 7a19a8ecff965884bbdaeb640271f824, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+  - name: Mossy0
+    material: {fileID: 2100000, guid: d08e0e728b8dc17478dbfa71c7de71c8, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 045c41697d7adbc4487493bcaeaad729, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+  - name: Mossy1
+    material: {fileID: 2100000, guid: 66535ffbf8515924982cddc600347193, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 045c41697d7adbc4487493bcaeaad729, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+  - name: Mossy2
+    material: {fileID: 2100000, guid: 90182137428cccc4cbe864f01976ba27, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: f24196eeb45425641b738b0775db03d0, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+  - name: Ground1
+    material: {fileID: 2100000, guid: 6d6252bebb6b8e249b7afac423a15679, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 3597c2eb2dce5f040b40e158487dd5fc, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 4da6f86dd23025b4490edf7a8db76a81, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: a119a929d4005314c9c8aa05f129bc80, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 354fa9fc14debe848bcb97b0bcdb6a1c, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 475302aa30ea0b04fa1b841b3032af24, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: Ground4
+    material: {fileID: 2100000, guid: 11ea38f7e79f1ec4b9eaf6114e10366f, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 0cd18f56a26966043b2ad4d4d1c10c1d, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: d6668f78cc8dbf5488c6390849009f2e, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 4f699b56b6dda774b87fdbab85cf66ec, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 15f3a1b5119700f44aaca25997af462c, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 87813d14e2ca73d41ba8171d22dbd62f, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: Ground5
+    material: {fileID: 2100000, guid: 5d31ed8c5af5e5d48b3daca181b59e45, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: a48b983b17f3cea41b95814af779201e, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 3c3453d895bcc564995777bcedfb79aa, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: c6ddb62eca9c14b4686648a55acbfda4, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: a5a6d3744434f1343b5757efc10023d3, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: b09762736f9736642afc584c54722954, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: Ground7
+    material: {fileID: 2100000, guid: 3b79150a1e402f845ad5c7d2c4c02f9e, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 6cf698592d77b734bb3d183243408624, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 9501fd8190b12af4dad3f401936077bc, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 02477ce57ba67cf468b805662bf21952, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: a7fa9bd5fd17fa440b3a921029a5c92f, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 84d210eb388437640a5f2ad4b3eaebd4, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: Ground7.Lined
+    material: {fileID: 2100000, guid: 788c2e30c525683469d4f26e31ae4860, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 90665fa426e462d49adf3814c3b01b31, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 9501fd8190b12af4dad3f401936077bc, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 02477ce57ba67cf468b805662bf21952, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: a7fa9bd5fd17fa440b3a921029a5c92f, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 84d210eb388437640a5f2ad4b3eaebd4, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: Metal0
+    material: {fileID: 2100000, guid: 295c0902a2eb1ad4d93fd9cf8e2c3fbb, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: ea533fcdb886df24e8454b75b88ebaec, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 1a76083d14f81d64bbd05f554c9f94ee, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 15ff69d206075df46aeccf3ae4650bb1, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: e49323d3d73bdce46aca06ec2e697f98, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 357b8fcce6e2eb844bb98777830ab7f0, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: Metal1
+    material: {fileID: 2100000, guid: 1e585b3bade097441893907e3c57c767, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 65897abc656caf74eaa35e6039be4b75, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6bc4403c434d6d14a9a645f6b1e618e3, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 3096c1a62748a8f42835e03a5224d35f, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: a96d29c46745d1d48b1b823404a12ada, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 1527178a66b8b864d87e7c2221cdaa06, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: Metal3
+    material: {fileID: 2100000, guid: 3e2400511ac29534e98132104032511f, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 1226463b813c9c8438ef49af9aa855e5, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: fed3c4743b08e3e42b6dd06fee3d5316, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: afd1bfa21af37b84abb51d0c318bc867, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 107ea41ac0d9a9c4098295c19cc7532e, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 21ac607e499b48340af0763ba86f3c78, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: Metal4OrangeMesa
+    material: {fileID: 2100000, guid: b3f0e16cffef71941ab07fd378bcea19, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 26e55d7b498244a498ff6270f36bc1ce, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 5ce96769154353c4990e5e0645fd39ec, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 1fb5b820e03294343b7eba8e5b4f8788, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 8a593b5016cd2104395ade142ba7e203, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: dd46004f36fdf6444b661e5ff6994589, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: c360078120586d74086b0db308677b89, type: 3}
+      shaderData:
+        textureName: _EmissionMap
+        bindedAtQuality: 0
+  - name: Metal5
+    material: {fileID: 2100000, guid: a5fc5929b6dbeeb4893507c064d9faac, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: e40104b9d45af7545b6cbb6c8b7f1bcf, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 49ad53c6418f0e34bacb708edc7e62cb, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 3a492f5e3cdf6dd47846c837f3528f22, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: b3521151faa95df4b856ee88c8bf33d3, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 7f0ab2e7d94b56042ae49e54e0f6fc58, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: Metal6
+    material: {fileID: 2100000, guid: 6e15935583d10ac429bdbb2862f6feb3, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 63233d06391a72443b7b1d8c5f7bd28f, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 9cec3c1604486f64a832e6b8e5f73cc8, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 7ed98f56f21772648bfee3473194b959, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: f6d19ca83704b2b409754c23ebc2f99d, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 4a319cd60c8be5a46b4ec46cd16b933e, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: Metal8
+    material: {fileID: 2100000, guid: a72f0670d8812504e9e74cc4f7eb5b94, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: fc570b3a219d46f48beb436d5f68ed70, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: ddf3e4a3cf239b3429fe4ec3cd9a27e2, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 4cd7b1c755ce7ef459d082ac307c9a7e, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: dbc3f66f2c266fe4eab2663e7be4ebe3, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 3d91b24f1846bbc4c8cb079bbb51976d, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: Reflective
+    material: {fileID: 2100000, guid: 7d29b7d6ac230804094fa60666b2b77b, type: 2}
+    shader: 0
+    textures: []
+  - name: Rubber0
+    material: {fileID: 2100000, guid: 93e9540113732b547854d849918a5c2e, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 50222027f68e6d54ba61639ec758823b, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 695b12ca2e7134644aff318986e456c0, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: cdb9bc42aef8cd34cae75b1e23ec7642, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 19d965ba2a7fc6e49b59bc0771b9763c, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 3430e3b6edf1cdd4a84142761dbe3090, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: Window0
+    material: {fileID: 2100000, guid: e5d92f7f1c1ec614788a9df2f3f80783, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 1963aa8b05573f44198efa35d37dab67, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: e2dcfe4ddee4a544fb4e05dcd0e3c613, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 23c423e46eb640b41bd041bb8f457da3, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 048052bac09f53d45956a0750a40b5a4, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 767873f350fc1e84cab199ddd8a5e2ce, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+  - name: WaterPlaneMaterial
+    material: {fileID: 2100000, guid: f1bc741ea0e69a241896582ddb633d55, type: 2}
+    shader: 0
+    textures: []
+  - name: OceanPlaneMaterial
+    material: {fileID: 2100000, guid: a437a9b380909fa4d98f929428f70388, type: 2}
+    shader: 0
+    textures: []
+  currentQuality: 3
 --- !u!114 &114986732595788516
 MonoBehaviour:
   m_ObjectHideFlags: 1

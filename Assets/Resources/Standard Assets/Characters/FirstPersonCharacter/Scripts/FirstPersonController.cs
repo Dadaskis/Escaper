@@ -80,10 +80,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 				RotateView ();
 			}
 
-			if (!enableLogic) {
-				return;
-			}
-
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
             {
@@ -101,8 +97,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 						targetHeight = crouchHeight;
 					} else {
 						RaycastHit hit;
-						bool isHitToOpaque = Physics.Raycast (characterController.transform.position, characterController.transform.up, out hit);
-						if (!isHitToOpaque || hit.distance > startHeight / 1.5f) {
+						bool isHitToOpaque = Physics.Raycast (m_Camera.position, Vector3.up, out hit);
+						if (!isHitToOpaque || hit.distance > 1.0f) {
 							isCrouching = false;
 							targetHeight = startHeight;
 						}
@@ -114,11 +110,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
 				if (isCrouching == true) {
 					targetHeight = crouchHeight;
 				} else {
-					RaycastHit hit;
-					bool isHitToOpaque = Physics.Raycast (characterController.transform.position, characterController.transform.up, out hit);
-					if (!isHitToOpaque || hit.distance > startHeight / 1.5f) {
+					//RaycastHit hit;
+					float radius = characterController.radius;
+					bool isHitToOpaque = Physics.CheckBox (m_Camera.position + new Vector3 (0.0f, radius * 2.0f, 0.0f), new Vector3 (radius, radius, radius));
+					//bool isHitToOpaque = Physics.Raycast (m_Camera.position + new Vector3(0.0f, 0.2f, 0.0f), Vector3.up, out hit);
+					if (!isHitToOpaque) {
 						targetHeight = startHeight;
 					} else {
+						//Debug.Log (hit.distance);
 						isCrouching = true;
 					}
 				}
@@ -145,6 +144,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
 				),
 				5.0f * Time.deltaTime
 			);
+
+			if (!enableLogic) {
+				return;
+			}
 
 			//
 

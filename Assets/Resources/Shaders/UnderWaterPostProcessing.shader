@@ -6,6 +6,8 @@
 		_Color("Color", Color) = (1, 1, 1, 1)
 		_FogColor("Fog color", Color) = (1, 1, 1, 1)
 		_FogDistance("Fog distance", float) = 0.0
+		_FogRefractionPower("Fog refraction power", float) = 0.0
+		_FogPower("Fog power", float) = 0.0
 		_NoiseTex("Noise texture", 2D) = "white" {}
 		_NoiseDepthMultiplier("Noise depth multiplier", float) = 0.0
 		_NoiseDepthOffset("Noise depth offset", float) = 0.0
@@ -69,6 +71,8 @@
 			float4 _FogColor;
 			float4 _Color;
 			float _FogDistance;
+			float _FogRefractionPower;
+			float _FogPower;
 			float _RefractionMix;
 			float _RefractionPower;
 			float _RefractionDepthMultiplier;
@@ -81,13 +85,15 @@
 			float4 ApplyFog(float4 col, float depth, float noise) {
 				depth = max(0.0, depth) * _FogDistance;
 				depth = saturate(depth + ((noise * _NoiseDepthMultiplier) + _NoiseDepthOffset));
-				col = lerp(col, _FogColor * ((noise * _NoiseFogMultiplier) + _NoiseFogOffset), depth);
+				float4 colFoggy = lerp(col * _FogPower, _FogColor * ((noise * _NoiseFogMultiplier) + _NoiseFogOffset), depth);
+				col = lerp(col, colFoggy, depth);
+				//col *= _FogColor * ((noise * _NoiseFogMultiplier) + _NoiseFogOffset);
 				return col;
 			}
 
 			float4 ApplyRefraction(float4 col, float2 displacement, float2 uv, float depth) {
 				depth = 1.0 - depth;
-				col = lerp(col, tex2D(_MainTex, uv + (displacement * (_RefractionPower * depth))), _RefractionMix * ((depth * _RefractionDepthMultiplier) + _RefractionDepthOffset));
+				col = lerp(col, tex2D(_MainTex, uv + (displacement * _RefractionPower)), (_RefractionMix * _RefractionDepthMultiplier) + _RefractionDepthOffset);
 				return col;
 			}
 
@@ -100,9 +106,11 @@
 				float4 col = tex2D(_MainTex, i.uv);
 				float depth = Linear01Depth(SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, i.uv));
 				float2 uv = i.uv + (_Time.y * 0.02);
+				float2 displacement = tex2D(_DisplacementTex, uv);
+				float noise = tex2D(_NoiseTex, (uv * 2.0) + ((displacement + sin(_Time.y * 0.03)) * _FogRefractionPower));
 				col = ApplyColor(col, _Color);
-				col = ApplyFog(col, depth, tex2D(_NoiseTex, uv));
-				col = ApplyRefraction(col, tex2D(_DisplacementTex, uv), i.uv, depth);
+				col = ApplyRefraction(col, displacement, i.uv, depth);
+				col = ApplyFog(col, depth, noise);
 
 				return col;
 			}

@@ -54,6 +54,7 @@
      <None Include="Assets\PostProcessing\Shaders\Builtins\Uber.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\Texture3DLerp.compute" />
      <None Include="Assets\InkPainter\readme_en.txt" />
+     <None Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Changelog.txt" />
      <None Include="Assets\DeferredDecals\DecalShaderDiffuseOnly.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\CopyStd.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\Bloom.shader" />
@@ -61,9 +62,11 @@
      <None Include="Assets\PostProcessing\Shaders\Builtins\CopyStdFromDoubleWide.shader" />
      <None Include="Assets\PostProcessing\Shaders\xRLib.hlsl" />
      <None Include="Assets\DeferredCustomLights\_ReadMe.txt" />
+     <None Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Font\Roboto\LICENSE.txt" />
      <None Include="Assets\PostProcessing\Shaders\API\Switch.hlsl" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVOUpsample.compute" />
      <None Include="Assets\Resources\Shaders\Text.shader" />
+     <None Include="Assets\Resources\Shaders\UnderWaterPostProcessing.shader" />
      <None Include="Assets\PostProcessing\Shaders\API\PSSL.hlsl" />
      <None Include="Assets\BlurryRefraction\GlassWithoutGrab.shader" />
      <None Include="Assets\PostProcessing\Shaders\Debug\Vectorscope.shader" />
@@ -82,6 +85,7 @@
      <None Include="Assets\PostProcessing\Shaders\API\Vulkan.hlsl" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\GrainBaker.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\ExposureHistogram.hlsl" />
+     <None Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Font\Northwest-Bold\ERIC-TIRADO-NORTHWEST-LICENSE.txt" />
      <None Include="Assets\PostProcessing\Shaders\Editor\Trackball.shader" />
      <None Include="Assets\PostProcessing\Shaders\Debug\LightMeter.shader" />
      <None Include="Assets\BlurryRefraction\SeparableBlur.shader" />
@@ -132,6 +136,7 @@
      <None Include="Assets\PostProcessing\Shaders\Builtins\Lut2DBaker.shader" />
      <None Include="Assets\InkPainter\Sample\Shader\VTFHeightTransform.shader" />
      <None Include="Assets\DeferredDecals\_ReadMe.txt" />
+     <None Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Shaders\GraphStandard.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\AutoExposure.compute" />
      <None Include="Assets\PostProcessing\Shaders\Debug\Overlays.shader" />
      <None Include="Assets\PostProcessing\Shaders\API\Metal.hlsl" />
@@ -161,6 +166,7 @@
      <None Include="Assets\PostProcessing\Shaders\API\PSP2.hlsl" />
      <None Include="Assets\PostProcessing\Shaders\Debug\Histogram.compute" />
      <None Include="Assets\PostProcessing\Shaders\Debug\Histogram.shader" />
+     <None Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Shaders\GraphMobile.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\ExposureHistogram.compute" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>D:/Games/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
