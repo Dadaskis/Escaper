@@ -163,6 +163,7 @@
      <Compile Include="Assets\Resources\Scripts\ExplodeOnUse.cs" />
      <Compile Include="Assets\Resources\Scripts\FPSTextChanger.cs" />
      <Compile Include="Assets\Resources\Scripts\FirstPersonWeaponChanger.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIAdvancedRendererApply.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIArmorChecker.cs" />
      <Compile Include="Assets\Resources\Scripts\GUICloseButton.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIContainer.cs" />
@@ -174,7 +175,7 @@
      <Compile Include="Assets\Resources\Scripts\GUIDropOutActionRegister.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIEnableOnInputSwitcher.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIEnableOnKeyPress.cs" />
-     <Compile Include="Assets\Resources\Scripts\GUIEventsController.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIFastModeRendererApply.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIInventory.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIInventorySlots.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIItem.cs" />
@@ -185,7 +186,11 @@
      <Compile Include="Assets\Resources\Scripts\GUIItemInfoWindow.cs" />
      <Compile Include="Assets\Resources\Scripts\GUILoadGameSavesListUpdate.cs" />
      <Compile Include="Assets\Resources\Scripts\GUILoadWindowButton.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIQualityController.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIQualityGreater.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIQualityLower.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIRendererModeDropdown.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIResolutionDropdown.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIRestrictWeaponUsingOnInput.cs" />
      <Compile Include="Assets\Resources\Scripts\GUISaveButton.cs" />
      <Compile Include="Assets\Resources\Scripts\GUISaveElementLoadButton.cs" />
@@ -195,7 +200,6 @@
      <Compile Include="Assets\Resources\Scripts\GUITabMemory.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIWindowEnabler.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIWindowEnablerMemory.cs" />
-     <Compile Include="Assets\Resources\Scripts\GlobalLuaExecutor.cs" />
      <Compile Include="Assets\Resources\Scripts\GraphicsSettings.cs" />
      <Compile Include="Assets\Resources\Scripts\HealthTextUpdate.cs" />
      <Compile Include="Assets\Resources\Scripts\HumanoidCharacter.cs" />
@@ -204,7 +208,6 @@
      <Compile Include="Assets\Resources\Scripts\IUsableObject.cs" />
      <Compile Include="Assets\Resources\Scripts\IWeapon.cs" />
      <Compile Include="Assets\Resources\Scripts\IWeaponChanger.cs" />
-     <Compile Include="Assets\Resources\Scripts\InGameMenu.cs" />
      <Compile Include="Assets\Resources\Scripts\InSightDisabler.cs" />
      <Compile Include="Assets\Resources\Scripts\InertialMoving.cs" />
      <Compile Include="Assets\Resources\Scripts\InputData.cs" />
@@ -214,7 +217,6 @@
      <Compile Include="Assets\Resources\Scripts\LootBox.cs" />
      <Compile Include="Assets\Resources\Scripts\MainMenuCameraRotator.cs" />
      <Compile Include="Assets\Resources\Scripts\MainMenuOnClick.cs" />
-     <Compile Include="Assets\Resources\Scripts\MapLevelTransition.cs" />
      <Compile Include="Assets\Resources\Scripts\MapObject.cs" />
      <Compile Include="Assets\Resources\Scripts\MarkAsNotDeletableOnLoad.cs" />
      <Compile Include="Assets\Resources\Scripts\MaterialManager.cs" />
@@ -237,10 +239,6 @@
      <Compile Include="Assets\Resources\Scripts\Ragdollizer.cs" />
      <Compile Include="Assets\Resources\Scripts\RaycastFirearm.cs" />
      <Compile Include="Assets\Resources\Scripts\RemoveEvent.cs" />
-     <Compile Include="Assets\Resources\Scripts\ResourceMapLoader.cs" />
-     <Compile Include="Assets\Resources\Scripts\ResourceMaterialLoader.cs" />
-     <Compile Include="Assets\Resources\Scripts\ResourceModelLoader.cs" />
-     <Compile Include="Assets\Resources\Scripts\ResourceTextureLoader.cs" />
      <Compile Include="Assets\Resources\Scripts\ResourceUtility.cs" />
      <Compile Include="Assets\Resources\Scripts\RootMovingNavAgent.cs" />
      <Compile Include="Assets\Resources\Scripts\Screenshot.cs" />
@@ -367,6 +365,7 @@
      <None Include="Assets\PostProcessing\Shaders\Builtins\Uber.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\Texture3DLerp.compute" />
      <None Include="Assets\InkPainter\readme_en.txt" />
+     <None Include="Assets\Resources\Shaders\FastMesaShader.shader" />
      <None Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Changelog.txt" />
      <None Include="Assets\DeferredDecals\DecalShaderDiffuseOnly.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\CopyStd.shader" />

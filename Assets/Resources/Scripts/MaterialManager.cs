@@ -124,6 +124,7 @@ public class MaterialManager : MonoBehaviour {
 				}
 			}
 		}
+		currentQuality = quality;
 	}
 
 	public void ChangeMode(MaterialMode mode = MaterialMode.UNDEFINED) {
@@ -135,6 +136,7 @@ public class MaterialManager : MonoBehaviour {
 			Camera.main.renderingPath = RenderingPath.DeferredShading;
 		} else if (mode == MaterialMode.FAST) {
 			Camera.main.renderingPath = RenderingPath.Forward;
+			ChangeQuality (ShaderQuality.LOW);
 		}
 
 		foreach (MaterialVariablesData data in materialsSettings) {
@@ -144,6 +146,13 @@ public class MaterialManager : MonoBehaviour {
 				data.material.shader = Shader.Find (data.fastShaderName);
 			}
 		}
+
+		if (mode == MaterialMode.FAST) {
+			DynamicLightSwitcher[] switchers = FindObjectsOfType<DynamicLightSwitcher> ();
+			foreach (DynamicLightSwitcher switcher in switchers) {	
+				switcher.EnableStaticLighting ();
+			}
+		} 
 	}
 
 	public void RegisterMaterialsAndTextures() { 

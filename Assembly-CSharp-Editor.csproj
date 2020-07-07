@@ -106,6 +106,7 @@
      <None Include="Assets\PostProcessing\Shaders\Builtins\Uber.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\Texture3DLerp.compute" />
      <None Include="Assets\InkPainter\readme_en.txt" />
+     <None Include="Assets\Resources\Shaders\FastMesaShader.shader" />
      <None Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Changelog.txt" />
      <None Include="Assets\DeferredDecals\DecalShaderDiffuseOnly.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\CopyStd.shader" />

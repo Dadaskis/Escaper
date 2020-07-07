@@ -1,6 +1,6 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\GUITabMemory.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\GUIAdvancedRendererApply.cs">
     <Files>
       <File FileName="Assets\Resources\Scripts\ItemData.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\Player.cs" Line="1" Column="1" />
@@ -24,7 +24,6 @@
       <File FileName="Assets\Resources\Scripts\MinecraftGun.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\IFirearm.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\RaycastFirearm.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\InGameMenu.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\SerializableRectTransform.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\MarkAsNotDeletableOnLoad.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\ResourceUtility.cs" Line="1" Column="1" />
@@ -79,11 +78,14 @@
       <File FileName="Assets\Resources\Scripts\GUISaveElementLoadButton.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\GUILoadGameSavesListUpdate.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\MaterialSettingsManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\MaterialManager.cs" Line="134" Column="27" />
-      <File FileName="Assets\Editor\MaterialManager\MaterialManagerEditor.cs" Line="26" Column="23" />
-      <File FileName="Assets\Resources\Scripts\GUIRendererModeDropdown.cs" Line="14" Column="63" />
-      <File FileName="Assets\Resources\Scripts\GUITabMemory.cs" Line="12" Column="4" />
-      <File FileName="Assets\Resources\Scripts\GUITab.cs" Line="11" Column="30" />
+      <File FileName="Assets\Resources\Scripts\MaterialManager.cs" Line="127" Column="28" />
+      <File FileName="Assets\Editor\MaterialManager\MaterialManagerEditor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIRendererModeDropdown.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUITabMemory.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUITab.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Shaders\FastMesaShader.shader" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIAdvancedRendererApply.cs" Line="53" Column="63" />
+      <File FileName="Assets\Resources\Scripts\GUIFastModeRendererApply.cs" Line="9" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
