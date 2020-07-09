@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityStandardAssets.Characters.FirstPerson;
+using Newtonsoft.Json;
 
 [System.Serializable]
 public class InputManagerDictionary : Dictionary<string, KeyCode> {
@@ -25,6 +27,12 @@ public class InputManagerDictionary : Dictionary<string, KeyCode> {
 
 }
 
+[System.Serializable]
+public class InputSave {
+	public SerializableKeyValues<string, int> keys;
+	public float mouseSensitivity;
+}
+
 public class InputManager : MonoBehaviour {
 
 	public class KeyPressedEvent : UnityEvent<KeyCode> {}
@@ -36,6 +44,31 @@ public class InputManager : MonoBehaviour {
 
 	public InputManagerDictionary keys = new InputManagerDictionary ();
 	public Dictionary<string, string> normalNames = new Dictionary<string, string>();
+	public float mouseSensitivity = 2.0f;
+
+
+	public void Load() {
+		try {
+			string json = System.IO.File.ReadAllText("Saves/Input.settings");
+			InputSave data = JsonConvert.DeserializeObject<InputSave>(json);
+			keys.SetFromSerializableVariant(data.keys);
+			mouseSensitivity = data.mouseSensitivity;
+		} catch(System.Exception ex) {
+			// ... fuck
+		}
+	}
+
+	public void Save() {
+		try {
+			InputSave save = new InputSave();
+			save.keys = keys.GetSerializableVariant();
+			save.mouseSensitivity = mouseSensitivity;
+			string json = JsonConvert.SerializeObject(save);
+			System.IO.File.WriteAllText("Saves/Input.settings", json);
+		} catch(System.Exception ex) {
+			// What do you mean? What is exception? I dont know what is this either
+		}
+	}
 
 	void Awake() {
 		instance = this;
@@ -43,6 +76,7 @@ public class InputManager : MonoBehaviour {
 			keys.Add (key.name, key.key);
 			normalNames.Add (key.name, key.normalName);
 		}
+		Load ();
 	}
 		
 	void CheckKeys() {
@@ -66,6 +100,14 @@ public class InputManager : MonoBehaviour {
 			return Input.GetKey (instance.keys [name]);
 		}
 		return false;
+	}
+
+	public void SetMouseSensitivity(float sensitivity) {
+		mouseSensitivity = sensitivity;
+		MouseLook mouseLook = Player.instance.controller.mouseLook;
+		mouseLook.XSensitivity = sensitivity;
+		mouseLook.YSensitivity = sensitivity;
+		Player.instance.controller.mouseLook = mouseLook;
 	}
 
 }

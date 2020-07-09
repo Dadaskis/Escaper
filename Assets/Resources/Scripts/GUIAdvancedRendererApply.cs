@@ -39,20 +39,7 @@ public class GUIAdvancedRendererApply : MonoBehaviour {
 			data.antialiasing = PostProcessLayer.Antialiasing.SubpixelMorphologicalAntialiasing;
 			break;
 		}
-		switch (materialsQuality.quality) {
-		case 0:
-			MaterialManager.instance.ChangeQuality (ShaderQuality.LOW);
-			break;
-		case 1:
-			MaterialManager.instance.ChangeQuality (ShaderQuality.MEDIUM);
-			break;
-		case 2:
-			MaterialManager.instance.ChangeQuality (ShaderQuality.HIGH);
-			break;
-		case 3:
-			MaterialManager.instance.ChangeQuality (ShaderQuality.ULTRA);
-			break;
-		}
+		data.shadersQuality = (ShaderQuality) materialsQuality.quality;
 		GraphicsSettings.instance.Data = data;
 	}
 

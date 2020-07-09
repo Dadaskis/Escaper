@@ -168,6 +168,7 @@
      <Compile Include="Assets\Resources\Scripts\GUICloseButton.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIContainer.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIContainerWeaponEventHandler.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIControlsTab.cs" />
      <Compile Include="Assets\Resources\Scripts\GUICustomUtility.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIDisableMouseLookOnInput.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIDisableOnInput.cs" />
@@ -176,6 +177,7 @@
      <Compile Include="Assets\Resources\Scripts\GUIEnableOnInputSwitcher.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIEnableOnKeyPress.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIFastModeRendererApply.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIInitializeRenderSettings.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIInventory.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIInventorySlots.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIItem.cs" />
@@ -184,8 +186,10 @@
      <Compile Include="Assets\Resources\Scripts\GUIItemDropOutButton.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIItemDropOutWindow.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIItemInfoWindow.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIKeyControl.cs" />
      <Compile Include="Assets\Resources\Scripts\GUILoadGameSavesListUpdate.cs" />
      <Compile Include="Assets\Resources\Scripts\GUILoadWindowButton.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIMouseSensitivitySlider.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIQualityController.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIQualityGreater.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIQualityLower.cs" />
@@ -198,6 +202,7 @@
      <Compile Include="Assets\Resources\Scripts\GUISlot.cs" />
      <Compile Include="Assets\Resources\Scripts\GUITab.cs" />
      <Compile Include="Assets\Resources\Scripts\GUITabMemory.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIVolumeSlider.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIWindowEnabler.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIWindowEnablerMemory.cs" />
      <Compile Include="Assets\Resources\Scripts\GraphicsSettings.cs" />

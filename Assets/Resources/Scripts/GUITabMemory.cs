@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GUITabMemory : MonoBehaviour {
 	
-	private GameObject previousTab;
+	public GameObject previousTab;
 
 	public void Change(GameObject tabElement) {
 		if (previousTab != null) {

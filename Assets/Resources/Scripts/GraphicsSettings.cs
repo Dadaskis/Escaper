@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
+using Newtonsoft.Json;
 
+[System.Serializable]
 public class GraphicsSettingsData {
 	public bool isFastMode = false;
 	public bool bloomEnabled = true;
@@ -81,6 +83,8 @@ public class GraphicsSettings : MonoBehaviour {
 
 				MaterialManager.instance.ChangeQuality (data.shadersQuality);
 			}
+
+			Save ();
 		}
 
 		get {
@@ -99,6 +103,25 @@ public class GraphicsSettings : MonoBehaviour {
 
 	void Awake() {
 		instance = this;
+		Load ();
+	}
+
+	public void Save() {
+		try {
+			string json = JsonConvert.SerializeObject(data);
+			System.IO.File.WriteAllText("Saves/Graphics.settings", json);
+		} catch(System.Exception ex) { 
+			// Do you know that we can kill 90% of humans using exceptions?
+		}
+	}
+
+	public void Load() {
+		try {
+			string json = System.IO.File.ReadAllText("Saves/Graphics.settings");
+			Data = JsonConvert.DeserializeObject<GraphicsSettingsData>(json);
+		} catch(System.Exception ex) { 
+			// Or maybe 100%! 
+		}
 	}
 
 }
