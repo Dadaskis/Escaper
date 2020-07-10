@@ -238,4 +238,47 @@ public class MaterialManager : MonoBehaviour {
 		}
 	}
 
+	public Material GetMaterialFromRaycast(RaycastHit hit) { 
+		if (hit.triangleIndex == -1) {
+			return null;
+		}
+
+		//MeshFilter filter = hit.transform.GetComponent<MeshFilter> ();
+		Renderer renderer = hit.transform.GetComponent<Renderer> ();
+		MeshCollider collider = hit.collider as MeshCollider;
+		Mesh mesh = collider.sharedMesh;
+
+		int[] triangleIndexes = new int[] {
+			mesh.triangles[(hit.triangleIndex * 3)], 
+			mesh.triangles[(hit.triangleIndex * 3) + 1],
+			mesh.triangles[(hit.triangleIndex * 3) + 2]
+		};
+
+		int materialIndex = -1;
+		for(int subMeshIndex = 0; subMeshIndex < mesh.subMeshCount; subMeshIndex++) {
+			int[] triangles = mesh.GetTriangles (subMeshIndex);
+			for (int index = 0; index < triangles.Length; index += 3) {
+				if (triangles [index] == triangleIndexes[0] 
+					&& triangles[index + 1] == triangleIndexes[1] 
+					&& triangles[index + 2] == triangleIndexes[2]) {
+					materialIndex = subMeshIndex;
+					break;
+				}
+			}
+		}
+
+		if (materialIndex == -1) {
+			return null;
+		}
+
+		Material material = null;
+		//try {
+			material = renderer.sharedMaterials [materialIndex];
+		//} catch(System.Exception ex) {
+		//	material = renderer.materials [materialIndex];
+		//}
+
+		return material;
+	}
+
 }

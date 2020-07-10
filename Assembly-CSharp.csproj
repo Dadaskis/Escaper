@@ -141,6 +141,7 @@
      <Compile Include="Assets\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
      <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Util.cs" />
      <Compile Include="Assets\ProCore\ProGrids\MonoBehaviour\pg_IgnoreSnap.cs" />
+     <Compile Include="Assets\Resources\Scripts\AmbientPlayer.cs" />
      <Compile Include="Assets\Resources\Scripts\AwakeAndStartDisabledChildrens.cs" />
      <Compile Include="Assets\Resources\Scripts\Bullet.cs" />
      <Compile Include="Assets\Resources\Scripts\CameraClearStencilAfterLightPass.cs" />
@@ -258,6 +259,8 @@
      <Compile Include="Assets\Resources\Scripts\ShootPos.cs" />
      <Compile Include="Assets\Resources\Scripts\Singletons.cs" />
      <Compile Include="Assets\Resources\Scripts\SkeletalMeshUtility.cs" />
+     <Compile Include="Assets\Resources\Scripts\SoundManager.cs" />
+     <Compile Include="Assets\Resources\Scripts\SoundObject.cs" />
      <Compile Include="Assets\Resources\Scripts\SpriteManager.cs" />
      <Compile Include="Assets\Resources\Scripts\ThirdPersonWeaponChanger.cs" />
      <Compile Include="Assets\Resources\Scripts\Timer.cs" />
