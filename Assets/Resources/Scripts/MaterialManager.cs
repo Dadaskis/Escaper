@@ -58,6 +58,7 @@ public class MaterialVariablesData {
 	public List<TextureSettingsData> textures = new List<TextureSettingsData> ();
 	public string advancedShaderName;
 	public string fastShaderName;
+	public bool blacklisted = false;
 }
 
 [ExecuteInEditMode]
@@ -106,6 +107,10 @@ public class MaterialManager : MonoBehaviour {
 			quality = currentQuality;
 		}
 		foreach (MaterialVariablesData data in materialsSettings) {
+			if (data.blacklisted) {
+				continue;
+			}
+
 			ShaderSettingsData shaderSettingsData = shaderSettings [data.shader];
 
 			foreach (TextureSettingsData textureData in data.textures) {
@@ -140,6 +145,10 @@ public class MaterialManager : MonoBehaviour {
 		}
 
 		foreach (MaterialVariablesData data in materialsSettings) {
+			if (data.blacklisted) {
+				continue;
+			}
+
 			if (mode == MaterialMode.ADVANCED) {
 				data.material.shader = Shader.Find (data.advancedShaderName);
 			} else if (mode == MaterialMode.FAST) {

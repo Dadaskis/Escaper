@@ -1,0 +1,233 @@
+fileFormatVersion: 2
+guid: 7b87888eefe63704581ea5a6c094e6f2
+timeCreated: 1594517281
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: __Sight
+    100002: Agressive_0
+    100004: Agressive_0:Male_generic
+    100006: Camera
+    100008: clavicle_l
+    100010: clavicle_r
+    100012: DI-SP-0
+    100014: //RootNode
+    100016: hand_l
+    100018: hand_r
+    100020: index_01_l
+    100022: index_01_r
+    100024: index_02_l
+    100026: index_02_r
+    100028: index_03_l
+    100030: index_03_l_end
+    100032: index_03_r
+    100034: index_03_r_end
+    100036: LeftHandIK
+    100038: LeftHandIK_end
+    100040: LeftHandRotationHelper
+    100042: LeftHandRotationHelper_end
+    100044: lowerarm_r
+    100046: middle_01_l
+    100048: middle_01_r
+    100050: middle_02_l
+    100052: middle_02_r
+    100054: middle_03_l
+    100056: middle_03_l_end
+    100058: middle_03_r
+    100060: middle_03_r_end
+    100062: neck_01
+    100064: neck_01_end
+    100066: Offset
+    100068: pinky_01_l
+    100070: pinky_01_r
+    100072: pinky_02_l
+    100074: pinky_02_r
+    100076: pinky_03_l
+    100078: pinky_03_l_end
+    100080: pinky_03_r
+    100082: pinky_03_r_end
+    100084: RightHandIK
+    100086: RightHandIK_end
+    100088: RightHandRotationHelper
+    100090: RightHandRotationHelper_end
+    100092: ring_01_l
+    100094: ring_01_r
+    100096: ring_02_l
+    100098: ring_02_r
+    100100: ring_03_l
+    100102: ring_03_l_end
+    100104: ring_03_r
+    100106: ring_03_r_end
+    100108: thumb_01_l
+    100110: thumb_01_r
+    100112: thumb_02_l
+    100114: thumb_02_r
+    100116: thumb_03_l
+    100118: thumb_03_l_end
+    100120: thumb_03_r
+    100122: thumb_03_r_end
+    100124: upperarm_l
+    100126: upperarm_r
+    100128: Weapon
+    100130: WeaponBolt
+    100132: WeaponBolt_end
+    100134: WeaponMag
+    100136: WeaponMag_end
+    100138: WeaponMain
+    100140: WeaponMain_end
+    400000: __Sight
+    400002: Agressive_0
+    400004: Agressive_0:Male_generic
+    400006: Camera
+    400008: clavicle_l
+    400010: clavicle_r
+    400012: DI-SP-0
+    400014: //RootNode
+    400016: hand_l
+    400018: hand_r
+    400020: index_01_l
+    400022: index_01_r
+    400024: index_02_l
+    400026: index_02_r
+    400028: index_03_l
+    400030: index_03_l_end
+    400032: index_03_r
+    400034: index_03_r_end
+    400036: LeftHandIK
+    400038: LeftHandIK_end
+    400040: LeftHandRotationHelper
+    400042: LeftHandRotationHelper_end
+    400044: lowerarm_r
+    400046: middle_01_l
+    400048: middle_01_r
+    400050: middle_02_l
+    400052: middle_02_r
+    400054: middle_03_l
+    400056: middle_03_l_end
+    400058: middle_03_r
+    400060: middle_03_r_end
+    400062: neck_01
+    400064: neck_01_end
+    400066: Offset
+    400068: pinky_01_l
+    400070: pinky_01_r
+    400072: pinky_02_l
+    400074: pinky_02_r
+    400076: pinky_03_l
+    400078: pinky_03_l_end
+    400080: pinky_03_r
+    400082: pinky_03_r_end
+    400084: RightHandIK
+    400086: RightHandIK_end
+    400088: RightHandRotationHelper
+    400090: RightHandRotationHelper_end
+    400092: ring_01_l
+    400094: ring_01_r
+    400096: ring_02_l
+    400098: ring_02_r
+    400100: ring_03_l
+    400102: ring_03_l_end
+    400104: ring_03_r
+    400106: ring_03_r_end
+    400108: thumb_01_l
+    400110: thumb_01_r
+    400112: thumb_02_l
+    400114: thumb_02_r
+    400116: thumb_03_l
+    400118: thumb_03_l_end
+    400120: thumb_03_r
+    400122: thumb_03_r_end
+    400124: upperarm_l
+    400126: upperarm_r
+    400128: Weapon
+    400130: WeaponBolt
+    400132: WeaponBolt_end
+    400134: WeaponMag
+    400136: WeaponMag_end
+    400138: WeaponMain
+    400140: WeaponMain_end
+    4300000: Agressive_0:Male_generic
+    4300002: DI-SP-0
+    7400000: Agressive_0|Empty
+    7400002: Agressive_0|IARReload.001
+    7400004: Agressive_0|WeaponDraw
+    7400006: Agressive_0|WeaponEmpty
+    7400008: Agressive_0|WeaponFullReload
+    7400010: Agressive_0|WeaponIdle.001
+    7400012: Agressive_0|WeaponOrigin
+    7400014: Agressive_0|WeaponReload
+    7400016: Agressive_0|WeaponShoot
+    9500000: //RootNode
+    13700000: Agressive_0:Male_generic
+    13700002: DI-SP-0
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

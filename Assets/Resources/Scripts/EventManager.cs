@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class EventArguments {
-	private List<object> objects;
+public class EventData {
+	public List<object> objects;
 
-	public EventArguments(params object[] args) {
+	public EventData(params object[] args) {
 		objects = new List<object> ();
 		for (int index = 0; index < args.GetLength(0); index++) {
 			objects.Add (args [index]);
@@ -48,7 +48,30 @@ public class EventArguments {
 
 public class EventManager : MonoBehaviour {
 
-	class Event : UnityEvent<EventArguments> {}
+
+	public delegate EventData EventMethodType(EventData args);
+
+	class Event {
+		public List<EventMethodType> methods = new List<EventMethodType>();
+
+		public void AddListener (EventMethodType method) {
+			methods.Add (method);
+		}
+
+		public void RemoveListener(EventMethodType method) {
+			methods.Remove (method);
+		}
+
+		public void Invoke(EventData args, ref EventData returned) {
+			foreach (EventMethodType method in methods) {
+				EventData data = method (args);
+				if (data != null) {
+					returned.objects.AddRange (data.objects);
+				}
+			}
+		}
+	}
+
 
 	private Dictionary<string, Event> events;
 
@@ -74,7 +97,7 @@ public class EventManager : MonoBehaviour {
 		}
 	}
 
-	public static void AddEventListener(string name, UnityAction<EventArguments> listener) {
+	public static void AddEventListener(string name, EventMethodType listener) {
 		Event thisEvent = null;
 		if (instance.events.TryGetValue (name, out thisEvent)) {
 			thisEvent.AddListener (listener);
@@ -85,7 +108,12 @@ public class EventManager : MonoBehaviour {
 		}
 	}
 
-	public static void RemoveEventListener(string name, UnityAction<EventArguments> listener) {
+	public static void AddEventListener<EventType>(EventMethodType listener) {
+		string name = typeof(EventType).Name;
+		AddEventListener (name, listener);
+	}
+
+	public static void RemoveEventListener(string name, EventMethodType listener) {
 		if (manager == null) {
 			return;
 		}
@@ -97,12 +125,23 @@ public class EventManager : MonoBehaviour {
 		}
 	}
 
-	public static void RunEventListeners(string name, params object[] args) {
-		Event thisEvent = null;
+	public static void RemoveEventListener<EventType> (EventMethodType listener) {
+		string name = typeof(EventType).Name;
+		RemoveEventListener (name, listener);
+	}
 
+	public static EventData RunEventListeners(string name, params object[] args) {
+		Event thisEvent = null;
+		EventData returnValues = new EventData ();
 		if (instance.events.TryGetValue (name, out thisEvent)) {
-			thisEvent.Invoke (new EventArguments(args));
+			thisEvent.Invoke (new EventData(args), ref returnValues);
 		}
+		return returnValues;
+	}
+
+	public static EventData RunEventListeners<EventType>(params object[] args) {
+		string name = typeof(EventType).Name;
+		return RunEventListeners (name, args);
 	}
 
 }

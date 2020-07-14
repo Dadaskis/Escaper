@@ -6,6 +6,7 @@ public class AmbientPlayer : MonoBehaviour {
 	private SoundManager soundManager = null;
 	public float delay = 0.0f;
 	private float timer = 0.0f;
+	public float volume = 0.1f;
 	public List<string> soundNames;
 
 	void Start() {
@@ -22,6 +23,7 @@ public class AmbientPlayer : MonoBehaviour {
 		SoundObjectData data = GetRandomSound ();
 		timer -= data.clip.length;
 		data.spatialBlend = 0.0f;
+		data.volume = volume;
 		soundManager.CreateSound (data);
 	}
 

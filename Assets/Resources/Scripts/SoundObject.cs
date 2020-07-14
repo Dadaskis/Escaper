@@ -27,7 +27,7 @@ public class SoundObject : MonoBehaviour {
 		source.maxDistance = data.maxDistance;
 		source.spatialBlend = data.spatialBlend;
 		source.pitch = data.pitch;
-		source.Play ();
+		source.PlayOneShot (data.clip, data.volume);
 		if (data.destroyTime > 0.0f || data.destroyAfterPlaying) {
 			if (data.destroyAfterPlaying) {
 				Destroy (gameObject, data.clip.length);

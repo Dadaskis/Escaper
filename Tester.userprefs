@@ -1,97 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\MaterialManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\RaycastFirearm.cs">
     <Files>
-      <File FileName="Assets\Resources\Scripts\ItemData.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\PhysicalItem.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\IUsableObject.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIItem.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIInventorySlots.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIContainer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIInventory.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUISlot.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIDropOutActionRegister.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIItemActionBase.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIItemDropOutWindow.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIItemDropOutButton.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\SerializableMonoBehaviour.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\SerializableData.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\Serializer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\SerializableMaterial.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\SerializableRigidbody.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\MinecraftGun.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\IFirearm.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\RaycastFirearm.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\SerializableRectTransform.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\MarkAsNotDeletableOnLoad.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\ResourceUtility.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\AwakeAndStartDisabledChildrens.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\MessageUtility.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\EnableObjectInOneFrame.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\WeaponShooter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\SerializableTransform.cs" Line="1" Column="1" />
-      <File FileName="Assets\Editor\Inventory\GUIItemEditor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\IWeapon.cs" Line="40" Column="3" />
+      <File FileName="Assets\Resources\Scripts\IFirearm.cs" Line="172" Column="3" />
+      <File FileName="Assets\Resources\Scripts\RaycastFirearm.cs" Line="76" Column="4" />
+      <File FileName="Assets\Resources\Scripts\WeaponShooter.cs" Line="7" Column="9" />
+      <File FileName="Assets\Resources\Scripts\EventManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\HumanoidCharacter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\MaterialManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\Character.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\InputData.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\IWeaponChanger.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\ThirdPersonWeaponChanger.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\FirstPersonWeaponChanger.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\WeaponItemData.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\WeaponPhysicalItemEventHandler.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\WeaponGUIItemEventHandler.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\WeaponManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\IWeapon.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIContainerWeaponEventHandler.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\PlayerWeaponSlots.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\SpriteManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Shaders\ProjectorAdditive.shader" Line="1" Column="1" />
-      <File FileName="Assets\DeferredDecals\DeferredDecalRenderer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIItemInfoWindow.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUICloseButton.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIItemActionSimple.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIDragable.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIDisableOnInput.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\DoorObject.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\LadderObject.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\WaterObject.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\PlayerFirstPersonController.cs" Line="1" Column="1" />
-      <File FileName="Assets\DecalSystem\Plugins\DecalSystem\Decal.cs" Line="1" Column="1" />
-      <File FileName="Assets\DecalSystem\Plugins\DecalSystem\Utils\DecalBuilder.cs" Line="1" Column="1" />
-      <File FileName="Assets\DecalSystem\Plugins\DecalSystem\Utils\DecalUtils.cs" Line="1" Column="1" />
-      <File FileName="Assets\DecalSystem\Plugins\DecalSystem\Utils\MeshBuilder.cs" Line="1" Column="1" />
-      <File FileName="Assets\DecalSystem\Plugins\DecalSystem\Utils\PolygonClippingUtils.cs" Line="1" Column="1" />
-      <File FileName="Assets\InkPainter\Sample\Script\CollisionPainter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\NAF\Lightmapper.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\NAF\LightVoxelColliderPainter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Shaders\WaterShader.shader" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\PostProcessingCaller.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Shaders\UnderWaterPostProcessing.shader" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIWindowEnabler.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIWindowEnablerMemory.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUISaveButton.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIDisableMouseLookOnInput.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIEnableOnInputSwitcher.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUISaveGame.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUISaveElementLoadButton.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUILoadGameSavesListUpdate.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\MaterialSettingsManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\MaterialManager.cs" Line="253" Column="5" />
-      <File FileName="Assets\Editor\MaterialManager\MaterialManagerEditor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIRendererModeDropdown.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUITabMemory.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUITab.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Shaders\FastMesaShader.shader" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIAdvancedRendererApply.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIFastModeRendererApply.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIKeyControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIControlsTab.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIMouseSensitivitySlider.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\InputManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIVolumeSlider.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIInitializeRenderSettings.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GraphicsSettings.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\WeaponNearWallPushBack.cs" Line="32" Column="109" />
+      <File FileName="Assets\Resources\Scripts\InertialMoving.cs" Line="5" Column="46" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

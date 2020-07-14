@@ -12,8 +12,20 @@ public class WeaponShooter : MonoBehaviour {
 				weapon.PrimaryFire ();
 			} 
 
-			if(InputManager.GetButton("PlayerSight")) {
+			if (InputManager.GetButton("PlayerSight")) {
 				weapon.SecondaryFire ();
+			}
+
+			if (InputManager.GetButtonDown ("PlayerShoot")) {
+				weapon.SinglePrimaryFire ();
+			}
+
+			if (InputManager.GetButtonDown ("PlayerSight")) {
+				weapon.SingleSecondaryFire ();
+			}
+
+			if (InputManager.GetButtonDown ("PlayerReload")) {
+				weapon.Reload ();
 			}
 		} else {
 			if (transform.childCount > 0) {

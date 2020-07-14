@@ -18,23 +18,18 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private float m_StickToGroundForce;
         [SerializeField] public float gravityMultiplier;
 		public MouseLook mouseLook;
-        [SerializeField] private bool m_UseFovKick;
-        [SerializeField] private FOVKick m_FovKick = new FOVKick();
-        [SerializeField] private bool m_UseHeadBob;
-        [SerializeField] private CurveControlledBob m_HeadBob = new CurveControlledBob();
-        [SerializeField] private LerpControlledBob m_JumpBob = new LerpControlledBob();
         [SerializeField] private float m_StepInterval;
 		[SerializeField] private Transform m_Camera;
 
         private bool m_Jump;
         private float m_YRotation;
-        private Vector2 m_Input;
+        private Vector2 inputDirection;
         public Vector3 moveDir = Vector3.zero;
 		public CharacterController characterController;
         private CollisionFlags m_CollisionFlags;
         private bool m_PreviouslyGrounded;
         private Vector3 m_OriginalCameraPosition;
-        private float m_StepCycle;
+        private float stepDistance;
         private float m_NextStep;
         private bool m_Jumping;
 
@@ -51,6 +46,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
 		private float previousY = 0.0f;
 		private float startHeight = 0.0f;
 
+		public float stepSpeedMultiplier = 1.0f;
+		public float stepDistanceToPlaySound = 1.0f;
+		public float stepVolume = 1.0f;
+
         // Use this for initialization
         private void Start()
         {
@@ -60,8 +59,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_OriginalCameraPosition = m_Camera.transform.localPosition;
             //m_FovKick.Setup(m_Camera);
             //m_HeadBob.Setup(m_Camera, m_StepInterval);
-            m_StepCycle = 0f;
-            m_NextStep = m_StepCycle/2f;
+            stepDistance = 0f;
+            m_NextStep = stepDistance/2f;
             m_Jumping = false;
             //m_AudioSource = GetComponent<AudioSource>();
 			mouseLook.Init(transform , m_Camera.transform);
@@ -92,11 +91,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
 						isCrouching = true;
 						targetHeight = crouchHeight;
 					} else {
-						RaycastHit hit;
-						bool isHitToOpaque = Physics.Raycast (m_Camera.position, Vector3.up, out hit);
-						if (!isHitToOpaque || hit.distance > 1.0f) {
-							isCrouching = false;
+						float radius = characterController.radius;
+						bool isHitToOpaque = Physics.CheckBox (m_Camera.position + new Vector3 (0.0f, radius * 2.0f, 0.0f), new Vector3 (radius, radius, radius));
+						if (!isHitToOpaque) {
 							targetHeight = startHeight;
+						} else {
+							isCrouching = true;
 						}
 					}
 				}
@@ -106,14 +106,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 				if (isCrouching == true) {
 					targetHeight = crouchHeight;
 				} else {
-					//RaycastHit hit;
 					float radius = characterController.radius;
 					bool isHitToOpaque = Physics.CheckBox (m_Camera.position + new Vector3 (0.0f, radius * 2.0f, 0.0f), new Vector3 (radius, radius, radius));
-					//bool isHitToOpaque = Physics.Raycast (m_Camera.position + new Vector3(0.0f, 0.2f, 0.0f), Vector3.up, out hit);
 					if (!isHitToOpaque) {
 						targetHeight = startHeight;
 					} else {
-						//Debug.Log (hit.distance);
 						isCrouching = true;
 					}
 				}
@@ -140,28 +137,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 				),
 				5.0f * Time.deltaTime
 			);
-
-			if (!enableLogic) {
-				return;
-			}
-
-			//
-
-            if (!m_PreviouslyGrounded && characterController.isGrounded)
-            {
-                StartCoroutine(m_JumpBob.DoBobCycle());
-                //PlayLandingSound();
-                moveDir.y = 0f;
-                m_Jumping = false;
-				Player.instance.character.FallDamage (previousSpeed);
-            }
-            if (!characterController.isGrounded && !m_Jumping && m_PreviouslyGrounded)
-            {
-                moveDir.y = 0f;
-            }
-
-            m_PreviouslyGrounded = characterController.isGrounded;
-			previousSpeed = Math.Abs(characterController.velocity.y);
         }
 
 
@@ -169,7 +144,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             //m_AudioSource.clip = m_LandSound;
             //m_AudioSource.Play();
-            m_NextStep = m_StepCycle + .5f;
+            //m_NextStep = stepDistance + .5f;
+			PlayFootStepAudio ();
         }
 
 		private float previousSpeed = 0.0f;
@@ -182,61 +158,69 @@ namespace UnityStandardAssets.Characters.FirstPerson
 				return;
 			}
 
-            float speed;
-            GetInput(out speed);
-            // always move along the camera forward as it is the direction that it being aimed at
-            Vector3 desiredMove = transform.forward * m_Input.y + transform.right * m_Input.x;
+			//
 
-            // get a normal for the surface that is being touched to move along it
-            RaycastHit hitInfo;
-            Physics.SphereCast(transform.position, characterController.radius, Vector3.down, out hitInfo,
-                               characterController.height/2f, Physics.AllLayers, QueryTriggerInteraction.Ignore);
-            desiredMove = Vector3.ProjectOnPlane(desiredMove, hitInfo.normal).normalized;
+			if (!m_PreviouslyGrounded && characterController.isGrounded)
+			{
+				PlayLandingSound();
+				moveDir.y = 0f;
+				m_Jumping = false;
+				Player.instance.character.FallDamage (previousSpeed);
+			}
+			if (!characterController.isGrounded && !m_Jumping && m_PreviouslyGrounded)
+			{
+				moveDir.y = 0f;
+			}
+
+			m_PreviouslyGrounded = characterController.isGrounded;
+			previousSpeed = Math.Abs(characterController.velocity.y);
+
+			float speed;
+			GetInput(out speed);
+			// always move along the camera forward as it is the direction that it being aimed at
+			Vector3 desiredMove = transform.forward * inputDirection.y + transform.right * inputDirection.x;
+
+			// get a normal for the surface that is being touched to move along it
+			RaycastHit hitInfo;
+			Physics.SphereCast(transform.position, characterController.radius, Vector3.down, out hitInfo,
+				characterController.height/2f, Physics.AllLayers, QueryTriggerInteraction.Ignore);
+			desiredMove = Vector3.ProjectOnPlane(desiredMove, hitInfo.normal).normalized;
 
 			moveDir.x = desiredMove.x * speed;
 			//moveDir.y = desiredMove.y * speed;
 			moveDir.z = desiredMove.z * speed;
 
 			if (characterController.isGrounded && inertionInAir)
-            {
-                moveDir.y = -m_StickToGroundForce;
+			{
+				moveDir.y = -m_StickToGroundForce;
 
-                if (m_Jump)
-                {
-                    moveDir.y = m_JumpSpeed;
-                    //PlayJumpSound();
-                    m_Jump = false;
-                    m_Jumping = true;
-                }
-            }
-            else
-            {
-				if (inertionInAir) {
-					moveDir += Physics.gravity * gravityMultiplier * Time.fixedDeltaTime;
-					moveDir.x = characterController.velocity.x + (desiredMove.x * inAirMoveMultiplier);
-					moveDir.z = characterController.velocity.z + (desiredMove.z * inAirMoveMultiplier);
-					if (isCrouching) {
-						moveDir.x -= (desiredMove.x * inAirMoveMultiplier) / 3.0f;
-						moveDir.z -= (desiredMove.z * inAirMoveMultiplier) / 3.0f;
-					}
-				} else {
-					moveDir.y = m_Camera.transform.forward.y * speed;
+				if (m_Jump)
+				{
+					moveDir.y = m_JumpSpeed;
+					PlayJumpSound();
+					m_Jump = false;
+					m_Jumping = true;
 				}
-            }
-
-			if (inertionInAir) {
-				if (moveDir.x + moveDir.z == 0.0f) {
-					moveDirection = Vector2.Lerp (moveDirection, Vector2.zero, Time.fixedDeltaTime * 6.0f);
-				} else {
-					moveDirection = Vector2.Lerp (moveDirection, new Vector2 (moveDir.x, moveDir.z), Time.fixedDeltaTime * 10.0f);
+			}
+			else
+			{
+				moveDir += Physics.gravity * gravityMultiplier * Time.fixedDeltaTime;
+				moveDir.x = characterController.velocity.x + (desiredMove.x * inAirMoveMultiplier);
+				moveDir.z = characterController.velocity.z + (desiredMove.z * inAirMoveMultiplier);
+				if (isCrouching) {
+					moveDir.x -= (desiredMove.x * inAirMoveMultiplier) / 3.0f;
+					moveDir.z -= (desiredMove.z * inAirMoveMultiplier) / 3.0f;
 				}
-				m_CollisionFlags = characterController.Move (new Vector3 (moveDirection.x, moveDir.y, moveDirection.y) * Time.fixedDeltaTime);
-			} else {
-				m_CollisionFlags = characterController.Move (moveDir * Time.fixedDeltaTime);
 			}
 
-            ProgressStepCycle(speed);
-            UpdateCameraPosition(speed);
+			if (moveDir.x + moveDir.z == 0.0f) {
+				moveDirection = Vector2.Lerp (moveDirection, Vector2.zero, Time.fixedDeltaTime * 6.0f);
+			} else {
+				moveDirection = Vector2.Lerp (moveDirection, new Vector2 (moveDir.x, moveDir.z), Time.fixedDeltaTime * 10.0f);
+			}
+			m_CollisionFlags = characterController.Move (new Vector3 (moveDirection.x, moveDir.y, moveDirection.y) * Time.fixedDeltaTime);
+
+			ProgressStepCycle(speed);
 
 			mouseLook.UpdateCursorLock ();
         }
@@ -246,25 +230,21 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             //m_AudioSource.clip = m_JumpSound;
             //m_AudioSource.Play();
+			PlayFootStepAudio();
         }
 
 
         private void ProgressStepCycle(float speed)
         {
-            if (characterController.velocity.sqrMagnitude > 0 && (m_Input.x != 0 || m_Input.y != 0))
+			if (characterController.velocity.sqrMagnitude > 0 && (inputDirection.x != 0 || inputDirection.y != 0))
             {
-                m_StepCycle += (characterController.velocity.magnitude + (speed*(m_IsWalking ? 1f : m_RunstepLenghten)))*
-                             Time.fixedDeltaTime;
+				stepDistance += (speed * stepSpeedMultiplier) * Time.fixedDeltaTime;
             }
 
-            if (!(m_StepCycle > m_NextStep))
-            {
-                return;
-            }
-
-            m_NextStep = m_StepCycle + m_StepInterval;
-
-            PlayFootStepAudio();
+			if(stepDistance > stepDistanceToPlaySound) {
+				PlayFootStepAudio();
+				stepDistance = 0.0f;
+			}
         }
 
 
@@ -286,12 +266,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
 	        //    m_FootstepSounds[0] = m_AudioSource.clip;
 			//}
 
-			Debug.LogError ("Checking sound");
-			RaycastHit[] hits = Physics.RaycastAll (transform.position + new Vector3(0.0f, 0.5f, 0.0f), Vector3.down, 2.0f);
+			RaycastHit[] hits = Physics.RaycastAll (transform.position + new Vector3(0.0f, 0.5f, 0.0f), Vector3.down, 2.4f);
 			RaycastHit neededHit = new RaycastHit ();
 			bool neededHitFound = false;
 			foreach (RaycastHit hit in hits) {
-				Debug.LogError ("Checking transform: " + hit.transform);
 				if (hit.transform.root.tag != "Player") {
 					if (hit.transform.GetComponent<Renderer> () == null) {
 						continue;
@@ -301,7 +279,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 					}
 					neededHit = hit;
 					neededHitFound = true;
-					Debug.LogError (neededHit.transform);
 					break;
 				}
 			}
@@ -314,38 +291,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
 				List<string> clips = type.walkClipNames;
 				string clip = clips [Random.Range (0, clips.Count - 1)];
 				SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (clip);
-				data.volume = 1.0f;
+				data.volume = stepVolume;
 				data.maxDistance = 100.0f;
 				data.minDistance = 10.0f;
 				data.spatialBlend = 0.0f;
 				SoundManager.instance.CreateSound (data, Vector3.zero, transform);
 			}
         }
-
-
-        private void UpdateCameraPosition(float speed)
-        {
-            Vector3 newCameraPosition;
-            if (!m_UseHeadBob)
-            {
-                return;
-            }
-            if (characterController.velocity.magnitude > 0 && characterController.isGrounded)
-            {
-                m_Camera.transform.localPosition =
-                    m_HeadBob.DoHeadBob(characterController.velocity.magnitude +
-                                      (speed*(m_IsWalking ? 1f : m_RunstepLenghten)));
-                newCameraPosition = m_Camera.transform.localPosition;
-                newCameraPosition.y = m_Camera.transform.localPosition.y - m_JumpBob.Offset();
-            }
-            else
-            {
-                newCameraPosition = m_Camera.transform.localPosition;
-                newCameraPosition.y = m_OriginalCameraPosition.y - m_JumpBob.Offset();
-            }
-            m_Camera.transform.localPosition = newCameraPosition;
-        }
-
 
         private void GetInput(out float speed)
         {
@@ -380,20 +332,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
 			speed = isCrouching ? crouchSpeed : speed;
-            m_Input = new Vector2(horizontal, vertical);
+            inputDirection = new Vector2(horizontal, vertical);
 
             // normalize input if it exceeds 1 in combined length:
-            if (m_Input.sqrMagnitude > 1)
+            if (inputDirection.sqrMagnitude > 1)
             {
-                m_Input.Normalize();
-            }
-
-            // handle speed change to give an fov kick
-            // only if the player is going to a run, is running and the fovkick is to be used
-            if (m_IsWalking != waswalking && m_UseFovKick && characterController.velocity.sqrMagnitude > 0)
-            {
-                StopAllCoroutines();
-                StartCoroutine(!m_IsWalking ? m_FovKick.FOVKickUp() : m_FovKick.FOVKickDown());
+                inputDirection.Normalize();
             }
         }
 

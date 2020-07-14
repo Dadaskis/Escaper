@@ -1,0 +1,241 @@
+fileFormatVersion: 2
+guid: 9ec6ad17c073e81479e775306f0e2274
+timeCreated: 1594461680
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Agressive_1:Gizmos
+    100002: DI-SP-0.Bolt
+    100004: DI-SP-0.Main
+    100006: DI-SP-0.Trigger
+    100008: GZM_Ball025
+    100010: GZM_Breast_L
+    100012: GZM_Breast_R
+    100014: GZM_Circle025
+    100016: GZM_CircleChest
+    100018: GZM_CircleHips
+    100020: GZM_CircleSpine
+    100022: GZM_CrownHips
+    100024: GZM_Cube025
+    100026: GZM_FaceHead
+    100028: GZM_FaceJaw
+    100030: GZM_Foot
+    100032: GZM_FootIK
+    100034: GZM_Gaze
+    100036: GZM_Hand
+    100038: GZM_HandIK
+    100040: GZM_Head
+    100042: GZM_Jaw
+    100044: GZM_Knuckle
+    100046: GZM_LoLid
+    100048: GZM_Master
+    100050: GZM_Neck
+    100052: GZM_RevFoot
+    100054: GZM_RevToe
+    100056: GZM_Root
+    100058: GZM_Shoulder
+    100060: GZM_Toe
+    100062: GZM_Tongue
+    100064: GZM_UpLid
+    100066: //RootNode
+    400000: Agressive_1:Gizmos
+    400002: DI-SP-0.Bolt
+    400004: DI-SP-0.Main
+    400006: DI-SP-0.Trigger
+    400008: GZM_Ball025
+    400010: GZM_Breast_L
+    400012: GZM_Breast_R
+    400014: GZM_Circle025
+    400016: GZM_CircleChest
+    400018: GZM_CircleHips
+    400020: GZM_CircleSpine
+    400022: GZM_CrownHips
+    400024: GZM_Cube025
+    400026: GZM_FaceHead
+    400028: GZM_FaceJaw
+    400030: GZM_Foot
+    400032: GZM_FootIK
+    400034: GZM_Gaze
+    400036: GZM_Hand
+    400038: GZM_HandIK
+    400040: GZM_Head
+    400042: GZM_Jaw
+    400044: GZM_Knuckle
+    400046: GZM_LoLid
+    400048: GZM_Master
+    400050: GZM_Neck
+    400052: GZM_RevFoot
+    400054: GZM_RevToe
+    400056: GZM_Root
+    400058: GZM_Shoulder
+    400060: GZM_Toe
+    400062: GZM_Tongue
+    400064: GZM_UpLid
+    400066: //RootNode
+    2300000: DI-SP-0.Bolt
+    2300002: DI-SP-0.Main
+    2300004: DI-SP-0.Trigger
+    2300006: GZM_Ball025
+    2300008: GZM_Breast_L
+    2300010: GZM_Breast_R
+    2300012: GZM_Circle025
+    2300014: GZM_CircleChest
+    2300016: GZM_CircleHips
+    2300018: GZM_CircleSpine
+    2300020: GZM_CrownHips
+    2300022: GZM_Cube025
+    2300024: GZM_FaceHead
+    2300026: GZM_FaceJaw
+    2300028: GZM_Foot
+    2300030: GZM_FootIK
+    2300032: GZM_Gaze
+    2300034: GZM_Hand
+    2300036: GZM_HandIK
+    2300038: GZM_Head
+    2300040: GZM_Jaw
+    2300042: GZM_Knuckle
+    2300044: GZM_LoLid
+    2300046: GZM_Master
+    2300048: GZM_Neck
+    2300050: GZM_RevFoot
+    2300052: GZM_RevToe
+    2300054: GZM_Root
+    2300056: GZM_Shoulder
+    2300058: GZM_Toe
+    2300060: GZM_Tongue
+    2300062: GZM_UpLid
+    3300000: DI-SP-0.Bolt
+    3300002: DI-SP-0.Main
+    3300004: DI-SP-0.Trigger
+    3300006: GZM_Ball025
+    3300008: GZM_Breast_L
+    3300010: GZM_Breast_R
+    3300012: GZM_Circle025
+    3300014: GZM_CircleChest
+    3300016: GZM_CircleHips
+    3300018: GZM_CircleSpine
+    3300020: GZM_CrownHips
+    3300022: GZM_Cube025
+    3300024: GZM_FaceHead
+    3300026: GZM_FaceJaw
+    3300028: GZM_Foot
+    3300030: GZM_FootIK
+    3300032: GZM_Gaze
+    3300034: GZM_Hand
+    3300036: GZM_HandIK
+    3300038: GZM_Head
+    3300040: GZM_Jaw
+    3300042: GZM_Knuckle
+    3300044: GZM_LoLid
+    3300046: GZM_Master
+    3300048: GZM_Neck
+    3300050: GZM_RevFoot
+    3300052: GZM_RevToe
+    3300054: GZM_Root
+    3300056: GZM_Shoulder
+    3300058: GZM_Toe
+    3300060: GZM_Tongue
+    3300062: GZM_UpLid
+    4300000: DI-SP-0.Trigger
+    4300002: DI-SP-0.Bolt
+    4300004: DI-SP-0.Main
+    4300006: GZM_Circle025
+    4300008: GZM_Head
+    4300010: GZM_CircleChest
+    4300012: GZM_FaceHead
+    4300014: GZM_FaceJaw
+    4300016: GZM_Neck
+    4300018: GZM_UpLid
+    4300020: GZM_Toe
+    4300022: GZM_Gaze
+    4300024: GZM_Breast_R
+    4300026: GZM_CircleHips
+    4300028: GZM_RevFoot
+    4300030: GZM_RevToe
+    4300032: GZM_Foot
+    4300034: GZM_Tongue
+    4300036: GZM_CircleSpine
+    4300038: GZM_LoLid
+    4300040: GZM_Root
+    4300042: GZM_Shoulder
+    4300044: GZM_HandIK
+    4300046: GZM_Master
+    4300048: GZM_Hand
+    4300050: GZM_Cube025
+    4300052: GZM_FootIK
+    4300054: GZM_Jaw
+    4300056: GZM_CrownHips
+    4300058: GZM_Knuckle
+    4300060: GZM_Ball025
+    4300062: GZM_Breast_L
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

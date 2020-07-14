@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AnimationClipOverrides : List<KeyValuePair<AnimationClip, AnimationClip>> {
 	public AnimationClipOverrides(int capacity) : base(capacity) {}
@@ -30,23 +31,35 @@ public abstract class IWeapon : MonoBehaviour {
 	public int currentAmmo = 1;
 	public bool restrictUsing = false;
 
+	public delegate void AnimationOverMethodType ();
+	public delegate void AnimationOverrideMethodType(ref AnimationClipOverrides overrides);
+
 	public IEnumerator PlayAnimation(string name, float duration) {
+		if (animationPlaying) {
+			yield break;
+		}
+		Debug.LogError ("Setting animation: " + name);
 		animationPlaying = true;
-		animator.SetBool (name, true);
+		animator.SetTrigger (name);
 		yield return new WaitForSeconds (duration);
 		animationPlaying = false;
-		animator.SetBool (name, false);
 	}
 
-	public Vector3 CalculateSightPosition(Transform weapon, Transform sight) {
-		Vector3 sightPosition = new Vector3 ();
-		Vector3 sightPrePosition = sight.position;
-		Vector3 weaponPrePosition = weapon.position;
-		sightPosition = sightPrePosition - weaponPrePosition;
-		//sightPosition = weapon.localPosition - sightPosition;
-		sightPosition.z = weapon.localPosition.z;
-		sightPosition.y = -sightPosition.y;
-		return sightPosition;
+	public IEnumerator PlayAnimation(string name, float duration, AnimationOverMethodType onOver = null) {
+		yield return PlayAnimation (name, duration);
+		onOver ();
+	}
+
+	public void UpdateAnimations() {
+		animatorOverride.GetOverrides (animationOverrides);
+		ApplyAnimationOverrides (ref animationOverrides);
+		animatorOverride.ApplyOverrides (animationOverrides);
+	}
+
+	public void UpdateAnimations(AnimationOverrideMethodType method) {
+		animatorOverride.GetOverrides (animationOverrides);
+		method(ref animationOverrides);
+		animatorOverride.ApplyOverrides (animationOverrides);
 	}
 
 	void Start() {
@@ -54,9 +67,7 @@ public abstract class IWeapon : MonoBehaviour {
 		animatorOverride = new AnimatorOverrideController (animator.runtimeAnimatorController);
 		animator.runtimeAnimatorController = animatorOverride;
 		animationOverrides = new AnimationClipOverrides (animatorOverride.overridesCount);
-		animatorOverride.GetOverrides (animationOverrides);
-		ApplyAnimationOverrides (ref animationOverrides);
-		animatorOverride.ApplyOverrides (animationOverrides);
+		UpdateAnimations ();
 		CustomStartOnEnd ();
 	}
 

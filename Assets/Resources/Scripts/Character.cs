@@ -47,24 +47,17 @@ public class Character : MonoBehaviour {
 
 	public Ragdollizer ragdoll;
 
-	//private bool isPlayer = false;
 	private Image damageScreen;
+
+	private bool rawRaycast = true;
+	private RaycastHit[] raycastHits;
 
 	void Start() {
 		CharacterManager.Characters.Add (this);
-		/*if (GetComponent<Player> () != null) {
-			isPlayer = true;
-			damageScreen = Player.instance.damagePanel;
-		}*/
 	}
 
-	//private float damageScreenResetSpeed = 5.0f;
 	void Update() {
-		/*if (isPlayer) {
-			Color color = damageScreen.color;
-			color.a = Mathf.Lerp (color.a, 0.0f, Time.deltaTime * damageScreenResetSpeed);
-			damageScreen.color = color;
-		}*/
+		rawRaycast = true;
 	}
 
 	public void Damage(int count, Character character) {
@@ -75,11 +68,6 @@ public class Character : MonoBehaviour {
 				onDeath.Invoke ();
 				return;
 			}
-			/*if (isPlayer) {
-				Color color = Color.red;
-				color.a = 0.3f * (100.0f / ((float)health));
-				damageScreen.color = color;
-			}*/
 			onHealthChange.Invoke (health);
 		} else {
 			armor--;
@@ -99,11 +87,6 @@ public class Character : MonoBehaviour {
 			onDeath.Invoke ();
 			return;
 		}
-		///if (isPlayer) {
-		//	Color color = Color.red;
-		//	color.a = 0.3f * (100.0f / ((float)health));
-		//	damageScreen.color = color;
-		//}
 		onHealthChange.Invoke (health);
 	}
 
@@ -114,25 +97,18 @@ public class Character : MonoBehaviour {
 			CharacterManager.Characters.Remove (this);
 			if (ragdoll != null) {
 				ragdoll.EnableRagdoll ();
-				//Timer.Create (ragdoll.FreezeRagdoll, "RagdollFreeze" + this.GetHashCode (), 3.0f, 1);
-				//Destroy (gameObject, 10.0f);
-				/*
-				RaycastHit hit;
-				if (Physics.Raycast (transform.position, -transform.up, out hit)) {
-					Instantiate (boxAfterDeath, hit.point, Quaternion.identity);
-				}
-				*/
-			} else {
-				//Destroy (gameObject, 0.3f);
 			}
 		}
 	}
 
 	public RaycastHit Raycast() {
-		RaycastHit[] hits = Physics.RaycastAll(raycaster.position, raycaster.forward, 1000000.0f);
+		if (rawRaycast) {
+			raycastHits = Physics.RaycastAll (raycaster.position, raycaster.forward, 1000000.0f);
+			rawRaycast = false;
+		}
 		RaycastHit resultHit = new RaycastHit ();
 		resultHit.distance = 1000000.0f;
-		foreach (RaycastHit hit in hits) {
+		foreach (RaycastHit hit in raycastHits) {
 			if (hit.transform.root.name != transform.root.name) {
 				if (hit.distance < resultHit.distance) {
 					resultHit = hit;
@@ -140,6 +116,14 @@ public class Character : MonoBehaviour {
 			}
 		}
 		return resultHit;
+	}
+
+	public RaycastHit[] RaycastAll() {
+		if (rawRaycast) {
+			raycastHits = Physics.RaycastAll (raycaster.position, raycaster.forward, 1000000.0f);
+			rawRaycast = false;
+		}
+		return raycastHits;
 	}
 
 }

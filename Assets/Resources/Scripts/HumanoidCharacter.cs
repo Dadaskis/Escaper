@@ -14,13 +14,14 @@ public class HumanoidCharacter : INonPlayerCharacter {
 	private float rightHandIKWeight = 0.0f;
 
 
-	public virtual void GoOnHit(EventArguments args) {
+	public virtual EventData GoOnHit(EventData args) {
 		Vector3 position = args.Get<Vector3> (0);
 		Move (position);
+		return null;
 	}
 
 	public virtual void Start() {
-		EventManager.AddEventListener ("BulletHit", GoOnHit);
+		EventManager.AddEventListener<Events.RaycastFirearmBulletHit> (GoOnHit);
 	}
 
 	public virtual void Update() {

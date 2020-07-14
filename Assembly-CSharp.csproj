@@ -226,8 +226,6 @@
      <Compile Include="Assets\Resources\Scripts\MapObject.cs" />
      <Compile Include="Assets\Resources\Scripts\MarkAsNotDeletableOnLoad.cs" />
      <Compile Include="Assets\Resources\Scripts\MaterialManager.cs" />
-     <Compile Include="Assets\Resources\Scripts\MaterialSettingsData.cs" />
-     <Compile Include="Assets\Resources\Scripts\MaterialSettingsManager.cs" />
      <Compile Include="Assets\Resources\Scripts\MessageUtility.cs" />
      <Compile Include="Assets\Resources\Scripts\MinecraftGun.cs" />
      <Compile Include="Assets\Resources\Scripts\MinecraftObject.cs" />
@@ -259,6 +257,7 @@
      <Compile Include="Assets\Resources\Scripts\ShootPos.cs" />
      <Compile Include="Assets\Resources\Scripts\Singletons.cs" />
      <Compile Include="Assets\Resources\Scripts\SkeletalMeshUtility.cs" />
+     <Compile Include="Assets\Resources\Scripts\SmoothInfrontPlacer.cs" />
      <Compile Include="Assets\Resources\Scripts\SoundManager.cs" />
      <Compile Include="Assets\Resources\Scripts\SoundObject.cs" />
      <Compile Include="Assets\Resources\Scripts\SpriteManager.cs" />
@@ -270,6 +269,7 @@
      <Compile Include="Assets\Resources\Scripts\WeaponGUIItemEventHandler.cs" />
      <Compile Include="Assets\Resources\Scripts\WeaponItemData.cs" />
      <Compile Include="Assets\Resources\Scripts\WeaponManager.cs" />
+     <Compile Include="Assets\Resources\Scripts\WeaponNearWallPushBack.cs" />
      <Compile Include="Assets\Resources\Scripts\WeaponPhysicalItemEventHandler.cs" />
      <Compile Include="Assets\Resources\Scripts\WeaponShooter.cs" />
      <Compile Include="Assets\Resources\Standard Assets\Cameras\Scripts\AbstractTargetFollower.cs" />

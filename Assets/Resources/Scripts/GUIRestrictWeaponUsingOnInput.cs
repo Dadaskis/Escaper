@@ -6,22 +6,12 @@ public class GUIRestrictWeaponUsingOnInput : MonoBehaviour {
 	public string inputName = "";
 	public Player player;
 	public bool isOpened = false;
+	public WeaponShooter shooter;
 
 	void Update() {
 		if(InputManager.GetButtonDown(inputName)) {
-			isOpened = !isOpened;	
-			if (!isOpened) {
-				IWeapon weapon = player.weaponHolder.GetComponentInChildren<IWeapon> ();
-				if (weapon != null) {
-					weapon.restrictUsing = false;
-				}
-			}
+			isOpened = !isOpened;
 		}
-		if (isOpened) {
-			IWeapon weapon = player.weaponHolder.GetComponentInChildren<IWeapon> ();
-			if (weapon != null) {
-				weapon.restrictUsing = true;
-			}
-		} 
+		shooter.enabled = !isOpened;
 	}
 }

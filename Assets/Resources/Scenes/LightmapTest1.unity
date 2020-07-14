@@ -4002,6 +4002,7 @@ MonoBehaviour:
         bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Bandit0Body
     material: {fileID: 2100000, guid: b884d743f0c1dd740a26ff97765c0cd6, type: 2}
     shader: 0
@@ -4020,6 +4021,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Brick0
     material: {fileID: 2100000, guid: 943df3516dbb75247b8898bceabba0cb, type: 2}
     shader: 0
@@ -4046,6 +4048,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Brick1
     material: {fileID: 2100000, guid: ff9c040fff15ebb4d955fc49c60c9f4f, type: 2}
     shader: 0
@@ -4072,6 +4075,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Bricks0
     material: {fileID: 2100000, guid: 82b694b93615bd845b3dd0bad7649c0d, type: 2}
     shader: 0
@@ -4082,6 +4086,7 @@ MonoBehaviour:
         bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Car0
     material: {fileID: 2100000, guid: fb6fca8bd5e5bf84fb741e63e90d0dcc, type: 2}
     shader: 0
@@ -4108,6 +4113,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Cardboard0
     material: {fileID: 2100000, guid: 384f06139a285844daac55286f4e2b23, type: 2}
     shader: 0
@@ -4134,6 +4140,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Concrete0
     material: {fileID: 2100000, guid: 91e30b6f7687e4042ae90971059469c0, type: 2}
     shader: 0
@@ -4160,6 +4167,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Concrete1
     material: {fileID: 2100000, guid: 5e3f59b5e74804e41967caa5a9ba4b45, type: 2}
     shader: 0
@@ -4186,6 +4194,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Concrete3
     material: {fileID: 2100000, guid: 50c7bcaa2d6f7854cb436b51fd78afcb, type: 2}
     shader: 0
@@ -4212,6 +4221,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Concrete4
     material: {fileID: 2100000, guid: a2d7e423b6cee81488d9aa564de17ecf, type: 2}
     shader: 0
@@ -4234,6 +4244,7 @@ MonoBehaviour:
         bindedAtQuality: 3
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Concrete5
     material: {fileID: 2100000, guid: 23ddf251eaf023e439e834f16f99dc0b, type: 2}
     shader: 0
@@ -4260,6 +4271,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Concrete6
     material: {fileID: 2100000, guid: d546626bc8f4eed408036d19be4b6195, type: 2}
     shader: 0
@@ -4286,6 +4298,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Concrete8
     material: {fileID: 2100000, guid: bb7424d4f5d6db14690c8c44fd892c7c, type: 2}
     shader: 0
@@ -4312,6 +4325,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Construction0
     material: {fileID: 2100000, guid: ba474037e39a32248ac77e099e4b8483, type: 2}
     shader: 0
@@ -4338,6 +4352,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Debris0
     material: {fileID: 2100000, guid: 2577995c26b64ca4485d709ca696b1fd, type: 2}
     shader: 0
@@ -4360,6 +4375,7 @@ MonoBehaviour:
         bindedAtQuality: 3
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Brick0Decal
     material: {fileID: 2100000, guid: 6b976cb3b37b3de4fb20e30e778ad83b, type: 2}
     shader: 0
@@ -4386,6 +4402,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Transparent/Diffuse
+    blacklisted: 0
   - name: Ground1
     material: {fileID: 2100000, guid: 6d6252bebb6b8e249b7afac423a15679, type: 2}
     shader: 0
@@ -4412,6 +4429,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Ground4
     material: {fileID: 2100000, guid: 11ea38f7e79f1ec4b9eaf6114e10366f, type: 2}
     shader: 0
@@ -4438,6 +4456,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Ground5
     material: {fileID: 2100000, guid: 5d31ed8c5af5e5d48b3daca181b59e45, type: 2}
     shader: 0
@@ -4464,6 +4483,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Ground7
     material: {fileID: 2100000, guid: 3b79150a1e402f845ad5c7d2c4c02f9e, type: 2}
     shader: 0
@@ -4490,6 +4510,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Ground7.Lined
     material: {fileID: 2100000, guid: 788c2e30c525683469d4f26e31ae4860, type: 2}
     shader: 0
@@ -4516,6 +4537,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Metal0
     material: {fileID: 2100000, guid: 295c0902a2eb1ad4d93fd9cf8e2c3fbb, type: 2}
     shader: 0
@@ -4542,6 +4564,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Metal1
     material: {fileID: 2100000, guid: 1e585b3bade097441893907e3c57c767, type: 2}
     shader: 0
@@ -4568,6 +4591,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Metal3
     material: {fileID: 2100000, guid: 3e2400511ac29534e98132104032511f, type: 2}
     shader: 0
@@ -4594,6 +4618,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Metal4OrangeMesa
     material: {fileID: 2100000, guid: b3f0e16cffef71941ab07fd378bcea19, type: 2}
     shader: 0
@@ -4624,6 +4649,7 @@ MonoBehaviour:
         bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Custom/FastMesaShader
+    blacklisted: 0
   - name: Metal5
     material: {fileID: 2100000, guid: a5fc5929b6dbeeb4893507c064d9faac, type: 2}
     shader: 0
@@ -4650,6 +4676,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Metal6
     material: {fileID: 2100000, guid: 6e15935583d10ac429bdbb2862f6feb3, type: 2}
     shader: 0
@@ -4676,6 +4703,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Metal8
     material: {fileID: 2100000, guid: a72f0670d8812504e9e74cc4f7eb5b94, type: 2}
     shader: 0
@@ -4702,12 +4730,14 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Reflective
     material: {fileID: 2100000, guid: 7d29b7d6ac230804094fa60666b2b77b, type: 2}
     shader: 0
     textures: []
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Rubber0
     material: {fileID: 2100000, guid: 93e9540113732b547854d849918a5c2e, type: 2}
     shader: 0
@@ -4734,6 +4764,7 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: Window0
     material: {fileID: 2100000, guid: e5d92f7f1c1ec614788a9df2f3f80783, type: 2}
     shader: 0
@@ -4760,20 +4791,61 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: WaterPlaneMaterial
     material: {fileID: 2100000, guid: f1bc741ea0e69a241896582ddb633d55, type: 2}
     shader: 0
     textures: []
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
   - name: OceanPlaneMaterial
     material: {fileID: 2100000, guid: a437a9b380909fa4d98f929428f70388, type: 2}
     shader: 0
     textures: []
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Lightmapped/Diffuse
-  currentQuality: 3
-  currentMode: 1
+    blacklisted: 0
+  - name: DI-SP-0
+    material: {fileID: 2100000, guid: e482e91410012ac4eafe67c0c5256e7d, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: e941a342fb0a38640ae37fd047befbd4, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: d33c7d680d99ae74dacfc159d4d8ca67, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: bd7a72e5942effe41a1ece17b8615016, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: ad774c9d2435aa84dbfa371e239e80a0, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 4f5fd761d33be0449acc2fab1abd3ca1, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 0
+  - name: Agressive_0_Male_generic_Middleage_cauasian_male.001
+    material: {fileID: 2100000, guid: bad6f81c9dd0eab46b9328e125aee907, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 4f3327b91c192604783a9569cf8109cc, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    blacklisted: 1
+  currentQuality: 0
+  currentMode: 0
 --- !u!1001 &175336142
 Prefab:
   m_ObjectHideFlags: 0
@@ -9103,6 +9175,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 374507530}
+--- !u!1 &374696966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 374696967}
+  m_Layer: 0
+  m_Name: UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &374696967
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 374696966}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1799768913}
+  m_Father: {fileID: 475332048}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &383620119
 GameObject:
   m_ObjectHideFlags: 0
@@ -10961,6 +11062,8 @@ GameObject:
   - component: {fileID: 474694173}
   - component: {fileID: 474694172}
   - component: {fileID: 474694171}
+  - component: {fileID: 474694174}
+  - component: {fileID: 474694175}
   m_Layer: 8
   m_Name: WeaponHolder
   m_TagString: Untagged
@@ -10975,11 +11078,12 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 474694169}
-  m_LocalRotation: {x: -0.00000001493936, y: 7.7080994e-11, z: -0.0000000023868025,
+  m_LocalRotation: {x: -0.000000014959369, y: 7.7081e-11, z: -0.0000000023868025,
     w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1696952418}
   m_Father: {fileID: 2133005983}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10997,7 +11101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputName: InventoryOpen
   player: {fileID: 1944243943}
-  isOpened: 1
+  isOpened: 0
+  shooter: {fileID: 474694172}
 --- !u!114 &474694172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11022,7 +11127,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23406bf2799a76a4494a05c158a9c4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationPower: 8
+  rotationPower: 2
+  decreasingFactor: 0.02
+--- !u!114 &474694174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 474694169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 503a11fc0b267db4d86f54b2c5000507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputName: OpenMenu
+  player: {fileID: 1944243943}
+  isOpened: 0
+  shooter: {fileID: 474694172}
+--- !u!114 &474694175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 474694169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd249da161554d49a6d3a1c8b110d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDistance: 1
+  speed: 8
 --- !u!1 &475332046
 GameObject:
   m_ObjectHideFlags: 0
@@ -11033,6 +11167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 475332048}
   - component: {fileID: 475332047}
+  - component: {fileID: 475332049}
   m_Layer: 0
   m_Name: Singletons
   m_TagString: Untagged
@@ -11078,9 +11213,21 @@ Transform:
   - {fileID: 172675557}
   - {fileID: 4750289}
   - {fileID: 874544032}
+  - {fileID: 374696967}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &475332049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 475332046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f7f6467890832449bf3a4144d4520d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &480473208
 GameObject:
   m_ObjectHideFlags: 0
@@ -14138,6 +14285,34 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 673578616}
+--- !u!1 &676715943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 676715944}
+  m_Layer: 9
+  m_Name: Forward
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &676715944
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 676715943}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2133005983}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &677362156
 GameObject:
   m_ObjectHideFlags: 0
@@ -14364,7 +14539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputName: InventoryOpen
   controller: {fileID: 1944243935}
-  isOpened: 1
+  isOpened: 0
 --- !u!114 &682617739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17719,8 +17894,8 @@ RectTransform:
   - {fileID: 2023022901}
   - {fileID: 1488911928}
   - {fileID: 1476385624}
-  m_Father: {fileID: 2133005983}
-  m_RootOrder: 1
+  m_Father: {fileID: 1799768913}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -17844,7 +18019,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 1
+  m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -17972,6 +18147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
+  volume: 0.25
   soundNames:
   - ambient_shoot_0
 --- !u!1 &876231866
@@ -24761,74 +24937,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1293820954}
---- !u!1 &1295608588
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1392538202874532, guid: 5ce9af1497543534e82c2f1a29c9777b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1295608589}
-  - component: {fileID: 1295608590}
-  m_Layer: 8
-  m_Name: GunCamera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1295608589
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4952802807884844, guid: 5ce9af1497543534e82c2f1a29c9777b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1295608588}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2133005983}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &1295608590
-Camera:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 20112457996388978, guid: 5ce9af1497543534e82c2f1a29c9777b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1295608588}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 3
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.01
-  far clip plane: 1000
-  field of view: 90
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 256
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_ForceIntoRT: 1
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
-  m_StereoMirrorMode: 0
 --- !u!1 &1300757340
 GameObject:
   m_ObjectHideFlags: 0
@@ -26399,8 +26507,8 @@ RectTransform:
   - {fileID: 1476894230}
   - {fileID: 682617734}
   - {fileID: 1554545645}
-  m_Father: {fileID: 2133005983}
-  m_RootOrder: 2
+  m_Father: {fileID: 1799768913}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -26471,9 +26579,9 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 2133005984}
-  m_PlaneDistance: 0.71
-  m_PixelPerfect: 1
+  m_Camera: {fileID: 1799768917}
+  m_PlaneDistance: 1
+  m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -31195,7 +31303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1596525084
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33828,6 +33936,141 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1695740690}
+--- !u!1001 &1696952417
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 474694170}
+    m_Modifications:
+    - target: {fileID: 400014, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+      propertyPath: m_Name
+      value: FirstPerson
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2c2fbce932759184faf79aec41216c7c, type: 2}
+    - target: {fileID: 9500000, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+      propertyPath: m_UpdateMode
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+  m_IsPrefabParent: 0
+--- !u!4 &1696952418 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400014, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+  m_PrefabInternal: {fileID: 1696952417}
+--- !u!1 &1696952419 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100014, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+  m_PrefabInternal: {fileID: 1696952417}
+--- !u!114 &1696952420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1696952419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 699570f42cb3e134a88118bd75f98636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationPlaying: 0
+  animator: {fileID: 1696952422}
+  animatorOverride: {fileID: 22100000, guid: 49c0b09f44ef06245b3ab7ca9054fded, type: 2}
+  owner: {fileID: 1944243942}
+  firstPerson: 1
+  maxAmmo: 8
+  currentAmmo: 8
+  restrictUsing: 0
+  currentDurability: 300
+  maxDurability: 600
+  fireRate: 350
+  idleOverrideNameFP: WeaponIdle
+  idleClipFP: {fileID: 7400012, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+  fireOverrideNameFP: WeaponShoot
+  fireClipFP: {fileID: 7400016, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+  drawOverrideNameFP: WeaponDraw
+  drawClipFP: {fileID: 7400004, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+  runOverrideNameFP: WeaponRun
+  runClipFP: {fileID: 7400006, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+  reloadOverrideNameFP: WeaponReload
+  reloadClipFP: {fileID: 7400014, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+  fullReloadOverrideNameFP: WeaponFullReload
+  fullReloadClipFP: {fileID: 7400008, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+  jammingOverrideNameFP: WeaponJamming
+  jammingClipFP: {fileID: 7400004, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+  jammedIdleOverrideNameFP: WeaponJammedIdle
+  jammedIdleClipFP: {fileID: 7400012, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+  unjammingOverrideNameFP: WeaponUnjamming
+  unjammingClipFP: {fileID: 7400004, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+  punchOverrideNameFP: WeaponPunch
+  punchClipFP: {fileID: 7400016, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+  punchHitSeconds: 0
+  offsetTransform: {fileID: 1696952421}
+  offsetInitialPosition: {x: 0, y: 0, z: 0}
+  inSight: 0
+  goingInSightSpeed: 5
+  goingOutSightSpeed: 7
+  jammable: 1
+  jammed: 0
+  minJammingChance: 0
+  maxJammingChance: 60
+  nextShootTime: 0
+  maxXRecoil: 12
+  minXRecoil: 2
+  maxYRecoil: 5
+  minYRecoil: 2
+  maxZRecoil: 2
+  minZRecoil: 2
+  onHitObjects: []
+--- !u!4 &1696952421 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400066, guid: 7b87888eefe63704581ea5a6c094e6f2, type: 3}
+  m_PrefabInternal: {fileID: 1696952417}
+--- !u!95 &1696952422 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 9500000, guid: 7b87888eefe63704581ea5a6c094e6f2,
+    type: 3}
+  m_PrefabInternal: {fileID: 1696952417}
 --- !u!1 &1701695921 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100102, guid: dcf372d55b2498a4ea5f29ecaa6affcd, type: 3}
@@ -38703,6 +38946,81 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1792382570}
+--- !u!1 &1799768912
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1799768913}
+  - component: {fileID: 1799768917}
+  - component: {fileID: 1799768915}
+  m_Layer: 5
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1799768913
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1799768912}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 871796725}
+  - {fileID: 1395787335}
+  m_Father: {fileID: 374696967}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!92 &1799768915
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1799768912}
+  m_Enabled: 1
+--- !u!20 &1799768917
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1799768912}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 3
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 5
+  m_Depth: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 32
+  m_RenderingPath: 0
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_AllowMSAA: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 0
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
 --- !u!1 &1800427793
 GameObject:
   m_ObjectHideFlags: 0
@@ -42158,7 +42476,7 @@ MonoBehaviour:
   m_RunSpeed: 6
   m_RunstepLenghten: 1
   m_JumpSpeed: 8
-  m_StickToGroundForce: 0
+  m_StickToGroundForce: 1
   gravityMultiplier: 2
   mouseLook:
     XSensitivity: 2
@@ -42169,75 +42487,21 @@ MonoBehaviour:
     smooth: 1
     smoothTime: 10
     lockCursor: 0
-  m_UseFovKick: 0
-  m_FovKick:
-    Camera: {fileID: 0}
-    originalFov: 0
-    FOVIncrease: 3
-    TimeToIncrease: 1
-    TimeToDecrease: 1
-    IncreaseCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-  m_UseHeadBob: 0
-  m_HeadBob:
-    HorizontalBobRange: 0.33
-    VerticalBobRange: 0.33
-    Bobcurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 0.5
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 1.5
-        value: -1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 2
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    VerticaltoHorizontalRatio: 1
-  m_JumpBob:
-    BobDuration: 0
-    BobAmount: 0
   m_StepInterval: 0
   m_Camera: {fileID: 1593243900}
   moveDir: {x: 0, y: -0, z: 0}
   characterController: {fileID: 1944243936}
   enableMouseLook: 0
-  targetHeight: 2
-  crouchHeight: 0.9
+  targetHeight: 1.7
+  crouchHeight: 1
   crouchSpeed: 1
   holdCrouch: 0
   inAirMoveMultiplier: 0.3
   inertionInAir: 1
   enableLogic: 1
+  stepSpeedMultiplier: 1
+  stepDistanceToPlaySound: 2
+  stepVolume: 1
 --- !u!143 &1944243936
 CharacterController:
   m_ObjectHideFlags: 0
@@ -42249,7 +42513,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
+  m_Height: 1.7
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.5
@@ -46116,9 +46380,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 474694170}
-  - {fileID: 871796725}
-  - {fileID: 1395787335}
-  - {fileID: 1295608589}
+  - {fileID: 676715944}
   m_Father: {fileID: 1593243900}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -46147,8 +46409,8 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: 3
+    m_Bits: 4294967263
+  m_RenderingPath: 1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
