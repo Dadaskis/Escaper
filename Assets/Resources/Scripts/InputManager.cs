@@ -95,6 +95,10 @@ public class InputManager : MonoBehaviour {
 		return Input.GetKeyDown (instance.keys [name]);
 	}
 
+	public static bool GetButtonUp(string name) {
+		return Input.GetKeyUp (instance.keys [name]);
+	}
+
 	public static bool GetButton(string name) {
 		if (instance != null) {
 			return Input.GetKey (instance.keys [name]);

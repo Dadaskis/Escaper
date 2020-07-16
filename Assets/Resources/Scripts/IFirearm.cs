@@ -14,25 +14,33 @@ public abstract class IFirearm : IWeapon {
 
 	public string idleOverrideNameFP;
 	public AnimationClip idleClipFP;
+	public AnimationClip jammedIdleClipFP;
 	public string fireOverrideNameFP;
 	public AnimationClip fireClipFP;
 	public string drawOverrideNameFP;
 	public AnimationClip drawClipFP;
-	public string runOverrideNameFP;
-	public AnimationClip runClipFP;
 	public string reloadOverrideNameFP;
 	public AnimationClip reloadClipFP;
 	public string fullReloadOverrideNameFP;
 	public AnimationClip fullReloadClipFP;
 	public string jammingOverrideNameFP;
 	public AnimationClip jammingClipFP;
-	public string jammedIdleOverrideNameFP;
-	public AnimationClip jammedIdleClipFP;
 	public string unjammingOverrideNameFP;
 	public AnimationClip unjammingClipFP;
 	public string punchOverrideNameFP;
-	public AnimationClip punchClipFP;
-	public float punchHitSeconds;
+	public AnimationClip punchNotHitClipFP;
+	public AnimationClip punchHitClipFP;
+	public string saveOverrideNameFP;
+	public bool save = false;
+	public AnimationClip saveClipFP;
+	public AnimationClip saveJammedClipFP;
+
+	public float fireAnimationSpeed = 1.0f;
+	public float drawAnimationSpeed = 1.0f;
+	public float reloadAnimationSpeed = 1.0f;
+	public float fullReloadAnimationSpeed = 1.0f;
+	public float unjammingAnimationSpeed = 1.0f;
+	public float punchAnimationSpeed = 1.0f;
 
 	/*public AnimationClip idleClipTP;
 	public AnimationClip fireClipTP;
@@ -55,6 +63,15 @@ public abstract class IFirearm : IWeapon {
 	public bool jammed = false;
 	public int minJammingChance = 1;
 	public int maxJammingChance = 10;
+	public float punchHitDistanceCheck = 1.5f;
+	public GameObject bulletDropPrefab;
+	public Transform bulletDropLaunch;
+	public float bulletDropWaitSecondsAfterShoot = 1.0f;
+	public float bulletDropForce = 1.0f;
+	public float bulletDropKillTime = 10.0f;
+	public GameObject shootFireParticlePrefab;
+	public Transform shootFireTransform;
+	[HideInInspector] public ParticleSystem shootFireParticles;
 
 	public class AfterShootEvent : UnityEvent {}
 	public AfterShootEvent afterShootEvent = new AfterShootEvent ();
@@ -67,13 +84,12 @@ public abstract class IFirearm : IWeapon {
 			overrides [idleOverrideNameFP] = idleClipFP;
 			overrides [fireOverrideNameFP] = fireClipFP;
 			overrides [drawOverrideNameFP] = drawClipFP;
-			overrides [runOverrideNameFP] = runClipFP;
 			overrides [reloadOverrideNameFP] = reloadClipFP;
 			overrides [fullReloadOverrideNameFP] = fullReloadClipFP;
 			overrides [unjammingOverrideNameFP] = unjammingClipFP;
 			overrides [jammingOverrideNameFP] = jammingClipFP;
-			overrides [jammedIdleOverrideNameFP] = jammedIdleClipFP;
-			overrides [punchOverrideNameFP] = punchClipFP;
+			overrides [saveOverrideNameFP] = saveClipFP;
+			overrides [punchOverrideNameFP] = punchNotHitClipFP;
 		} else {
 			/*overrides ["Idle"] = idleClipTP;
 			overrides ["Fire"] = fireClipTP;
@@ -97,9 +113,30 @@ public abstract class IFirearm : IWeapon {
 
 	public void NullifyJammedState() {
 		jammed = false;
+		ChangeAnimation (idleOverrideNameFP, idleClipFP);
+		ChangeAnimation (saveOverrideNameFP, saveClipFP);
+	}
+
+	public void Jam() {
+		StartCoroutine (PlayAnimation (jammingOverrideNameFP, jammingClipFP.length));
+		ChangeAnimation (idleOverrideNameFP, jammedIdleClipFP);
+		ChangeAnimation (saveOverrideNameFP, saveJammedClipFP);
+	}
+
+	public IEnumerator LaunchBulletDrop() {
+		yield return new WaitForSeconds (bulletDropWaitSecondsAfterShoot * fireAnimationSpeed);
+		GameObject bulletDrop = Instantiate (bulletDropPrefab);
+		bulletDrop.transform.position = bulletDropLaunch.position;
+		Rigidbody body = bulletDrop.GetComponent<Rigidbody> ();
+		body.AddForce (bulletDropLaunch.forward * bulletDropForce, ForceMode.Impulse);
+		Destroy (bulletDrop, bulletDropKillTime);
 	}
 
 	public override void PrimaryFire () {
+		if (save) {
+			return;
+		}
+
 		if (currentAmmo == 0) {
 			return;
 		}
@@ -119,19 +156,21 @@ public abstract class IFirearm : IWeapon {
 					int procent = Mathf.RoundToInt (((float)currentDurability / (float)maxDurability) * 100.0f);
 					int jammingChance = Random.Range (minJammingChance, maxJammingChance);
 					if (jammingChance > procent) {
-						Debug.LogError (procent + " " + jammingChance);
 						jammed = true;
 					}
 				}
 				if (jammed) {
-					StartCoroutine (PlayAnimation (jammingOverrideNameFP, jammingClipFP.length));
+					Jam ();
 					NullifyNextShootTime ();
 				} else {
+					SetCurrentAnimationSpeed (fireAnimationSpeed);
 					StartCoroutine (PlayAnimation (fireOverrideNameFP, fireClipFP.length, NullifyNextShootTime));
+					StartCoroutine (LaunchBulletDrop ());
 				}
 			}
 			afterShootEvent.Invoke ();
 			currentDurability--;
+			shootFireParticles.Play ();
 			Shoot ();
 		}
 	}
@@ -152,7 +191,7 @@ public abstract class IFirearm : IWeapon {
 					inSightApproved = true;
 				}
 			}
-			if (inSightApproved) {
+			if (inSightApproved && !save) {
 				offsetTransform.localPosition = Vector3.Lerp (offsetTransform.localPosition, Vector3.zero, Time.deltaTime * goingInSightSpeed);
 			} else {
 				offsetTransform.localPosition = Vector3.Lerp (offsetTransform.localPosition, offsetInitialPosition, Time.deltaTime * goingOutSightSpeed);
@@ -163,6 +202,10 @@ public abstract class IFirearm : IWeapon {
 	}
 
 	public override void Reload() {
+		if (save) {
+			return;
+		} 
+
 		if (restrictUsing == true) {
 			return;
 		}
@@ -171,13 +214,20 @@ public abstract class IFirearm : IWeapon {
 			return;
 		}
 
+		if (animationPlaying) {
+			return;
+		}
+
 		if(firstPerson){
 			if (jammed) {
+				SetCurrentAnimationSpeed (unjammingAnimationSpeed);
 				StartCoroutine(PlayAnimation(unjammingOverrideNameFP, unjammingClipFP.length, NullifyJammedState)); 
 			} else {
 				if (currentAmmo > 0) {
+					SetCurrentAnimationSpeed (reloadAnimationSpeed);
 					StartCoroutine (PlayAnimation (reloadOverrideNameFP, reloadClipFP.length, FirearmReloadAnimationEnd));
 				} else {
+					SetCurrentAnimationSpeed (fullReloadAnimationSpeed);
 					StartCoroutine (PlayAnimation (fullReloadOverrideNameFP, fullReloadClipFP.length, FirearmReloadAnimationEnd));
 				}
 			}
@@ -186,9 +236,51 @@ public abstract class IFirearm : IWeapon {
 		FirearmReloadEnd ();
 	}
 
+	public override void Punch() {
+		if (animationPlaying) {
+			return;
+		}
+
+		if (restrictUsing == true) {
+			return;
+		}
+
+		if (firstPerson) {
+			RaycastHit hit = Player.instance.character.Raycast ();
+			AnimationClip currentClip = null;
+			if (hit.distance > punchHitDistanceCheck) {
+				ChangeAnimation (punchOverrideNameFP, punchNotHitClipFP);
+				currentClip = punchNotHitClipFP;
+				PunchNotHit (hit);
+			} else {
+				ChangeAnimation (punchOverrideNameFP, punchHitClipFP);
+				currentClip = punchHitClipFP;
+				PunchHit (hit);
+			}
+			SetCurrentAnimationSpeed (punchAnimationSpeed);
+			StartCoroutine (PlayAnimation (punchOverrideNameFP, currentClip.length));
+		}
+	}
+
+	public abstract void PunchHit (RaycastHit hit);
+	public abstract void PunchNotHit (RaycastHit hit);
+
 	public override void CustomStartOnBegin () {
 		offsetInitialPosition = offsetTransform.localPosition;
 
+		GameObject shootFire = Instantiate (shootFireParticlePrefab, shootFireTransform);
+		shootFireParticles = shootFire.GetComponent<ParticleSystem> ();
+
 		FirearmStart ();
+	}
+
+	public override void Save () {
+		save = true;
+		animator.SetBool (saveOverrideNameFP, save);
+	}
+
+	public override void UnSave () {
+		save = false;
+		animator.SetBool (saveOverrideNameFP, save);
 	}
 }

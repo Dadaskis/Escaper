@@ -30,6 +30,8 @@ public abstract class IWeapon : MonoBehaviour {
 	public int maxAmmo = 1;
 	public int currentAmmo = 1;
 	public bool restrictUsing = false;
+	public string animatorSpeedFloatName;
+	public float overallWeaponsAnimationSpeedModifier = 1.0f;
 
 	public delegate void AnimationOverMethodType ();
 	public delegate void AnimationOverrideMethodType(ref AnimationClipOverrides overrides);
@@ -38,11 +40,11 @@ public abstract class IWeapon : MonoBehaviour {
 		if (animationPlaying) {
 			yield break;
 		}
-		Debug.LogError ("Setting animation: " + name);
 		animationPlaying = true;
 		animator.SetTrigger (name);
 		yield return new WaitForSeconds (duration);
 		animationPlaying = false;
+		SetCurrentAnimationSpeed (1.0f);
 	}
 
 	public IEnumerator PlayAnimation(string name, float duration, AnimationOverMethodType onOver = null) {
@@ -62,6 +64,16 @@ public abstract class IWeapon : MonoBehaviour {
 		animatorOverride.ApplyOverrides (animationOverrides);
 	}
 
+	public void ChangeAnimation(string name, AnimationClip clip) {
+		UpdateAnimations (delegate(ref AnimationClipOverrides overrides) {
+			overrides[name] = clip;
+		});
+	}
+
+	public void SetCurrentAnimationSpeed(float speed) {
+		animator.SetFloat (animatorSpeedFloatName, speed * overallWeaponsAnimationSpeedModifier);
+	}
+
 	void Start() {
 		CustomStartOnBegin ();
 		animatorOverride = new AnimatorOverrideController (animator.runtimeAnimatorController);
@@ -76,6 +88,9 @@ public abstract class IWeapon : MonoBehaviour {
 	public abstract void SecondaryFire ();
 	public abstract void SingleSecondaryFire ();
 	public abstract void Reload ();
+	public abstract void Punch ();
+	public abstract void Save ();
+	public abstract void UnSave ();
 	public abstract void CustomStartOnBegin();
 	public abstract void CustomStartOnEnd();
 	public abstract void ApplyAnimationOverrides(ref AnimationClipOverrides overrides);

@@ -54,3 +54,6 @@ MonoBehaviour:
   - key: 114
     name: RotateItem
     normalName: Rotate item
+  - key: 118
+    name: PlayerPunch
+    normalName: Punch

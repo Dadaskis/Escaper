@@ -63,7 +63,7 @@
 				//o.ray = RotateAroundYAxis(v.texcoord1.xyz, 0.0);
 				return o;
 			}
-			
+
 			sampler2D _MainTex;
 			sampler2D _CameraDepthTexture;
 			sampler2D _NoiseTex;

@@ -27,6 +27,18 @@ public class WeaponShooter : MonoBehaviour {
 			if (InputManager.GetButtonDown ("PlayerReload")) {
 				weapon.Reload ();
 			}
+
+			if (InputManager.GetButtonDown ("PlayerPunch")) {
+				weapon.Punch ();
+			}
+
+			if (InputManager.GetButtonDown("PlayerRun")) {
+				weapon.Save ();
+			}
+
+			if (InputManager.GetButtonUp("PlayerRun")) {
+				weapon.UnSave ();
+			}
 		} else {
 			if (transform.childCount > 0) {
 				weapon = GetComponentInChildren<IWeapon> ();

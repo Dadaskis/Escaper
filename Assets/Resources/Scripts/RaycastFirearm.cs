@@ -16,6 +16,7 @@ public class RaycastFirearm : IFirearm {
 	public float minYRecoil = 2.0f;
 	public float maxZRecoil = 2.0f;
 	public float minZRecoil = 2.0f;
+	public GameObject tracerPrefab;
 
 	public List<GameObject> onHitObjects;
 
@@ -45,6 +46,10 @@ public class RaycastFirearm : IFirearm {
 		RaycastHit hit = this.owner.Raycast ();
 
 		Vector3 hitPos = hit.point;
+
+		GameObject tracer = Instantiate (tracerPrefab);
+		TracerObject tracerObject = tracer.GetComponent<TracerObject> ();
+		tracerObject.SetLineSettings (this.owner.raycaster.position, hitPos);
 		//GameObject obj = Instantiate(onHitObjects [Random.Range (0, onHitObjects.Count)]);
 		//obj.transform.position = hitPos;
 
@@ -63,23 +68,27 @@ public class RaycastFirearm : IFirearm {
 
 	public override void FirearmReloadAnimationEnd () {
 		currentAmmo = maxAmmo;
+
+		EventManager.RunEventListeners<Events.RaycastFirearmStartReload> (this);
 	}
 
 	public override void FirearmReloadEnd () {
-		
+		EventManager.RunEventListeners<Events.RaycastFirearmEndReload> (this);
 	}
 
 	public override bool FirearmReloadStart () {
 		return true;
 	}
 
-	/*public override void Reload () {
-		EventManager.RunEventListeners<Events.RaycastFirearmStartReload> (this);
-
-		EventManager.RunEventListeners<Events.RaycastFirearmEndReload> (this);
-	}*/
-
 	public override void CustomStartOnEnd () {
 	
+	}
+
+	public override void PunchHit (RaycastHit hit) {
+		
+	}
+
+	public override void PunchNotHit (RaycastHit hit) {
+
 	}
 }
