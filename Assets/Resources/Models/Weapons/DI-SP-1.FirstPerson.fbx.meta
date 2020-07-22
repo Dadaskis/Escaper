@@ -1,0 +1,4075 @@
+fileFormatVersion: 2
+guid: 0c45a753e87bb7b48b61da62319c5ce6
+timeCreated: 1595390113
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: 0
+    100002: 1
+    100004: 10
+    100006: 11
+    100008: 12
+    100010: 13
+    100012: 14
+    100014: 15
+    100016: 16
+    100018: 2
+    100020: 3
+    100022: 4
+    100024: 5
+    100026: 6
+    100028: 7
+    100030: 8
+    100032: 9
+    100034: __Ammo
+    100036: __BulletDrop
+    100038: __Offset
+    100040: __ShootParticlePosition
+    100042: __Sight
+    100044: Agressive_0
+    100046: Agressive_0:Male_generic
+    100048: Agressive_0:Male_generic.001
+    100050: Camera
+    100052: clavicle_l
+    100054: clavicle_r
+    100056: DI-SP-1
+    100058: //RootNode
+    100060: hand_l
+    100062: hand_r
+    100064: index_01_l
+    100066: index_01_r
+    100068: index_02_l
+    100070: index_02_r
+    100072: index_03_l
+    100074: index_03_l_end
+    100076: index_03_r
+    100078: index_03_r_end
+    100080: LeftHandIK
+    100082: LeftHandIK_end
+    100084: LeftHandRotationHelper
+    100086: LeftHandRotationHelper_end
+    100088: lowerarm_r
+    100090: middle_01_l
+    100092: middle_01_r
+    100094: middle_02_l
+    100096: middle_02_r
+    100098: middle_03_l
+    100100: middle_03_l_end
+    100102: middle_03_r
+    100104: middle_03_r_end
+    100106: neck_01
+    100108: neck_01_end
+    100110: pinky_01_l
+    100112: pinky_01_r
+    100114: pinky_02_l
+    100116: pinky_02_r
+    100118: pinky_03_l
+    100120: pinky_03_l_end
+    100122: pinky_03_r
+    100124: pinky_03_r_end
+    100126: PistolAmmo0
+    100128: PistolAmmo0Empty
+    100130: RightHandIK
+    100132: RightHandIK_end
+    100134: RightHandRotationHelper
+    100136: RightHandRotationHelper_end
+    100138: ring_01_l
+    100140: ring_01_r
+    100142: ring_02_l
+    100144: ring_02_r
+    100146: ring_03_l
+    100148: ring_03_l_end
+    100150: ring_03_r
+    100152: ring_03_r_end
+    100154: thumb_01_l
+    100156: thumb_01_r
+    100158: thumb_02_l
+    100160: thumb_02_r
+    100162: thumb_03_l
+    100164: thumb_03_l_end
+    100166: thumb_03_r
+    100168: thumb_03_r_end
+    100170: upperarm_l
+    100172: upperarm_r
+    100174: Weapon
+    100176: WeaponBolt
+    100178: WeaponBolt_end
+    100180: WeaponJamBullet
+    100182: WeaponJamBullet_end
+    100184: WeaponMag
+    100186: WeaponMag_end
+    100188: WeaponMain
+    100190: WeaponMain_end
+    400000: 0
+    400002: 1
+    400004: 10
+    400006: 11
+    400008: 12
+    400010: 13
+    400012: 14
+    400014: 15
+    400016: 16
+    400018: 2
+    400020: 3
+    400022: 4
+    400024: 5
+    400026: 6
+    400028: 7
+    400030: 8
+    400032: 9
+    400034: __Ammo
+    400036: __BulletDrop
+    400038: __Offset
+    400040: __ShootParticlePosition
+    400042: __Sight
+    400044: Agressive_0
+    400046: Agressive_0:Male_generic
+    400048: Agressive_0:Male_generic.001
+    400050: Camera
+    400052: clavicle_l
+    400054: clavicle_r
+    400056: DI-SP-1
+    400058: //RootNode
+    400060: hand_l
+    400062: hand_r
+    400064: index_01_l
+    400066: index_01_r
+    400068: index_02_l
+    400070: index_02_r
+    400072: index_03_l
+    400074: index_03_l_end
+    400076: index_03_r
+    400078: index_03_r_end
+    400080: LeftHandIK
+    400082: LeftHandIK_end
+    400084: LeftHandRotationHelper
+    400086: LeftHandRotationHelper_end
+    400088: lowerarm_r
+    400090: middle_01_l
+    400092: middle_01_r
+    400094: middle_02_l
+    400096: middle_02_r
+    400098: middle_03_l
+    400100: middle_03_l_end
+    400102: middle_03_r
+    400104: middle_03_r_end
+    400106: neck_01
+    400108: neck_01_end
+    400110: pinky_01_l
+    400112: pinky_01_r
+    400114: pinky_02_l
+    400116: pinky_02_r
+    400118: pinky_03_l
+    400120: pinky_03_l_end
+    400122: pinky_03_r
+    400124: pinky_03_r_end
+    400126: PistolAmmo0
+    400128: PistolAmmo0Empty
+    400130: RightHandIK
+    400132: RightHandIK_end
+    400134: RightHandRotationHelper
+    400136: RightHandRotationHelper_end
+    400138: ring_01_l
+    400140: ring_01_r
+    400142: ring_02_l
+    400144: ring_02_r
+    400146: ring_03_l
+    400148: ring_03_l_end
+    400150: ring_03_r
+    400152: ring_03_r_end
+    400154: thumb_01_l
+    400156: thumb_01_r
+    400158: thumb_02_l
+    400160: thumb_02_r
+    400162: thumb_03_l
+    400164: thumb_03_l_end
+    400166: thumb_03_r
+    400168: thumb_03_r_end
+    400170: upperarm_l
+    400172: upperarm_r
+    400174: Weapon
+    400176: WeaponBolt
+    400178: WeaponBolt_end
+    400180: WeaponJamBullet
+    400182: WeaponJamBullet_end
+    400184: WeaponMag
+    400186: WeaponMag_end
+    400188: WeaponMain
+    400190: WeaponMain_end
+    2300000: PistolAmmo0
+    2300002: PistolAmmo0Empty
+    3300000: PistolAmmo0
+    3300002: PistolAmmo0Empty
+    4300000: Agressive_0:Male_generic.001
+    4300002: Agressive_0:Male_generic
+    4300004: DI-SP-1
+    4300006: 9
+    4300008: 8
+    4300010: 7
+    4300012: 6
+    4300014: 5
+    4300016: 4
+    4300018: 3
+    4300020: 2
+    4300022: 16
+    4300024: 15
+    4300026: 14
+    4300028: 13
+    4300030: 12
+    4300032: 11
+    4300034: 10
+    4300036: 1
+    4300038: 0
+    4300040: PistolAmmo0
+    4300042: PistolAmmo0Empty
+    7400000: Agressive_0|Empty
+    7400002: Agressive_0|IARReload.001
+    7400004: Agressive_0|WeaponDraw
+    7400006: Agressive_0|WeaponEmpty
+    7400008: Agressive_0|WeaponFullReload
+    7400010: Agressive_0|WeaponIdle
+    7400012: Agressive_0|WeaponIdle.001
+    7400014: Agressive_0|WeaponJammedIdle
+    7400016: Agressive_0|WeaponJammedSave
+    7400018: Agressive_0|WeaponJamming
+    7400020: Agressive_0|WeaponMagCheck
+    7400022: Agressive_0|WeaponPunchHit
+    7400024: Agressive_0|WeaponPunchNotHit
+    7400026: Agressive_0|WeaponReload
+    7400028: Agressive_0|WeaponSave
+    7400030: Agressive_0|WeaponShoot
+    7400032: Agressive_0|WeaponUnjamming
+    7400034: __BulletDrop|WeaponUnjamming
+    7400036: Camera|WeaponIdle
+    9500000: //RootNode
+    13700000: 0
+    13700002: 1
+    13700004: 10
+    13700006: 11
+    13700008: 12
+    13700010: 13
+    13700012: 14
+    13700014: 15
+    13700016: 16
+    13700018: 2
+    13700020: 3
+    13700022: 4
+    13700024: 5
+    13700026: 6
+    13700028: 7
+    13700030: 8
+    13700032: 9
+    13700034: Agressive_0:Male_generic
+    13700036: Agressive_0:Male_generic.001
+    13700038: DI-SP-1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Agressive_0|Empty
+      takeName: Agressive_0|Empty
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: __Offset
+        weight: 1
+      - path: __Offset/__BulletDrop
+        weight: 1
+      - path: __Offset/__ShootParticlePosition
+        weight: 1
+      - path: __Offset/__Sight
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l/index_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l/middle_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l/pinky_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l/ring_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l/thumb_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r/index_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r/middle_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r/pinky_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r/ring_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r/thumb_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK/LeftHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper/LeftHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01/neck_01_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK/RightHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper/RightHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt/WeaponBolt_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet/WeaponJamBullet_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag/WeaponMag_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain/WeaponMain_end
+        weight: 1
+      - path: Agressive_0:Male_generic
+        weight: 1
+      - path: Agressive_0:Male_generic.001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: DI-SP-1
+        weight: 1
+      - path: DI-SP-1/__Ammo
+        weight: 1
+      - path: DI-SP-1/__Ammo/0
+        weight: 1
+      - path: DI-SP-1/__Ammo/1
+        weight: 1
+      - path: DI-SP-1/__Ammo/2
+        weight: 1
+      - path: DI-SP-1/__Ammo/3
+        weight: 1
+      - path: DI-SP-1/__Ammo/4
+        weight: 1
+      - path: DI-SP-1/__Ammo/5
+        weight: 1
+      - path: DI-SP-1/__Ammo/6
+        weight: 1
+      - path: DI-SP-1/__Ammo/7
+        weight: 1
+      - path: DI-SP-1/__Ammo/8
+        weight: 1
+      - path: DI-SP-1/__Ammo/9
+        weight: 1
+      - path: DI-SP-1/__Ammo/10
+        weight: 1
+      - path: DI-SP-1/__Ammo/11
+        weight: 1
+      - path: DI-SP-1/__Ammo/12
+        weight: 1
+      - path: DI-SP-1/__Ammo/13
+        weight: 1
+      - path: DI-SP-1/__Ammo/14
+        weight: 1
+      - path: DI-SP-1/__Ammo/15
+        weight: 1
+      - path: DI-SP-1/__Ammo/16
+        weight: 1
+      - path: PistolAmmo0
+        weight: 1
+      - path: PistolAmmo0Empty
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Agressive_0|IARReload.001
+      takeName: Agressive_0|IARReload.001
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: __Offset
+        weight: 1
+      - path: __Offset/__BulletDrop
+        weight: 1
+      - path: __Offset/__ShootParticlePosition
+        weight: 1
+      - path: __Offset/__Sight
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l/index_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l/middle_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l/pinky_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l/ring_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l/thumb_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r/index_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r/middle_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r/pinky_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r/ring_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r/thumb_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK/LeftHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper/LeftHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01/neck_01_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK/RightHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper/RightHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt/WeaponBolt_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet/WeaponJamBullet_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag/WeaponMag_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain/WeaponMain_end
+        weight: 1
+      - path: Agressive_0:Male_generic
+        weight: 1
+      - path: Agressive_0:Male_generic.001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: DI-SP-1
+        weight: 1
+      - path: DI-SP-1/__Ammo
+        weight: 1
+      - path: DI-SP-1/__Ammo/0
+        weight: 1
+      - path: DI-SP-1/__Ammo/1
+        weight: 1
+      - path: DI-SP-1/__Ammo/2
+        weight: 1
+      - path: DI-SP-1/__Ammo/3
+        weight: 1
+      - path: DI-SP-1/__Ammo/4
+        weight: 1
+      - path: DI-SP-1/__Ammo/5
+        weight: 1
+      - path: DI-SP-1/__Ammo/6
+        weight: 1
+      - path: DI-SP-1/__Ammo/7
+        weight: 1
+      - path: DI-SP-1/__Ammo/8
+        weight: 1
+      - path: DI-SP-1/__Ammo/9
+        weight: 1
+      - path: DI-SP-1/__Ammo/10
+        weight: 1
+      - path: DI-SP-1/__Ammo/11
+        weight: 1
+      - path: DI-SP-1/__Ammo/12
+        weight: 1
+      - path: DI-SP-1/__Ammo/13
+        weight: 1
+      - path: DI-SP-1/__Ammo/14
+        weight: 1
+      - path: DI-SP-1/__Ammo/15
+        weight: 1
+      - path: DI-SP-1/__Ammo/16
+        weight: 1
+      - path: PistolAmmo0
+        weight: 1
+      - path: PistolAmmo0Empty
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Agressive_0|WeaponDraw
+      takeName: Agressive_0|WeaponDraw
+      firstFrame: 0
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: __Offset
+        weight: 1
+      - path: __Offset/__BulletDrop
+        weight: 1
+      - path: __Offset/__ShootParticlePosition
+        weight: 1
+      - path: __Offset/__Sight
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l/index_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l/middle_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l/pinky_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l/ring_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l/thumb_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r/index_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r/middle_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r/pinky_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r/ring_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r/thumb_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK/LeftHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper/LeftHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01/neck_01_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK/RightHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper/RightHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt/WeaponBolt_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet/WeaponJamBullet_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag/WeaponMag_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain/WeaponMain_end
+        weight: 1
+      - path: Agressive_0:Male_generic
+        weight: 1
+      - path: Agressive_0:Male_generic.001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: DI-SP-1
+        weight: 1
+      - path: DI-SP-1/__Ammo
+        weight: 1
+      - path: DI-SP-1/__Ammo/0
+        weight: 1
+      - path: DI-SP-1/__Ammo/1
+        weight: 1
+      - path: DI-SP-1/__Ammo/2
+        weight: 1
+      - path: DI-SP-1/__Ammo/3
+        weight: 1
+      - path: DI-SP-1/__Ammo/4
+        weight: 1
+      - path: DI-SP-1/__Ammo/5
+        weight: 1
+      - path: DI-SP-1/__Ammo/6
+        weight: 1
+      - path: DI-SP-1/__Ammo/7
+        weight: 1
+      - path: DI-SP-1/__Ammo/8
+        weight: 1
+      - path: DI-SP-1/__Ammo/9
+        weight: 1
+      - path: DI-SP-1/__Ammo/10
+        weight: 1
+      - path: DI-SP-1/__Ammo/11
+        weight: 1
+      - path: DI-SP-1/__Ammo/12
+        weight: 1
+      - path: DI-SP-1/__Ammo/13
+        weight: 1
+      - path: DI-SP-1/__Ammo/14
+        weight: 1
+      - path: DI-SP-1/__Ammo/15
+        weight: 1
+      - path: DI-SP-1/__Ammo/16
+        weight: 1
+      - path: PistolAmmo0
+        weight: 1
+      - path: PistolAmmo0Empty
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Agressive_0|WeaponEmpty
+      takeName: Agressive_0|WeaponEmpty
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: __Offset
+        weight: 1
+      - path: __Offset/__BulletDrop
+        weight: 1
+      - path: __Offset/__ShootParticlePosition
+        weight: 1
+      - path: __Offset/__Sight
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l/index_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l/middle_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l/pinky_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l/ring_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l/thumb_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r/index_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r/middle_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r/pinky_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r/ring_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r/thumb_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK/LeftHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper/LeftHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01/neck_01_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK/RightHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper/RightHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt/WeaponBolt_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet/WeaponJamBullet_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag/WeaponMag_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain/WeaponMain_end
+        weight: 1
+      - path: Agressive_0:Male_generic
+        weight: 1
+      - path: Agressive_0:Male_generic.001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: DI-SP-1
+        weight: 1
+      - path: DI-SP-1/__Ammo
+        weight: 1
+      - path: DI-SP-1/__Ammo/0
+        weight: 1
+      - path: DI-SP-1/__Ammo/1
+        weight: 1
+      - path: DI-SP-1/__Ammo/2
+        weight: 1
+      - path: DI-SP-1/__Ammo/3
+        weight: 1
+      - path: DI-SP-1/__Ammo/4
+        weight: 1
+      - path: DI-SP-1/__Ammo/5
+        weight: 1
+      - path: DI-SP-1/__Ammo/6
+        weight: 1
+      - path: DI-SP-1/__Ammo/7
+        weight: 1
+      - path: DI-SP-1/__Ammo/8
+        weight: 1
+      - path: DI-SP-1/__Ammo/9
+        weight: 1
+      - path: DI-SP-1/__Ammo/10
+        weight: 1
+      - path: DI-SP-1/__Ammo/11
+        weight: 1
+      - path: DI-SP-1/__Ammo/12
+        weight: 1
+      - path: DI-SP-1/__Ammo/13
+        weight: 1
+      - path: DI-SP-1/__Ammo/14
+        weight: 1
+      - path: DI-SP-1/__Ammo/15
+        weight: 1
+      - path: DI-SP-1/__Ammo/16
+        weight: 1
+      - path: PistolAmmo0
+        weight: 1
+      - path: PistolAmmo0Empty
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Agressive_0|WeaponFullReload
+      takeName: Agressive_0|WeaponFullReload
+      firstFrame: 0
+      lastFrame: 135
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: __Offset
+        weight: 1
+      - path: __Offset/__BulletDrop
+        weight: 1
+      - path: __Offset/__ShootParticlePosition
+        weight: 1
+      - path: __Offset/__Sight
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l/index_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l/middle_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l/pinky_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l/ring_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l/thumb_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r/index_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r/middle_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r/pinky_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r/ring_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r/thumb_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK/LeftHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper/LeftHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01/neck_01_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK/RightHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper/RightHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt/WeaponBolt_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet/WeaponJamBullet_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag/WeaponMag_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain/WeaponMain_end
+        weight: 1
+      - path: Agressive_0:Male_generic
+        weight: 1
+      - path: Agressive_0:Male_generic.001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: DI-SP-1
+        weight: 1
+      - path: DI-SP-1/__Ammo
+        weight: 1
+      - path: DI-SP-1/__Ammo/0
+        weight: 1
+      - path: DI-SP-1/__Ammo/1
+        weight: 1
+      - path: DI-SP-1/__Ammo/2
+        weight: 1
+      - path: DI-SP-1/__Ammo/3
+        weight: 1
+      - path: DI-SP-1/__Ammo/4
+        weight: 1
+      - path: DI-SP-1/__Ammo/5
+        weight: 1
+      - path: DI-SP-1/__Ammo/6
+        weight: 1
+      - path: DI-SP-1/__Ammo/7
+        weight: 1
+      - path: DI-SP-1/__Ammo/8
+        weight: 1
+      - path: DI-SP-1/__Ammo/9
+        weight: 1
+      - path: DI-SP-1/__Ammo/10
+        weight: 1
+      - path: DI-SP-1/__Ammo/11
+        weight: 1
+      - path: DI-SP-1/__Ammo/12
+        weight: 1
+      - path: DI-SP-1/__Ammo/13
+        weight: 1
+      - path: DI-SP-1/__Ammo/14
+        weight: 1
+      - path: DI-SP-1/__Ammo/15
+        weight: 1
+      - path: DI-SP-1/__Ammo/16
+        weight: 1
+      - path: PistolAmmo0
+        weight: 1
+      - path: PistolAmmo0Empty
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Agressive_0|WeaponIdle
+      takeName: Agressive_0|WeaponIdle
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: __Offset
+        weight: 1
+      - path: __Offset/__BulletDrop
+        weight: 1
+      - path: __Offset/__ShootParticlePosition
+        weight: 1
+      - path: __Offset/__Sight
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l/index_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l/middle_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l/pinky_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l/ring_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l/thumb_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r/index_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r/middle_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r/pinky_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r/ring_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r/thumb_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK/LeftHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper/LeftHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01/neck_01_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK/RightHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper/RightHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt/WeaponBolt_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet/WeaponJamBullet_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag/WeaponMag_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain/WeaponMain_end
+        weight: 1
+      - path: Agressive_0:Male_generic
+        weight: 1
+      - path: Agressive_0:Male_generic.001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: DI-SP-1
+        weight: 1
+      - path: DI-SP-1/__Ammo
+        weight: 1
+      - path: DI-SP-1/__Ammo/0
+        weight: 1
+      - path: DI-SP-1/__Ammo/1
+        weight: 1
+      - path: DI-SP-1/__Ammo/2
+        weight: 1
+      - path: DI-SP-1/__Ammo/3
+        weight: 1
+      - path: DI-SP-1/__Ammo/4
+        weight: 1
+      - path: DI-SP-1/__Ammo/5
+        weight: 1
+      - path: DI-SP-1/__Ammo/6
+        weight: 1
+      - path: DI-SP-1/__Ammo/7
+        weight: 1
+      - path: DI-SP-1/__Ammo/8
+        weight: 1
+      - path: DI-SP-1/__Ammo/9
+        weight: 1
+      - path: DI-SP-1/__Ammo/10
+        weight: 1
+      - path: DI-SP-1/__Ammo/11
+        weight: 1
+      - path: DI-SP-1/__Ammo/12
+        weight: 1
+      - path: DI-SP-1/__Ammo/13
+        weight: 1
+      - path: DI-SP-1/__Ammo/14
+        weight: 1
+      - path: DI-SP-1/__Ammo/15
+        weight: 1
+      - path: DI-SP-1/__Ammo/16
+        weight: 1
+      - path: PistolAmmo0
+        weight: 1
+      - path: PistolAmmo0Empty
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Agressive_0|WeaponIdle.001
+      takeName: Agressive_0|WeaponIdle.001
+      firstFrame: 0
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: __Offset
+        weight: 1
+      - path: __Offset/__BulletDrop
+        weight: 1
+      - path: __Offset/__ShootParticlePosition
+        weight: 1
+      - path: __Offset/__Sight
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l/index_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l/middle_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l/pinky_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l/ring_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l/thumb_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r/index_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r/middle_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r/pinky_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r/ring_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r/thumb_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK/LeftHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper/LeftHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01/neck_01_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK/RightHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper/RightHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt/WeaponBolt_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet/WeaponJamBullet_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag/WeaponMag_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain/WeaponMain_end
+        weight: 1
+      - path: Agressive_0:Male_generic
+        weight: 1
+      - path: Agressive_0:Male_generic.001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: DI-SP-1
+        weight: 1
+      - path: DI-SP-1/__Ammo
+        weight: 1
+      - path: DI-SP-1/__Ammo/0
+        weight: 1
+      - path: DI-SP-1/__Ammo/1
+        weight: 1
+      - path: DI-SP-1/__Ammo/2
+        weight: 1
+      - path: DI-SP-1/__Ammo/3
+        weight: 1
+      - path: DI-SP-1/__Ammo/4
+        weight: 1
+      - path: DI-SP-1/__Ammo/5
+        weight: 1
+      - path: DI-SP-1/__Ammo/6
+        weight: 1
+      - path: DI-SP-1/__Ammo/7
+        weight: 1
+      - path: DI-SP-1/__Ammo/8
+        weight: 1
+      - path: DI-SP-1/__Ammo/9
+        weight: 1
+      - path: DI-SP-1/__Ammo/10
+        weight: 1
+      - path: DI-SP-1/__Ammo/11
+        weight: 1
+      - path: DI-SP-1/__Ammo/12
+        weight: 1
+      - path: DI-SP-1/__Ammo/13
+        weight: 1
+      - path: DI-SP-1/__Ammo/14
+        weight: 1
+      - path: DI-SP-1/__Ammo/15
+        weight: 1
+      - path: DI-SP-1/__Ammo/16
+        weight: 1
+      - path: PistolAmmo0
+        weight: 1
+      - path: PistolAmmo0Empty
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Agressive_0|WeaponJammedIdle
+      takeName: Agressive_0|WeaponJammedIdle
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: __Offset
+        weight: 1
+      - path: __Offset/__BulletDrop
+        weight: 1
+      - path: __Offset/__ShootParticlePosition
+        weight: 1
+      - path: __Offset/__Sight
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l/index_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l/middle_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l/pinky_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l/ring_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l/thumb_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r/index_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r/middle_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r/pinky_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r/ring_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r/thumb_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK/LeftHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper/LeftHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01/neck_01_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK/RightHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper/RightHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt/WeaponBolt_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet/WeaponJamBullet_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag/WeaponMag_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain/WeaponMain_end
+        weight: 1
+      - path: Agressive_0:Male_generic
+        weight: 1
+      - path: Agressive_0:Male_generic.001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: DI-SP-1
+        weight: 1
+      - path: DI-SP-1/__Ammo
+        weight: 1
+      - path: DI-SP-1/__Ammo/0
+        weight: 1
+      - path: DI-SP-1/__Ammo/1
+        weight: 1
+      - path: DI-SP-1/__Ammo/2
+        weight: 1
+      - path: DI-SP-1/__Ammo/3
+        weight: 1
+      - path: DI-SP-1/__Ammo/4
+        weight: 1
+      - path: DI-SP-1/__Ammo/5
+        weight: 1
+      - path: DI-SP-1/__Ammo/6
+        weight: 1
+      - path: DI-SP-1/__Ammo/7
+        weight: 1
+      - path: DI-SP-1/__Ammo/8
+        weight: 1
+      - path: DI-SP-1/__Ammo/9
+        weight: 1
+      - path: DI-SP-1/__Ammo/10
+        weight: 1
+      - path: DI-SP-1/__Ammo/11
+        weight: 1
+      - path: DI-SP-1/__Ammo/12
+        weight: 1
+      - path: DI-SP-1/__Ammo/13
+        weight: 1
+      - path: DI-SP-1/__Ammo/14
+        weight: 1
+      - path: DI-SP-1/__Ammo/15
+        weight: 1
+      - path: DI-SP-1/__Ammo/16
+        weight: 1
+      - path: PistolAmmo0
+        weight: 1
+      - path: PistolAmmo0Empty
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Agressive_0|WeaponJammedSave
+      takeName: Agressive_0|WeaponJammedSave
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: __Offset
+        weight: 1
+      - path: __Offset/__BulletDrop
+        weight: 1
+      - path: __Offset/__ShootParticlePosition
+        weight: 1
+      - path: __Offset/__Sight
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l/index_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l/middle_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l/pinky_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l/ring_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l/thumb_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r/index_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r/middle_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r/pinky_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r/ring_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r/thumb_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK/LeftHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper/LeftHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01/neck_01_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK/RightHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper/RightHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt/WeaponBolt_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet/WeaponJamBullet_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag/WeaponMag_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain/WeaponMain_end
+        weight: 1
+      - path: Agressive_0:Male_generic
+        weight: 1
+      - path: Agressive_0:Male_generic.001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: DI-SP-1
+        weight: 1
+      - path: DI-SP-1/__Ammo
+        weight: 1
+      - path: DI-SP-1/__Ammo/0
+        weight: 1
+      - path: DI-SP-1/__Ammo/1
+        weight: 1
+      - path: DI-SP-1/__Ammo/2
+        weight: 1
+      - path: DI-SP-1/__Ammo/3
+        weight: 1
+      - path: DI-SP-1/__Ammo/4
+        weight: 1
+      - path: DI-SP-1/__Ammo/5
+        weight: 1
+      - path: DI-SP-1/__Ammo/6
+        weight: 1
+      - path: DI-SP-1/__Ammo/7
+        weight: 1
+      - path: DI-SP-1/__Ammo/8
+        weight: 1
+      - path: DI-SP-1/__Ammo/9
+        weight: 1
+      - path: DI-SP-1/__Ammo/10
+        weight: 1
+      - path: DI-SP-1/__Ammo/11
+        weight: 1
+      - path: DI-SP-1/__Ammo/12
+        weight: 1
+      - path: DI-SP-1/__Ammo/13
+        weight: 1
+      - path: DI-SP-1/__Ammo/14
+        weight: 1
+      - path: DI-SP-1/__Ammo/15
+        weight: 1
+      - path: DI-SP-1/__Ammo/16
+        weight: 1
+      - path: PistolAmmo0
+        weight: 1
+      - path: PistolAmmo0Empty
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Agressive_0|WeaponJamming
+      takeName: Agressive_0|WeaponJamming
+      firstFrame: 0
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: __Offset
+        weight: 1
+      - path: __Offset/__BulletDrop
+        weight: 1
+      - path: __Offset/__ShootParticlePosition
+        weight: 1
+      - path: __Offset/__Sight
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l/index_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l/middle_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l/pinky_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l/ring_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l/thumb_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r/index_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r/middle_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r/pinky_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r/ring_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r/thumb_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK/LeftHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper/LeftHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01/neck_01_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK/RightHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper/RightHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt/WeaponBolt_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet/WeaponJamBullet_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag/WeaponMag_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain/WeaponMain_end
+        weight: 1
+      - path: Agressive_0:Male_generic
+        weight: 1
+      - path: Agressive_0:Male_generic.001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: DI-SP-1
+        weight: 1
+      - path: DI-SP-1/__Ammo
+        weight: 1
+      - path: DI-SP-1/__Ammo/0
+        weight: 1
+      - path: DI-SP-1/__Ammo/1
+        weight: 1
+      - path: DI-SP-1/__Ammo/2
+        weight: 1
+      - path: DI-SP-1/__Ammo/3
+        weight: 1
+      - path: DI-SP-1/__Ammo/4
+        weight: 1
+      - path: DI-SP-1/__Ammo/5
+        weight: 1
+      - path: DI-SP-1/__Ammo/6
+        weight: 1
+      - path: DI-SP-1/__Ammo/7
+        weight: 1
+      - path: DI-SP-1/__Ammo/8
+        weight: 1
+      - path: DI-SP-1/__Ammo/9
+        weight: 1
+      - path: DI-SP-1/__Ammo/10
+        weight: 1
+      - path: DI-SP-1/__Ammo/11
+        weight: 1
+      - path: DI-SP-1/__Ammo/12
+        weight: 1
+      - path: DI-SP-1/__Ammo/13
+        weight: 1
+      - path: DI-SP-1/__Ammo/14
+        weight: 1
+      - path: DI-SP-1/__Ammo/15
+        weight: 1
+      - path: DI-SP-1/__Ammo/16
+        weight: 1
+      - path: PistolAmmo0
+        weight: 1
+      - path: PistolAmmo0Empty
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Agressive_0|WeaponMagCheck
+      takeName: Agressive_0|WeaponMagCheck
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: __Offset
+        weight: 1
+      - path: __Offset/__BulletDrop
+        weight: 1
+      - path: __Offset/__ShootParticlePosition
+        weight: 1
+      - path: __Offset/__Sight
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l/index_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l/middle_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l/pinky_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l/ring_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l/thumb_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r/index_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r/middle_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r/pinky_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r/ring_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r/thumb_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK/LeftHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper/LeftHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01/neck_01_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK/RightHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper/RightHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt/WeaponBolt_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet/WeaponJamBullet_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag/WeaponMag_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain/WeaponMain_end
+        weight: 1
+      - path: Agressive_0:Male_generic
+        weight: 1
+      - path: Agressive_0:Male_generic.001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: DI-SP-1
+        weight: 1
+      - path: DI-SP-1/__Ammo
+        weight: 1
+      - path: DI-SP-1/__Ammo/0
+        weight: 1
+      - path: DI-SP-1/__Ammo/1
+        weight: 1
+      - path: DI-SP-1/__Ammo/2
+        weight: 1
+      - path: DI-SP-1/__Ammo/3
+        weight: 1
+      - path: DI-SP-1/__Ammo/4
+        weight: 1
+      - path: DI-SP-1/__Ammo/5
+        weight: 1
+      - path: DI-SP-1/__Ammo/6
+        weight: 1
+      - path: DI-SP-1/__Ammo/7
+        weight: 1
+      - path: DI-SP-1/__Ammo/8
+        weight: 1
+      - path: DI-SP-1/__Ammo/9
+        weight: 1
+      - path: DI-SP-1/__Ammo/10
+        weight: 1
+      - path: DI-SP-1/__Ammo/11
+        weight: 1
+      - path: DI-SP-1/__Ammo/12
+        weight: 1
+      - path: DI-SP-1/__Ammo/13
+        weight: 1
+      - path: DI-SP-1/__Ammo/14
+        weight: 1
+      - path: DI-SP-1/__Ammo/15
+        weight: 1
+      - path: DI-SP-1/__Ammo/16
+        weight: 1
+      - path: PistolAmmo0
+        weight: 1
+      - path: PistolAmmo0Empty
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Agressive_0|WeaponPunchHit
+      takeName: Agressive_0|WeaponPunchHit
+      firstFrame: 0
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: __Offset
+        weight: 1
+      - path: __Offset/__BulletDrop
+        weight: 1
+      - path: __Offset/__ShootParticlePosition
+        weight: 1
+      - path: __Offset/__Sight
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l/index_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l/middle_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l/pinky_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l/ring_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l/thumb_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r/index_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r/middle_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r/pinky_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r/ring_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r/thumb_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK/LeftHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper/LeftHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01/neck_01_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK/RightHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper/RightHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt/WeaponBolt_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet/WeaponJamBullet_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag/WeaponMag_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain/WeaponMain_end
+        weight: 1
+      - path: Agressive_0:Male_generic
+        weight: 1
+      - path: Agressive_0:Male_generic.001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: DI-SP-1
+        weight: 1
+      - path: DI-SP-1/__Ammo
+        weight: 1
+      - path: DI-SP-1/__Ammo/0
+        weight: 1
+      - path: DI-SP-1/__Ammo/1
+        weight: 1
+      - path: DI-SP-1/__Ammo/2
+        weight: 1
+      - path: DI-SP-1/__Ammo/3
+        weight: 1
+      - path: DI-SP-1/__Ammo/4
+        weight: 1
+      - path: DI-SP-1/__Ammo/5
+        weight: 1
+      - path: DI-SP-1/__Ammo/6
+        weight: 1
+      - path: DI-SP-1/__Ammo/7
+        weight: 1
+      - path: DI-SP-1/__Ammo/8
+        weight: 1
+      - path: DI-SP-1/__Ammo/9
+        weight: 1
+      - path: DI-SP-1/__Ammo/10
+        weight: 1
+      - path: DI-SP-1/__Ammo/11
+        weight: 1
+      - path: DI-SP-1/__Ammo/12
+        weight: 1
+      - path: DI-SP-1/__Ammo/13
+        weight: 1
+      - path: DI-SP-1/__Ammo/14
+        weight: 1
+      - path: DI-SP-1/__Ammo/15
+        weight: 1
+      - path: DI-SP-1/__Ammo/16
+        weight: 1
+      - path: PistolAmmo0
+        weight: 1
+      - path: PistolAmmo0Empty
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Agressive_0|WeaponPunchNotHit
+      takeName: Agressive_0|WeaponPunchNotHit
+      firstFrame: 0
+      lastFrame: 21
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: __Offset
+        weight: 1
+      - path: __Offset/__BulletDrop
+        weight: 1
+      - path: __Offset/__ShootParticlePosition
+        weight: 1
+      - path: __Offset/__Sight
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l/index_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l/middle_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l/pinky_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l/ring_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l/thumb_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r/index_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r/middle_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r/pinky_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r/ring_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r/thumb_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK/LeftHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper/LeftHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01/neck_01_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK/RightHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper/RightHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt/WeaponBolt_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet/WeaponJamBullet_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag/WeaponMag_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain/WeaponMain_end
+        weight: 1
+      - path: Agressive_0:Male_generic
+        weight: 1
+      - path: Agressive_0:Male_generic.001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: DI-SP-1
+        weight: 1
+      - path: DI-SP-1/__Ammo
+        weight: 1
+      - path: DI-SP-1/__Ammo/0
+        weight: 1
+      - path: DI-SP-1/__Ammo/1
+        weight: 1
+      - path: DI-SP-1/__Ammo/2
+        weight: 1
+      - path: DI-SP-1/__Ammo/3
+        weight: 1
+      - path: DI-SP-1/__Ammo/4
+        weight: 1
+      - path: DI-SP-1/__Ammo/5
+        weight: 1
+      - path: DI-SP-1/__Ammo/6
+        weight: 1
+      - path: DI-SP-1/__Ammo/7
+        weight: 1
+      - path: DI-SP-1/__Ammo/8
+        weight: 1
+      - path: DI-SP-1/__Ammo/9
+        weight: 1
+      - path: DI-SP-1/__Ammo/10
+        weight: 1
+      - path: DI-SP-1/__Ammo/11
+        weight: 1
+      - path: DI-SP-1/__Ammo/12
+        weight: 1
+      - path: DI-SP-1/__Ammo/13
+        weight: 1
+      - path: DI-SP-1/__Ammo/14
+        weight: 1
+      - path: DI-SP-1/__Ammo/15
+        weight: 1
+      - path: DI-SP-1/__Ammo/16
+        weight: 1
+      - path: PistolAmmo0
+        weight: 1
+      - path: PistolAmmo0Empty
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Agressive_0|WeaponReload
+      takeName: Agressive_0|WeaponReload
+      firstFrame: 0
+      lastFrame: 115
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: __Offset
+        weight: 1
+      - path: __Offset/__BulletDrop
+        weight: 1
+      - path: __Offset/__ShootParticlePosition
+        weight: 1
+      - path: __Offset/__Sight
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l/index_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l/middle_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l/pinky_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l/ring_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l/thumb_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r/index_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r/middle_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r/pinky_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r/ring_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r/thumb_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK/LeftHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper/LeftHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01/neck_01_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK/RightHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper/RightHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt/WeaponBolt_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet/WeaponJamBullet_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag/WeaponMag_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain/WeaponMain_end
+        weight: 1
+      - path: Agressive_0:Male_generic
+        weight: 1
+      - path: Agressive_0:Male_generic.001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: DI-SP-1
+        weight: 1
+      - path: DI-SP-1/__Ammo
+        weight: 1
+      - path: DI-SP-1/__Ammo/0
+        weight: 1
+      - path: DI-SP-1/__Ammo/1
+        weight: 1
+      - path: DI-SP-1/__Ammo/2
+        weight: 1
+      - path: DI-SP-1/__Ammo/3
+        weight: 1
+      - path: DI-SP-1/__Ammo/4
+        weight: 1
+      - path: DI-SP-1/__Ammo/5
+        weight: 1
+      - path: DI-SP-1/__Ammo/6
+        weight: 1
+      - path: DI-SP-1/__Ammo/7
+        weight: 1
+      - path: DI-SP-1/__Ammo/8
+        weight: 1
+      - path: DI-SP-1/__Ammo/9
+        weight: 1
+      - path: DI-SP-1/__Ammo/10
+        weight: 1
+      - path: DI-SP-1/__Ammo/11
+        weight: 1
+      - path: DI-SP-1/__Ammo/12
+        weight: 1
+      - path: DI-SP-1/__Ammo/13
+        weight: 1
+      - path: DI-SP-1/__Ammo/14
+        weight: 1
+      - path: DI-SP-1/__Ammo/15
+        weight: 1
+      - path: DI-SP-1/__Ammo/16
+        weight: 1
+      - path: PistolAmmo0
+        weight: 1
+      - path: PistolAmmo0Empty
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Agressive_0|WeaponSave
+      takeName: Agressive_0|WeaponSave
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: __Offset
+        weight: 1
+      - path: __Offset/__BulletDrop
+        weight: 1
+      - path: __Offset/__ShootParticlePosition
+        weight: 1
+      - path: __Offset/__Sight
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l/index_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l/middle_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l/pinky_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l/ring_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l/thumb_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r/index_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r/middle_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r/pinky_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r/ring_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r/thumb_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK/LeftHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper/LeftHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01/neck_01_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK/RightHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper/RightHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt/WeaponBolt_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet/WeaponJamBullet_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag/WeaponMag_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain/WeaponMain_end
+        weight: 1
+      - path: Agressive_0:Male_generic
+        weight: 1
+      - path: Agressive_0:Male_generic.001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: DI-SP-1
+        weight: 1
+      - path: DI-SP-1/__Ammo
+        weight: 1
+      - path: DI-SP-1/__Ammo/0
+        weight: 1
+      - path: DI-SP-1/__Ammo/1
+        weight: 1
+      - path: DI-SP-1/__Ammo/2
+        weight: 1
+      - path: DI-SP-1/__Ammo/3
+        weight: 1
+      - path: DI-SP-1/__Ammo/4
+        weight: 1
+      - path: DI-SP-1/__Ammo/5
+        weight: 1
+      - path: DI-SP-1/__Ammo/6
+        weight: 1
+      - path: DI-SP-1/__Ammo/7
+        weight: 1
+      - path: DI-SP-1/__Ammo/8
+        weight: 1
+      - path: DI-SP-1/__Ammo/9
+        weight: 1
+      - path: DI-SP-1/__Ammo/10
+        weight: 1
+      - path: DI-SP-1/__Ammo/11
+        weight: 1
+      - path: DI-SP-1/__Ammo/12
+        weight: 1
+      - path: DI-SP-1/__Ammo/13
+        weight: 1
+      - path: DI-SP-1/__Ammo/14
+        weight: 1
+      - path: DI-SP-1/__Ammo/15
+        weight: 1
+      - path: DI-SP-1/__Ammo/16
+        weight: 1
+      - path: PistolAmmo0
+        weight: 1
+      - path: PistolAmmo0Empty
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Agressive_0|WeaponShoot
+      takeName: Agressive_0|WeaponShoot
+      firstFrame: 0
+      lastFrame: 7
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: __Offset
+        weight: 1
+      - path: __Offset/__BulletDrop
+        weight: 1
+      - path: __Offset/__ShootParticlePosition
+        weight: 1
+      - path: __Offset/__Sight
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l/index_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l/middle_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l/pinky_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l/ring_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l/thumb_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r/index_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r/middle_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r/pinky_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r/ring_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r/thumb_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK/LeftHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper/LeftHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01/neck_01_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK/RightHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper/RightHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt/WeaponBolt_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet/WeaponJamBullet_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag/WeaponMag_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain/WeaponMain_end
+        weight: 1
+      - path: Agressive_0:Male_generic
+        weight: 1
+      - path: Agressive_0:Male_generic.001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: DI-SP-1
+        weight: 1
+      - path: DI-SP-1/__Ammo
+        weight: 1
+      - path: DI-SP-1/__Ammo/0
+        weight: 1
+      - path: DI-SP-1/__Ammo/1
+        weight: 1
+      - path: DI-SP-1/__Ammo/2
+        weight: 1
+      - path: DI-SP-1/__Ammo/3
+        weight: 1
+      - path: DI-SP-1/__Ammo/4
+        weight: 1
+      - path: DI-SP-1/__Ammo/5
+        weight: 1
+      - path: DI-SP-1/__Ammo/6
+        weight: 1
+      - path: DI-SP-1/__Ammo/7
+        weight: 1
+      - path: DI-SP-1/__Ammo/8
+        weight: 1
+      - path: DI-SP-1/__Ammo/9
+        weight: 1
+      - path: DI-SP-1/__Ammo/10
+        weight: 1
+      - path: DI-SP-1/__Ammo/11
+        weight: 1
+      - path: DI-SP-1/__Ammo/12
+        weight: 1
+      - path: DI-SP-1/__Ammo/13
+        weight: 1
+      - path: DI-SP-1/__Ammo/14
+        weight: 1
+      - path: DI-SP-1/__Ammo/15
+        weight: 1
+      - path: DI-SP-1/__Ammo/16
+        weight: 1
+      - path: PistolAmmo0
+        weight: 1
+      - path: PistolAmmo0Empty
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Agressive_0|WeaponUnjamming
+      takeName: Agressive_0|WeaponUnjamming
+      firstFrame: 0
+      lastFrame: 66
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: __Offset
+        weight: 1
+      - path: __Offset/__BulletDrop
+        weight: 1
+      - path: __Offset/__ShootParticlePosition
+        weight: 1
+      - path: __Offset/__Sight
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/index_01_l/index_02_l/index_03_l/index_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/middle_01_l/middle_02_l/middle_03_l/middle_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/pinky_01_l/pinky_02_l/pinky_03_l/pinky_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/ring_01_l/ring_02_l/ring_03_l/ring_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_l/upperarm_l/Weapon/hand_l/thumb_01_l/thumb_02_l/thumb_03_l/thumb_03_l_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/index_01_r/index_02_r/index_03_r/index_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/middle_01_r/middle_02_r/middle_03_r/middle_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/pinky_01_r/pinky_02_r/pinky_03_r/pinky_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/ring_01_r/ring_02_r/ring_03_r/ring_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/clavicle_r/upperarm_r/lowerarm_r/hand_r/thumb_01_r/thumb_02_r/thumb_03_r/thumb_03_r_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandIK/LeftHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/LeftHandRotationHelper/LeftHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/neck_01/neck_01_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandIK/RightHandIK_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/RightHandRotationHelper/RightHandRotationHelper_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponBolt/WeaponBolt_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponJamBullet/WeaponJamBullet_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMag/WeaponMag_end
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain
+        weight: 1
+      - path: __Offset/__Sight/Agressive_0/WeaponMain/WeaponMain_end
+        weight: 1
+      - path: Agressive_0:Male_generic
+        weight: 1
+      - path: Agressive_0:Male_generic.001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: DI-SP-1
+        weight: 1
+      - path: DI-SP-1/__Ammo
+        weight: 1
+      - path: DI-SP-1/__Ammo/0
+        weight: 1
+      - path: DI-SP-1/__Ammo/1
+        weight: 1
+      - path: DI-SP-1/__Ammo/2
+        weight: 1
+      - path: DI-SP-1/__Ammo/3
+        weight: 1
+      - path: DI-SP-1/__Ammo/4
+        weight: 1
+      - path: DI-SP-1/__Ammo/5
+        weight: 1
+      - path: DI-SP-1/__Ammo/6
+        weight: 1
+      - path: DI-SP-1/__Ammo/7
+        weight: 1
+      - path: DI-SP-1/__Ammo/8
+        weight: 1
+      - path: DI-SP-1/__Ammo/9
+        weight: 1
+      - path: DI-SP-1/__Ammo/10
+        weight: 1
+      - path: DI-SP-1/__Ammo/11
+        weight: 1
+      - path: DI-SP-1/__Ammo/12
+        weight: 1
+      - path: DI-SP-1/__Ammo/13
+        weight: 1
+      - path: DI-SP-1/__Ammo/14
+        weight: 1
+      - path: DI-SP-1/__Ammo/15
+        weight: 1
+      - path: DI-SP-1/__Ammo/16
+        weight: 1
+      - path: PistolAmmo0
+        weight: 1
+      - path: PistolAmmo0Empty
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

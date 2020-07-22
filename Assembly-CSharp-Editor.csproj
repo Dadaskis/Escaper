@@ -52,6 +52,7 @@
      <Compile Include="Assets\DecalSystem\Plugins\DecalSystem\Editor\Utils\GUIUtils.cs" />
      <Compile Include="Assets\Editor\ApplySelectedPrefabs.cs" />
      <Compile Include="Assets\Editor\EditorCameraClipChanger.cs" />
+     <Compile Include="Assets\Editor\IWeapon\IFirearmEditor.cs" />
      <Compile Include="Assets\Editor\Inventory\GUIInventorySlotsEditor.cs" />
      <Compile Include="Assets\Editor\Inventory\GUIItemEditor.cs" />
      <Compile Include="Assets\Editor\LightProbes\LightProbePlacement.cs" />

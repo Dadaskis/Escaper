@@ -19,19 +19,20 @@ public class AnimationClipOverrides : List<KeyValuePair<AnimationClip, Animation
 	}
 }
 
-public abstract class IWeapon : MonoBehaviour {
+public class IWeapon : MonoBehaviour {
 
 	public bool animationPlaying = false;
-	public Animator animator;
+	public Animator animator = null;
 	public AnimatorOverrideController animatorOverride;
 	public AnimationClipOverrides animationOverrides;
 	public Character owner;
 	public bool firstPerson = true;
-	public int maxAmmo = 1;
-	public int currentAmmo = 1;
+	public int maxAmmo = 30;
+	public int currentAmmo = 30;
 	public bool restrictUsing = false;
-	public string animatorSpeedFloatName;
+	public string animatorSpeedFloatName = "AnimationSpeed";
 	public float overallWeaponsAnimationSpeedModifier = 1.0f;
+	public float currentAnimationSpeed = 1.0f;
 
 	public delegate void AnimationOverMethodType ();
 	public delegate void AnimationOverrideMethodType(ref AnimationClipOverrides overrides);
@@ -42,7 +43,7 @@ public abstract class IWeapon : MonoBehaviour {
 		}
 		animationPlaying = true;
 		animator.SetTrigger (name);
-		yield return new WaitForSeconds (duration);
+		yield return new WaitForSeconds (duration / currentAnimationSpeed);
 		animationPlaying = false;
 		SetCurrentAnimationSpeed (1.0f);
 	}
@@ -72,10 +73,17 @@ public abstract class IWeapon : MonoBehaviour {
 
 	public void SetCurrentAnimationSpeed(float speed) {
 		animator.SetFloat (animatorSpeedFloatName, speed * overallWeaponsAnimationSpeedModifier);
+		currentAnimationSpeed = speed * overallWeaponsAnimationSpeedModifier;
 	}
 
 	void Start() {
 		CustomStartOnBegin ();
+		if (animator == null) {
+			animator = GetComponent<Animator> ();
+			if (animator == null) {
+				animator = GetComponentInChildren<Animator> ();
+			}
+		}
 		animatorOverride = new AnimatorOverrideController (animator.runtimeAnimatorController);
 		animator.runtimeAnimatorController = animatorOverride;
 		animationOverrides = new AnimationClipOverrides (animatorOverride.overridesCount);
@@ -83,16 +91,17 @@ public abstract class IWeapon : MonoBehaviour {
 		CustomStartOnEnd ();
 	}
 
-	public abstract void PrimaryFire ();
-	public abstract void SinglePrimaryFire ();
-	public abstract void SecondaryFire ();
-	public abstract void SingleSecondaryFire ();
-	public abstract void Reload ();
-	public abstract void Punch ();
-	public abstract void Save ();
-	public abstract void UnSave ();
-	public abstract void CustomStartOnBegin();
-	public abstract void CustomStartOnEnd();
-	public abstract void ApplyAnimationOverrides(ref AnimationClipOverrides overrides);
+	public virtual void PrimaryFire () {}
+	public virtual void SinglePrimaryFire () {}
+	public virtual void SecondaryFire () {}
+	public virtual void SingleSecondaryFire () {}
+	public virtual void Reload () {}
+	public virtual void Punch () {}
+	public virtual void Save () {}
+	public virtual void UnSave () {}
+	public virtual void CustomStartOnBegin () {}
+	public virtual void CustomStartOnEnd () {}
+	public virtual void MagCheck () {}
+	public virtual void ApplyAnimationOverrides (ref AnimationClipOverrides overrides) {}
 
 }

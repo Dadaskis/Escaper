@@ -57,3 +57,6 @@ MonoBehaviour:
   - key: 118
     name: PlayerPunch
     normalName: Punch
+  - key: 99
+    name: PlayerMagCheck
+    normalName: Magazine check

@@ -43,6 +43,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 		public bool enableLogic = true;
 
 		private bool isCrouching = false;
+		private bool isEnteredCrouching = false;
 		private float previousY = 0.0f;
 		private float startHeight = 0.0f;
 
@@ -101,15 +102,22 @@ namespace UnityStandardAssets.Characters.FirstPerson
 					}
 				}
 			} else {
-				isCrouching = InputManager.GetButton ("PlayerCrouch");
+				//isCrouching = InputManager.GetButton ("PlayerCrouch");
+				bool isPressedCrouching = InputManager.GetButton("PlayerCrouch");
 
-				if (isCrouching == true) {
+				if (isPressedCrouching) {
+					isEnteredCrouching = true;
+				}
+
+				if (isPressedCrouching == true || (isCrouching == true && isEnteredCrouching == true)) {
 					targetHeight = crouchHeight;
-				} else {
+					isCrouching = true;
+				} else if(isEnteredCrouching) {
 					float radius = characterController.radius;
-					bool isHitToOpaque = Physics.CheckBox (m_Camera.position + new Vector3 (0.0f, radius * 2.0f, 0.0f), new Vector3 (radius, radius, radius));
+					bool isHitToOpaque = Physics.CheckBox (m_Camera.position + new Vector3 (0.0f, radius * 1.3f, 0.0f), new Vector3 (radius, radius, radius));
 					if (!isHitToOpaque) {
 						targetHeight = startHeight;
+						isEnteredCrouching = false;
 					} else {
 						isCrouching = true;
 					}

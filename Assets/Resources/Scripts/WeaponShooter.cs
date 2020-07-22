@@ -39,9 +39,16 @@ public class WeaponShooter : MonoBehaviour {
 			if (InputManager.GetButtonUp("PlayerRun")) {
 				weapon.UnSave ();
 			}
+
+			if (InputManager.GetButtonDown("PlayerMagCheck")) {
+				weapon.MagCheck ();
+			}
 		} else {
 			if (transform.childCount > 0) {
 				weapon = GetComponentInChildren<IWeapon> ();
+				if (weapon != null) {
+					weapon.owner = Player.instance.character;
+				}
 			}
 		}
 	}

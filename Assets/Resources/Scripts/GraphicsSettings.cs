@@ -66,19 +66,33 @@ public class GraphicsSettings : MonoBehaviour {
 			//}
 
 			if (!data.isFastMode) {
-				DynamicLightSwitcher[] switchers = FindObjectsOfType<DynamicLightSwitcher> ();
+				/*DynamicLightSwitcher[] switchers = FindObjectsOfType<DynamicLightSwitcher> ();
 				foreach (DynamicLightSwitcher switcher in switchers) {
 					if (data.enableRealtimeShadows) {
 						switcher.EnableDynamicLighting ();
 					} else {
 						switcher.EnableStaticLighting ();
 					}
-				}
+				}*/
+
+				Light[] lights = FindObjectsOfType<Light> ();
 
 				if (data.enableRealtimeShadows) {
 					QualitySettings.shadows = ShadowQuality.All;
+					foreach (Light light in lights) {
+						if (light.lightmapBakeType == LightmapBakeType.Realtime) {
+							light.enabled = true;
+						}
+					}
+					LightmapManager.instance.DisableLightmaps ();
 				} else {
 					QualitySettings.shadows = ShadowQuality.Disable;
+					foreach (Light light in lights) {
+						if (light.lightmapBakeType == LightmapBakeType.Realtime) {
+							light.enabled = false;
+						}
+					}
+					LightmapManager.instance.EnableLightmaps ();
 				}
 
 				MaterialManager.instance.ChangeQuality (data.shadersQuality);

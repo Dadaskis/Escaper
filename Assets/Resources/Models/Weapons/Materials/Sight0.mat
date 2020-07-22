@@ -70,16 +70,16 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Smoothness: 0.391
+    - _Smoothness: 0.13
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WhiteNoiseAlphaMultiplier: 0.53
+    - _WhiteNoiseAlphaMultiplier: 1.33
     - _WhiteNoiseColorMultiplier: 6
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 0, b: 0, a: 1}
-    - _Emission: {r: 2.709, g: 0, b: 0, a: 1}
+    - _Emission: {r: 1.972, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Specular: {r: 1, g: 0.44852945, b: 0.44852945, a: 1}
+    - _Specular: {r: 0.58823526, g: 0.25951555, b: 0.25951555, a: 1}
