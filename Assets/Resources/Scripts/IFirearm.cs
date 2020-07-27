@@ -59,6 +59,12 @@ public class IFirearm : IWeapon {
 	public float punchAnimationSpeed = 1.0f;
 	public float checkMagAnimationSpeed = 1.0f;
 
+	public string reloadSoundName = "";
+	public string fullReloadSoundName = "";
+	public string shootSoundName = "";
+	public string unjammingSoundName = "";
+	public string magCheckSoundName = "";
+
 	/*public AnimationClip idleClipTP;
 	public AnimationClip fireClipTP;
 	public float fireTPDuration;
@@ -132,8 +138,16 @@ public class IFirearm : IWeapon {
 		ChangeAnimation (saveOverrideNameFP, saveClipFP);
 	}
 
+	public void UnJam() {
+		SetCurrentAnimationSpeed (unjammingAnimationSpeed);
+		StartCoroutine(PlayAnimation(unjammingOverrideNameFP, unjammingClipFP.length, NullifyJammedState)); 
+		SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (unjammingSoundName);
+		data.spatialBlend = 0.0f;
+		SoundManager.instance.CreateSound (data, Vector3.zero, transform);
+	}
+
 	public void Jam() {
-		StartCoroutine (PlayAnimation (jammingOverrideNameFP, jammingClipFP.length));
+		StartCoroutine (PlayAnimation (jammingOverrideNameFP, jammingClipFP.length, UnJam));
 		ChangeAnimation (idleOverrideNameFP, jammedIdleClipFP);
 		ChangeAnimation (saveOverrideNameFP, saveJammedClipFP);
 	}
@@ -193,6 +207,13 @@ public class IFirearm : IWeapon {
 		if (shootFireParticles != null) {
 			shootFireParticles.Play ();
 		}
+		SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (shootSoundName);
+		data.minDistance = 50.0f;
+		data.maxDistance = 100.0f;
+		if (firstPerson) {
+			data.spatialBlend = 0.0f;
+		}
+		SoundManager.instance.CreateSound (data, Vector3.zero, transform);
 		Shoot ();
 	}
 
@@ -201,6 +222,40 @@ public class IFirearm : IWeapon {
 			return;
 		}
 		inSight = !inSight;
+		PlayTurningSound ();
+	}
+
+	private Quaternion previousRotation = Quaternion.identity;
+	public float turningValueCheck = 0.2f;
+	public float turningValueCheckMax = 0.5f;
+	public List<string> turningSoundNames = new List<string>();
+	public float turningTimer = 0.0f;
+	public float turningDelay = 0.6f;
+
+	public virtual void PlayTurningSound() {
+		turningTimer = 0.0f;
+		int index = Random.Range (0, turningSoundNames.Count);
+		SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (turningSoundNames[index]);
+		data.spatialBlend = 0.0f;
+		SoundManager.instance.CreateSound (data, Vector3.zero, transform);
+		Debug.LogError ("Playing turning sound: " + turningSoundNames [index]);
+	}
+
+	public virtual void UpdateTurningSound() {
+		turningTimer += Time.deltaTime;
+
+		if (turningTimer > turningDelay) {
+			float xRotation = Mathf.Abs(previousRotation.x - transform.rotation.x);
+			float yRotation = Mathf.Abs(previousRotation.y - transform.rotation.y);
+
+			if (xRotation > turningValueCheck && xRotation < turningValueCheckMax) {
+				PlayTurningSound ();
+			} else if (yRotation > turningValueCheck && yRotation < turningValueCheckMax) {
+				PlayTurningSound ();
+			}
+		}
+
+		previousRotation = transform.rotation;
 	}
 
 	void Update() {
@@ -212,12 +267,13 @@ public class IFirearm : IWeapon {
 					inSightApproved = true;
 				}
 			}
-			if (inSightApproved && !save && !reloading) {
+			if (inSightApproved && !save && !reloading && !jammed) {
 				offsetTransform.localPosition = Vector3.Lerp (offsetTransform.localPosition, Vector3.zero, Time.deltaTime * goingInSightSpeed);
 			} else {
 				offsetTransform.localPosition = Vector3.Lerp (offsetTransform.localPosition, offsetInitialPosition, Time.deltaTime * goingOutSightSpeed);
 			}
 		}
+		UpdateTurningSound ();
 		FirearmUpdate ();
 	}
 
@@ -246,8 +302,7 @@ public class IFirearm : IWeapon {
 
 		if(firstPerson) {
 			if (jammed) {
-				SetCurrentAnimationSpeed (unjammingAnimationSpeed);
-				StartCoroutine(PlayAnimation(unjammingOverrideNameFP, unjammingClipFP.length, NullifyJammedState)); 
+				
 			} else {
 				if (ammoTransform != null) {
 					ammoTransform.gameObject.SetActive (true);
@@ -257,9 +312,15 @@ public class IFirearm : IWeapon {
 				if (currentAmmo > 0) {
 					SetCurrentAnimationSpeed (reloadAnimationSpeed);
 					StartCoroutine (PlayAnimation (reloadOverrideNameFP, reloadClipFP.length, ReloadEnd));
+					SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (reloadSoundName);
+					data.spatialBlend = 0.0f;
+					SoundManager.instance.CreateSound (data, Vector3.zero, transform);
 				} else {
 					SetCurrentAnimationSpeed (fullReloadAnimationSpeed);
 					StartCoroutine (PlayAnimation (fullReloadOverrideNameFP, fullReloadClipFP.length, ReloadEnd));
+					SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (fullReloadSoundName);
+					data.spatialBlend = 0.0f;
+					SoundManager.instance.CreateSound (data, Vector3.zero, transform);
 				}
 
 				if (ammoTransform != null) {
@@ -280,6 +341,10 @@ public class IFirearm : IWeapon {
 	}
 
 	public override void Punch() {
+		if (jammed) {
+			return;
+		}
+
 		if (animationPlaying) {
 			return;
 		}
@@ -289,6 +354,7 @@ public class IFirearm : IWeapon {
 		}
 
 		if (firstPerson) {
+			PlayTurningSound ();
 			RaycastHit hit = Player.instance.character.Raycast ();
 			AnimationClip currentClip = null;
 			if (hit.distance > punchHitDistanceCheck) {
@@ -343,11 +409,13 @@ public class IFirearm : IWeapon {
 	public override void Save () {
 		save = true;
 		animator.SetBool (saveOverrideNameFP, save);
+		PlayTurningSound ();
 	}
 
 	public override void UnSave () {
 		save = false;
 		animator.SetBool (saveOverrideNameFP, save);
+		PlayTurningSound ();
 	}
 
 	public IEnumerator FulfillAmmoOnReload() {
@@ -378,6 +446,10 @@ public class IFirearm : IWeapon {
 	}
 
 	public override void MagCheck () {
+		if (jammed) {
+			return;
+		}
+
 		if (drawAmmoOnlyOnCheckMag && ammoTransform != null) {
 			ammoTransform.gameObject.SetActive (true);
 		}
@@ -388,5 +460,13 @@ public class IFirearm : IWeapon {
 		StartCoroutine (PlayAnimation (checkMagOverrideNameFP, checkMagClipFP.length, delegate {
 			reloading = false;
 		}));
+
+		SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (magCheckSoundName);
+		data.minDistance = 2.0f;
+		data.maxDistance = 4.0f;
+		if (firstPerson) {
+			data.spatialBlend = 0.0f;
+		}
+		SoundManager.instance.CreateSound (data, Vector3.zero, transform);
 	}
 }

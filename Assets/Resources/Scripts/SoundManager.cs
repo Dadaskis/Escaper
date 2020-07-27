@@ -13,7 +13,9 @@ public class SoundType {
 public class SoundMaterialType {
 	public string typeName = "";
 	public List<string> hitClipNames = new List<string> ();
-	public List<string> walkClipNames = new List<string>();
+	public List<string> walkClipNames = new List<string> ();
+	public List<string> runClipNames = new List<string> ();
+	public List<string> landingClipNames = new List<string> ();
 }
 
 public class SoundManager : MonoBehaviour {

@@ -509,69 +509,105 @@ MonoBehaviour:
   - typeName: Ground
     hitClipNames: []
     walkClipNames:
-    - step_concrete_0
-    - step_concrete_1
-    - step_concrete_2
-    - step_concrete_3
-    - step_concrete_4
-    - step_concrete_5
-    - step_concrete_6
-    - step_concrete_7
+    - Concrete0Walk
+    - Concrete1Walk
+    - Concrete2Walk
+    - Concrete3Walk
+    runClipNames:
+    - Concrete0Run
+    - Concrete1Run
+    - Concrete2Run
+    - Concrete3Run
+    landingClipNames:
+    - Concrete0Landing
+    - Concrete1Landing
+    - Concrete2Landing
+    - Concrete3Landing
   - typeName: Debris
     hitClipNames: []
     walkClipNames:
-    - step_concrete_0
-    - step_concrete_1
-    - step_concrete_2
-    - step_concrete_3
-    - step_concrete_4
-    - step_concrete_5
-    - step_concrete_6
-    - step_concrete_7
+    - Gravel0Walk
+    - Gravel1Walk
+    - Gravel2Walk
+    - Gravel3Walk
+    runClipNames:
+    - Gravel0Run
+    - Gravel1Run
+    - Gravel2Run
+    - Gravel3Run
+    landingClipNames:
+    - Gravel0Landing
+    - Gravel1Landing
+    - Gravel2Landing
+    - Gravel3Landing
   - typeName: Concrete
     hitClipNames: []
     walkClipNames:
-    - step_concrete_0
-    - step_concrete_1
-    - step_concrete_2
-    - step_concrete_3
-    - step_concrete_4
-    - step_concrete_5
-    - step_concrete_6
-    - step_concrete_7
+    - Concrete0Walk
+    - Concrete1Walk
+    - Concrete2Walk
+    - Concrete3Walk
+    runClipNames:
+    - Concrete0Run
+    - Concrete1Run
+    - Concrete2Run
+    - Concrete3Run
+    landingClipNames:
+    - Concrete0Landing
+    - Concrete1Landing
+    - Concrete2Landing
+    - Concrete3Landing
   - typeName: Brick
     hitClipNames: []
     walkClipNames:
-    - step_concrete_0
-    - step_concrete_1
-    - step_concrete_2
-    - step_concrete_3
-    - step_concrete_4
-    - step_concrete_5
-    - step_concrete_6
-    - step_concrete_7
+    - Concrete0Walk
+    - Concrete1Walk
+    - Concrete2Walk
+    - Concrete3Walk
+    runClipNames:
+    - Concrete0Run
+    - Concrete1Run
+    - Concrete2Run
+    - Concrete3Run
+    landingClipNames:
+    - Concrete0Landing
+    - Concrete1Landing
+    - Concrete2Landing
+    - Concrete3Landing
   - typeName: Metal
     hitClipNames: []
     walkClipNames:
-    - step_metal_0
-    - step_metal_1
-    - step_metal_2
-    - step_metal_3
-    - step_metal_4
-    - step_metal_5
-    - step_metal_6
-    - step_metal_7
+    - Metal0Walk
+    - Metal1Walk
+    - Metal2Walk
+    - Metal3Walk
+    runClipNames:
+    - Metal0Run
+    - Metal1Run
+    - Metal2Run
+    - Metal3Run
+    landingClipNames:
+    - Metal0Landing
+    - Metal1Landing
+    - Metal2Landing
+    - Metal3Landing
   - typeName: Car
     hitClipNames: []
     walkClipNames:
-    - step_metal_0
-    - step_metal_1
-    - step_metal_2
-    - step_metal_3
-    - step_metal_4
-    - step_metal_5
-    - step_metal_6
-    - step_metal_7
+    - Metal0Walk
+    - Metal1Walk
+    - Metal2Walk
+    - Metal3Walk
+    runClipNames:
+    - Metal0Run
+    - Metal1Run
+    - Metal2Run
+    - Metal3Run
+    landingClipNames:
+    - Metal0Landing
+    - Metal1Landing
+    - Metal2Landing
+    - Metal3Landing
 --- !u!1 &7058894
 GameObject:
   m_ObjectHideFlags: 0
@@ -11028,7 +11064,7 @@ MonoBehaviour:
   animatorSpeedFloatName: AnimationSpeed
   overallWeaponsAnimationSpeedModifier: 1
   currentAnimationSpeed: 1
-  currentDurability: 531
+  currentDurability: 200
   maxDurability: 600
   modelPath: Assets/Resources/Models/Weapons/DI-SP-1.FirstPerson.fbx
   idleOverrideNameFP: WeaponIdle
@@ -11076,6 +11112,11 @@ MonoBehaviour:
   unjammingAnimationSpeed: 1
   punchAnimationSpeed: 1
   checkMagAnimationSpeed: 1
+  reloadSoundName: DI-SP-1.Reload
+  fullReloadSoundName: DI-SP-1.FullReload
+  shootSoundName: DI-SP-1.Shoot
+  unjammingSoundName: DI-SP-1.Unjamming
+  magCheckSoundName: DI-SP-1.MagCheck
   offsetTransform: {fileID: 2052458808}
   offsetInitialPosition: {x: 0.113, y: -0.054, z: 0.162}
   inSight: 0
@@ -11099,6 +11140,14 @@ MonoBehaviour:
   ammoTransform: {fileID: 181851641}
   drawAmmoOnlyOnCheckMag: 1
   ammoFulfillSecondsOnReload: 3.3
+  turningValueCheck: 0.2
+  turningValueCheckMax: 0.5
+  turningSoundNames:
+  - WeaponTurning0
+  - WeaponTurning1
+  - WeaponTurning2
+  turningTimer: 0
+  turningDelay: 0.6
   maxXRecoil: 12
   minXRecoil: 2
   maxYRecoil: 5
@@ -29914,7 +29963,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 800, y: 800}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
@@ -47332,9 +47381,19 @@ MonoBehaviour:
   inAirMoveMultiplier: 0.3
   inertionInAir: 1
   enableLogic: 1
+  isRunning: 0
   stepSpeedMultiplier: 1
   stepDistanceToPlaySound: 2
   stepVolume: 1
+  turningRotationCheckValue: 0.3
+  turningRotationCheckValueMax: 0.9
+  turningTimer: 0
+  turningDelay: 0.5
+  turningSoundNames:
+  - Turning0
+  - Turning1
+  - Turning2
+  - Turning3
 --- !u!143 &1944243936
 CharacterController:
   m_ObjectHideFlags: 0
@@ -51368,6 +51427,58 @@ Transform:
   - {fileID: 1668455129}
   m_Father: {fileID: 302338453}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2109550637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2109550639}
+  - component: {fileID: 2109550638}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!167 &2109550638
+AudioReverbZone:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2109550637}
+  m_Enabled: 1
+  m_MinDistance: 1000
+  m_MaxDistance: 2000
+  m_ReverbPreset: 27
+  m_Room: -1000
+  m_RoomHF: -300
+  m_DecayTime: 1.49
+  m_DecayHFRatio: 0.59
+  m_Reflections: -1219
+  m_ReflectionsDelay: 0.007
+  m_Reverb: 4
+  m_ReverbDelay: 0.011
+  m_HFReference: 5000
+  m_Diffusion: 100
+  m_Density: 100
+  m_LFReference: 250
+  m_RoomLF: 0
+--- !u!4 &2109550639
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2109550637}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -84.68, y: 7.38, z: -31.81}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2113833552
 GameObject:

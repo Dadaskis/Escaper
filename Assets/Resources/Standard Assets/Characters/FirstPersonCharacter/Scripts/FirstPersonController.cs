@@ -47,9 +47,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
 		private float previousY = 0.0f;
 		private float startHeight = 0.0f;
 
+		public bool isRunning = false;
+
 		public float stepSpeedMultiplier = 1.0f;
 		public float stepDistanceToPlaySound = 1.0f;
 		public float stepVolume = 1.0f;
+
+		public float turningRotationCheckValue = 0.05f;
+		public float turningRotationCheckValueMax = 0.3f;
+		public float turningTimer = 0.0f;
+		public float turningDelay = 1.0f;
+		public List<string> turningSoundNames = new List<string>();
 
         // Use this for initialization
         private void Start()
@@ -68,13 +76,32 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			mouseLook.SetCursorLock (true);
         }
 
+		private Quaternion previousRotation = Quaternion.identity;
+		private void TurningSoundPlay() {
+			if (turningTimer > turningDelay) {
+				float turningValue = Mathf.Abs(previousRotation.y - transform.rotation.y);
+				if (turningValue > turningRotationCheckValue && turningValue < turningRotationCheckValueMax) {
+					int index = Random.Range (0, turningSoundNames.Count);
+					SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (turningSoundNames[index]);
+					data.spatialBlend = 0.0f;
+					SoundManager.instance.CreateSound (data, Vector3.zero, transform);
+					turningTimer = 0.0f;
+				}
+			} else {
+				previousRotation = transform.rotation;
+				return;
+			}
+		}
+
 
         // Update is called once per frame
         private void Update()
         {
 			if (enableMouseLook) {
 				RotateView ();
+				TurningSoundPlay ();
 			}
+			turningTimer += Time.deltaTime;
 
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
@@ -109,19 +136,23 @@ namespace UnityStandardAssets.Characters.FirstPerson
 					isEnteredCrouching = true;
 				}
 
-				if (isPressedCrouching == true || (isCrouching == true && isEnteredCrouching == true)) {
-					targetHeight = crouchHeight;
-					isCrouching = true;
-				} else if(isEnteredCrouching) {
+				if (isCrouching && !isPressedCrouching) {
 					float radius = characterController.radius;
-					bool isHitToOpaque = Physics.CheckBox (m_Camera.position + new Vector3 (0.0f, radius * 1.3f, 0.0f), new Vector3 (radius, radius, radius));
+					float height = characterController.height;
+					bool isHitToOpaque = Physics.CheckBox (
+						m_Camera.position + new Vector3 (0.0f, height * 0.8f, 0.0f), 
+						new Vector3 (radius, radius, radius)
+					);
 					if (!isHitToOpaque) {
 						targetHeight = startHeight;
-						isEnteredCrouching = false;
+						isCrouching = false;
 					} else {
 						isCrouching = true;
 					}
-				}
+				} else if(isPressedCrouching) {
+					targetHeight = crouchHeight;
+					isCrouching = true;
+				} 
 			}
 
 			characterController.height = Mathf.Lerp (characterController.height, targetHeight, 5.0f * Time.deltaTime);
@@ -153,7 +184,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //m_AudioSource.clip = m_LandSound;
             //m_AudioSource.Play();
             //m_NextStep = stepDistance + .5f;
-			PlayFootStepAudio ();
+			PlayFootStepAudio (true);
         }
 
 		private float previousSpeed = 0.0f;
@@ -238,7 +269,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             //m_AudioSource.clip = m_JumpSound;
             //m_AudioSource.Play();
-			PlayFootStepAudio();
+			PlayFootStepAudio(true);
         }
 
 
@@ -256,7 +287,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-        private void PlayFootStepAudio()
+		private void PlayFootStepAudio(bool landing = false)
         {
             if (!characterController.isGrounded)
             {
@@ -296,12 +327,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
 					return;
 				} 
 				SoundMaterialType type = SoundManager.instance.GetSoundMaterialType (material);
-				List<string> clips = type.walkClipNames;
-				string clip = clips [Random.Range (0, clips.Count - 1)];
+				List<string> clips;
+				if (landing) {
+					clips = type.landingClipNames;
+				} else if (isRunning) {
+					clips = type.runClipNames;
+				} else {
+					clips = type.walkClipNames;
+				}
+				string clip = clips [Random.Range (0, clips.Count)];
 				SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (clip);
 				data.volume = stepVolume;
-				data.maxDistance = 100.0f;
-				data.minDistance = 10.0f;
 				data.spatialBlend = 0.0f;
 				SoundManager.instance.CreateSound (data, Vector3.zero, transform);
 			}
@@ -332,19 +368,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             bool waswalking = m_IsWalking;
 
-#if !MOBILE_INPUT
-            // On standalone builds, walk/run speed is modified by a key press.
-            // keep track of whether or not the character is walking or running
             m_IsWalking = !InputManager.GetButton ("PlayerRun");
-#endif
-            // set the desired speed to be walking or running
+
+			isRunning = !m_IsWalking;
+
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
 			speed = isCrouching ? crouchSpeed : speed;
             inputDirection = new Vector2(horizontal, vertical);
 
             // normalize input if it exceeds 1 in combined length:
-            if (inputDirection.sqrMagnitude > 1)
-            {
+            if (inputDirection.sqrMagnitude > 1) {
                 inputDirection.Normalize();
             }
         }
