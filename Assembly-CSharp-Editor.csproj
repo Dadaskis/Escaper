@@ -133,6 +133,7 @@
      <None Include="Assets\PostProcessing\Shaders\Builtins\Dithering.hlsl" />
      <None Include="Assets\PostProcessing\Shaders\Colors.hlsl" />
      <None Include="Assets\InkPainter\Shader\Lib\InkPainterFoundation.cginc" />
+     <None Include="Assets\Resources\Shaders\CharacterAdvanced.shader" />
      <None Include="Assets\Resources\Shaders\NoiseBlend.shader" />
      <None Include="Assets\InkPainter\Shader\Effective\HeightToColor.shader" />
      <None Include="Assets\Resources\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
