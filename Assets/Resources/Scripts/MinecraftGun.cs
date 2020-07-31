@@ -17,7 +17,7 @@ public class MinecraftGun : MonoBehaviour {
 
 	void Start() {
 		gun.afterShootEvent.AddListener (AfterShoot);
-		gun.onHitObjects = new List<GameObject> (); 
+		//gun.onHitObjects = new List<GameObject> (); 
 		switch (mode) {
 		case 0:
 			modePanel.color = new Color (0.0f, 0.3f, 0.0f);

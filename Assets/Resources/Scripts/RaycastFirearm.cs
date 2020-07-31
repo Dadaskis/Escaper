@@ -10,22 +10,87 @@ namespace Events {
 }
 
 public class RaycastFirearm : IFirearm {
+	[Header("RaycastFirearm")]
+
+	[Header("Animations")]
+	public string fullReloadOverrideNameFP = "WeaponFullReload";
+	public string fullReloadAnimationFindNameFP = "WeaponFullReload";
+	public AnimationClip fullReloadClipFP;
+	public string jammingShootAnimationFindNameFP = "WeaponJammingShoot";
+	public AnimationClip jammingShootClipFP;
+
+	[Header("Sounds")]
+	public string jammingSoundName = "";
+	public string fullReloadSoundName = "";
+
+	[Header("Recoil")]
 	public float maxXRecoil = 12.0f;
 	public float minXRecoil = 2.0f;
 	public float maxYRecoil = 5.0f;
 	public float minYRecoil = 2.0f;
 	public float maxZRecoil = 2.0f;
 	public float minZRecoil = 2.0f;
+
+	[Header("Jamming")]
+	public bool jammable = true;
+	public int jammed = 0;
+	public int minJammingChance = 1;
+	public int maxJammingChance = 10;
+
+	[Header("Other")]
 	public GameObject tracerPrefab;
 
-	public List<GameObject> onHitObjects;
-
-	public override void FirearmStart () {
-		
+	public bool CheckJamming() {
+		if (jammable) {
+			if (jammingShootClipFP == null) {
+				return false;
+			}
+			int procent = Mathf.RoundToInt (((float)currentDurability / (float)maxDurability) * 100.0f);
+			int jammingChance = Random.Range (minJammingChance, maxJammingChance);
+			if (jammingChance > procent) {
+				return true;
+			}
+		}
+		return false;
 	}
 
-	public override void FirearmUpdate () {
-		
+	public override bool ShootAnimationOverride () {
+		if (jammed > 0) {
+			return true;
+		}
+
+		if (CheckJamming ()) {
+			jammed++;
+			SetCurrentAnimationSpeed (1.0f);
+			ChangeAnimation (fireOverrideNameFP, jammingShootClipFP);
+			PlayAnimation (fireOverrideNameFP, jammingShootClipFP.length, delegate {
+				jammed--;
+			});
+			SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (jammingSoundName);
+			if (firstPerson) {
+				data.spatialBlend = 0.0f;
+			}
+			SoundManager.instance.CreateSound (data, Vector3.zero, transform);
+			StandardAfterShootAnimation ();
+			return true;
+		}
+
+		return false;
+	}
+
+	public override bool ReloadOverrideAnimation () {
+		if (currentAmmo <= 0) {
+			ChangeAnimation (reloadOverrideNameFP, fullReloadClipFP);
+			PlayAnimation (reloadOverrideNameFP, fullReloadClipFP.length, ReloadEnd);
+			SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (fullReloadSoundName);
+			if (firstPerson) {
+				data.spatialBlend = 0.0f;
+			}
+			SoundManager.instance.CreateSound (data, Vector3.zero, transform);
+			return true;
+		}
+
+		return false;
 	}
 
 	public override void Shoot () {
@@ -54,41 +119,6 @@ public class RaycastFirearm : IFirearm {
 		//obj.transform.position = hitPos;
 
 		EventManager.RunEventListeners<Events.RaycastFirearmBulletHit> (hitPos);
-
-		currentAmmo--;
 	}
-
-	public override void SinglePrimaryFire () {
-		
-	}
-
-	public override void SecondaryFire () {
-		
-	}
-
-	public override void FirearmReloadAnimationEnd () {
-		currentAmmo = maxAmmo;
-
-		EventManager.RunEventListeners<Events.RaycastFirearmStartReload> (this);
-	}
-
-	public override void FirearmReloadEnd () {
-		EventManager.RunEventListeners<Events.RaycastFirearmEndReload> (this);
-	}
-
-	public override bool FirearmReloadStart () {
-		return true;
-	}
-
-	public override void CustomStartOnEnd () {
 	
-	}
-
-	public override void PunchHit (RaycastHit hit) {
-		
-	}
-
-	public override void PunchNotHit (RaycastHit hit) {
-
-	}
 }

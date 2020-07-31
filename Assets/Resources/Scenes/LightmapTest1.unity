@@ -19835,6 +19835,21 @@ Prefab:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1922516242}
+    - target: {fileID: 114807703157770248, guid: 5ce9af1497543534e82c2f1a29c9777b,
+        type: 2}
+      propertyPath: fullReloadClipFP
+      value: 
+      objectReference: {fileID: 7400008, guid: 0c45a753e87bb7b48b61da62319c5ce6, type: 3}
+    - target: {fileID: 114807703157770248, guid: 5ce9af1497543534e82c2f1a29c9777b,
+        type: 2}
+      propertyPath: jammingShootClipFP
+      value: 
+      objectReference: {fileID: 7400032, guid: 0c45a753e87bb7b48b61da62319c5ce6, type: 3}
+    - target: {fileID: 114393845593503848, guid: 5ce9af1497543534e82c2f1a29c9777b,
+        type: 2}
+      propertyPath: minDistance
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ce9af1497543534e82c2f1a29c9777b, type: 2}
   m_IsPrefabParent: 0
