@@ -55,14 +55,18 @@ public class Player : MonoBehaviour {
 
 	void Update() {
 		RaycastHit hit = character.Raycast ();
-		usageText.text = "";
-		usagePanel.SetActive (false);
+		if (usageText != null && usagePanel != null) {
+			usageText.text = "";
+			usagePanel.SetActive (false);
+		}
 		if (hit.transform != null) {
 			if (hit.distance < pickupDistance) {
 				IUsableObject obj = hit.transform.GetComponent<IUsableObject> ();
 				if (obj != null) {
-					usagePanel.SetActive (true);
-					usageText.text = obj.ShowText ();
+					if (usageText != null && usagePanel != null) {
+						usagePanel.SetActive (true);
+						usageText.text = obj.ShowText ();
+					}
 					if (InputManager.GetButtonDown ("Use")) {
 						obj.Use ();
 					}

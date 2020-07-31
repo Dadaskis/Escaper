@@ -8,16 +8,14 @@ namespace Events {
 }
 
 public class IFirearm : IWeapon {
-	[Header("IFirearm")]
-
-	[Header("Durability")]
 	public int currentDurability = 600;
 	public int maxDurability = 600;
-
-	[Header("Animations")]
+	public string modelPath;
 	public string idleOverrideNameFP = "WeaponIdle";
 	public string idleAnimationFindNameFP = "WeaponIdle";
+	public string jammedIdleAnimationFindNameFP = "WeaponJammedIdle";
 	public AnimationClip idleClipFP;
+	public AnimationClip jammedIdleClipFP;
 	public string fireOverrideNameFP = "WeaponFire";
 	public string fireAnimationFindNameFP = "WeaponFire";
 	public AnimationClip fireClipFP;
@@ -27,15 +25,15 @@ public class IFirearm : IWeapon {
 	public string reloadOverrideNameFP = "WeaponReload";
 	public string reloadAnimationFindNameFP = "WeaponReload";
 	public AnimationClip reloadClipFP;
-	//public string fullReloadOverrideNameFP = "WeaponFullReload";
-	//public string fullReloadAnimationFindNameFP = "WeaponFullReload";
-	//public AnimationClip fullReloadClipFP;
-	//public string jammingOverrideNameFP = "WeaponJamming";
-	//public string jammingAnimationFindNameFP = "WeaponJamming";
-	//public AnimationClip jammingClipFP;
-	//public string unjammingOverrideNameFP = "WeaponUnjamming";
-	//public string unjammingAnimationFindNameFP = "WeaponUnjamming";
-	//public AnimationClip unjammingClipFP;
+	public string fullReloadOverrideNameFP = "WeaponFullReload";
+	public string fullReloadAnimationFindNameFP = "WeaponFullReload";
+	public AnimationClip fullReloadClipFP;
+	public string jammingOverrideNameFP = "WeaponJamming";
+	public string jammingAnimationFindNameFP = "WeaponJamming";
+	public AnimationClip jammingClipFP;
+	public string unjammingOverrideNameFP = "WeaponUnjamming";
+	public string unjammingAnimationFindNameFP = "WeaponUnjamming";
+	public AnimationClip unjammingClipFP;
 	public string punchOverrideNameFP = "WeaponPunch";
 	public string punchNotHitAnimationFindNameFP = "WeaponPunchHit";
 	public string punchHitAnimationFindNameFP = "WeaponPunchNotHit";
@@ -45,10 +43,13 @@ public class IFirearm : IWeapon {
 	public string saveAnimationFindNameFP = "WeaponSave";
 	public string saveJammedAnimationFindNameFP = "WeaponJammedSave";
 	public AnimationClip saveClipFP;
-	//public AnimationClip saveJammedClipFP;
+	public AnimationClip saveJammedClipFP;
 	public string checkMagOverrideNameFP = "WeaponCheckMag";
 	public string checkMagAnimationFindNameFP = "WeaponCheckMag";
 	public AnimationClip checkMagClipFP;
+
+	public bool save = false;
+	public bool reloading = false;
 
 	public float fireAnimationSpeed = 1.0f;
 	public float drawAnimationSpeed = 1.0f;
@@ -58,11 +59,10 @@ public class IFirearm : IWeapon {
 	public float punchAnimationSpeed = 1.0f;
 	public float checkMagAnimationSpeed = 1.0f;
 
-	[Header("Sounds")]
 	public string reloadSoundName = "";
-	//public string fullReloadSoundName = "";
+	public string fullReloadSoundName = "";
 	public string shootSoundName = "";
-	//public string unjammingSoundName = "";
+	public string unjammingSoundName = "";
 	public string magCheckSoundName = "";
 
 	/*public AnimationClip idleClipTP;
@@ -77,13 +77,15 @@ public class IFirearm : IWeapon {
 	public AnimationClip fullReloadClipTP;
 	public float fullReloadTPDuration;*/
 
-	[Header("Other")]
-	public string modelPath;
 	public Transform offsetTransform;
 	public Vector3 offsetInitialPosition;
 	public bool inSight = false;
 	public float goingInSightSpeed = 5.0f;
 	public float goingOutSightSpeed = 7.0f;
+	public bool jammable = true;
+	public bool jammed = false;
+	public int minJammingChance = 1;
+	public int maxJammingChance = 10;
 	public float punchHitDistanceCheck = 1.5f;
 	public GameObject bulletDropPrefab;
 	public Transform bulletDropLaunch;
@@ -96,10 +98,6 @@ public class IFirearm : IWeapon {
 	public Transform ammoTransform;
 	public bool drawAmmoOnlyOnCheckMag = true;
 	public float ammoFulfillSecondsOnReload = 1.0f;
-	public bool save = false;
-	public bool reloading = false;
-	public bool launchableBulletDrop = true;
-	public bool playableShootParticles = true;
 
 	public class AfterShootEvent : UnityEvent {}
 	public AfterShootEvent afterShootEvent = new AfterShootEvent ();
@@ -111,9 +109,9 @@ public class IFirearm : IWeapon {
 			overrides [fireOverrideNameFP] = fireClipFP;
 			overrides [drawOverrideNameFP] = drawClipFP;
 			overrides [reloadOverrideNameFP] = reloadClipFP;
-			//overrides [fullReloadOverrideNameFP] = fullReloadClipFP;
-			//overrides [unjammingOverrideNameFP] = unjammingClipFP;
-			//overrides [jammingOverrideNameFP] = jammingClipFP;
+			overrides [fullReloadOverrideNameFP] = fullReloadClipFP;
+			overrides [unjammingOverrideNameFP] = unjammingClipFP;
+			overrides [jammingOverrideNameFP] = jammingClipFP;
 			overrides [saveOverrideNameFP] = saveClipFP;
 			overrides [punchOverrideNameFP] = punchNotHitClipFP;
 			overrides [checkMagOverrideNameFP] = checkMagClipFP;
@@ -134,7 +132,13 @@ public class IFirearm : IWeapon {
 	public virtual void FirearmReloadEnd () {}
 	public virtual void FirearmReloadAnimationEnd () {}
 
-	/*public void UnJam() {
+	public void NullifyJammedState() {
+		jammed = false;
+		ChangeAnimation (idleOverrideNameFP, idleClipFP);
+		ChangeAnimation (saveOverrideNameFP, saveClipFP);
+	}
+
+	public void UnJam() {
 		SetCurrentAnimationSpeed (unjammingAnimationSpeed);
 		StartCoroutine(PlayAnimation(unjammingOverrideNameFP, unjammingClipFP.length, NullifyJammedState)); 
 		SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (unjammingSoundName);
@@ -146,46 +150,19 @@ public class IFirearm : IWeapon {
 		StartCoroutine (PlayAnimation (jammingOverrideNameFP, jammingClipFP.length, UnJam));
 		ChangeAnimation (idleOverrideNameFP, jammedIdleClipFP);
 		ChangeAnimation (saveOverrideNameFP, saveJammedClipFP);
-	}*/
+	}
 
 	public IEnumerator LaunchBulletDrop() {
-		if (!launchableBulletDrop) {
-			yield break;
-		}
-
 		if (bulletDropPrefab == null) { 
 			yield break;
 		}
 
-		yield return new WaitForSeconds (bulletDropWaitSecondsAfterShoot * fireAnimationSpeed * overallWeaponsAnimationSpeedModifier);
+		yield return new WaitForSeconds (bulletDropWaitSecondsAfterShoot / fireAnimationSpeed / overallWeaponsAnimationSpeedModifier);
 		GameObject bulletDrop = Instantiate (bulletDropPrefab);
 		bulletDrop.transform.position = bulletDropLaunch.position;
 		Rigidbody body = bulletDrop.GetComponent<Rigidbody> ();
 		body.AddForce (bulletDropLaunch.forward * bulletDropForce, ForceMode.Impulse);
 		Destroy (bulletDrop, bulletDropKillTime);
-	}
-
-	public virtual bool ShootAnimationOverride() {
-		return false;
-	}
-
-	public void StandardAfterShootAnimation() {
-		afterShootEvent.Invoke ();
-		currentDurability--;
-		if (shootFireParticles != null && playableShootParticles) {
-			shootFireParticles.Play ();
-		}
-
-		SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (shootSoundName);
-		data.minDistance = 50.0f;
-		data.maxDistance = 100.0f;
-		if (firstPerson) {
-			data.spatialBlend = 0.0f;
-		}
-		SoundManager.instance.CreateSound (data, Vector3.zero, transform);
-
-		Shoot ();
-		currentAmmo--;
 	}
 
 	public override void PrimaryFire () {
@@ -201,23 +178,43 @@ public class IFirearm : IWeapon {
 			return;
 		}
 
+		if (jammed) {
+			return;
+		}
+
 		if (animationPlaying) {
 			return;
 		}
 
 		if (firstPerson) {
-			/*
-			if (jammed) {
-				//Jam ();
-			// else {*/
-			if (!ShootAnimationOverride ()) {
-				SetCurrentAnimationSpeed (fireAnimationSpeed);
-				PlayAnimation (fireOverrideNameFP, fireClipFP.length);
-				StandardAfterShootAnimation ();
+			if (jammable) {
+				int procent = Mathf.RoundToInt (((float)currentDurability / (float)maxDurability) * 100.0f);
+				int jammingChance = Random.Range (minJammingChance, maxJammingChance);
+				if (jammingChance > procent) {
+					jammed = true;
+				}
 			}
-			StartCoroutine (LaunchBulletDrop ());
-			//}
+			if (jammed) {
+				Jam ();
+			} else {
+				SetCurrentAnimationSpeed (fireAnimationSpeed);
+				StartCoroutine (PlayAnimation (fireOverrideNameFP, fireClipFP.length));
+				StartCoroutine (LaunchBulletDrop ());
+			}
 		}
+		afterShootEvent.Invoke ();
+		currentDurability--;
+		if (shootFireParticles != null) {
+			shootFireParticles.Play ();
+		}
+		SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (shootSoundName);
+		data.minDistance = 50.0f;
+		data.maxDistance = 100.0f;
+		if (firstPerson) {
+			data.spatialBlend = 0.0f;
+		}
+		SoundManager.instance.CreateSound (data, Vector3.zero, transform);
+		Shoot ();
 	}
 
 	public override void SingleSecondaryFire () {
@@ -241,6 +238,7 @@ public class IFirearm : IWeapon {
 		SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (turningSoundNames[index]);
 		data.spatialBlend = 0.0f;
 		SoundManager.instance.CreateSound (data, Vector3.zero, transform);
+		Debug.LogError ("Playing turning sound: " + turningSoundNames [index]);
 	}
 
 	public virtual void UpdateTurningSound() {
@@ -269,7 +267,7 @@ public class IFirearm : IWeapon {
 					inSightApproved = true;
 				}
 			}
-			if (inSightApproved && !save && !reloading) {
+			if (inSightApproved && !save && !reloading && !jammed) {
 				offsetTransform.localPosition = Vector3.Lerp (offsetTransform.localPosition, Vector3.zero, Time.deltaTime * goingInSightSpeed);
 			} else {
 				offsetTransform.localPosition = Vector3.Lerp (offsetTransform.localPosition, offsetInitialPosition, Time.deltaTime * goingOutSightSpeed);
@@ -277,10 +275,6 @@ public class IFirearm : IWeapon {
 		}
 		UpdateTurningSound ();
 		FirearmUpdate ();
-	}
-
-	public virtual bool ReloadOverrideAnimation() {
-		return false;
 	}
 
 	public override void Reload() {
@@ -307,29 +301,31 @@ public class IFirearm : IWeapon {
 		reloading = true;
 
 		if(firstPerson) {
-			if (ammoTransform != null) {
-				ammoTransform.gameObject.SetActive (true);
-				DrawOnlyExistAmmo ();
-			}
+			if (jammed) {
 
-			//if (currentAmmo > 0) {
-			if (!ReloadOverrideAnimation ()) {
-				SetCurrentAnimationSpeed (reloadAnimationSpeed);
-				PlayAnimation (reloadOverrideNameFP, reloadClipFP.length, ReloadEnd);
-				SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (reloadSoundName);
-				data.spatialBlend = 0.0f;
-				SoundManager.instance.CreateSound (data, Vector3.zero, transform);
-			}
-			//} else {
-			//	SetCurrentAnimationSpeed (fullReloadAnimationSpeed);
-			//	StartCoroutine (PlayAnimation (fullReloadOverrideNameFP, fullReloadClipFP.length, ReloadEnd));
-			//	SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (fullReloadSoundName);
-			//	data.spatialBlend = 0.0f;
-			//	SoundManager.instance.CreateSound (data, Vector3.zero, transform);
-			//}
+			} else {
+				if (ammoTransform != null) {
+					ammoTransform.gameObject.SetActive (true);
+					DrawOnlyExistAmmo ();
+				}
 
-			if (ammoTransform != null) {
-				StartCoroutine (FulfillAmmoOnReload ());
+				if (currentAmmo > 0) {
+					SetCurrentAnimationSpeed (reloadAnimationSpeed);
+					StartCoroutine (PlayAnimation (reloadOverrideNameFP, reloadClipFP.length, ReloadEnd));
+					SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (reloadSoundName);
+					data.spatialBlend = 0.0f;
+					SoundManager.instance.CreateSound (data, Vector3.zero, transform);
+				} else {
+					SetCurrentAnimationSpeed (fullReloadAnimationSpeed);
+					StartCoroutine (PlayAnimation (fullReloadOverrideNameFP, fullReloadClipFP.length, ReloadEnd));
+					SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (fullReloadSoundName);
+					data.spatialBlend = 0.0f;
+					SoundManager.instance.CreateSound (data, Vector3.zero, transform);
+				}
+
+				if (ammoTransform != null) {
+					StartCoroutine (FulfillAmmoOnReload ());
+				}
 			}
 		}
 
@@ -341,11 +337,14 @@ public class IFirearm : IWeapon {
 			ammoTransform.gameObject.SetActive (false);
 		}
 		reloading = false;
-		currentAmmo = maxAmmo;
 		FirearmReloadAnimationEnd ();
 	}
 
 	public override void Punch() {
+		if (jammed) {
+			return;
+		}
+
 		if (animationPlaying) {
 			return;
 		}
@@ -368,7 +367,7 @@ public class IFirearm : IWeapon {
 				PunchHit (hit);
 			}
 			SetCurrentAnimationSpeed (punchAnimationSpeed);
-			PlayAnimation (punchOverrideNameFP, currentClip.length);
+			StartCoroutine (PlayAnimation (punchOverrideNameFP, currentClip.length));
 		}
 	}
 
@@ -447,6 +446,10 @@ public class IFirearm : IWeapon {
 	}
 
 	public override void MagCheck () {
+		if (jammed) {
+			return;
+		}
+
 		if (drawAmmoOnlyOnCheckMag && ammoTransform != null) {
 			ammoTransform.gameObject.SetActive (true);
 		}
@@ -454,9 +457,9 @@ public class IFirearm : IWeapon {
 
 		reloading = true;
 		SetCurrentAnimationSpeed (checkMagAnimationSpeed);
-		PlayAnimation (checkMagOverrideNameFP, checkMagClipFP.length, delegate {
+		StartCoroutine (PlayAnimation (checkMagOverrideNameFP, checkMagClipFP.length, delegate {
 			reloading = false;
-		});
+		}));
 
 		SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (magCheckSoundName);
 		data.minDistance = 2.0f;

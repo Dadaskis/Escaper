@@ -327,19 +327,21 @@ namespace UnityStandardAssets.Characters.FirstPerson
 					return;
 				} 
 				SoundMaterialType type = SoundManager.instance.GetSoundMaterialType (material);
-				List<string> clips;
-				if (landing) {
-					clips = type.landingClipNames;
-				} else if (isRunning) {
-					clips = type.runClipNames;
-				} else {
-					clips = type.walkClipNames;
+				if (type != null) {
+					List<string> clips;
+					if (landing) {
+						clips = type.landingClipNames;
+					} else if (isRunning) {
+						clips = type.runClipNames;
+					} else {
+						clips = type.walkClipNames;
+					}
+					string clip = clips [Random.Range (0, clips.Count)];
+					SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (clip);
+					data.volume = stepVolume;
+					data.spatialBlend = 0.0f;
+					SoundManager.instance.CreateSound (data, Vector3.zero, transform);
 				}
-				string clip = clips [Random.Range (0, clips.Count)];
-				SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (clip);
-				data.volume = stepVolume;
-				data.spatialBlend = 0.0f;
-				SoundManager.instance.CreateSound (data, Vector3.zero, transform);
 			}
         }
 

@@ -40,8 +40,8 @@ public class IFirearmEditor : Editor {
 
 		IFirearm firearm = target as IFirearm;
 
-		if (GUILayout.Button ("Assign animations by name (IFirearm)", EditorStyles.miniButton)) {
-			List<AnimationClip> clips = new List<AnimationClip>();
+		if (GUILayout.Button ("Assign animations by name", EditorStyles.miniButton)) {
+			List<AnimationClip> clips = new List<AnimationClip>();// = AnimationUtility.GetAnimationClips ();
 
 			Object[] objects = AssetDatabase.LoadAllAssetRepresentationsAtPath (firearm.modelPath);
 			foreach (Object obj in objects) {
@@ -64,15 +64,15 @@ public class IFirearmEditor : Editor {
 			firearm.idleClipFP = GetClipFromArray (firearm.idleAnimationFindNameFP, clips, nameByIndex);
 			firearm.fireClipFP = GetClipFromArray (firearm.fireAnimationFindNameFP, clips, nameByIndex);
 			firearm.drawClipFP = GetClipFromArray (firearm.drawAnimationFindNameFP, clips, nameByIndex);
-			//firearm.fullReloadClipFP = GetClipFromArray (firearm.fullReloadAnimationFindNameFP, clips, nameByIndex); 
-			//firearm.jammedIdleClipFP = GetClipFromArray (firearm.jammedIdleAnimationFindNameFP, clips, nameByIndex); 
-			//firearm.jammingClipFP = GetClipFromArray (firearm.jammingAnimationFindNameFP, clips, nameByIndex); 
+			firearm.fullReloadClipFP = GetClipFromArray (firearm.fullReloadAnimationFindNameFP, clips, nameByIndex); 
+			firearm.jammedIdleClipFP = GetClipFromArray (firearm.jammedIdleAnimationFindNameFP, clips, nameByIndex); 
+			firearm.jammingClipFP = GetClipFromArray (firearm.jammingAnimationFindNameFP, clips, nameByIndex); 
 			firearm.punchHitClipFP = GetClipFromArray (firearm.punchHitAnimationFindNameFP, clips, nameByIndex); 
 			firearm.punchNotHitClipFP = GetClipFromArray (firearm.punchNotHitAnimationFindNameFP, clips, nameByIndex); 
 			firearm.reloadClipFP = GetClipFromArray (firearm.reloadAnimationFindNameFP, clips, nameByIndex); 
 			firearm.saveClipFP = GetClipFromArray (firearm.saveAnimationFindNameFP, clips, nameByIndex); 
-			//firearm.saveJammedClipFP = GetClipFromArray (firearm.saveJammedAnimationFindNameFP, clips, nameByIndex); 
-			//firearm.unjammingClipFP = GetClipFromArray (firearm.unjammingAnimationFindNameFP, clips, nameByIndex); 
+			firearm.saveJammedClipFP = GetClipFromArray (firearm.saveJammedAnimationFindNameFP, clips, nameByIndex); 
+			firearm.unjammingClipFP = GetClipFromArray (firearm.unjammingAnimationFindNameFP, clips, nameByIndex); 
 			firearm.checkMagClipFP = GetClipFromArray (firearm.checkMagAnimationFindNameFP, clips, nameByIndex);
 
 		}

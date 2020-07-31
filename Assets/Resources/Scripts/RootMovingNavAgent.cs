@@ -35,13 +35,13 @@ public class RootMovingNavAgent : MonoBehaviour {
 
 		bool shouldMove = velocity.magnitude > 0.5f && navAgent.remainingDistance > navAgent.radius;
 
-		animator.SetBool (moveBoolString, shouldMove);
-		animator.SetFloat (velocityXFloatString, velocity.x);
-		animator.SetFloat (velocityYFloatString, velocity.y);
-
 		if (worldDeltaPosition.magnitude > navAgent.radius) {
 			navAgent.nextPosition = transform.position + 0.9f * worldDeltaPosition;
 		}
+
+		animator.SetBool (moveBoolString, shouldMove);
+		animator.SetFloat (velocityXFloatString, velocity.x);
+		animator.SetFloat (velocityYFloatString, velocity.y);
 
 		//if (worldDeltaPosition.magnitude > navAgent.radius) {
 		//	transform.position = navAgent.nextPosition + 0.9f * worldDeltaPosition;

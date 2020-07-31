@@ -20,7 +20,7 @@ public class AnimationClipOverrides : List<KeyValuePair<AnimationClip, Animation
 }
 
 public class IWeapon : MonoBehaviour {
-	[Header("IWeapon")]
+
 	public bool animationPlaying = false;
 	public Animator animator = null;
 	public AnimatorOverrideController animatorOverride;
@@ -33,31 +33,24 @@ public class IWeapon : MonoBehaviour {
 	public string animatorSpeedFloatName = "AnimationSpeed";
 	public float overallWeaponsAnimationSpeedModifier = 1.0f;
 	public float currentAnimationSpeed = 1.0f;
-	public int currentAnimationsCount = 0;
 
 	public delegate void AnimationOverMethodType ();
 	public delegate void AnimationOverrideMethodType(ref AnimationClipOverrides overrides);
 
-	private IEnumerator PlayAnimationWaitPart(float duration, AnimationOverMethodType onOver = null) {
+	public IEnumerator PlayAnimation(string name, float duration) {
+		if (animationPlaying) {
+			yield break;
+		}
+		animationPlaying = true;
+		animator.SetTrigger (name);
 		yield return new WaitForSeconds (duration / currentAnimationSpeed);
 		animationPlaying = false;
 		SetCurrentAnimationSpeed (1.0f);
-		if (onOver != null) {
-			onOver ();
-		}
-		currentAnimationsCount--;
-		Debug.LogError (currentAnimationsCount + " " + animationPlaying);
 	}
 
-	public void PlayAnimation(string name, float duration, AnimationOverMethodType onOver = null) {
-		if (currentAnimationsCount > 0) {
-			return;
-		}
-		animationPlaying = true;
-		currentAnimationsCount++;
-		Debug.LogError ("Animations: " + currentAnimationsCount);
-		animator.SetTrigger (name);
-		StartCoroutine(PlayAnimationWaitPart(duration, onOver));
+	public IEnumerator PlayAnimation(string name, float duration, AnimationOverMethodType onOver = null) {
+		yield return PlayAnimation (name, duration);
+		onOver ();
 	}
 
 	public void UpdateAnimations() {
