@@ -9,6 +9,8 @@ public class RootMovingNavAgent : MonoBehaviour {
 	public string velocityXFloatString;
 	public string velocityYFloatString;
 	public NavMeshAgent navAgent;
+	public float rootMotionSpeed = 40.0f;
+	public float addSpeed = 1.0f;
 
 	Vector2 smoothDeltaPosition = Vector2.zero;
 	Vector2 velocity = Vector2.zero;
@@ -33,7 +35,7 @@ public class RootMovingNavAgent : MonoBehaviour {
 			velocity = smoothDeltaPosition / Time.deltaTime;
 		}
 
-		bool shouldMove = velocity.magnitude > 0.5f && navAgent.remainingDistance > navAgent.radius;
+		bool shouldMove = velocity.magnitude > 0.5f && navAgent.remainingDistance > navAgent.radius && navAgent.remainingDistance > navAgent.stoppingDistance;
 
 		if (worldDeltaPosition.magnitude > navAgent.radius) {
 			navAgent.nextPosition = transform.position + 0.9f * worldDeltaPosition;
@@ -48,9 +50,24 @@ public class RootMovingNavAgent : MonoBehaviour {
 		//}
 	}
 
+	private Vector3 tempRootPosition = Vector3.zero;
+
 	void OnAnimatorMove() {
-		Vector3 position = animator.rootPosition;
-		position.y = navAgent.nextPosition.y;
-		transform.position = position;
+		//Vector3 position = animator.rootPosition;
+		//position.y = navAgent.nextPosition.y;
+		//transform.position = position;
+		/*
+		if (navAgent.velocity.y > 0.01f) {
+			transform.position = navAgent.nextPosition;
+		} else {
+			Vector3 position = animator.rootPosition;
+			position.y = navAgent.nextPosition.y;
+			transform.position = position;
+		}
+		*/
+		transform.position = navAgent.nextPosition;
+		//navAgent.speed = Mathf.Abs((tempRootPosition - animator.rootPosition).magnitude * rootMotionSpeed) + addSpeed;
+
+		//tempRootPosition = animator.rootPosition;
 	}
 }

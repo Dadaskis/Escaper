@@ -25,7 +25,7 @@ public class GUIAdvancedRendererApply : MonoBehaviour {
 		data.chromaticAberrationEnabled = chromaticAberrationActive.isOn;
 		data.grainEnabled = grainActive.isOn;
 		data.isHDREnabled = isHDRActive.isOn;
-		data.textureQuality = texturesQuality.quality + 1;
+		data.textureQuality = texturesQuality.quality;
 		data.enableRealtimeShadows = dynamicShadowsActive.isOn;
 		data.enableAmbientOcclusion = ambientOcclusionActive.isOn;
 		switch (antialiasingApplied.quality) {

@@ -16,10 +16,11 @@ public class IFirearm : IWeapon {
 	public string jammedIdleAnimationFindNameFP = "WeaponJammedIdle";
 	public AnimationClip idleClipFP;
 	public AnimationClip jammedIdleClipFP;
-	public string fireOverrideNameFP = "WeaponFire";
-	public string fireAnimationFindNameFP = "WeaponFire";
+	public string fireOverrideNameFP = "WeaponShoot";
+	public string fireAnimationFindNameFP = "WeaponShoot";
 	public AnimationClip fireClipFP;
 	public string drawOverrideNameFP = "WeaponDraw";
+	public string takeoutOverrideNameFP = "WeaponTakeout";
 	public string drawAnimationFindNameFP = "WeaponDraw";
 	public AnimationClip drawClipFP;
 	public string reloadOverrideNameFP = "WeaponReload";
@@ -47,6 +48,28 @@ public class IFirearm : IWeapon {
 	public string checkMagOverrideNameFP = "WeaponCheckMag";
 	public string checkMagAnimationFindNameFP = "WeaponCheckMag";
 	public AnimationClip checkMagClipFP;
+
+	public string startOverrideNameTP = "WeaponStart";
+	public string startAnimationFindNameTP = "WeaponStart";
+	public AnimationClip startClipTP;
+	public string endOverrideNameTP = "WeaponEnd";
+	public string endAnimationFindNameTP = "WeaponEnd";
+	public AnimationClip endClipTP;
+	public string saveOverrideNameTP = "WeaponSave";
+	public string saveAnimationFindNameTP = "WeaponSave";
+	public AnimationClip saveClipTP;
+	public string idleOverrideNameTP = "WeaponIdle";
+	public string idleAnimationFindNameTP = "WeaponIdle";
+	public AnimationClip idleClipTP;
+	public string shootOverrideNameTP = "WeaponShoot";
+	public string shootAnimationFindNameTP = "WeaponShoot";
+	public AnimationClip shootClipTP;
+	public string unjammingOverrideNameTP = "WeaponUnjamming";
+	public string unjammingAnimationFindNameTP = "WeaponUnjamming";
+	public AnimationClip unjammingClipTP;
+	public string reloadOverrideNameTP = "WeaponReload";
+	public string reloadAnimationFindNameTP = "WeaponReload";
+	public AnimationClip reloadClipTP;
 
 	public bool save = false;
 	public bool reloading = false;
@@ -116,12 +139,13 @@ public class IFirearm : IWeapon {
 			overrides [punchOverrideNameFP] = punchNotHitClipFP;
 			overrides [checkMagOverrideNameFP] = checkMagClipFP;
 		} else {
-			/*overrides ["Idle"] = idleClipTP;
-			overrides ["Fire"] = fireClipTP;
-			overrides ["Draw"] = drawClipTP;
-			overrides ["Run"] = runClipTP;
-			overrides ["Reload"] = reloadClipTP;
-			overrides ["FullReload"] = fullReloadClipTP;*/
+			overrides [idleOverrideNameTP] = idleClipTP;
+			overrides [shootOverrideNameTP] = shootClipTP;
+			overrides [startOverrideNameTP] = startClipTP;
+			overrides [endOverrideNameTP] = endClipTP;
+			overrides [unjammingOverrideNameTP] = unjammingClipTP;
+			overrides [endOverrideNameTP] = endClipTP;
+			overrides [reloadOverrideNameTP] = reloadClipTP;
 		}
 	}
 
@@ -139,17 +163,33 @@ public class IFirearm : IWeapon {
 	}
 
 	public void UnJam() {
-		SetCurrentAnimationSpeed (unjammingAnimationSpeed);
-		StartCoroutine(PlayAnimation(unjammingOverrideNameFP, unjammingClipFP.length, NullifyJammedState)); 
-		SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (unjammingSoundName);
-		data.spatialBlend = 0.0f;
-		SoundManager.instance.CreateSound (data, Vector3.zero, transform);
+		if (firstPerson) {
+			SetCurrentAnimationSpeed (unjammingAnimationSpeed);
+			StartCoroutine (PlayAnimation (unjammingOverrideNameFP, unjammingClipFP.length, NullifyJammedState)); 
+			SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (unjammingSoundName);
+			data.spatialBlend = 0.0f;
+			SoundManager.instance.CreateSound (data, Vector3.zero, transform);
+		}
+	}
+
+	public void UnJamTP() {
+		if (!firstPerson) {
+			jammed = false;
+		}
 	}
 
 	public void Jam() {
-		StartCoroutine (PlayAnimation (jammingOverrideNameFP, jammingClipFP.length, UnJam));
-		ChangeAnimation (idleOverrideNameFP, jammedIdleClipFP);
-		ChangeAnimation (saveOverrideNameFP, saveJammedClipFP);
+		if (firstPerson) {
+			StartCoroutine (PlayAnimation (jammingOverrideNameFP, jammingClipFP.length, UnJam));
+			ChangeAnimation (idleOverrideNameFP, jammedIdleClipFP);
+			ChangeAnimation (saveOverrideNameFP, saveJammedClipFP);
+		} else {
+			StartCoroutine (PlayAnimation (unjammingOverrideNameTP, unjammingClipTP.length, UnJamTP));
+			SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (unjammingSoundName);
+			data.minDistance = 50.0f;
+			data.maxDistance = 100.0f;
+			SoundManager.instance.CreateSound (data, Vector3.zero, transform);
+		}
 	}
 
 	public IEnumerator LaunchBulletDrop() {
@@ -186,35 +226,38 @@ public class IFirearm : IWeapon {
 			return;
 		}
 
-		if (firstPerson) {
-			if (jammable) {
-				int procent = Mathf.RoundToInt (((float)currentDurability / (float)maxDurability) * 100.0f);
-				int jammingChance = Random.Range (minJammingChance, maxJammingChance);
-				if (jammingChance > procent) {
-					jammed = true;
-				}
+		if (jammable) {
+			int procent = Mathf.RoundToInt (((float)currentDurability / (float)maxDurability) * 100.0f);
+			int jammingChance = Random.Range (minJammingChance, maxJammingChance);
+			if (jammingChance > procent) {
+				jammed = true;
 			}
-			if (jammed) {
-				Jam ();
-			} else {
-				SetCurrentAnimationSpeed (fireAnimationSpeed);
+		}
+		if (jammed) {
+			Jam ();
+		} else {
+			SetCurrentAnimationSpeed (fireAnimationSpeed);
+			if (firstPerson) {
 				StartCoroutine (PlayAnimation (fireOverrideNameFP, fireClipFP.length));
+				StartCoroutine (LaunchBulletDrop ());
+			} else {
+				StartCoroutine (PlayAnimation (shootOverrideNameTP, shootClipTP.length));
 				StartCoroutine (LaunchBulletDrop ());
 			}
 		}
-		afterShootEvent.Invoke ();
 		currentDurability--;
 		if (shootFireParticles != null) {
 			shootFireParticles.Play ();
 		}
 		SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (shootSoundName);
-		data.minDistance = 50.0f;
-		data.maxDistance = 100.0f;
+		data.minDistance = 4.0f;
+		data.maxDistance = 40.0f;
 		if (firstPerson) {
 			data.spatialBlend = 0.0f;
 		}
-		SoundManager.instance.CreateSound (data, Vector3.zero, transform);
+		SoundManager.instance.CreateSound (data, transform.position, transform);
 		Shoot ();
+		base.PrimaryFire ();
 	}
 
 	public override void SingleSecondaryFire () {
@@ -232,13 +275,16 @@ public class IFirearm : IWeapon {
 	public float turningTimer = 0.0f;
 	public float turningDelay = 0.6f;
 
+	public int fulfillAmmo;
+
 	public virtual void PlayTurningSound() {
-		turningTimer = 0.0f;
-		int index = Random.Range (0, turningSoundNames.Count);
-		SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (turningSoundNames[index]);
-		data.spatialBlend = 0.0f;
-		SoundManager.instance.CreateSound (data, Vector3.zero, transform);
-		Debug.LogError ("Playing turning sound: " + turningSoundNames [index]);
+		if (turningSoundNames.Count > 0) {
+			turningTimer = 0.0f;
+			int index = Random.Range (0, turningSoundNames.Count);
+			SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (turningSoundNames [index]);
+			data.spatialBlend = 0.0f;
+			SoundManager.instance.CreateSound (data, Vector3.zero, transform);
+		}
 	}
 
 	public virtual void UpdateTurningSound() {
@@ -298,43 +344,58 @@ public class IFirearm : IWeapon {
 			return;
 		}
 
+		if (ammoFiller != null) {
+			fulfillAmmo = ammoFiller.Reload (this);
+			if (fulfillAmmo <= currentAmmo) {
+				return;
+			}
+		} else {
+			fulfillAmmo = maxAmmo;
+		}
+
 		reloading = true;
 
-		if(firstPerson) {
-			if (jammed) {
-
-			} else {
-				if (ammoTransform != null) {
-					ammoTransform.gameObject.SetActive (true);
-					DrawOnlyExistAmmo ();
-				}
-
-				if (currentAmmo > 0) {
-					SetCurrentAnimationSpeed (reloadAnimationSpeed);
-					StartCoroutine (PlayAnimation (reloadOverrideNameFP, reloadClipFP.length, ReloadEnd));
-					SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (reloadSoundName);
-					data.spatialBlend = 0.0f;
-					SoundManager.instance.CreateSound (data, Vector3.zero, transform);
-				} else {
-					SetCurrentAnimationSpeed (fullReloadAnimationSpeed);
-					StartCoroutine (PlayAnimation (fullReloadOverrideNameFP, fullReloadClipFP.length, ReloadEnd));
-					SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (fullReloadSoundName);
-					data.spatialBlend = 0.0f;
-					SoundManager.instance.CreateSound (data, Vector3.zero, transform);
-				}
-
-				if (ammoTransform != null) {
-					StartCoroutine (FulfillAmmoOnReload ());
-				}
+		if (firstPerson) {
+			if (ammoTransform != null) {
+				ammoTransform.gameObject.SetActive (true);
+				DrawOnlyExistAmmo ();
 			}
+
+			if (currentAmmo > 0) {
+				SetCurrentAnimationSpeed (reloadAnimationSpeed);
+				StartCoroutine (PlayAnimation (reloadOverrideNameFP, reloadClipFP.length, ReloadEnd));
+				SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (reloadSoundName);
+				data.spatialBlend = 0.0f;
+				SoundManager.instance.CreateSound (data, Vector3.zero, transform);
+			} else {
+				SetCurrentAnimationSpeed (fullReloadAnimationSpeed);
+				StartCoroutine (PlayAnimation (fullReloadOverrideNameFP, fullReloadClipFP.length, ReloadEnd));
+				SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (fullReloadSoundName);
+				data.spatialBlend = 0.0f;
+				SoundManager.instance.CreateSound (data, Vector3.zero, transform);
+			}
+
+			if (ammoTransform != null) {
+				StartCoroutine (FulfillAmmoOnReload ());
+			}
+		} else {
+			SetCurrentAnimationSpeed (reloadAnimationSpeed);
+			StartCoroutine (PlayAnimation (reloadOverrideNameTP, reloadClipTP.length, ReloadEnd));
+			SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (reloadSoundName);
+			data.minDistance = 4.0f;
+			data.maxDistance = 10.0f;
+			SoundManager.instance.CreateSound (data, Vector3.zero, transform);
 		}
 
 		FirearmReloadEnd ();
+		base.Reload ();
 	}
 
 	public void ReloadEnd() {
-		if (ammoTransform != null) {
-			ammoTransform.gameObject.SetActive (false);
+		if (firstPerson) {
+			if (ammoTransform != null) {
+				ammoTransform.gameObject.SetActive (false);
+			}
 		}
 		reloading = false;
 		FirearmReloadAnimationEnd ();
@@ -395,26 +456,38 @@ public class IFirearm : IWeapon {
 			bulletDropLaunch = offsetTransform.Find ("__BulletDrop");
 		}
 
-		if (ammoTransform == null) {
-			ammoTransform = offsetTransform.Find ("__Ammo");
-		}
+		if (firstPerson) {
+			if (ammoTransform == null) {
+				ammoTransform = offsetTransform.Find ("__Ammo");
+			}
 
-		if (ammoTransform != null && drawAmmoOnlyOnCheckMag) {
-			ammoTransform.gameObject.SetActive (false);
+			if (ammoTransform != null && drawAmmoOnlyOnCheckMag) {
+				ammoTransform.gameObject.SetActive (false);
+			}
 		}
 
 		FirearmStart ();
 	}
 
 	public override void Save () {
-		save = true;
-		animator.SetBool (saveOverrideNameFP, save);
+		if (firstPerson) {
+			save = true;
+			animator.SetBool (saveOverrideNameFP, save);
+		} else {
+			save = true;
+			animator.SetBool (saveOverrideNameTP, save);
+		}
 		PlayTurningSound ();
 	}
 
 	public override void UnSave () {
-		save = false;
-		animator.SetBool (saveOverrideNameFP, save);
+		if (firstPerson) {
+			save = false;
+			animator.SetBool (saveOverrideNameFP, save);
+		} else {
+			save = false;
+			animator.SetBool (saveOverrideNameTP, save);
+		}
 		PlayTurningSound ();
 	}
 
@@ -446,27 +519,37 @@ public class IFirearm : IWeapon {
 	}
 
 	public override void MagCheck () {
-		if (jammed) {
-			return;
-		}
-
-		if (drawAmmoOnlyOnCheckMag && ammoTransform != null) {
-			ammoTransform.gameObject.SetActive (true);
-		}
-		DrawOnlyExistAmmo ();
-
-		reloading = true;
-		SetCurrentAnimationSpeed (checkMagAnimationSpeed);
-		StartCoroutine (PlayAnimation (checkMagOverrideNameFP, checkMagClipFP.length, delegate {
-			reloading = false;
-		}));
-
-		SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (magCheckSoundName);
-		data.minDistance = 2.0f;
-		data.maxDistance = 4.0f;
 		if (firstPerson) {
-			data.spatialBlend = 0.0f;
+			if (jammed) {
+				return;
+			}
+
+			if (drawAmmoOnlyOnCheckMag && ammoTransform != null) {
+				ammoTransform.gameObject.SetActive (true);
+			}
+			DrawOnlyExistAmmo ();
+
+			reloading = true;
+			SetCurrentAnimationSpeed (checkMagAnimationSpeed);
+			StartCoroutine (PlayAnimation (checkMagOverrideNameFP, checkMagClipFP.length, delegate {
+				reloading = false;
+			}));
+
+			SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (magCheckSoundName);
+			data.minDistance = 2.0f;
+			data.maxDistance = 4.0f;
+			if (firstPerson) {
+				data.spatialBlend = 0.0f;
+			}
+			SoundManager.instance.CreateSound (data, Vector3.zero, transform);
 		}
-		SoundManager.instance.CreateSound (data, Vector3.zero, transform);
+	}
+
+	public override float Takeout () {
+		if (animationPlaying) {
+			return -1.0f;
+		}
+		StartCoroutine (PlayAnimation (takeoutOverrideNameFP, drawClipFP.length));
+		return drawClipFP.length;
 	}
 }

@@ -17,6 +17,8 @@ public class RaycastFirearm : IFirearm {
 	public float maxZRecoil = 2.0f;
 	public float minZRecoil = 2.0f;
 	public GameObject tracerPrefab;
+	public GameObject decalPrefab;
+	public GameObject particlesPrefab;
 
 	public List<GameObject> onHitObjects;
 
@@ -42,18 +44,104 @@ public class RaycastFirearm : IFirearm {
 					Random.Range (-maxZRecoil, minZRecoil)
 				)
 			);
+
+			RaycastHit hit = this.owner.Raycast ();
+
+			Vector3 hitPos = hit.point;
+
+			IDamagable part = hit.collider.GetComponent<IDamagable> ();
+
+			GameObject tracer = Instantiate (tracerPrefab);
+			TracerObject tracerObject = tracer.GetComponent<TracerObject> ();
+			tracerObject.SetLineSettings (this.owner.raycaster.position, hitPos);
+			
+			if (part == null) {
+				GameObject decalObject = Instantiate (decalPrefab);
+				decalObject.transform.position = hitPos;
+				decalObject.transform.rotation = Quaternion.LookRotation (-hit.normal);
+				_Decal.DecalBuilder.BuildAndSetDirty (decalObject.GetComponent<_Decal.Decal> ());
+				Destroy (decalObject, 60.0f);
+
+				GameObject particlesObject = Instantiate (particlesPrefab);
+				particlesObject.transform.position = hitPos;
+				particlesObject.transform.rotation = Quaternion.LookRotation (hit.normal);
+				ParticleSystem particles = particlesObject.GetComponent<ParticleSystem> ();
+				particles.Play ();
+				Destroy (particlesObject, particles.main.duration * 2.0f);
+			} else {
+				//part.character.ragdoll.EnableRagdoll ();
+				part.Damage (damage, this.owner);
+			}
+
+			EventManager.RunEventListeners<Events.RaycastFirearmBulletHit> (hitPos);
+		} else {
+			
+
+			//RaycastHit hit;
+			Transform raycaster = this.owner.raycaster;
+			Vector3 direction = new Vector3 ();
+			if (target != null) {
+				if (overrideTargetHitPosition.magnitude == 0.0f) {
+					direction = target.transform.position - raycaster.position;
+				} else {
+					direction = overrideTargetHitPosition - raycaster.position;
+				}
+			} else {
+				if (overrideTargetHitPosition.magnitude == 0.0f) {
+					direction = Vector3.forward;
+				} else {
+					direction = overrideTargetHitPosition - raycaster.position;
+				}
+			}
+
+			RaycastHit[] rawHits = Physics.RaycastAll (raycaster.position, direction, 100000.0f);
+			if (rawHits.Length > 0) { 
+				SortedDictionary<float, RaycastHit> hits = new SortedDictionary<float, RaycastHit> ();
+				foreach (RaycastHit hit in rawHits) {
+					hits [hit.distance] = hit;
+				}
+
+				foreach (KeyValuePair<float, RaycastHit> hitPair in hits) {
+					RaycastHit hit = hitPair.Value;
+
+					if (hit.transform.root == transform.root) {
+						continue;
+					} 
+
+					if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Map")) {
+						break;
+					}
+
+					CharacterDamagablePart part = hit.collider.GetComponent<CharacterDamagablePart> ();
+					if (part != null) {
+						part.Damage (damage, this.owner);
+					} else {
+						Vector3 hitPos = hit.point;
+
+						GameObject tracer = Instantiate (tracerPrefab);
+						TracerObject tracerObject = tracer.GetComponent<TracerObject> ();
+						tracerObject.SetLineSettings (shootFireTransform.position, hitPos);
+						//GameObject obj = Instantiate(onHitObjects [Random.Range (0, onHitObjects.Count)]);
+						//obj.transform.position = hitPos;
+
+						GameObject decalObject = Instantiate (decalPrefab);
+						decalObject.transform.position = hitPos;
+						decalObject.transform.rotation = Quaternion.LookRotation (-hit.normal);
+						_Decal.DecalBuilder.BuildAndSetDirty (decalObject.GetComponent<_Decal.Decal> ());
+						Destroy (decalObject, 60.0f);
+
+						GameObject particlesObject = Instantiate (particlesPrefab);
+						particlesObject.transform.position = hitPos;
+						particlesObject.transform.rotation = Quaternion.LookRotation (hit.normal);
+						ParticleSystem particles = particlesObject.GetComponent<ParticleSystem> ();
+						particles.Play ();
+						Destroy (particlesObject, particles.main.duration * 2.0f);
+
+						EventManager.RunEventListeners<Events.RaycastFirearmBulletHit> (hitPos);
+					}
+				}
+			}
 		}
-		RaycastHit hit = this.owner.Raycast ();
-
-		Vector3 hitPos = hit.point;
-
-		GameObject tracer = Instantiate (tracerPrefab);
-		TracerObject tracerObject = tracer.GetComponent<TracerObject> ();
-		tracerObject.SetLineSettings (this.owner.raycaster.position, hitPos);
-		//GameObject obj = Instantiate(onHitObjects [Random.Range (0, onHitObjects.Count)]);
-		//obj.transform.position = hitPos;
-
-		EventManager.RunEventListeners<Events.RaycastFirearmBulletHit> (hitPos);
 
 		currentAmmo--;
 	}
@@ -67,7 +155,7 @@ public class RaycastFirearm : IFirearm {
 	}
 
 	public override void FirearmReloadAnimationEnd () {
-		currentAmmo = maxAmmo;
+		currentAmmo = fulfillAmmo;
 
 		EventManager.RunEventListeners<Events.RaycastFirearmStartReload> (this);
 	}

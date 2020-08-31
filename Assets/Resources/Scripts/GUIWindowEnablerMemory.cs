@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GUIWindowEnablerMemory : MonoBehaviour {
-	private GameObject lastEnabled = null;
+	public GameObject lastEnabled = null;
 
 	public void Enable(GameObject obj) {
 		if(lastEnabled != null) {

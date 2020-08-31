@@ -3,45 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[System.Serializable]
-public class DestroyableObjectSaveData {
-	public int health = 100;
-	public bool destroyed = false;
-}
+public class DestroyableObject : IDamagable {
 
-public class DestroyableObject : MonoBehaviour {
+	public int health = 10;
+	public GameObject appendOnDestroy;
 
-	public int health = 100;
-	public bool destroyed = false;
+	private bool destroyed = false;
 
-	public class DestroyEvent : UnityEvent {}
-	public DestroyEvent onDestroyEvent = new DestroyEvent();
-
-	public void Damage(int damage) {
+	public override void Damage (int damage, Character damager) {
 		if (destroyed) {
 			return;
 		}
 		health -= damage;
-		if (health <= 0) {
+		if (health < 0) {
+			GameObject obj = Instantiate (appendOnDestroy);
+			obj.transform.position = transform.position;
 			destroyed = true;
-			onDestroyEvent.Invoke ();
-			this.gameObject.SetActive (false);
-		}
-	}
-
-	public DestroyableObjectSaveData Save() {
-		DestroyableObjectSaveData save = new DestroyableObjectSaveData ();
-		save.destroyed = destroyed;
-		save.health = health;
-		return save;
-	}
-
-	public void Load(DestroyableObjectSaveData save){
-		destroyed = save.destroyed;
-		health = save.health;
-
-		if (destroyed) {
-			this.gameObject.SetActive (false);
+			Destroy (gameObject);
 		}
 	}
 

@@ -19,13 +19,16 @@ public class GUIInventorySlots : SerializableMonoBehaviour {
 	public Color idleSlotColor;
 	public Color puttableSlotColor;
 	public Color nonPuttableSlotColor;
+	public bool putRestricted = false;
 
-	void Start () {
+	void Awake() {
 		GenerateSlots ();
 
 		inventory = GetComponentInParent<GUIInventory> ();
 		inventory.slots.Add (this);
+	}
 
+	void Start () {
 		SerializableTransform transform = GetComponent<SerializableTransform> ();
 		saveName += transform.saveName + "InventorySlots";
 	}
@@ -40,10 +43,6 @@ public class GUIInventorySlots : SerializableMonoBehaviour {
 
 	public override void SetSerializableData (SerializableData rawData) {
 		GUIInventorySlotsData data = ConvertTargetObject<GUIInventorySlotsData> (rawData.target);
-	}
-
-	void Update () {
-		
 	}
 
 	public void ColorAllSlots(Color color) {
@@ -91,6 +90,10 @@ public class GUIInventorySlots : SerializableMonoBehaviour {
 	}
 
 	public bool IsPlaceable(GUIItem item, GUISlot slot) {
+		if (putRestricted) {
+			return false;
+		}
+
 		List<GUISlot> neededSlots = GetSlots ((int) slot.position.x, (int) slot.position.y, (int) item.size.x - 1, (int) item.size.y - 1, true);
 
 		if (neededSlots.Count == item.size.x * item.size.y) {
@@ -100,6 +103,11 @@ public class GUIInventorySlots : SerializableMonoBehaviour {
 	}
 
 	public bool IsPlaceable(GUIItem item, GUISlot slot, out List<GUISlot> slots) {
+		if (putRestricted) {
+			slots = new List<GUISlot> ();
+			return false;
+		}
+
 		List<GUISlot> neededSlots = GetSlots ((int) slot.position.x, (int) slot.position.y, (int) item.size.x - 1, (int) item.size.y - 1, true);
 
 		slots = neededSlots;
@@ -111,8 +119,15 @@ public class GUIInventorySlots : SerializableMonoBehaviour {
 	}
 
 	public GUISlot GetFreePlace(GUIItem item) {
-		for (int X = 0; X < width - item.size.x; X++) {
-			for (int Y = 0; Y < height - item.size.y; Y++) {
+		if (putRestricted) {
+			return null;
+		}
+
+		if (slots == null) {
+			return null;
+		}
+		for (int X = 0; X < width; X++) {
+			for (int Y = 0; Y < height; Y++) {
 				if(IsPlaceable(item, slots[X, Y])) {
 					return slots [X, Y];
 				}
@@ -121,8 +136,10 @@ public class GUIInventorySlots : SerializableMonoBehaviour {
 		return null;
 	}
 
-	public void ReactToItem(GUIItem item, GUISlot slot) {
-		ColorAllSlots (idleSlotColor);
+	public void ReactToItem(GUIItem item, GUISlot slot, bool colorAllSlotsIdle = true) {
+		if (colorAllSlotsIdle) {
+			ColorAllSlots (idleSlotColor);
+		}
 
 		List<GUISlot> neededSlots;
 		if (IsPlaceable (item, slot, out neededSlots)) {
@@ -130,6 +147,11 @@ public class GUIInventorySlots : SerializableMonoBehaviour {
 		} else {
 			ColorSlots (neededSlots, nonPuttableSlotColor);
 		}
+	}
+
+	public void ColorSlotsUnderItem(GUIItem item, GUISlot slot, Color color) {
+		List<GUISlot> slots = GetSlots ((int) slot.position.x, (int) slot.position.y, (int) item.size.x - 1, (int) item.size.y - 1, true);
+		ColorSlots (slots, color);
 	}
 
 	public void GenerateSlots() {

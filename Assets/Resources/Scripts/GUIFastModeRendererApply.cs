@@ -22,7 +22,8 @@ public class GUIFastModeRendererApply : MonoBehaviour {
 		data.chromaticAberrationEnabled = chromaticAberrationActive.isOn;
 		data.grainEnabled = grainActive.isOn;
 		data.isHDREnabled = isHDRActive.isOn;
-		data.textureQuality = texturesQuality.quality + 1;
+		data.textureQuality = texturesQuality.quality;
+		data.enableRealtimeShadows = false;
 		switch (antialiasingApplied.quality) {
 		case 0:
 			data.antialiasing = PostProcessLayer.Antialiasing.None;

@@ -1,0 +1,766 @@
+{
+  "data": {
+    "2": {
+      "saveName": "2",
+      "prefabName": "",
+      "id": -1050,
+      "target": {
+        "position": {
+          "x": -0.000111,
+          "y": 0.000389,
+          "z": 0.0
+        },
+        "counter": 16,
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0,
+          "eulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "parent": null
+      },
+      "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "Pistol2PhysicalItem": {
+      "saveName": "Pistol2PhysicalItem",
+      "prefabName": "DI-SP-1",
+      "id": -1050,
+      "target": {
+        "itemDataName": "DI-SP-1"
+      },
+      "type": "PhysicalItem, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "PlayerTransform913": {
+      "saveName": "PlayerTransform913",
+      "prefabName": "Player",
+      "id": 21862,
+      "target": {
+        "position": {
+          "x": -6.81194544,
+          "y": -2.67000175,
+          "z": -3.21432352
+        },
+        "counter": 16,
+        "rotation": {
+          "x": 0.0,
+          "y": -0.013089586,
+          "z": 0.0,
+          "w": -0.999914348,
+          "eulerAngles": {
+            "x": 0.0,
+            "y": 1.49999893,
+            "z": 0.0
+          }
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "parent": null
+      },
+      "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "MouseLook84": {
+      "saveName": "MouseLook84",
+      "prefabName": "Player",
+      "id": 19914,
+      "target": {
+        "position": {
+          "x": 0.0,
+          "y": 0.75,
+          "z": 0.0
+        },
+        "counter": 16,
+        "rotation": {
+          "x": 0.09845132,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.995141864,
+          "eulerAngles": {
+            "x": 11.2999945,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "parent": "PlayerTransform913"
+      },
+      "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "CameraTransform1012": {
+      "saveName": "CameraTransform1012",
+      "prefabName": "Player",
+      "id": 21698,
+      "target": {
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "counter": 16,
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0,
+          "eulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "parent": "MouseLook84"
+      },
+      "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "PlayerCanvas73": {
+      "saveName": "PlayerCanvas73",
+      "prefabName": "Player",
+      "id": 21862,
+      "target": {
+        "position": {
+          "x": 222.632584,
+          "y": 223.05,
+          "z": 50.49456
+        },
+        "counter": 16,
+        "rotation": {
+          "x": 0.0,
+          "y": 0.013089587,
+          "z": 0.0,
+          "w": -0.9999144,
+          "eulerAngles": {
+            "x": 0.0,
+            "y": 358.5,
+            "z": 0.0
+          }
+        },
+        "localScale": {
+          "x": 0.6928203,
+          "y": 0.6928203,
+          "z": 0.6928203
+        },
+        "parent": null
+      },
+      "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventoryHelper611": {
+      "saveName": "InventoryHelper611",
+      "prefabName": "Player",
+      "id": 21862,
+      "target": {
+        "position": {
+          "x": -324.65,
+          "y": -296.474976,
+          "z": 32.7624969
+        },
+        "counter": 16,
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0,
+          "eulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "parent": "PlayerCanvas73"
+      },
+      "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventoryPanelInventoryPanel1InventoryInventoryPanel110Inventory": {
+      "saveName": "InventoryPanelInventoryPanel1InventoryInventoryPanel110Inventory",
+      "prefabName": "Player",
+      "id": 18346,
+      "target": {
+        "containers": [
+          "InventoryContainerInventoryContainer3InventoryContainerInventoryContainer35InventoryContainer",
+          "InventoryContainerInventoryContainer4InventoryContainerInventoryContainer46InventoryContainer",
+          "InventoryContainerInventoryContainer2InventoryContainerInventoryContainer27InventoryContainer",
+          "InventoryContainerInventoryContainer5InventoryContainerInventoryContainer59InventoryContainer",
+          "InventoryContainerInventoryContainer3InventoryContainerInventoryContainer35InventoryContainer",
+          "InventoryContainerInventoryContainer4InventoryContainerInventoryContainer46InventoryContainer",
+          "InventoryContainerInventoryContainer2InventoryContainerInventoryContainer27InventoryContainer",
+          "InventoryContainerInventoryContainer5InventoryContainerInventoryContainer59InventoryContainer"
+        ],
+        "slots": [
+          "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots0InventorySlotsInventorySlots0InventorySlotsInventorySlots08InventorySlots"
+        ]
+      },
+      "type": "GUIInventory, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventoryPanel110": {
+      "saveName": "InventoryPanel110",
+      "prefabName": "Player",
+      "id": 18346,
+      "target": {
+        "position": {
+          "x": 324.0,
+          "y": 312.0,
+          "z": -26.2099972
+        },
+        "counter": 16,
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0,
+          "eulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "parent": "InventoryHelper611"
+      },
+      "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventoryPanelRectInventoryPanel1RectTransformInventoryPanel110RectTransform": {
+      "saveName": "InventoryPanelRectInventoryPanel1RectTransformInventoryPanel110RectTransform",
+      "prefabName": "Player",
+      "id": 18346,
+      "target": {
+        "position": {
+          "x": 324.0,
+          "y": 312.0
+        },
+        "anchorMax": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "anchorMin": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "offsetMax": {
+          "x": 664.5,
+          "y": 557.5
+        },
+        "offsetMin": {
+          "x": -16.5,
+          "y": 66.5
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "sizeDelta": {
+          "x": 681.0,
+          "y": 491.0
+        }
+      },
+      "type": "SerializableRectTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots0InventorySlotsInventorySlots0InventorySlotsInventorySlots08InventorySlots": {
+      "saveName": "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots0InventorySlotsInventorySlots0InventorySlotsInventorySlots08InventorySlots",
+      "prefabName": "Player",
+      "id": 19686,
+      "target": {},
+      "type": "GUIInventorySlots, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventorySlots08": {
+      "saveName": "InventorySlots08",
+      "prefabName": "Player",
+      "id": 19686,
+      "target": {
+        "position": {
+          "x": 32.0,
+          "y": -189.0,
+          "z": 0.0
+        },
+        "counter": 16,
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0,
+          "eulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "parent": "InventoryPanel110"
+      },
+      "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventoryContainerInventoryContainer3InventoryContainerInventoryContainer35InventoryContainer": {
+      "saveName": "InventoryContainerInventoryContainer3InventoryContainerInventoryContainer35InventoryContainer",
+      "prefabName": "Player",
+      "id": 22250,
+      "target": {
+        "whiteList": [
+          "ArmorBody"
+        ]
+      },
+      "type": "GUIContainer, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventoryContainer35": {
+      "saveName": "InventoryContainer35",
+      "prefabName": "Player",
+      "id": 22250,
+      "target": {
+        "position": {
+          "x": -282.0,
+          "y": 123.5,
+          "z": 1.90734863E-06
+        },
+        "counter": 16,
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0,
+          "eulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "localScale": {
+          "x": 0.99999994,
+          "y": 0.99999994,
+          "z": 0.99999994
+        },
+        "parent": "InventoryPanel110"
+      },
+      "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventoryContainerInventoryContainer3RectTransformInventoryContainer35RectTransform": {
+      "saveName": "InventoryContainerInventoryContainer3RectTransformInventoryContainer35RectTransform",
+      "prefabName": "Player",
+      "id": 22250,
+      "target": {
+        "position": {
+          "x": 58.5,
+          "y": -122.0
+        },
+        "anchorMax": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "anchorMin": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "offsetMax": {
+          "x": 190.5,
+          "y": -122.0
+        },
+        "offsetMin": {
+          "x": 58.5,
+          "y": -276.0
+        },
+        "pivot": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "sizeDelta": {
+          "x": 132.0,
+          "y": 154.0
+        }
+      },
+      "type": "SerializableRectTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventoryContainerInventoryContainer2InventoryContainerInventoryContainer27InventoryContainer": {
+      "saveName": "InventoryContainerInventoryContainer2InventoryContainerInventoryContainer27InventoryContainer",
+      "prefabName": "Player",
+      "id": 21350,
+      "target": {
+        "whiteList": [
+          "ArmorHead"
+        ]
+      },
+      "type": "GUIContainer, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventoryContainer27": {
+      "saveName": "InventoryContainer27",
+      "prefabName": "Player",
+      "id": 21350,
+      "target": {
+        "position": {
+          "x": -256.5,
+          "y": 226.5,
+          "z": 1.90734863E-06
+        },
+        "counter": 16,
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0,
+          "eulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "localScale": {
+          "x": 0.99999994,
+          "y": 0.99999994,
+          "z": 0.99999994
+        },
+        "parent": "InventoryPanel110"
+      },
+      "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventoryContainerInventoryContainer2RectTransformInventoryContainer27RectTransform": {
+      "saveName": "InventoryContainerInventoryContainer2RectTransformInventoryContainer27RectTransform",
+      "prefabName": "Player",
+      "id": 21350,
+      "target": {
+        "position": {
+          "x": 84.0,
+          "y": -19.0
+        },
+        "anchorMax": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "anchorMin": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "offsetMax": {
+          "x": 165.0,
+          "y": -19.0
+        },
+        "offsetMin": {
+          "x": 84.0,
+          "y": -114.0
+        },
+        "pivot": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "sizeDelta": {
+          "x": 81.0,
+          "y": 95.0
+        }
+      },
+      "type": "SerializableRectTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventoryContainerInventoryContainer4InventoryContainerInventoryContainer46InventoryContainer": {
+      "saveName": "InventoryContainerInventoryContainer4InventoryContainerInventoryContainer46InventoryContainer",
+      "prefabName": "Player",
+      "id": 22058,
+      "target": {
+        "whiteList": [
+          "Weapon"
+        ]
+      },
+      "type": "GUIContainer, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventoryContainer46": {
+      "saveName": "InventoryContainer46",
+      "prefabName": "Player",
+      "id": 22058,
+      "target": {
+        "position": {
+          "x": -294.15,
+          "y": -145.899963,
+          "z": 1.90734863E-06
+        },
+        "counter": 16,
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0,
+          "eulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "localScale": {
+          "x": 0.99999994,
+          "y": 0.99999994,
+          "z": 0.99999994
+        },
+        "parent": "InventoryPanel110"
+      },
+      "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventoryContainerInventoryContainer4RectTransformInventoryContainer46RectTransform": {
+      "saveName": "InventoryContainerInventoryContainer4RectTransformInventoryContainer46RectTransform",
+      "prefabName": "Player",
+      "id": 22058,
+      "target": {
+        "position": {
+          "x": 46.35001,
+          "y": -391.399963
+        },
+        "anchorMax": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "anchorMin": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "offsetMax": {
+          "x": 306.35,
+          "y": -391.399963
+        },
+        "offsetMin": {
+          "x": 46.35001,
+          "y": -472.399963
+        },
+        "pivot": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "sizeDelta": {
+          "x": 260.0,
+          "y": 81.0
+        }
+      },
+      "type": "SerializableRectTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventoryContainerInventoryContainer5InventoryContainerInventoryContainer59InventoryContainer": {
+      "saveName": "InventoryContainerInventoryContainer5InventoryContainerInventoryContainer59InventoryContainer",
+      "prefabName": "Player",
+      "id": 19404,
+      "target": {
+        "whiteList": [
+          "Weapon"
+        ]
+      },
+      "type": "GUIContainer, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventoryContainer59": {
+      "saveName": "InventoryContainer59",
+      "prefabName": "Player",
+      "id": 19404,
+      "target": {
+        "position": {
+          "x": -294.15,
+          "y": -56.8999634,
+          "z": 1.90734863E-06
+        },
+        "counter": 16,
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0,
+          "eulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "localScale": {
+          "x": 0.99999994,
+          "y": 0.99999994,
+          "z": 0.99999994
+        },
+        "parent": "InventoryPanel110"
+      },
+      "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventoryContainerInventoryContainer5RectTransformInventoryContainer59RectTransform": {
+      "saveName": "InventoryContainerInventoryContainer5RectTransformInventoryContainer59RectTransform",
+      "prefabName": "Player",
+      "id": 19404,
+      "target": {
+        "position": {
+          "x": 46.35001,
+          "y": -302.399963
+        },
+        "anchorMax": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "anchorMin": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "offsetMax": {
+          "x": 306.35,
+          "y": -302.399963
+        },
+        "offsetMin": {
+          "x": 46.35001,
+          "y": -383.399963
+        },
+        "pivot": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "sizeDelta": {
+          "x": 260.0,
+          "y": 81.0
+        }
+      },
+      "type": "SerializableRectTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventoryItemInventoryItem15Item": {
+      "saveName": "InventoryItemInventoryItem15Item",
+      "prefabName": "InventoryWeaponItem",
+      "id": -247564,
+      "target": {
+        "size": {
+          "x": 6.0,
+          "y": 3.0
+        },
+        "nameText": "DI-SP-1",
+        "additionalDataText": "17/17",
+        "actionsType": "Simple",
+        "tag": "Weapon",
+        "sprite": "DI-SP-1.ItemIcon",
+        "rotated": false,
+        "physicalData": "DI-SP-1",
+        "inventory": "InventoryPanelInventoryPanel1InventoryInventoryPanel110Inventory",
+        "rectTransform": "",
+        "placedInSlots": false,
+        "inventorySlots": "",
+        "slotPosition": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "placedInContainer": true,
+        "container": "InventoryContainerInventoryContainer5InventoryContainerInventoryContainer59InventoryContainer"
+      },
+      "type": "GUIItem, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventoryItem15": {
+      "saveName": "InventoryItem15",
+      "prefabName": "InventoryWeaponItem",
+      "id": -247564,
+      "target": {
+        "position": {
+          "x": 0.0,
+          "y": -81.0,
+          "z": -1.525879E-05
+        },
+        "counter": 16,
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0,
+          "eulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "localScale": {
+          "x": 0.9999998,
+          "y": 0.9999996,
+          "z": 0.9999998
+        },
+        "parent": "InventoryContainer59"
+      },
+      "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventoryItemInventoryItem15WeaponGUIItemEventHandler": {
+      "saveName": "InventoryItemInventoryItem15WeaponGUIItemEventHandler",
+      "prefabName": "InventoryWeaponItem",
+      "id": -247564,
+      "target": {
+        "weaponClass": "DI-SP-1"
+      },
+      "type": "WeaponGUIItemEventHandler, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventoryItemItemInventoryItem14Item": {
+      "saveName": "InventoryItemItemInventoryItem14Item",
+      "prefabName": "InventoryItem",
+      "id": -247602,
+      "target": {
+        "size": {
+          "x": 4.0,
+          "y": 2.0
+        },
+        "nameText": "Pistol ammo",
+        "additionalDataText": "40/40",
+        "actionsType": "Simple",
+        "tag": "PistolAmmo0",
+        "sprite": "PistolAmmoItem0Icon",
+        "rotated": false,
+        "physicalData": "PistolAmmo0",
+        "inventory": "InventoryPanelInventoryPanel1InventoryInventoryPanel110Inventory",
+        "rectTransform": "",
+        "placedInSlots": true,
+        "inventorySlots": "InventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlotsInventorySlots0InventorySlotsInventorySlots0InventorySlotsInventorySlots08InventorySlots",
+        "slotPosition": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "placedInContainer": false,
+        "container": ""
+      },
+      "type": "GUIItem, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    "InventoryItem14": {
+      "saveName": "InventoryItem14",
+      "prefabName": "InventoryItem",
+      "id": -247602,
+      "target": {
+        "position": {
+          "x": 31.99997,
+          "y": -219.000015,
+          "z": -5.722046E-06
+        },
+        "counter": 16,
+        "rotation": {
+          "x": 0.0,
+          "y": 1.49011594E-08,
+          "z": 0.0,
+          "w": 1.0,
+          "eulerAngles": {
+            "x": 0.0,
+            "y": 1.70754709E-06,
+            "z": 0.0
+          }
+        },
+        "localScale": {
+          "x": 0.999999762,
+          "y": 0.99999994,
+          "z": 0.999999762
+        },
+        "parent": "InventoryPanel110"
+      },
+      "type": "SerializableTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    }
+  }
+}

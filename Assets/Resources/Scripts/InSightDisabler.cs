@@ -5,8 +5,15 @@ using UnityEngine.UI;
 
 public class InSightDisabler : MonoBehaviour {
 	public Image image;
+	public static InSightDisabler instance;
 
-	void FixedUpdate () {
-		image.enabled = !Input.GetMouseButton (1);
+	void Awake() {
+		instance = this;
+	}
+
+	void Update () {
+		if(Input.GetMouseButtonDown (1)) {
+			image.enabled = !image.enabled; 
+		}
 	}
 }

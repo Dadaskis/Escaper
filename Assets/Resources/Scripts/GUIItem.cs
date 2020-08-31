@@ -5,6 +5,10 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
+namespace Events.GUIItem {
+	class Selected {}
+}
+
 [System.Serializable]
 public class GUIItemData {
 
@@ -28,11 +32,14 @@ public class GUIItemData {
 	public bool placedInContainer = false;
 	public string container = "";
 
+	public bool selectable = false;
+	public bool selected = false;
+
 }
 
 [ExecuteInEditMode]
 [RequireComponent(typeof(SerializableTransform))]
-public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
+public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler {
 	public Vector2 size = Vector2.one;
 	public Image icon;
 	public Text nameText;
@@ -46,6 +53,11 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 	public bool draging = false;
 	public bool rotatedOnBeginDrag = false;
 	public ItemData physicalData;
+	public bool selectable = false;
+	public bool selected = false;
+	public Image background;
+	public Color selectedColor;
+	public Color notSelectedColor;
 
 	private RectTransform rectTransform;
 	private Canvas canvas;
@@ -67,6 +79,8 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 		inventory = GetComponentInParent<GUIInventory> ();
 		serializableTransform = GetComponent<SerializableTransform> ();
 		saveName += serializableTransform.saveName + "Item";
+		background = GetComponent<Image> ();
+		inventory.items.Add (this);
 	}
 
 	void Update() {
@@ -76,6 +90,21 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 
 		if (InputManager.GetButtonDown ("RotateItem")) {
 			Rotate ();
+		}
+	}
+
+	public void OnPointerClick(PointerEventData eventData) {
+		if (selectable) {
+			selected = !selected;
+			if (background == null) {
+				return;
+			}
+			if (selected) {
+				background.color = selectedColor;
+			} else {
+				background.color = notSelectedColor;
+			}
+			EventManager.RunEventListeners<Events.GUIItem.Selected> (this);
 		}
 	}
 
@@ -91,6 +120,9 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 		physicalData = Serializer.GetScriptableObject (data.physicalData) as ItemData;
 
 		rotated = data.rotated;
+
+		selectable = data.selectable;
+		selected = data.selected;
 
 		if (data.placedInSlots) {
 			GUIInventorySlots slots = Serializer.GetComponent (data.inventorySlots) as GUIInventorySlots;
@@ -120,6 +152,8 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 		item.sprite = icon.sprite.name;
 		item.rotated = rotated;
 		item.physicalData = physicalData.name;
+		item.selected = selected;
+		item.selectable = selectable;
 
 		if (bindedSlot != null && bindedInventorySlots != null) {
 			item.placedInSlots = true;
@@ -166,13 +200,20 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 		}
 	}
 
-	public void OnBeginDrag (PointerEventData eventData) {
+	public void ClearSlotsAfterItem() {
 		if (bindedSlot != null && bindedInventorySlots != null) {
 			List<GUISlot> slots = bindedInventorySlots.GetSlots ((int) bindedSlot.position.x, (int) bindedSlot.position.y, (int) size.x - 1, (int) size.y - 1);
 			foreach (GUISlot slot in slots) {
 				slot.item = null;
 			}
 		}
+	}
+
+	public void OnBeginDrag (PointerEventData eventData) {
+		if (selectable) {
+			return;
+		}
+		ClearSlotsAfterItem ();
 
 		if (bindedContainer != null) {
 			rectTransform.SetParent (inventory.transform, true);
@@ -212,6 +253,9 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 	}
 
 	public void OnDrag (PointerEventData eventData) {
+		if (selectable) {
+			return;
+		}
 		FindNeededData ();
 
 		rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
@@ -258,6 +302,16 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 		bindedInventorySlots = slot.inventory;
 		bindedContainer = null;
 		Resize ();
+		GUIInventory previousInventory = inventory;
+		inventory = slot.inventory.inventory;
+		if (inventory != previousInventory) {
+			rectTransform.SetParent (inventory.transform, true);
+			Debug.LogError (previousInventory);
+			if (previousInventory != null) {
+				previousInventory.items.Remove (this);
+			}
+			inventory.items.Add (this);
+		}
 		placedInSlotsEvent.Invoke (bindedInventorySlots, bindedSlot);
 	}
 
@@ -276,10 +330,14 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 		bindedSlot = null;
 		bindedInventorySlots = null;
 		bindedContainer = container;
+		inventory = container.inventory;
 		placedInContainerEvent.Invoke (container);
 	}
 
 	public void OnEndDrag (PointerEventData eventData) {
+		if (selectable) {
+			return;
+		}
 		draging = false;
 
 		List<RaycastResult> raycastResults = GUICustomUtility.RaycastMouse ();

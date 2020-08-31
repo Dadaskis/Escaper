@@ -71,11 +71,11 @@ public class Serializer : MonoBehaviour {
 	}
 
 	void Update() {
-		if (Input.GetKeyDown (KeyCode.LeftBracket)) {
-			Save ("Test");
-		} else if (Input.GetKeyDown (KeyCode.RightBracket)) {
-			StartCoroutine(Load ("Test"));
-		}
+		//if (Input.GetKeyDown (KeyCode.LeftBracket)) {
+		//	Save ("Test");
+		//} else if (Input.GetKeyDown (KeyCode.RightBracket)) {
+		//	StartCoroutine(Load ("Test"));
+		//}
 	}
 
 	public void Serialize() {

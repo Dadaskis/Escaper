@@ -10,13 +10,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (CharacterController))]
     public class FirstPersonController : MonoBehaviour
     {
-        [SerializeField] private bool m_IsWalking;
-        [SerializeField] private float m_WalkSpeed;
-        [SerializeField] private float m_RunSpeed;
+        public bool isWalking;
+        public float walkSpeed;
+		public float runSpeed;
         [SerializeField] [Range(0f, 1f)] private float m_RunstepLenghten;
-        [SerializeField] private float m_JumpSpeed;
-        [SerializeField] private float m_StickToGroundForce;
-        [SerializeField] public float gravityMultiplier;
+		public float jumpSpeed;
+        public float stickToGroundForce;
+        public float gravityMultiplier;
 		public MouseLook mouseLook;
         [SerializeField] private float m_StepInterval;
 		[SerializeField] private Transform m_Camera;
@@ -51,6 +51,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 		public float stepSpeedMultiplier = 1.0f;
 		public float stepDistanceToPlaySound = 1.0f;
+		public float stepDistanceToPlaySoundOnRun = 2.0f;
 		public float stepVolume = 1.0f;
 
 		public float turningRotationCheckValue = 0.05f;
@@ -58,6 +59,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 		public float turningTimer = 0.0f;
 		public float turningDelay = 1.0f;
 		public List<string> turningSoundNames = new List<string>();
+
+		public float physicsPushPower = 1.0f;
 
         // Use this for initialization
         private void Start()
@@ -231,11 +234,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 			if (characterController.isGrounded && inertionInAir)
 			{
-				moveDir.y = -m_StickToGroundForce;
+				moveDir.y = -stickToGroundForce;
 
 				if (m_Jump)
 				{
-					moveDir.y = m_JumpSpeed;
+					moveDir.y = jumpSpeed;
 					PlayJumpSound();
 					m_Jump = false;
 					m_Jumping = true;
@@ -280,8 +283,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 				stepDistance += (speed * stepSpeedMultiplier) * Time.fixedDeltaTime;
             }
 
-			if(stepDistance > stepDistanceToPlaySound) {
-				PlayFootStepAudio();
+			if (stepDistance > stepDistanceToPlaySound && isWalking) {
+				PlayFootStepAudio ();
+				stepDistance = 0.0f;
+			} else if(stepDistance > stepDistanceToPlaySoundOnRun && isRunning) {
+				PlayFootStepAudio ();
 				stepDistance = 0.0f;
 			}
         }
@@ -368,13 +374,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
 				vertical += 1.0f;
 			}
 
-            bool waswalking = m_IsWalking;
+            bool waswalking = isWalking;
 
-            m_IsWalking = !InputManager.GetButton ("PlayerRun");
+            isWalking = !InputManager.GetButton ("PlayerRun");
 
-			isRunning = !m_IsWalking;
+			isRunning = !isWalking;
 
-            speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
+            speed = isWalking ? walkSpeed : runSpeed;
 			speed = isCrouching ? crouchSpeed : speed;
             inputDirection = new Vector2(horizontal, vertical);
 
@@ -407,7 +413,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 return;
             }
-            body.AddForceAtPosition(characterController.velocity*0.1f, hit.point, ForceMode.Impulse);
+			body.AddForceAtPosition(characterController.velocity * physicsPushPower, hit.point, ForceMode.Impulse);
         }
     }
 }

@@ -55,10 +55,20 @@ public class PhysicalItem : IUsableObject {
 			}
 		}
 		if (slot == null) {
-			Destroy (itemObject);
-			return;
+			item.Rotate ();
+			foreach (GUIInventorySlots slots in Player.instance.inventory.slots) {
+				slot = slots.GetFreePlace (item);
+				if (slot != null) {
+					break;
+				}
+			}
+			if (slot == null) {
+				Destroy (itemObject);
+				return;
+			}
 		}
 		item.BindToSlot (slot);
+
 		if (destroyAfterPickingUp) {
 			Destroy (gameObject);
 		}

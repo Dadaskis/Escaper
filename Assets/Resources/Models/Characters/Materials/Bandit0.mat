@@ -30,6 +30,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 8632532726e17974f953bfce86d21a96, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _DetailMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _DetailMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -82,6 +86,7 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
+    - _DetailScale: 1
     - _DisplacementPower: 0.015
     - _DstBlend: 0
     - _GlossMapScale: 1

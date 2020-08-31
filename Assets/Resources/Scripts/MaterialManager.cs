@@ -157,10 +157,10 @@ public class MaterialManager : MonoBehaviour {
 		}
 
 		if (mode == MaterialMode.FAST) {
-			DynamicLightSwitcher[] switchers = FindObjectsOfType<DynamicLightSwitcher> ();
-			foreach (DynamicLightSwitcher switcher in switchers) {	
-				switcher.EnableStaticLighting ();
-			}
+			GraphicsSettingsData data = GraphicsSettings.instance.Data;
+			data.enableRealtimeShadows = false;
+			data.enableAmbientOcclusion = false;
+			GraphicsSettings.instance.Data = data;
 		} 
 	}
 

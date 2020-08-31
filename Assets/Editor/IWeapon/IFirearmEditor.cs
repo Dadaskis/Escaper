@@ -40,7 +40,7 @@ public class IFirearmEditor : Editor {
 
 		IFirearm firearm = target as IFirearm;
 
-		if (GUILayout.Button ("Assign animations by name", EditorStyles.miniButton)) {
+		if (GUILayout.Button ("Assign animations by name (FP)", EditorStyles.miniButton)) {
 			List<AnimationClip> clips = new List<AnimationClip>();// = AnimationUtility.GetAnimationClips ();
 
 			Object[] objects = AssetDatabase.LoadAllAssetRepresentationsAtPath (firearm.modelPath);
@@ -74,6 +74,35 @@ public class IFirearmEditor : Editor {
 			firearm.saveJammedClipFP = GetClipFromArray (firearm.saveJammedAnimationFindNameFP, clips, nameByIndex); 
 			firearm.unjammingClipFP = GetClipFromArray (firearm.unjammingAnimationFindNameFP, clips, nameByIndex); 
 			firearm.checkMagClipFP = GetClipFromArray (firearm.checkMagAnimationFindNameFP, clips, nameByIndex);
+
+		} else if (GUILayout.Button ("Assign animations by name (TP)", EditorStyles.miniButton)) {
+			List<AnimationClip> clips = new List<AnimationClip>();// = AnimationUtility.GetAnimationClips ();
+
+			Object[] objects = AssetDatabase.LoadAllAssetRepresentationsAtPath (firearm.modelPath);
+			foreach (Object obj in objects) {
+				AnimationClip clip = obj as AnimationClip;
+				if (clip != null) {
+					clips.Add (clip);
+				}
+			}
+
+			List<NameIndexPair> nameByIndex = new List<NameIndexPair> ();
+			int index = 0;
+			foreach (AnimationClip clip in clips) {
+				NameIndexPair pair = new NameIndexPair ();
+				pair.name = clip.name;
+				pair.index = index;
+				index++;
+				nameByIndex.Add (pair);
+			}
+
+			firearm.idleClipTP = GetClipFromArray (firearm.idleAnimationFindNameTP, clips, nameByIndex);
+			firearm.endClipTP = GetClipFromArray (firearm.endAnimationFindNameTP, clips, nameByIndex);
+			firearm.startClipTP = GetClipFromArray (firearm.startAnimationFindNameTP, clips, nameByIndex);
+			firearm.reloadClipTP = GetClipFromArray (firearm.reloadAnimationFindNameTP, clips, nameByIndex);
+			firearm.saveClipTP = GetClipFromArray (firearm.saveAnimationFindNameTP, clips, nameByIndex);
+			firearm.shootClipTP = GetClipFromArray (firearm.shootAnimationFindNameTP, clips, nameByIndex);
+			firearm.unjammingClipTP = GetClipFromArray (firearm.unjammingAnimationFindNameTP, clips, nameByIndex);
 
 		}
 	}

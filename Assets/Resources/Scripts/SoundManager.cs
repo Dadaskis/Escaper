@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Newtonsoft.Json;
 
 [System.Serializable]
 public class SoundType {
@@ -25,6 +26,14 @@ public class SoundManager : MonoBehaviour {
 	void Awake() {
 		InitializeClips ();
 		instance = this;
+
+		try {
+			string json = System.IO.File.ReadAllText("Saves/Sound.settings");
+			VolumeSliderSaveData data = JsonConvert.DeserializeObject<VolumeSliderSaveData>(json);
+			AudioListener.volume = data.volume;
+		} catch(System.Exception ex) {
+			// ... fuck
+		}
 	}
 
 	public Dictionary<string, AudioClip> clips = new Dictionary<string, AudioClip>();

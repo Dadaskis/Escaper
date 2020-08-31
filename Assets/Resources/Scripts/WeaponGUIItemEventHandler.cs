@@ -3,34 +3,96 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponGUIItemEventHandlerData { 
-	public string weaponClass;
+	public int currentAmmo = 0;
 }
 
 [RequireComponent(typeof(SerializableTransform))]
 public class WeaponGUIItemEventHandler : SerializableMonoBehaviour {
 
 	public GUIItem item;
-	public string weaponClass;
+	public int currentAmmo = 0;
+	public static bool initializedFirst = false;
 
 	void PlacedInContainer(GUIContainer container) {
-		Player.instance.character.weapon.SetWeapon (weaponClass);
+		//Player.instance.character.weapon.SetWeapon (weaponClass);
 	}
 
 	void PlacedInSlots(GUIInventorySlots slots, GUISlot slot) {
-		Player.instance.character.weapon.SetWeapon ("");
+		if (Player.instance.character.weapon.GetWeapon ()) {
+			if (Player.instance.weaponSlots.currentSlot == Player.instance.character.weapon.GetWeapon ().slot) {
+				Player.instance.character.weapon.SetWeapon ("");
+			}
+		}
+	}
+
+	EventData OnItemDrop (EventData data) {
+		GUIItem dataItem = data.Get<GUIItem> (0);
+		if (dataItem == item) {
+			GameObject itemObject = data.Get<GameObject> (1);
+			WeaponPhysicalItemEventHandler physicalWeaponHandler = itemObject.GetComponent<WeaponPhysicalItemEventHandler> ();
+			if (physicalWeaponHandler != null) {
+				physicalWeaponHandler.currentAmmo = currentAmmo;
+			}
+		}
+		return new EventData ();
+	}
+
+	private static EventData OnLocationStart(EventData data) {
+
+		GUIItem item = data.Get<GUIItem> (0);
+		WeaponItemData itemData = item.physicalData as WeaponItemData;
+		if (itemData != null) {
+			WeaponData weaponData = WeaponManager.GetWeaponData (itemData.weaponClass);
+			IWeapon weaponObject = weaponData.firstPerson.GetComponent<IWeapon> ();
+			WeaponGUIItemEventHandler handler = item.GetComponent<WeaponGUIItemEventHandler> ();
+			handler.currentAmmo = weaponObject.maxAmmo;
+			handler.UpdateText ();
+
+			List<GUIContainer> containers = Player.instance.inventory.containers;
+			foreach (GUIContainer container in containers) {
+				GUIContainerWeaponEventHandler weaponHandler = container.GetComponent<GUIContainerWeaponEventHandler> ();
+				if (weaponHandler != null) {
+					if (container.contains == null) {
+						item.ClearSlotsAfterItem ();
+						item.BindToContainer (container);
+					}
+				}
+			}
+
+			Player.instance.weaponSlots.TakeWeapon (1);
+		}
+
+		return new EventData ();
 	}
 
 	void Start () {
-		item.placedInContainerEvent.AddListener (PlacedInContainer);
+		if (initializedFirst == false) {
+			initializedFirst = true;
+			EventManager.AddEventListener<Events.GameLogic.AddedItemToThePlayer> (OnLocationStart);
+		}
+		//item.placedInContainerEvent.AddListener (PlacedInContainer);
 		item.placedInSlotsEvent.AddListener (PlacedInSlots);
 		SerializableTransform transform = GetComponent<SerializableTransform> ();
 		saveName += transform.saveName + "WeaponGUIItemEventHandler";
+		EventManager.AddEventListener<Events.GUIItemActionSimple.Drop> (OnItemDrop);
+	}
+
+	public void UpdateText() {
+		WeaponItemData data = item.physicalData as WeaponItemData;
+		GameObject weapon = WeaponManager.GetWeaponData (data.weaponClass).firstPerson;
+		if (weapon == null) {
+			weapon = WeaponManager.GetWeaponData (data.weaponClass).thirdPerson;
+		}
+		if(weapon != null) {
+			IWeapon weaponData = weapon.GetComponent<IWeapon> ();
+			item.additionalDataText.text = currentAmmo + "/" + weaponData.maxAmmo;
+		}
 	}
 
 	public override SerializableData GetSerializableData () {
 		SerializableData rawData = base.GetSerializableData ();
 		WeaponGUIItemEventHandlerData data = new WeaponGUIItemEventHandlerData ();
-		data.weaponClass = weaponClass;
+		data.currentAmmo = currentAmmo;
 		rawData.type = typeof(WeaponGUIItemEventHandler);
 		rawData.target = data;
 		return rawData;
@@ -38,7 +100,7 @@ public class WeaponGUIItemEventHandler : SerializableMonoBehaviour {
 
 	public override void SetSerializableData (SerializableData rawData) {
 		WeaponGUIItemEventHandlerData data = ConvertTargetObject<WeaponGUIItemEventHandlerData>(rawData.target);
-		weaponClass = data.weaponClass;
+		currentAmmo = data.currentAmmo;
 	}
 
 }

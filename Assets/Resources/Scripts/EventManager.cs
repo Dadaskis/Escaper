@@ -64,9 +64,13 @@ public class EventManager : MonoBehaviour {
 
 		public void Invoke(EventData args, ref EventData returned) {
 			foreach (EventMethodType method in methods) {
-				EventData data = method (args);
-				if (data != null) {
-					returned.objects.AddRange (data.objects);
+				try{
+					EventData data = method (args);
+					if (data != null) {
+						returned.objects.AddRange (data.objects);
+					}
+				} catch (System.Exception ex) {
+					Debug.LogError (ex);
 				}
 			}
 		}

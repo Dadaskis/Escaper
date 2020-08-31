@@ -138,6 +138,7 @@
      <None Include="Assets\PostProcessing\Shaders\Builtins\Lut2DBaker.shader" />
      <None Include="Assets\InkPainter\Sample\Shader\VTFHeightTransform.shader" />
      <None Include="Assets\DeferredDecals\_ReadMe.txt" />
+     <None Include="Assets\Resources\Shaders\Glass.shader" />
      <None Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Shaders\GraphStandard.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\AutoExposure.compute" />
      <None Include="Assets\PostProcessing\Shaders\Debug\Overlays.shader" />

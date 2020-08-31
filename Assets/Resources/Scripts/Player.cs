@@ -9,6 +9,8 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class Player : MonoBehaviour {
 
 	private GameObject weaponObject;
+	private Vector3 previousPosition = Vector3.zero;
+	public float walkDistance = 0.0f;
 	public GameObject weaponHolder;
 	public Camera camera;
 	public Character character;
@@ -38,12 +40,8 @@ public class Player : MonoBehaviour {
 	public bool killed = false;
 	void OnDeath() {
 		if(!killed) {
-			GameObject player = Instantiate (deathPlayer, transform);
-			player.transform.SetParent (null);
-			GetComponentInChildren<Camera> ().enabled = false;
-			Destroy (this.gameObject);
-			//gameObject.transform.position = new Vector3(10000.0f, 10000.0f, 10000.0f);
 			killed = true;
+			GameLogic.PlayerDeath ();
 		}
 	}
 
@@ -54,6 +52,8 @@ public class Player : MonoBehaviour {
 	}
 
 	void Update() {
+		walkDistance += Vector3.Distance (transform.position, previousPosition);
+		previousPosition = transform.position;
 		RaycastHit hit = character.Raycast ();
 		if (usageText != null && usagePanel != null) {
 			usageText.text = "";
@@ -61,11 +61,14 @@ public class Player : MonoBehaviour {
 		}
 		if (hit.transform != null) {
 			if (hit.distance < pickupDistance) {
-				IUsableObject obj = hit.transform.GetComponent<IUsableObject> ();
+				IUsableObject obj = hit.transform.root.GetComponentInChildren<IUsableObject> ();
 				if (obj != null) {
 					if (usageText != null && usagePanel != null) {
-						usagePanel.SetActive (true);
-						usageText.text = obj.ShowText ();
+						string text = obj.ShowText ();
+						if (text.Length > 1) { 
+							usagePanel.SetActive (true);
+							usageText.text = text;
+						}
 					}
 					if (InputManager.GetButtonDown ("Use")) {
 						obj.Use ();

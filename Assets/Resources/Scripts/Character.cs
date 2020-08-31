@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
+namespace Events.Character {
+	class Killed {}
+}
+
 public class Character : MonoBehaviour {
 
 	public string faction;
@@ -13,6 +17,8 @@ public class Character : MonoBehaviour {
 	public IWeaponChanger weapon;
 
 	[SerializeField]
+	private int maxHealth = 100;
+	[SerializeField]
 	private int health = 100;
 	public int Health {
 		get {
@@ -20,7 +26,16 @@ public class Character : MonoBehaviour {
 		}
 		set {
 			health = value;
+			if (health > maxHealth) {
+				maxHealth = health;
+			}
 			onHealthChange.Invoke (health);
+		}
+	}
+
+	public int MaxHealth {
+		get {
+			return maxHealth;
 		}
 	}
 
@@ -54,6 +69,9 @@ public class Character : MonoBehaviour {
 
 	void Start() {
 		CharacterManager.Characters.Add (this);
+		if (health > maxHealth) {
+			maxHealth = health;
+		}
 	}
 
 	void Update() {
@@ -64,6 +82,7 @@ public class Character : MonoBehaviour {
 		if (armor < 0) {
 			health -= count;
 			if (health < 0) {
+				EventManager.RunEventListeners <Events.Character.Killed> (this, character);
 				Kill ();
 				onDeath.Invoke ();
 				return;

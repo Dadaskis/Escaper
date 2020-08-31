@@ -1,29 +1,100 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\RootMovingNavAgent.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs">
     <Files>
-      <File FileName="Assets\Resources\Scripts\IWeapon.cs" Line="107" Column="2" />
-      <File FileName="Assets\Resources\Scripts\IFirearm.cs" Line="160" Column="89" />
-      <File FileName="Assets\Resources\Scripts\RaycastFirearm.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\WeaponShooter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\EventManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\HumanoidCharacter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\MaterialManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\Character.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\IWeapon.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\IFirearm.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\WeaponNearWallPushBack.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\InertialMoving.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\TracerObject.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\TransformIdleAnimationGenerator.cs" Line="1" Column="1" />
       <File FileName="Assets\Editor\MaterialManager\MaterialManagerEditor.cs" Line="1" Column="1" />
       <File FileName="Assets\Editor\IWeapon\IFirearmEditor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\LightmapManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\GraphicsSettings.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\Screenshot.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\SoundManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Shaders\CharacterAdvanced.shader" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\RootMovingNavAgent.cs" Line="44" Column="56" />
+      <File FileName="Assets\Resources\Scripts\RootMovingNavAgent.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Shaders\Glass.shader" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Shaders\CollimatorSightGlass.shader" Line="1" Column="1" />
+      <File FileName="Assets\DecalSystem\Plugins\DecalSystem\Decal.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIFastModeRendererApply.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIAdvancedRendererApply.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIRendererModeDropdown.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\PlaySyncAnimators.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\NullifyTransform.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Ragdollizer.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\WeaponShooterTP.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\WeaponShooter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\RaycastFirearm.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\HumanoidCharacter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\HumanoidAIAgressiveState.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\MathHelper.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\PlayerWeaponSlots.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\FirstPersonWeaponChanger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\IUsableObject.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\ItemData.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\WeaponItemData.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\IWeaponChanger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\IAmmoFiller.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\AmmoItemData.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIItem.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIItemActionSimple.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\AmmoGUIItemEventHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\ItemAmmoFiller.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\AmmoPhysicalItemEventHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\WeaponPhysicalItemEventHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\PhysicalItem.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\ItemManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\SpriteManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\ThirdPersonWeaponChanger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUICorpseInventorySwitch.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIInventories.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Corpse.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIDisableMouseLookOnInput.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIEnableOnKeyPress.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIOpenInventoryOnInput.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIVolumeSlider.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\InputData.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\InputManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\SoundManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\InSightDisabler.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIEquipmentAdder.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIInventorySlots.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIInventory.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUISetTextCurrentEXP.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUISetCurrentLocationSettings.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIGamePrestartLaunchLocation.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\WeaponGUIItemEventHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIContainerWeaponEventHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIBoostPriceValueUpdater.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIBoostPointValueUpdater.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIBoostAddPoint.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIBoostDecreasePoint.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Player.cs" Line="44" Column="29" />
+      <File FileName="Assets\Resources\Scripts\GiveRandomWeaponToCharacter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIActiveWhenEscapingStatus.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIChangeScene.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIEnableByPlayerStatus.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIAfterRaidStatsValuesSetup.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\EscapingTrigger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\LightmapManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GameLaunchLoadingScreenSceneChanger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\InitializeLightmapManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GameLogic.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\IPlayerBoost.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Character.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\HealthBoostHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GUIStartPriceUpdater.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\RunSpeedBoostHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\CharacterDamagablePart.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\IDamagable.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\DestroyableObject.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\DamageRadius.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\PlaySoundOnAwake.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\EventManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\AnotherLiveBoostHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\AppearPoint.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="291" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -6,7 +6,6 @@ public class ThirdPersonWeaponChanger : IWeaponChanger {
 
 	public Transform weaponHolder;
 	public Character owner;
-	[HideInInspector] public string weaponClass;
 	[HideInInspector] public IWeapon weapon;
 
 	public override void SetWeapon (string weaponClass) {

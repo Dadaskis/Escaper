@@ -30,6 +30,10 @@ public class GraphicsSettings : MonoBehaviour {
 
 	public GraphicsSettingsData Data {
 		set {
+			if (layer == null) {
+				layer = FindObjectOfType<PostProcessLayer> ();
+			}
+
 			data = value;
 
 			layer.antialiasingMode = data.antialiasing;
@@ -65,38 +69,36 @@ public class GraphicsSettings : MonoBehaviour {
 			//	}
 			//}
 
-			if (!data.isFastMode) {
-				/*DynamicLightSwitcher[] switchers = FindObjectsOfType<DynamicLightSwitcher> ();
-				foreach (DynamicLightSwitcher switcher in switchers) {
-					if (data.enableRealtimeShadows) {
-						switcher.EnableDynamicLighting ();
-					} else {
-						switcher.EnableStaticLighting ();
-					}
-				}*/
-
-				Light[] lights = FindObjectsOfType<Light> ();
-
+			/*DynamicLightSwitcher[] switchers = FindObjectsOfType<DynamicLightSwitcher> ();
+			foreach (DynamicLightSwitcher switcher in switchers) {
 				if (data.enableRealtimeShadows) {
-					QualitySettings.shadows = ShadowQuality.All;
-					foreach (Light light in lights) {
-						if (light.lightmapBakeType == LightmapBakeType.Realtime) {
-							light.enabled = true;
-						}
-					}
-					LightmapManager.instance.DisableLightmaps ();
+					switcher.EnableDynamicLighting ();
 				} else {
-					QualitySettings.shadows = ShadowQuality.Disable;
-					foreach (Light light in lights) {
-						if (light.lightmapBakeType == LightmapBakeType.Realtime) {
-							light.enabled = false;
-						}
-					}
-					LightmapManager.instance.EnableLightmaps ();
+					switcher.EnableStaticLighting ();
 				}
+			}*/
 
-				MaterialManager.instance.ChangeQuality (data.shadersQuality);
+			Light[] lights = FindObjectsOfType<Light> ();
+
+			if (data.enableRealtimeShadows && !data.isFastMode) {
+				QualitySettings.shadows = ShadowQuality.All;
+				foreach (Light light in lights) {
+					if (light.isBaked) {
+						light.enabled = true;
+					}
+				}
+				LightmapManager.instance.DisableLightmaps ();
+			} else {
+				QualitySettings.shadows = ShadowQuality.Disable;
+				foreach (Light light in lights) {
+					if (light.isBaked) {
+						light.enabled = false;
+					}
+				}
+				LightmapManager.instance.EnableLightmaps ();
 			}
+
+			MaterialManager.instance.ChangeQuality (data.shadersQuality);
 
 			Save ();
 		}

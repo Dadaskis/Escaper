@@ -17,6 +17,7 @@ public class GUIInventory : SerializableMonoBehaviour {
 
 	public List<GUIContainer> containers;
 	public List<GUIInventorySlots> slots;
+	public List<GUIItem> items = new List<GUIItem>();
 	public GUIInventoryData inventory;
 	public RectTransform dropOutTransform;
 	public GUIItemDropOutWindow dropOutWindow;
@@ -24,7 +25,49 @@ public class GUIInventory : SerializableMonoBehaviour {
 
 	private Canvas canvas;
 
-	void Start() {
+	public GUIItem AddItem(ItemData data) {
+		GameObject itemObject = Instantiate (data.prefabUI, transform);
+
+		GUIItem item = itemObject.GetComponent<GUIItem> ();
+		item.nameText.text = data.nameText;
+		item.additionalDataText.text = data.additionalText;
+		item.icon.sprite = data.icon;
+		item.size = data.size;
+		item.itemTag = data.tag;
+		item.fullName = data.fullName;
+		item.description = data.description;
+		item.actionsType = data.actionType;
+		item.physicalData = data;
+		item.Resize ();
+
+		//customItemSetDataEvent.Invoke (item, data);
+
+		GUISlot slot = null;
+		foreach (GUIInventorySlots slots in this.slots) {
+			slot = slots.GetFreePlace (item);
+			if (slot != null) {
+				break;
+			}
+		}
+		if (slot == null) {
+			item.Rotate ();
+			foreach (GUIInventorySlots slots in this.slots) {
+				slot = slots.GetFreePlace (item);
+				if (slot != null) {
+					break;
+				}
+			}
+			if (slot == null) {
+				Destroy (itemObject);
+				return null;
+			}
+		}
+		item.BindToSlot (slot);
+
+		return item;
+	}
+
+	void Start () {
 		canvas = GetComponentInParent<Canvas> ();
 		SerializableTransform transform = GetComponent<SerializableTransform> ();
 		saveName += transform.saveName + "Inventory";
@@ -37,6 +80,9 @@ public class GUIInventory : SerializableMonoBehaviour {
 			foreach (RaycastResult raycast in raycastResults) {
 				GUIItem item = raycast.gameObject.GetComponent<GUIItem> ();
 				if (item != null) {
+					if (item.inventory != this) {
+						break;
+					}
 					Transform previousParent = dropOutTransform.parent;
 					dropOutTransform.SetParent (null, true);
 					dropOutTransform.SetParent (previousParent, true);

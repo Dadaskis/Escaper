@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Resources/Scenes/GameLaunchLoadingScreen.unity
+    guid: f9436ec8ddb85014a9556cd06fe0d318
+  - enabled: 1
+    path: Assets/Resources/Scenes/LocationAccomplished.unity
+    guid: 20262d3582ce2f24da7b86bf40bd9c86
+  - enabled: 1
     path: Assets/Resources/Scenes/Main menu.unity
     guid: 1aaf2ef92a2d0524bb93b7ad261fa561
   - enabled: 0
@@ -14,6 +20,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Resources/Scenes/LightmapTest.unity
     guid: 12eddce2199d7f448b00efc50b71a9c9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Resources/Scenes/LightmapTest1.unity
     guid: f478a91120baf444ca4d964c49ea8f44
+  - enabled: 1
+    path: Assets/Resources/Scenes/LightmapTest4.unity
+    guid: c16a8e75c5ca2b24ba4878b95ead6c93

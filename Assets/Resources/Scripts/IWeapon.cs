@@ -19,8 +19,17 @@ public class AnimationClipOverrides : List<KeyValuePair<AnimationClip, Animation
 	}
 }
 
+namespace Events.IWeapon {
+	class PrimaryFire {}
+	class Reload {}
+}
+	
 public class IWeapon : MonoBehaviour {
 
+	public string weaponClass = "";
+	public int slot = -1;
+	public IAmmoFiller ammoFiller = null;
+	public string ammoType = "";
 	public bool animationPlaying = false;
 	public Animator animator = null;
 	public AnimatorOverrideController animatorOverride;
@@ -29,10 +38,13 @@ public class IWeapon : MonoBehaviour {
 	public bool firstPerson = true;
 	public int maxAmmo = 30;
 	public int currentAmmo = 30;
+	public int damage = 2;
 	public bool restrictUsing = false;
 	public string animatorSpeedFloatName = "AnimationSpeed";
 	public float overallWeaponsAnimationSpeedModifier = 1.0f;
 	public float currentAnimationSpeed = 1.0f;
+	public GameObject target;
+	public Vector3 overrideTargetHitPosition = Vector3.zero;
 
 	public delegate void AnimationOverMethodType ();
 	public delegate void AnimationOverrideMethodType(ref AnimationClipOverrides overrides);
@@ -79,9 +91,13 @@ public class IWeapon : MonoBehaviour {
 	void Start() {
 		CustomStartOnBegin ();
 		if (animator == null) {
-			animator = GetComponent<Animator> ();
-			if (animator == null) {
-				animator = GetComponentInChildren<Animator> ();
+			if (firstPerson) {
+				animator = GetComponent<Animator> ();
+				if (animator == null) {
+					animator = GetComponentInChildren<Animator> ();
+				}
+			} else {
+				animator = GetComponentInParent <Animator> ();
 			}
 		}
 		animatorOverride = new AnimatorOverrideController (animator.runtimeAnimatorController);
@@ -91,11 +107,18 @@ public class IWeapon : MonoBehaviour {
 		CustomStartOnEnd ();
 	}
 
-	public virtual void PrimaryFire () {}
+	public virtual void PrimaryFire () {
+		EventManager.RunEventListeners<Events.IWeapon.PrimaryFire> (this);
+	}
+
 	public virtual void SinglePrimaryFire () {}
 	public virtual void SecondaryFire () {}
 	public virtual void SingleSecondaryFire () {}
-	public virtual void Reload () {}
+
+	public virtual void Reload () {
+		EventManager.RunEventListeners<Events.IWeapon.Reload> (this);
+	}
+
 	public virtual void Punch () {}
 	public virtual void Save () {}
 	public virtual void UnSave () {}
@@ -103,5 +126,6 @@ public class IWeapon : MonoBehaviour {
 	public virtual void CustomStartOnEnd () {}
 	public virtual void MagCheck () {}
 	public virtual void ApplyAnimationOverrides (ref AnimationClipOverrides overrides) {}
+	public virtual float Takeout() { return 1.0f; }
 
 }

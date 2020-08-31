@@ -192,40 +192,122 @@ MonoBehaviour:
   firstPerson: 0
   maxAmmo: 1
   currentAmmo: 1
-  durability: 100
-  fireRate: 100
+  damage: 2
+  restrictUsing: 0
+  animatorSpeedFloatName: AnimationSpeed
+  overallWeaponsAnimationSpeedModifier: 1
+  currentAnimationSpeed: 1
+  target: {fileID: 0}
+  overrideTargetHitPosition: {x: 0, y: 0, z: 0}
+  currentDurability: 600
+  maxDurability: 600
+  modelPath: 
+  idleOverrideNameFP: WeaponIdle
+  idleAnimationFindNameFP: WeaponIdle
+  jammedIdleAnimationFindNameFP: WeaponJammedIdle
   idleClipFP: {fileID: 0}
+  jammedIdleClipFP: {fileID: 0}
+  fireOverrideNameFP: WeaponShoot
+  fireAnimationFindNameFP: WeaponShoot
   fireClipFP: {fileID: 0}
-  fireFPDuration: 0
+  drawOverrideNameFP: WeaponDraw
+  drawAnimationFindNameFP: WeaponDraw
   drawClipFP: {fileID: 0}
-  drawFPDuration: 0
-  runClipFP: {fileID: 0}
-  runFPDuration: 0
+  reloadOverrideNameFP: WeaponReload
+  reloadAnimationFindNameFP: WeaponReload
   reloadClipFP: {fileID: 0}
-  reloadFPDuration: 0
+  fullReloadOverrideNameFP: WeaponFullReload
+  fullReloadAnimationFindNameFP: WeaponFullReload
   fullReloadClipFP: {fileID: 0}
-  fullReloadFPDuration: 0
+  jammingOverrideNameFP: WeaponJamming
+  jammingAnimationFindNameFP: WeaponJamming
+  jammingClipFP: {fileID: 0}
+  unjammingOverrideNameFP: WeaponUnjamming
+  unjammingAnimationFindNameFP: WeaponUnjamming
+  unjammingClipFP: {fileID: 0}
+  punchOverrideNameFP: WeaponPunch
+  punchNotHitAnimationFindNameFP: WeaponPunchHit
+  punchHitAnimationFindNameFP: WeaponPunchNotHit
+  punchNotHitClipFP: {fileID: 0}
+  punchHitClipFP: {fileID: 0}
+  saveOverrideNameFP: WeaponSave
+  saveAnimationFindNameFP: WeaponSave
+  saveJammedAnimationFindNameFP: WeaponJammedSave
+  saveClipFP: {fileID: 0}
+  saveJammedClipFP: {fileID: 0}
+  checkMagOverrideNameFP: WeaponCheckMag
+  checkMagAnimationFindNameFP: WeaponCheckMag
+  checkMagClipFP: {fileID: 0}
+  startOverrideNameTP: WeaponStart
+  startAnimationFindNameTP: WeaponStart
+  startClipTP: {fileID: 0}
+  endOverrideNameTP: WeaponEnd
+  endAnimationFindNameTP: WeaponEnd
+  endClipTP: {fileID: 0}
+  saveOverrideNameTP: WeaponSave
+  saveAnimationFindNameTP: WeaponSave
+  saveClipTP: {fileID: 0}
+  idleOverrideNameTP: WeaponIdle
+  idleAnimationFindNameTP: WeaponIdle
   idleClipTP: {fileID: 0}
-  fireClipTP: {fileID: 0}
-  fireTPDuration: 0
-  drawClipTP: {fileID: 0}
-  drawTPDuration: 0
-  runClipTP: {fileID: 0}
-  runTPDuration: 0
+  shootOverrideNameTP: WeaponShoot
+  shootAnimationFindNameTP: WeaponShoot
+  shootClipTP: {fileID: 0}
+  unjammingOverrideNameTP: WeaponUnjamming
+  unjammingAnimationFindNameTP: WeaponUnjamming
+  unjammingClipTP: {fileID: 0}
+  reloadOverrideNameTP: WeaponReload
+  reloadAnimationFindNameTP: WeaponReload
   reloadClipTP: {fileID: 0}
-  reloadTPDuration: 0
-  fullReloadClipTP: {fileID: 0}
-  fullReloadTPDuration: 0
-  sightPosition: {x: 0, y: 0, z: 0}
-  nonSightPosition: {x: 0, y: 0, z: 0}
+  save: 0
+  reloading: 0
+  fireAnimationSpeed: 1
+  drawAnimationSpeed: 1
+  reloadAnimationSpeed: 1
+  fullReloadAnimationSpeed: 1
+  unjammingAnimationSpeed: 1
+  punchAnimationSpeed: 1
+  checkMagAnimationSpeed: 1
+  reloadSoundName: 
+  fullReloadSoundName: 
+  shootSoundName: 
+  unjammingSoundName: 
+  magCheckSoundName: 
+  offsetTransform: {fileID: 0}
+  offsetInitialPosition: {x: 0, y: 0, z: 0}
   inSight: 0
-  nextShootTime: 0
+  goingInSightSpeed: 5
+  goingOutSightSpeed: 7
+  jammable: 1
+  jammed: 0
+  minJammingChance: 1
+  maxJammingChance: 10
+  punchHitDistanceCheck: 1.5
+  bulletDropPrefab: {fileID: 0}
+  bulletDropLaunch: {fileID: 0}
+  bulletDropWaitSecondsAfterShoot: 1
+  bulletDropForce: 1
+  bulletDropKillTime: 10
+  shootFireParticlePrefab: {fileID: 0}
+  shootFireTransform: {fileID: 0}
+  shootFireParticles: {fileID: 0}
+  ammoTransform: {fileID: 0}
+  drawAmmoOnlyOnCheckMag: 1
+  ammoFulfillSecondsOnReload: 1
+  turningValueCheck: 0.2
+  turningValueCheckMax: 0.5
+  turningSoundNames: []
+  turningTimer: 0
+  turningDelay: 0.6
   maxXRecoil: 3
   minXRecoil: -3
   maxYRecoil: 2
   minYRecoil: 2
   maxZRecoil: 2
   minZRecoil: 2
+  tracerPrefab: {fileID: 0}
+  decalPrefab: {fileID: 0}
+  particlesPrefab: {fileID: 0}
   onHitObjects:
   - {fileID: 1606553370804506, guid: 9951f6c5d42a6454db584d650361166b, type: 2}
 --- !u!114 &114684021828819518
