@@ -39,10 +39,23 @@ public class GUIContainerWeaponEventHandler : MonoBehaviour {
 		Player.instance.weaponSlots.SetWeaponInSlot (weaponClass, weaponSlot, handler.currentAmmo);
 	}
 
+	EventData OnItemDrop(EventData data) {
+		GUIItem item = data.Get<GUIItem> (0);
+		if (container.contains == item) {
+			if (Player.instance.weaponSlots.currentSlot == weaponSlot) {
+				Player.instance.weaponSlots.TakeWeapon (weaponSlot);
+			}
+			Player.instance.weaponSlots.SetWeaponInSlot ("", weaponSlot, 0);
+		}
+
+		return new EventData ();
+	}
+
 	void Start() {
 		container.setItemEvent.AddListener (SetItemEvent);
 		EventManager.AddEventListener<Events.PlayerWeaponSlots.SlotAtPrimaryFire> (SlotAtPrimaryFire);
 		EventManager.AddEventListener<Events.PlayerWeaponSlots.SlotAtReload> (SlotAtReload);
+		EventManager.AddEventListener<Events.GUIItemActionSimple.Drop> (OnItemDrop);
 	}
 
 }

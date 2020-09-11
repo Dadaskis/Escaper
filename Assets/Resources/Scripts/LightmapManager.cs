@@ -11,7 +11,6 @@ public class LightmapManager : MonoBehaviour {
 	public List<Light> realtimeLightsFromBaked = new List<Light>();
 
 	public void Initialize() {
-		Debug.LogError ("Initialize");
 		rememberedData = new List<LightmapData> ();
 		bakedLights = new List<Light> ();
 		realtimeLightsFromBaked = new List<Light>();

@@ -38,16 +38,17 @@ public class Player : MonoBehaviour {
 	public static Player instance;
 
 	public bool killed = false;
-	void OnDeath() {
+	EventData OnDeath(EventData data) {
 		if(!killed) {
 			killed = true;
 			GameLogic.PlayerDeath ();
 		}
+		return new EventData ();
 	}
 
 	void Awake() {
 		instance = this;
-		character.onDeath.AddListener (OnDeath);
+		character.onDeath.AddListener(OnDeath);
 		Time.timeScale = 1.0f;
 	}
 

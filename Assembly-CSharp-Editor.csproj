@@ -51,6 +51,7 @@
      <Compile Include="Assets\DecalSystem\Plugins\DecalSystem\Editor\DecalEditor.cs" />
      <Compile Include="Assets\DecalSystem\Plugins\DecalSystem\Editor\Utils\GUIUtils.cs" />
      <Compile Include="Assets\Editor\ApplySelectedPrefabs.cs" />
+     <Compile Include="Assets\Editor\BotPositionInfo\BotPositionInfoEditor.cs" />
      <Compile Include="Assets\Editor\EditorCameraClipChanger.cs" />
      <Compile Include="Assets\Editor\IWeapon\IFirearmEditor.cs" />
      <Compile Include="Assets\Editor\Inventory\GUIInventorySlotsEditor.cs" />
@@ -100,6 +101,7 @@
      <Compile Include="Assets\ProCore\ProGrids\Editor\pg_ToggleContent.cs" />
      <Compile Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Editor\GraphyDebuggerEditor.cs" />
      <Compile Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Editor\GraphyManagerEditor.cs" />
+     <None Include="Assets\Resources\Shaders\Pain.shader" />
      <None Include="Assets\Resources\Shaders\ProjectorAdditive.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\FinalPass.shader" />
      <None Include="Assets\PostProcessing\Shaders\Debug\Waveform.compute" />
@@ -125,6 +127,7 @@
      <None Include="Assets\BlurryRefraction\GlassWithoutGrab.shader" />
      <None Include="Assets\PostProcessing\Shaders\Debug\Vectorscope.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\GaussianDownsample.compute" />
+     <None Include="Assets\Resources\Shaders\FadeIn.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\ScreenSpaceReflections.hlsl" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\DepthOfField.shader" />
      <None Include="Assets\InkPainter\Shader\Effective\HeightToNormal.shader" />
@@ -185,6 +188,7 @@
      <None Include="Assets\PostProcessing\Shaders\Builtins\Texture2DLerp.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\DeferredFog.shader" />
      <None Include="Assets\Resources\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
+     <None Include="Assets\Resources\Shaders\FadeOut.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\CopyStdFromTexArray.shader" />
      <None Include="Assets\PostProcessing\Runtime\Unity.Postprocessing.Runtime.asmdef" />
      <None Include="Assets\PostProcessing\Shaders\API\D3D9.hlsl" />
@@ -203,6 +207,8 @@
      <None Include="Assets\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasingBridge.hlsl" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\ScreenSpaceReflections.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\Copy.shader" />
+     <None Include="Assets\Resources\Shaders\Missed.shader" />
+     <None Include="Assets\Resources\Shaders\LUTColorGrading.shader" />
      <None Include="Assets\Resources\Standard Assets\Cameras\CameraGuidelines.txt" />
      <None Include="Assets\Resources\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
      <None Include="Assets\PostProcessing\Shaders\API\D3D11.hlsl" />

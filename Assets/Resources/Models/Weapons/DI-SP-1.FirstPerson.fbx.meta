@@ -101,6 +101,7 @@ ModelImporter:
     100186: WeaponMag_end
     100188: WeaponMain
     100190: WeaponMain_end
+    100192: PlayerHands0
     400000: 0
     400002: 1
     400004: 10
@@ -197,6 +198,7 @@ ModelImporter:
     400186: WeaponMag_end
     400188: WeaponMain
     400190: WeaponMain_end
+    400192: PlayerHands0
     2300000: PistolAmmo0
     2300002: PistolAmmo0Empty
     3300000: PistolAmmo0
@@ -223,6 +225,7 @@ ModelImporter:
     4300038: 0
     4300040: PistolAmmo0
     4300042: PistolAmmo0Empty
+    4300044: PlayerHands0
     7400000: Agressive_0|Empty
     7400002: Agressive_0|IARReload.001
     7400004: Agressive_0|WeaponDraw
@@ -263,6 +266,7 @@ ModelImporter:
     13700034: Agressive_0:Male_generic
     13700036: Agressive_0:Male_generic.001
     13700038: DI-SP-1
+    13700040: PlayerHands0
   materials:
     importMaterials: 1
     materialName: 0

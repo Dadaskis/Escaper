@@ -23,8 +23,16 @@ public class GUISetTextCurrentEXP : MonoBehaviour {
 		UpdateText ();
 	}
 
+	EventData UpdateOnEvent(EventData data) {
+		UpdateText ();
+
+		return new EventData ();
+	}
+
 	void Start() {
 		UpdateText ();
+
+		EventManager.AddEventListener<Events.GameLogic.CurrentPointsChanged> (UpdateOnEvent);
 	}
 
 }

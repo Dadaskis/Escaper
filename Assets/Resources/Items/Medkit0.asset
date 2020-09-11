@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fceb5c0145ffa0245b42c28305faf63f, type: 3}
+  m_Name: Medkit0
+  m_EditorClassIdentifier: 
+  prefabUI: {fileID: 1518576587595632, guid: c00cc443e89e82648b57a961eb1bbdd8, type: 2}
+  physicalPrefab: {fileID: 1614464600894606, guid: 7a4e178238dc960448a2584981472d14,
+    type: 2}
+  icon: {fileID: 21300000, guid: 4397322421e4c044791f1a0ea4af767f, type: 3}
+  actionType: Usable
+  nameText: Medkit
+  tag: Medkit
+  additionalText: 0/0
+  showName: Medkit
+  fullName: Simple medkit
+  description: 2 stimulators in strange case. This thing can save your life in one
+    moment... maybe.
+  size: {x: 3, y: 4}
+  maxUses: 2
+  icons:
+  - applyOnUse: 1
+    spriteName: Medkit0.Use1Icon
+  - applyOnUse: 2
+    spriteName: Medkit0.Use0Icon
+  - applyOnUse: 0
+    spriteName: Medkit0.Use2Icon
+  animations:
+  - applyOnUse: 1
+    triggerName: Stimulator1
+    modelName: Medkit0
+  - applyOnUse: 2
+    triggerName: Stimulator0
+    modelName: Medkit0

@@ -148,6 +148,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4264731559813050}
   - component: {fileID: 114089430052115128}
+  - component: {fileID: 114372669344362102}
+  - component: {fileID: 114363349263330170}
+  - component: {fileID: 114988174325970572}
   m_Layer: 0
   m_Name: GameLogic
   m_TagString: Untagged
@@ -593,7 +596,8 @@ MonoBehaviour:
   types: []
   materialTypes:
   - typeName: Ground
-    hitClipNames: []
+    hitClipNames:
+    - Concrete0Hit
     walkClipNames:
     - Concrete0Walk
     - Concrete1Walk
@@ -610,7 +614,8 @@ MonoBehaviour:
     - Concrete2Landing
     - Concrete3Landing
   - typeName: Debris
-    hitClipNames: []
+    hitClipNames:
+    - Concrete0Hit
     walkClipNames:
     - Gravel0Walk
     - Gravel1Walk
@@ -627,7 +632,8 @@ MonoBehaviour:
     - Gravel2Landing
     - Gravel3Landing
   - typeName: Concrete
-    hitClipNames: []
+    hitClipNames:
+    - Concrete0Hit
     walkClipNames:
     - Concrete0Walk
     - Concrete1Walk
@@ -644,7 +650,8 @@ MonoBehaviour:
     - Concrete2Landing
     - Concrete3Landing
   - typeName: Brick
-    hitClipNames: []
+    hitClipNames:
+    - Concrete0Hit
     walkClipNames:
     - Concrete0Walk
     - Concrete1Walk
@@ -661,7 +668,12 @@ MonoBehaviour:
     - Concrete2Landing
     - Concrete3Landing
   - typeName: Metal
-    hitClipNames: []
+    hitClipNames:
+    - Metal0Hit
+    - Metal1Hit
+    - Metal3Hit
+    - Metal4Hit
+    - Metal5Hit
     walkClipNames:
     - Metal0Walk
     - Metal1Walk
@@ -678,7 +690,12 @@ MonoBehaviour:
     - Metal2Landing
     - Metal3Landing
   - typeName: Car
-    hitClipNames: []
+    hitClipNames:
+    - Metal0Hit
+    - Metal1Hit
+    - Metal3Hit
+    - Metal4Hit
+    - Metal5Hit
     walkClipNames:
     - Metal0Walk
     - Metal1Walk
@@ -721,36 +738,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationStartSettingsList:
-  - locationName: TestLocation0
-    sceneName: LightmapTest4
+  - locationName: Starting
+    sceneName: StartingLocation
     items:
     - name: DI-SP-1
       price: 0
-    - name: DI-SP-1
-      price: 100
     - name: PistolAmmo0
       price: 0
     - name: PistolAmmo0
       price: 50
-    - name: PistolAmmo0
-      price: 50
+    - name: Medkit0
+      price: 0
     nextLocationName: 
-  - locationName: TestLocation1
-    sceneName: LightmapTest4
-    items:
-    - name: DI-SP-1
-      price: 40
-    - name: DI-SP-1
-      price: 200
-    - name: PistolAmmo0
-      price: 20
-    - name: PistolAmmo0
-      price: 70
-    - name: PistolAmmo0
-      price: 70
-    - name: PistolAmmo0
-      price: 70
-    nextLocationName: 
+    guideUnlocked: 0
+    guidePrice: 1000
   boostDataList:
   - name: Health
     price: 100
@@ -764,11 +765,20 @@ MonoBehaviour:
     price: 100
     points: 0
     maximumPoints: 2
+  boostHandlers:
+  - boostName: Health
+    boostApplier: {fileID: 114372669344362102}
+  - boostName: RunSpeed
+    boostApplier: {fileID: 114363349263330170}
+  - boostName: AnotherLive
+    boostApplier: {fileID: 114988174325970572}
   currentLocationSettings:
     locationName: 
     sceneName: 
     items: []
     nextLocationName: 
+    guideUnlocked: 0
+    guidePrice: 9500
   currentEXP: 0
   playerObject: {fileID: 1463439828905582, guid: 5ce9af1497543534e82c2f1a29c9777b,
     type: 2}
@@ -848,6 +858,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: df65d760d2e9dcc4a956ef10adc10360, type: 2}
   mouseSensitivity: 2
+--- !u!114 &114363349263330170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1414322105141524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc811e78e506a3e46b32f3ac22330f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runModifier: 1.1
+--- !u!114 &114372669344362102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1414322105141524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff12254f027f0c459af7e439c9d6581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthOnPoint: 35
 --- !u!114 &114383736087128310
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -967,12 +1001,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shaderSettings:
   - advancedName: Standard (Specular setup)
-    fastName: Legacy Shaders/Lightmapped/Diffuse
+    fastName: Legacy Shaders/Diffuse Detail
     fastShaderOverride:
     - keyWord: Decal
       fastShaderName: Legacy Shaders/Transparent/Diffuse
     - keyWord: Mesa
       fastShaderName: Custom/FastMesaShader
+    - keyWord: Explosion
+      fastShaderName: Standard (Specular setup)
     textures:
     - textureName: _MainTex
       bindedAtQuality: 0
@@ -990,6 +1026,8 @@ MonoBehaviour:
       bindedAtQuality: 0
     - textureName: _DetailNormalMap
       bindedAtQuality: 1
+    - textureName: _Detail
+      bindedAtQuality: 0
     keywords:
     - keyWord: _NORMALMAP
       bindedAtQuality: 1
@@ -1009,8 +1047,6 @@ MonoBehaviour:
       bindedAtQuality: 0
     - textureName: _SpecularMap
       bindedAtQuality: 2
-    - textureName: _NormalMap
-      bindedAtQuality: 1
     - textureName: _DisplacementMap
       bindedAtQuality: 3
     - textureName: _DetailAmbientOcclusionMap
@@ -1034,7 +1070,49 @@ MonoBehaviour:
         textureName: _MainTex
         bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  - name: Explosion1
+    material: {fileID: 2100000, guid: 75e1eac4489241a4081a298a07cfd3de, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: d267b1658443cae48a379f09370e1dda, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: d267b1658443cae48a379f09370e1dda, type: 3}
+      shaderData:
+        textureName: _EmissionMap
+        bindedAtQuality: 0
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  - name: Bandit0
+    material: {fileID: 2100000, guid: fa1987925e43f2148a1b348ed7c0ab65, type: 2}
+    shader: 1
+    textures:
+    - texture: {fileID: 2800000, guid: 897e1723b463af64381c48ae6a8c5076, type: 3}
+      shaderData:
+        textureName: _DiffuseMap
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6506679a1bb702f409e9971190cd51d9, type: 3}
+      shaderData:
+        textureName: _SpecularMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 03ee88e3bf396c84eb373edff398508f, type: 3}
+      shaderData:
+        textureName: _DisplacementMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 8632532726e17974f953bfce86d21a96, type: 3}
+      shaderData:
+        textureName: _DetailAmbientOcclusionMap
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 0f3777c1dbb26924b9fbaac20fffb2a1, type: 3}
+      shaderData:
+        textureName: _DetailNormalMap
+        bindedAtQuality: 1
+    advancedShaderName: Custom/CharacterAdvanced
+    fastShaderName: Custom/CharacterAdvanced
     blacklisted: 0
   - name: Bandit0Body
     material: {fileID: 2100000, guid: b884d743f0c1dd740a26ff97765c0cd6, type: 2}
@@ -1052,8 +1130,174 @@ MonoBehaviour:
       shaderData:
         textureName: _BumpMap
         bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: ad774c9d2435aa84dbfa371e239e80a0, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 4f5fd761d33be0449acc2fab1abd3ca1, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 785150f9efa82dd4388736cb5221ce96, type: 3}
+      shaderData:
+        textureName: _DetailAlbedoMap
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  - name: DI-SP-0
+    material: {fileID: 2100000, guid: 95a8739012aaf1b44a4446c3b6691270, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: e941a342fb0a38640ae37fd047befbd4, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: d33c7d680d99ae74dacfc159d4d8ca67, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: bd7a72e5942effe41a1ece17b8615016, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: ad774c9d2435aa84dbfa371e239e80a0, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 4f5fd761d33be0449acc2fab1abd3ca1, type: 3}
+      shaderData:
+        textureName: _OcclusionMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 785150f9efa82dd4388736cb5221ce96, type: 3}
+      shaderData:
+        textureName: _DetailAlbedoMap
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  - name: Military0Head
+    material: {fileID: 2100000, guid: df5dd3bca1148ff49b750403c4da41bd, type: 2}
+    shader: 1
+    textures:
+    - texture: {fileID: 2800000, guid: 9d0a610b15dd5c445b8f3eb121422bdb, type: 3}
+      shaderData:
+        textureName: _DiffuseMap
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 9e4166cd62d61424db34feb373e00fbb, type: 3}
+      shaderData:
+        textureName: _SpecularMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: eb245c7e01f51f248b9670fa7e04d1c3, type: 3}
+      shaderData:
+        textureName: _DisplacementMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 934dabc0bde826847bb22203d16f312c, type: 3}
+      shaderData:
+        textureName: _DetailAmbientOcclusionMap
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 039d9a124ae8b3c4d86c2c10096a2cff, type: 3}
+      shaderData:
+        textureName: _DetailNormalMap
+        bindedAtQuality: 1
+    advancedShaderName: Custom/CharacterAdvanced
+    fastShaderName: Custom/CharacterAdvanced
+    blacklisted: 0
+  - name: Military0Legs
+    material: {fileID: 2100000, guid: 1aab9e8ad95f61e4fac4b6d9ea37a05f, type: 2}
+    shader: 1
+    textures:
+    - texture: {fileID: 2800000, guid: 279b2271b1f94984ca0a838a375431b0, type: 3}
+      shaderData:
+        textureName: _DiffuseMap
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 3e84135d8d4376143bed2b682e9c4fc0, type: 3}
+      shaderData:
+        textureName: _SpecularMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 3e84135d8d4376143bed2b682e9c4fc0, type: 3}
+      shaderData:
+        textureName: _DisplacementMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: c1b69b765b1f0704d9fc49b7b806ac68, type: 3}
+      shaderData:
+        textureName: _DetailAmbientOcclusionMap
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: aab6f6cfcf3e7b54ca7a1f43434d301b, type: 3}
+      shaderData:
+        textureName: _DetailNormalMap
+        bindedAtQuality: 1
+    advancedShaderName: Custom/CharacterAdvanced
+    fastShaderName: Custom/CharacterAdvanced
+    blacklisted: 0
+  - name: Military0Torso
+    material: {fileID: 2100000, guid: b0acc8b062d00d247bb0a44dc2c0a2a1, type: 2}
+    shader: 1
+    textures:
+    - texture: {fileID: 2800000, guid: ccf93d86f4bca164bbb78f48e714a985, type: 3}
+      shaderData:
+        textureName: _DiffuseMap
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: fab4413bc0d0435409072c71a06f1489, type: 3}
+      shaderData:
+        textureName: _SpecularMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: b0ee9e350bc5fb04bb86ab68b0ead7a1, type: 3}
+      shaderData:
+        textureName: _DisplacementMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 178f2363d6ca6d944bff3b5678fbde59, type: 3}
+      shaderData:
+        textureName: _DetailAmbientOcclusionMap
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: dd58b143b06c741478e32ff16b8c0958, type: 3}
+      shaderData:
+        textureName: _DetailNormalMap
+        bindedAtQuality: 1
+    advancedShaderName: Custom/CharacterAdvanced
+    fastShaderName: Custom/CharacterAdvanced
+    blacklisted: 0
+  - name: PistolAmmoItem0
+    material: {fileID: 2100000, guid: e31c77cb75041994690d57e413b1a095, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 7c51a1c6fb140f54ebe96b9eb28d56d1, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 5c7d86dfe50a9524c85e4308bb53ecbf, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 96dc54357c322104b80cd5d2413f64f1, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 16e32b1b659dc6844b8bd8afc89f4bba, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _DetailAlbedoMap
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  - name: Black
+    material: {fileID: 2100000, guid: 10993d4afc9e84b4cad281251264d49d, type: 2}
+    shader: 0
+    textures: []
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Brick0
     material: {fileID: 2100000, guid: 943df3516dbb75247b8898bceabba0cb, type: 2}
@@ -1083,8 +1327,12 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Brick1
     material: {fileID: 2100000, guid: ff9c040fff15ebb4d955fc49c60c9f4f, type: 2}
@@ -1114,8 +1362,74 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  - name: Brick2
+    material: {fileID: 2100000, guid: 5819f30c1d05c6c48bb1e2fbcc039fc6, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 243032039669e3e449521fb09f5e796c, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 4912f055c24c80c4d9ac34174e99cd65, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 4be050c1076487046b19de61d92a00e3, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 85872d1b0619d2f4ca05c9a8f370e5d3, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _DetailAlbedoMap
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  - name: Brick4
+    material: {fileID: 2100000, guid: ad608e148182ae14eb0eb2e55a689ea5, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 9aba95302872e9d4b90599155bf10188, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 47a60265bf7f9154ca6e53151f34bf1f, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: cdffbfe93de6b57418e60e963d62fcc8, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: bbea98e595b5bc84aa9b349a67bc11f3, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _DetailAlbedoMap
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Bricks0
     material: {fileID: 2100000, guid: 82b694b93615bd845b3dd0bad7649c0d, type: 2}
@@ -1125,8 +1439,12 @@ MonoBehaviour:
       shaderData:
         textureName: _MainTex
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Car0
     material: {fileID: 2100000, guid: fb6fca8bd5e5bf84fb741e63e90d0dcc, type: 2}
@@ -1152,8 +1470,12 @@ MonoBehaviour:
       shaderData:
         textureName: _OcclusionMap
         bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Cardboard0
     material: {fileID: 2100000, guid: 384f06139a285844daac55286f4e2b23, type: 2}
@@ -1183,8 +1505,12 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Concrete0
     material: {fileID: 2100000, guid: 91e30b6f7687e4042ae90971059469c0, type: 2}
@@ -1214,8 +1540,12 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Concrete1
     material: {fileID: 2100000, guid: 5e3f59b5e74804e41967caa5a9ba4b45, type: 2}
@@ -1229,7 +1559,7 @@ MonoBehaviour:
       shaderData:
         textureName: _SpecGlossMap
         bindedAtQuality: 2
-    - texture: {fileID: 2800000, guid: 338bf0d3cc821cd45ac0b53467004966, type: 3}
+    - texture: {fileID: 2800000, guid: 5cabf968dd9a8ed4c8d9fa1871827bea, type: 3}
       shaderData:
         textureName: _BumpMap
         bindedAtQuality: 1
@@ -1237,16 +1567,43 @@ MonoBehaviour:
       shaderData:
         textureName: _ParallaxMap
         bindedAtQuality: 3
-    - texture: {fileID: 2800000, guid: 3f6242b5629b87144bde92dceeb497f0, type: 3}
-      shaderData:
-        textureName: _OcclusionMap
-        bindedAtQuality: 1
     - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  - name: Concrete2
+    material: {fileID: 2100000, guid: a68a4003fdc8ad54ea7c6db3c2947136, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: b24faade5470b60458ac25dc467f3e6f, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: d3a25392b41d13545a84b965fc240261, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: bfadba56d8c9d18479c4f2f01ae7719f, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: dcb1dd2eef8613b4da6048c18efbb9f2, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Concrete3
     material: {fileID: 2100000, guid: 50c7bcaa2d6f7854cb436b51fd78afcb, type: 2}
@@ -1276,8 +1633,12 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Concrete4
     material: {fileID: 2100000, guid: a2d7e423b6cee81488d9aa564de17ecf, type: 2}
@@ -1303,8 +1664,12 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Concrete5
     material: {fileID: 2100000, guid: 23ddf251eaf023e439e834f16f99dc0b, type: 2}
@@ -1334,8 +1699,12 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Concrete6
     material: {fileID: 2100000, guid: d546626bc8f4eed408036d19be4b6195, type: 2}
@@ -1365,8 +1734,43 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  - name: Concrete7
+    material: {fileID: 2100000, guid: 8672e6d58799ed64ba032738b5fe2f71, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 1dc0a5cfc774bb54cba74c0c05be4e3b, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: dcd8ee90f59bc3141b193dead503f168, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: cd8e87fe96793e141a8ca69439a000d3, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 35af14de25d08c5418ea4f110a19dfbe, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _DetailAlbedoMap
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Concrete8
     material: {fileID: 2100000, guid: bb7424d4f5d6db14690c8c44fd892c7c, type: 2}
@@ -1396,8 +1800,43 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  - name: Concrete9
+    material: {fileID: 2100000, guid: 0f670e82dc5eb824fb70e178f637a711, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 785150f9efa82dd4388736cb5221ce96, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 3e4dfbe730b248441a5742620b6ac30b, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 5b1005f75b5bf624fb3cc3c913fd4188, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: cd13cd000be72464aaa3da760a8a8983, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _DetailAlbedoMap
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Construction0
     material: {fileID: 2100000, guid: ba474037e39a32248ac77e099e4b8483, type: 2}
@@ -1427,8 +1866,12 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Debris0
     material: {fileID: 2100000, guid: 2577995c26b64ca4485d709ca696b1fd, type: 2}
@@ -1454,8 +1897,12 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Brick0Decal
     material: {fileID: 2100000, guid: 6b976cb3b37b3de4fb20e30e778ad83b, type: 2}
@@ -1483,6 +1930,13 @@ MonoBehaviour:
         bindedAtQuality: 1
     advancedShaderName: Standard (Specular setup)
     fastShaderName: Legacy Shaders/Transparent/Diffuse
+    blacklisted: 0
+  - name: GreenEmission
+    material: {fileID: 2100000, guid: da8d84a4047fcbf4484702a30c9a5ab3, type: 2}
+    shader: 0
+    textures: []
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Ground1
     material: {fileID: 2100000, guid: 6d6252bebb6b8e249b7afac423a15679, type: 2}
@@ -1512,8 +1966,12 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Ground4
     material: {fileID: 2100000, guid: 11ea38f7e79f1ec4b9eaf6114e10366f, type: 2}
@@ -1543,8 +2001,12 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Ground5
     material: {fileID: 2100000, guid: 5d31ed8c5af5e5d48b3daca181b59e45, type: 2}
@@ -1574,8 +2036,12 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Ground7
     material: {fileID: 2100000, guid: 3b79150a1e402f845ad5c7d2c4c02f9e, type: 2}
@@ -1605,8 +2071,12 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Ground7.Lined
     material: {fileID: 2100000, guid: 788c2e30c525683469d4f26e31ae4860, type: 2}
@@ -1636,8 +2106,39 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  - name: Ground8
+    material: {fileID: 2100000, guid: ac8e5e0d3b2faac4884b01dc0dc021bf, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 2730d0b70cf56bb4dabd2da5eafd0554, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 85235f34c56311747b5d1a859a7356d0, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: ded6b093c4c65e345ac2c74c541e4b51, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 4303b98aa3bc69649bf15f8594ad1507, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Metal0
     material: {fileID: 2100000, guid: 295c0902a2eb1ad4d93fd9cf8e2c3fbb, type: 2}
@@ -1667,14 +2168,18 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Metal1
     material: {fileID: 2100000, guid: 1e585b3bade097441893907e3c57c767, type: 2}
     shader: 0
     textures:
-    - texture: {fileID: 2800000, guid: 65897abc656caf74eaa35e6039be4b75, type: 3}
+    - texture: {fileID: 2800000, guid: 8e2c6b905b96a4542b19ef2efb210bf0, type: 3}
       shaderData:
         textureName: _MainTex
         bindedAtQuality: 0
@@ -1682,7 +2187,7 @@ MonoBehaviour:
       shaderData:
         textureName: _SpecGlossMap
         bindedAtQuality: 2
-    - texture: {fileID: 2800000, guid: 3096c1a62748a8f42835e03a5224d35f, type: 3}
+    - texture: {fileID: 2800000, guid: a6e0b42258672d34ba71ec47faf9ad59, type: 3}
       shaderData:
         textureName: _BumpMap
         bindedAtQuality: 1
@@ -1690,7 +2195,61 @@ MonoBehaviour:
       shaderData:
         textureName: _ParallaxMap
         bindedAtQuality: 3
-    - texture: {fileID: 2800000, guid: 1527178a66b8b864d87e7c2221cdaa06, type: 3}
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _DetailAlbedoMap
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  - name: Metal10
+    material: {fileID: 2100000, guid: 79ee99e4f799f9d4cb1fea2618e70723, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: ab72469b806cdb34297d3a340e3e8c32, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: ba0d693d6313bbc4aa2a8c27ae77d8b1, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 40291a6e78eb5bb498f84bbe0358db31, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  - name: Metal11
+    material: {fileID: 2100000, guid: a1540cb8ea66d3642901430167c4e975, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: e5806a6843799304b9e44ffb89caf160, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: a455cb1fc7972bd4fa57ba9b8102d351, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: fa6155abbae728945a55f76625c22b4f, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 4f728e457c887b74c80e5757aacc9437, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: ab08ed2511dd00a48947b01d3b1eae18, type: 3}
       shaderData:
         textureName: _OcclusionMap
         bindedAtQuality: 1
@@ -1698,8 +2257,43 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  - name: Metal12
+    material: {fileID: 2100000, guid: e8248e5db6b5df74cb70c49862e7e9b7, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: af7cd6e19077c974ba0c0a41570ffabc, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 91c6b6d1f3265ba429e9123c3cf69181, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: f6add77abfdadc44eae181d310c600da, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 01f561cc45146ab42b5f7bf371bccd6f, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _DetailAlbedoMap
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Metal3
     material: {fileID: 2100000, guid: 3e2400511ac29534e98132104032511f, type: 2}
@@ -1729,8 +2323,12 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Metal4OrangeMesa
     material: {fileID: 2100000, guid: b3f0e16cffef71941ab07fd378bcea19, type: 2}
@@ -1795,8 +2393,12 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Metal6
     material: {fileID: 2100000, guid: 6e15935583d10ac429bdbb2862f6feb3, type: 2}
@@ -1826,8 +2428,12 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Metal8
     material: {fileID: 2100000, guid: a72f0670d8812504e9e74cc4f7eb5b94, type: 2}
@@ -1857,15 +2463,81 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  - name: Metal9
+    material: {fileID: 2100000, guid: bc68b1a2b5ae0f54d893746f9a22ce62, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 18aebeefe003b884289604997f38e812, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 485412929a2ca4e41bea81a948a619ff, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 8e37ce275a8bf304c8f668c3143616c6, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 9098fa5025eeecf44a3999c8af6b704d, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _DetailAlbedoMap
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  - name: Planks0
+    material: {fileID: 2100000, guid: 0a788f2fb0b640b40a6d15fb062557dd, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 00f430f4971d2f94ab969ecd8647013f, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 75a072ca7d576034fb3f28c02b5b83ea, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 423b1e6972823f2479db7ad48996e838, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: d72e0d8161d516f49b9c98a57b5d640c, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _DetailAlbedoMap
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Reflective
     material: {fileID: 2100000, guid: 7d29b7d6ac230804094fa60666b2b77b, type: 2}
     shader: 0
     textures: []
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Rubber0
     material: {fileID: 2100000, guid: 93e9540113732b547854d849918a5c2e, type: 2}
@@ -1895,8 +2567,26 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  - name: WhiteEmission
+    material: {fileID: 2100000, guid: d8293b898cbc2a746bf82bbd72587f24, type: 2}
+    shader: 0
+    textures: []
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  - name: WhiteEmissive
+    material: {fileID: 2100000, guid: b064ff4abc0db394697789cd0857ba78, type: 2}
+    shader: 0
+    textures: []
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Window0
     material: {fileID: 2100000, guid: e5d92f7f1c1ec614788a9df2f3f80783, type: 2}
@@ -1922,53 +2612,12 @@ MonoBehaviour:
       shaderData:
         textureName: _OcclusionMap
         bindedAtQuality: 1
-    advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
-    blacklisted: 0
-  - name: WaterPlaneMaterial
-    material: {fileID: 2100000, guid: f1bc741ea0e69a241896582ddb633d55, type: 2}
-    shader: 0
-    textures: []
-    advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
-    blacklisted: 0
-  - name: OceanPlaneMaterial
-    material: {fileID: 2100000, guid: a437a9b380909fa4d98f929428f70388, type: 2}
-    shader: 0
-    textures: []
-    advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
-    blacklisted: 0
-  - name: DI-SP-0
-    material: {fileID: 2100000, guid: e482e91410012ac4eafe67c0c5256e7d, type: 2}
-    shader: 0
-    textures:
-    - texture: {fileID: 2800000, guid: e941a342fb0a38640ae37fd047befbd4, type: 3}
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
       shaderData:
-        textureName: _MainTex
-        bindedAtQuality: 0
-    - texture: {fileID: 2800000, guid: d33c7d680d99ae74dacfc159d4d8ca67, type: 3}
-      shaderData:
-        textureName: _SpecGlossMap
-        bindedAtQuality: 2
-    - texture: {fileID: 2800000, guid: bd7a72e5942effe41a1ece17b8615016, type: 3}
-      shaderData:
-        textureName: _BumpMap
-        bindedAtQuality: 1
-    - texture: {fileID: 2800000, guid: ad774c9d2435aa84dbfa371e239e80a0, type: 3}
-      shaderData:
-        textureName: _ParallaxMap
-        bindedAtQuality: 3
-    - texture: {fileID: 2800000, guid: 4f5fd761d33be0449acc2fab1abd3ca1, type: 3}
-      shaderData:
-        textureName: _OcclusionMap
-        bindedAtQuality: 1
-    - texture: {fileID: 2800000, guid: 785150f9efa82dd4388736cb5221ce96, type: 3}
-      shaderData:
-        textureName: _DetailAlbedoMap
+        textureName: _Detail
         bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Agressive_0_Male_generic_Middleage_cauasian_male.001
     material: {fileID: 2100000, guid: bad6f81c9dd0eab46b9328e125aee907, type: 2}
@@ -1979,38 +2628,7 @@ MonoBehaviour:
         textureName: _MainTex
         bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
-    blacklisted: 1
-  - name: Bandit0
-    material: {fileID: 2100000, guid: fa1987925e43f2148a1b348ed7c0ab65, type: 2}
-    shader: 1
-    textures:
-    - texture: {fileID: 2800000, guid: 897e1723b463af64381c48ae6a8c5076, type: 3}
-      shaderData:
-        textureName: _DiffuseMap
-        bindedAtQuality: 0
-    - texture: {fileID: 2800000, guid: 6506679a1bb702f409e9971190cd51d9, type: 3}
-      shaderData:
-        textureName: _SpecularMap
-        bindedAtQuality: 2
-    - texture: {fileID: 2800000, guid: 5a37041c568859141bf9341c75b60270, type: 3}
-      shaderData:
-        textureName: _NormalMap
-        bindedAtQuality: 1
-    - texture: {fileID: 2800000, guid: 03ee88e3bf396c84eb373edff398508f, type: 3}
-      shaderData:
-        textureName: _DisplacementMap
-        bindedAtQuality: 3
-    - texture: {fileID: 2800000, guid: 8632532726e17974f953bfce86d21a96, type: 3}
-      shaderData:
-        textureName: _DetailAmbientOcclusionMap
-        bindedAtQuality: 0
-    - texture: {fileID: 2800000, guid: 0f3777c1dbb26924b9fbaac20fffb2a1, type: 3}
-      shaderData:
-        textureName: _DetailNormalMap
-        bindedAtQuality: 1
-    advancedShaderName: Custom/CharacterAdvanced
-    fastShaderName: Custom/CharacterAdvanced
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: Ammo0
     material: {fileID: 2100000, guid: 3e509f935ab45ca48a3331a31ddf923a, type: 2}
@@ -2036,377 +2654,12 @@ MonoBehaviour:
       shaderData:
         textureName: _OcclusionMap
         bindedAtQuality: 1
-    advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
-    blacklisted: 0
-  - name: Military0Head
-    material: {fileID: 2100000, guid: df5dd3bca1148ff49b750403c4da41bd, type: 2}
-    shader: 1
-    textures:
-    - texture: {fileID: 2800000, guid: 9d0a610b15dd5c445b8f3eb121422bdb, type: 3}
-      shaderData:
-        textureName: _DiffuseMap
-        bindedAtQuality: 0
-    - texture: {fileID: 2800000, guid: 9e4166cd62d61424db34feb373e00fbb, type: 3}
-      shaderData:
-        textureName: _SpecularMap
-        bindedAtQuality: 2
-    - texture: {fileID: 2800000, guid: cf05cc608fb6c3c4f977683bacfff680, type: 3}
-      shaderData:
-        textureName: _NormalMap
-        bindedAtQuality: 1
-    - texture: {fileID: 2800000, guid: eb245c7e01f51f248b9670fa7e04d1c3, type: 3}
-      shaderData:
-        textureName: _DisplacementMap
-        bindedAtQuality: 3
-    - texture: {fileID: 2800000, guid: 934dabc0bde826847bb22203d16f312c, type: 3}
-      shaderData:
-        textureName: _DetailAmbientOcclusionMap
-        bindedAtQuality: 0
-    - texture: {fileID: 2800000, guid: 039d9a124ae8b3c4d86c2c10096a2cff, type: 3}
-      shaderData:
-        textureName: _DetailNormalMap
-        bindedAtQuality: 1
-    advancedShaderName: Custom/CharacterAdvanced
-    fastShaderName: Custom/CharacterAdvanced
-    blacklisted: 0
-  - name: Military0Legs
-    material: {fileID: 2100000, guid: 1aab9e8ad95f61e4fac4b6d9ea37a05f, type: 2}
-    shader: 1
-    textures:
-    - texture: {fileID: 2800000, guid: 279b2271b1f94984ca0a838a375431b0, type: 3}
-      shaderData:
-        textureName: _DiffuseMap
-        bindedAtQuality: 0
-    - texture: {fileID: 2800000, guid: 3e84135d8d4376143bed2b682e9c4fc0, type: 3}
-      shaderData:
-        textureName: _SpecularMap
-        bindedAtQuality: 2
-    - texture: {fileID: 2800000, guid: 9517465fbe6513d408797c1eed063e58, type: 3}
-      shaderData:
-        textureName: _NormalMap
-        bindedAtQuality: 1
-    - texture: {fileID: 2800000, guid: 3e84135d8d4376143bed2b682e9c4fc0, type: 3}
-      shaderData:
-        textureName: _DisplacementMap
-        bindedAtQuality: 3
-    - texture: {fileID: 2800000, guid: c1b69b765b1f0704d9fc49b7b806ac68, type: 3}
-      shaderData:
-        textureName: _DetailAmbientOcclusionMap
-        bindedAtQuality: 0
-    - texture: {fileID: 2800000, guid: aab6f6cfcf3e7b54ca7a1f43434d301b, type: 3}
-      shaderData:
-        textureName: _DetailNormalMap
-        bindedAtQuality: 1
-    advancedShaderName: Custom/CharacterAdvanced
-    fastShaderName: Custom/CharacterAdvanced
-    blacklisted: 0
-  - name: Military0Torso
-    material: {fileID: 2100000, guid: b0acc8b062d00d247bb0a44dc2c0a2a1, type: 2}
-    shader: 1
-    textures:
-    - texture: {fileID: 2800000, guid: ccf93d86f4bca164bbb78f48e714a985, type: 3}
-      shaderData:
-        textureName: _DiffuseMap
-        bindedAtQuality: 0
-    - texture: {fileID: 2800000, guid: fab4413bc0d0435409072c71a06f1489, type: 3}
-      shaderData:
-        textureName: _SpecularMap
-        bindedAtQuality: 2
-    - texture: {fileID: 2800000, guid: b2d82d16667a27c4693e5ebc7deb5b62, type: 3}
-      shaderData:
-        textureName: _NormalMap
-        bindedAtQuality: 1
-    - texture: {fileID: 2800000, guid: b0ee9e350bc5fb04bb86ab68b0ead7a1, type: 3}
-      shaderData:
-        textureName: _DisplacementMap
-        bindedAtQuality: 3
-    - texture: {fileID: 2800000, guid: 178f2363d6ca6d944bff3b5678fbde59, type: 3}
-      shaderData:
-        textureName: _DetailAmbientOcclusionMap
-        bindedAtQuality: 0
-    - texture: {fileID: 2800000, guid: dd58b143b06c741478e32ff16b8c0958, type: 3}
-      shaderData:
-        textureName: _DetailNormalMap
-        bindedAtQuality: 1
-    advancedShaderName: Custom/CharacterAdvanced
-    fastShaderName: Custom/CharacterAdvanced
-    blacklisted: 0
-  - name: PistolAmmoItem0
-    material: {fileID: 2100000, guid: e31c77cb75041994690d57e413b1a095, type: 2}
-    shader: 0
-    textures:
-    - texture: {fileID: 2800000, guid: 7c51a1c6fb140f54ebe96b9eb28d56d1, type: 3}
-      shaderData:
-        textureName: _MainTex
-        bindedAtQuality: 0
-    - texture: {fileID: 2800000, guid: 5c7d86dfe50a9524c85e4308bb53ecbf, type: 3}
-      shaderData:
-        textureName: _SpecGlossMap
-        bindedAtQuality: 2
-    - texture: {fileID: 2800000, guid: 96dc54357c322104b80cd5d2413f64f1, type: 3}
-      shaderData:
-        textureName: _BumpMap
-        bindedAtQuality: 1
-    - texture: {fileID: 2800000, guid: 16e32b1b659dc6844b8bd8afc89f4bba, type: 3}
-      shaderData:
-        textureName: _ParallaxMap
-        bindedAtQuality: 3
-    advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
-    blacklisted: 0
-  - name: Brick2
-    material: {fileID: 2100000, guid: 5819f30c1d05c6c48bb1e2fbcc039fc6, type: 2}
-    shader: 0
-    textures:
-    - texture: {fileID: 2800000, guid: 243032039669e3e449521fb09f5e796c, type: 3}
-      shaderData:
-        textureName: _MainTex
-        bindedAtQuality: 0
-    - texture: {fileID: 2800000, guid: 4912f055c24c80c4d9ac34174e99cd65, type: 3}
-      shaderData:
-        textureName: _SpecGlossMap
-        bindedAtQuality: 2
-    - texture: {fileID: 2800000, guid: 4be050c1076487046b19de61d92a00e3, type: 3}
-      shaderData:
-        textureName: _BumpMap
-        bindedAtQuality: 1
-    - texture: {fileID: 2800000, guid: 85872d1b0619d2f4ca05c9a8f370e5d3, type: 3}
-      shaderData:
-        textureName: _ParallaxMap
-        bindedAtQuality: 3
     - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
       shaderData:
-        textureName: _DetailAlbedoMap
+        textureName: _Detail
         bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
-    blacklisted: 0
-  - name: Brick4
-    material: {fileID: 2100000, guid: ad608e148182ae14eb0eb2e55a689ea5, type: 2}
-    shader: 0
-    textures:
-    - texture: {fileID: 2800000, guid: 9aba95302872e9d4b90599155bf10188, type: 3}
-      shaderData:
-        textureName: _MainTex
-        bindedAtQuality: 0
-    - texture: {fileID: 2800000, guid: 47a60265bf7f9154ca6e53151f34bf1f, type: 3}
-      shaderData:
-        textureName: _SpecGlossMap
-        bindedAtQuality: 2
-    - texture: {fileID: 2800000, guid: cdffbfe93de6b57418e60e963d62fcc8, type: 3}
-      shaderData:
-        textureName: _BumpMap
-        bindedAtQuality: 1
-    - texture: {fileID: 2800000, guid: bbea98e595b5bc84aa9b349a67bc11f3, type: 3}
-      shaderData:
-        textureName: _ParallaxMap
-        bindedAtQuality: 3
-    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
-      shaderData:
-        textureName: _DetailAlbedoMap
-        bindedAtQuality: 0
-    advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
-    blacklisted: 0
-  - name: Concrete7
-    material: {fileID: 2100000, guid: 8672e6d58799ed64ba032738b5fe2f71, type: 2}
-    shader: 0
-    textures:
-    - texture: {fileID: 2800000, guid: 1dc0a5cfc774bb54cba74c0c05be4e3b, type: 3}
-      shaderData:
-        textureName: _MainTex
-        bindedAtQuality: 0
-    - texture: {fileID: 2800000, guid: dcd8ee90f59bc3141b193dead503f168, type: 3}
-      shaderData:
-        textureName: _SpecGlossMap
-        bindedAtQuality: 2
-    - texture: {fileID: 2800000, guid: cd8e87fe96793e141a8ca69439a000d3, type: 3}
-      shaderData:
-        textureName: _BumpMap
-        bindedAtQuality: 1
-    - texture: {fileID: 2800000, guid: 35af14de25d08c5418ea4f110a19dfbe, type: 3}
-      shaderData:
-        textureName: _ParallaxMap
-        bindedAtQuality: 3
-    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
-      shaderData:
-        textureName: _DetailAlbedoMap
-        bindedAtQuality: 0
-    advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
-    blacklisted: 0
-  - name: Concrete9
-    material: {fileID: 2100000, guid: 0f670e82dc5eb824fb70e178f637a711, type: 2}
-    shader: 0
-    textures:
-    - texture: {fileID: 2800000, guid: 785150f9efa82dd4388736cb5221ce96, type: 3}
-      shaderData:
-        textureName: _MainTex
-        bindedAtQuality: 0
-    - texture: {fileID: 2800000, guid: 3e4dfbe730b248441a5742620b6ac30b, type: 3}
-      shaderData:
-        textureName: _SpecGlossMap
-        bindedAtQuality: 2
-    - texture: {fileID: 2800000, guid: 5b1005f75b5bf624fb3cc3c913fd4188, type: 3}
-      shaderData:
-        textureName: _BumpMap
-        bindedAtQuality: 1
-    - texture: {fileID: 2800000, guid: cd13cd000be72464aaa3da760a8a8983, type: 3}
-      shaderData:
-        textureName: _ParallaxMap
-        bindedAtQuality: 3
-    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
-      shaderData:
-        textureName: _DetailAlbedoMap
-        bindedAtQuality: 0
-    advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
-    blacklisted: 0
-  - name: GreenEmission
-    material: {fileID: 2100000, guid: da8d84a4047fcbf4484702a30c9a5ab3, type: 2}
-    shader: 0
-    textures: []
-    advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
-    blacklisted: 0
-  - name: Metal10
-    material: {fileID: 2100000, guid: 79ee99e4f799f9d4cb1fea2618e70723, type: 2}
-    shader: 0
-    textures:
-    - texture: {fileID: 2800000, guid: ab72469b806cdb34297d3a340e3e8c32, type: 3}
-      shaderData:
-        textureName: _MainTex
-        bindedAtQuality: 0
-    - texture: {fileID: 2800000, guid: ba0d693d6313bbc4aa2a8c27ae77d8b1, type: 3}
-      shaderData:
-        textureName: _SpecGlossMap
-        bindedAtQuality: 2
-    - texture: {fileID: 2800000, guid: 40291a6e78eb5bb498f84bbe0358db31, type: 3}
-      shaderData:
-        textureName: _BumpMap
-        bindedAtQuality: 1
-    advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
-    blacklisted: 0
-  - name: Metal11
-    material: {fileID: 2100000, guid: a1540cb8ea66d3642901430167c4e975, type: 2}
-    shader: 0
-    textures:
-    - texture: {fileID: 2800000, guid: e5806a6843799304b9e44ffb89caf160, type: 3}
-      shaderData:
-        textureName: _MainTex
-        bindedAtQuality: 0
-    - texture: {fileID: 2800000, guid: a455cb1fc7972bd4fa57ba9b8102d351, type: 3}
-      shaderData:
-        textureName: _SpecGlossMap
-        bindedAtQuality: 2
-    - texture: {fileID: 2800000, guid: fa6155abbae728945a55f76625c22b4f, type: 3}
-      shaderData:
-        textureName: _BumpMap
-        bindedAtQuality: 1
-    - texture: {fileID: 2800000, guid: 4f728e457c887b74c80e5757aacc9437, type: 3}
-      shaderData:
-        textureName: _ParallaxMap
-        bindedAtQuality: 3
-    - texture: {fileID: 2800000, guid: ab08ed2511dd00a48947b01d3b1eae18, type: 3}
-      shaderData:
-        textureName: _OcclusionMap
-        bindedAtQuality: 1
-    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
-      shaderData:
-        textureName: _DetailAlbedoMap
-        bindedAtQuality: 0
-    advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
-    blacklisted: 0
-  - name: Metal12
-    material: {fileID: 2100000, guid: e8248e5db6b5df74cb70c49862e7e9b7, type: 2}
-    shader: 0
-    textures:
-    - texture: {fileID: 2800000, guid: af7cd6e19077c974ba0c0a41570ffabc, type: 3}
-      shaderData:
-        textureName: _MainTex
-        bindedAtQuality: 0
-    - texture: {fileID: 2800000, guid: 91c6b6d1f3265ba429e9123c3cf69181, type: 3}
-      shaderData:
-        textureName: _SpecGlossMap
-        bindedAtQuality: 2
-    - texture: {fileID: 2800000, guid: f6add77abfdadc44eae181d310c600da, type: 3}
-      shaderData:
-        textureName: _BumpMap
-        bindedAtQuality: 1
-    - texture: {fileID: 2800000, guid: 01f561cc45146ab42b5f7bf371bccd6f, type: 3}
-      shaderData:
-        textureName: _ParallaxMap
-        bindedAtQuality: 3
-    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
-      shaderData:
-        textureName: _DetailAlbedoMap
-        bindedAtQuality: 0
-    advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
-    blacklisted: 0
-  - name: Metal9
-    material: {fileID: 2100000, guid: bc68b1a2b5ae0f54d893746f9a22ce62, type: 2}
-    shader: 0
-    textures:
-    - texture: {fileID: 2800000, guid: 18aebeefe003b884289604997f38e812, type: 3}
-      shaderData:
-        textureName: _MainTex
-        bindedAtQuality: 0
-    - texture: {fileID: 2800000, guid: 485412929a2ca4e41bea81a948a619ff, type: 3}
-      shaderData:
-        textureName: _SpecGlossMap
-        bindedAtQuality: 2
-    - texture: {fileID: 2800000, guid: 8e37ce275a8bf304c8f668c3143616c6, type: 3}
-      shaderData:
-        textureName: _BumpMap
-        bindedAtQuality: 1
-    - texture: {fileID: 2800000, guid: 9098fa5025eeecf44a3999c8af6b704d, type: 3}
-      shaderData:
-        textureName: _ParallaxMap
-        bindedAtQuality: 3
-    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
-      shaderData:
-        textureName: _DetailAlbedoMap
-        bindedAtQuality: 0
-    advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
-    blacklisted: 0
-  - name: Planks0
-    material: {fileID: 2100000, guid: 0a788f2fb0b640b40a6d15fb062557dd, type: 2}
-    shader: 0
-    textures:
-    - texture: {fileID: 2800000, guid: 00f430f4971d2f94ab969ecd8647013f, type: 3}
-      shaderData:
-        textureName: _MainTex
-        bindedAtQuality: 0
-    - texture: {fileID: 2800000, guid: 75a072ca7d576034fb3f28c02b5b83ea, type: 3}
-      shaderData:
-        textureName: _SpecGlossMap
-        bindedAtQuality: 2
-    - texture: {fileID: 2800000, guid: 423b1e6972823f2479db7ad48996e838, type: 3}
-      shaderData:
-        textureName: _BumpMap
-        bindedAtQuality: 1
-    - texture: {fileID: 2800000, guid: d72e0d8161d516f49b9c98a57b5d640c, type: 3}
-      shaderData:
-        textureName: _ParallaxMap
-        bindedAtQuality: 3
-    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
-      shaderData:
-        textureName: _DetailAlbedoMap
-        bindedAtQuality: 0
-    advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
-    blacklisted: 0
-  - name: WhiteEmission
-    material: {fileID: 2100000, guid: d8293b898cbc2a746bf82bbd72587f24, type: 2}
-    shader: 0
-    textures: []
-    advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
   - name: DI-AR-0
     material: {fileID: 2100000, guid: 8b1783c2c7579d841ac505203b8d7787, type: 2}
@@ -2432,11 +2685,128 @@ MonoBehaviour:
       shaderData:
         textureName: _DetailAlbedoMap
         bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
     advancedShaderName: Standard (Specular setup)
-    fastShaderName: Legacy Shaders/Lightmapped/Diffuse
+    fastShaderName: Legacy Shaders/Diffuse Detail
     blacklisted: 0
-  currentQuality: 0
-  currentMode: 0
+  - name: Medkit0
+    material: {fileID: 2100000, guid: f9b11388f197aab449e2bc4aaa9d2aa9, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: 60c28cf209c048c4cb7daa2fa4c867bb, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: d3b126e619e02324db3dd35a00211185, type: 3}
+      shaderData:
+        textureName: _SpecGlossMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: fda124af6efd98e4fbe5dc1387fe6e23, type: 3}
+      shaderData:
+        textureName: _BumpMap
+        bindedAtQuality: 1
+    - texture: {fileID: 2800000, guid: 070bf09e314d46841a5e29834f1a6008, type: 3}
+      shaderData:
+        textureName: _ParallaxMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+      shaderData:
+        textureName: _Detail
+        bindedAtQuality: 0
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  - name: PlayerHands0Gloves
+    material: {fileID: 2100000, guid: 49a1d0ae82d7ff64da268c81ab4120ed, type: 2}
+    shader: 1
+    textures:
+    - texture: {fileID: 2800000, guid: 4189abbf61f725e44ae90efb6715bf37, type: 3}
+      shaderData:
+        textureName: _DiffuseMap
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: eb667d656f71fc0479995f5b4765d4bc, type: 3}
+      shaderData:
+        textureName: _SpecularMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: 48bc62953ea7f8d4ebcf4b4ceb0f60b7, type: 3}
+      shaderData:
+        textureName: _DisplacementMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: a1f7ff75585217e45be047a43b7f783c, type: 3}
+      shaderData:
+        textureName: _DetailAmbientOcclusionMap
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 24e323879cbc76b4f8f4a0f514034486, type: 3}
+      shaderData:
+        textureName: _DetailNormalMap
+        bindedAtQuality: 1
+    advancedShaderName: Custom/CharacterAdvanced
+    fastShaderName: Custom/CharacterAdvanced
+    blacklisted: 0
+  - name: PlayerHands0Main
+    material: {fileID: 2100000, guid: ae4911eea5db49a4dabe1cd2ff9db0e6, type: 2}
+    shader: 1
+    textures:
+    - texture: {fileID: 2800000, guid: fb9ad6ee38a6217448ac103e44703960, type: 3}
+      shaderData:
+        textureName: _DiffuseMap
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: e960c7e5882bbfa43800b6cea0e5e96f, type: 3}
+      shaderData:
+        textureName: _SpecularMap
+        bindedAtQuality: 2
+    - texture: {fileID: 2800000, guid: eaffe85b24e943a40b7d076e443e91bb, type: 3}
+      shaderData:
+        textureName: _DisplacementMap
+        bindedAtQuality: 3
+    - texture: {fileID: 2800000, guid: 2f3fc20d12323714f95310de368a74fc, type: 3}
+      shaderData:
+        textureName: _DetailAmbientOcclusionMap
+        bindedAtQuality: 0
+    - texture: {fileID: 2800000, guid: 4529976c2735aeb4c9b497ed175e93ac, type: 3}
+      shaderData:
+        textureName: _DetailNormalMap
+        bindedAtQuality: 1
+    advancedShaderName: Custom/CharacterAdvanced
+    fastShaderName: Custom/CharacterAdvanced
+    blacklisted: 0
+  - name: WaterDefault
+    material: {fileID: 2100000, guid: 30abebfd9bf1c49d8a2d26e61e66bc15, type: 2}
+    shader: 0
+    textures: []
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  - name: WaterPlaneMaterial
+    material: {fileID: 2100000, guid: f1bc741ea0e69a241896582ddb633d55, type: 2}
+    shader: 0
+    textures: []
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  - name: OceanPlaneMaterial
+    material: {fileID: 2100000, guid: a437a9b380909fa4d98f929428f70388, type: 2}
+    shader: 0
+    textures: []
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  - name: ParticleFirecloud
+    material: {fileID: 2100000, guid: 88575a9d8a1a4d64591f08cb61d749e9, type: 2}
+    shader: 0
+    textures:
+    - texture: {fileID: 2800000, guid: c3d66a8056f9db345b1ea380aa7e815d, type: 3}
+      shaderData:
+        textureName: _MainTex
+        bindedAtQuality: 0
+    advancedShaderName: Standard (Specular setup)
+    fastShaderName: Legacy Shaders/Diffuse Detail
+    blacklisted: 0
+  currentQuality: 3
+  currentMode: 1
 --- !u!114 &114986732595788516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2449,3 +2819,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1123383686939906}
+--- !u!114 &114988174325970572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1414322105141524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bb09e4180a01d54aa71114e57cd2156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: 0

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.Rendering.PostProcessing;
 
 public enum ShaderQuality {
 	LOW,
@@ -160,6 +161,7 @@ public class MaterialManager : MonoBehaviour {
 			GraphicsSettingsData data = GraphicsSettings.instance.Data;
 			data.enableRealtimeShadows = false;
 			data.enableAmbientOcclusion = false;
+
 			GraphicsSettings.instance.Data = data;
 		} 
 	}

@@ -1,0 +1,31 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class GUIGuideTextPriceUpdater : MonoBehaviour {
+
+	public int zeroCount = 4;
+	public Text text;
+
+	public void UpdateText() {
+		int price = GameLogic.GetCurrentLocationSettings().guidePrice;
+		string number = price.ToString ();
+		if (number.Length < zeroCount) {
+			int length = zeroCount - number.Length;
+			for (int counter = 0; counter < length; counter++) {
+				number = "0" + number;
+			}
+		}
+		text.text = "Price: " + number + " EXP";
+	}
+
+	void Start() {
+		UpdateText ();
+	}
+
+	void OnEnable() {
+		UpdateText ();
+	}
+
+}

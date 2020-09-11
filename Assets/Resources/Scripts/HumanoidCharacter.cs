@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+namespace Events.HumanoidCharacter {
+	class Shoot {}
+}
+
 public class HumanoidCharacterVisionData {
 	public List<Character> aliveEnemies = new List<Character> ();
 	public List<Character> aliveFriends = new List<Character> ();
@@ -29,6 +33,34 @@ public class HumanoidCharacter : INonPlayerCharacter {
 	public Animator stateMachineAI;
 	public int eachShootHit = 3;
 	public int currentShoot = 0;
+	public float walkSmoothing = 5.0f;
+	public string moveBoolString;
+	public string velocityXFloatString;
+	public string velocityYFloatString;
+	public Transform walkVelocityObjectHelper;
+	public BotCoverPosition currentCover;
+	public float stepVolume = 1.0f;
+	public float stepSoundMinDistance = 3.0f;
+	public float stepSoundMaxDistance = 9.0f;
+	public float stepDelay = 0.05f;
+	public List<GameObject> bloodDecals = new List<GameObject>();
+
+	public string currentState = "Awaiting";
+	public string startingState = "Awaiting";
+
+	//private Vector2 smoothDeltaPosition = Vector2.zero;
+	private Vector3 velocity = Vector2.zero;
+	private float stepTimer = 0.0f;
+	private bool shouldMove = false;
+	//private Vector3 previousRootPosition = Vector3.zero;
+	//private Vector3 rootVelocity = Vector3.zero;
+
+	public void ChangeState(string stateName) {
+		if (currentState != "Awaiting") {
+			stateMachineAI.SetTrigger ("ChangeState");
+		}	
+		stateMachineAI.SetTrigger (stateName);
+	}
 
 	public virtual EventData GoOnHit(EventData args) {
 		//Vector3 position = args.Get<Vector3> (0);
@@ -36,31 +68,92 @@ public class HumanoidCharacter : INonPlayerCharacter {
 		return null;
 	}
 
-	public void OnDeath() {
-		Rigidbody body = shooter.weapon.GetComponent<Rigidbody> ();
-		if (body != null) {
-			shooter.weapon.transform.SetParent (null, true);
-			body.isKinematic = false;
-			body.useGravity = true;
+	public EventData OnDeath(EventData args) {
+		Destroy (stateMachineAI);
+		Destroy (agent);
+		if (currentCover != null) {
+			currentCover.isUsedNow = false;
 		}
-		stateMachineAI.enabled = false;
+		if (shooter != null) {
+			Rigidbody body = shooter.weapon.GetComponent<Rigidbody> ();
+			if (body != null) {
+				shooter.weapon.transform.SetParent (null, true);
+				body.isKinematic = false;
+				body.useGravity = true;
+			}
+		}
+		return new EventData ();
+	}
+
+	public EventData OnDamage(EventData args) {
+		Vector3 offset = MathHelper.RandomVector3 (0.0f, 2.0f);
+		offset.y = 0.0f;
+		RaycastHit[] hits = Physics.RaycastAll (transform.position, Vector3.down + offset);
+		RaycastHit resultHit = new RaycastHit();
+		float minDistance = 999999.0f;
+		bool isPlaceAssigned = false;
+		foreach (RaycastHit hit in hits) {
+			if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Map")) {
+				float distance = Vector3.Distance (transform.position, hit.point);
+				if (distance < minDistance) {
+					minDistance = distance;
+					resultHit = hit;
+					isPlaceAssigned = true;
+				}
+			}
+		}
+		if (isPlaceAssigned) {
+			GameObject decalPrefab = bloodDecals [Random.Range (0, bloodDecals.Count - 1)];
+			GameObject decalObject = Instantiate (decalPrefab);
+			decalObject.transform.position = resultHit.point;
+			decalObject.transform.rotation = Quaternion.LookRotation (-resultHit.normal);
+			_Decal.DecalBuilder.BuildAndSetDirty (decalObject.GetComponent<_Decal.Decal> ());
+			Destroy (decalObject, 60.0f);
+		}
+		return new EventData ();
 	}
 
 	public virtual void Start() {
 		EventManager.AddEventListener<Events.RaycastFirearmBulletHit> (GoOnHit);
 		shooter = GetComponentInChildren<WeaponShooterTP> ();
-		data.onDeath.AddListener (OnDeath);
-	}		
+		data.onDeath.AddListener(OnDeath);
+		data.onDamage.AddListener (OnDamage);
+		ChangeState (startingState);
+	}
+
+	void Update() {
+		stepTimer += Time.deltaTime;
+		if (agent != null) {
+			shouldMove = velocity.magnitude > 0.1f && agent.remainingDistance > agent.radius && agent.remainingDistance > agent.stoppingDistance;
+			walkVelocityObjectHelper.position = transform.position + agent.desiredVelocity;
+			Vector3 newVelocity = walkVelocityObjectHelper.localPosition.normalized;
+			velocity = Vector3.Lerp (velocity, newVelocity, walkSmoothing * Time.deltaTime);
+			animator.SetBool (moveBoolString, shouldMove);
+			animator.SetFloat (velocityXFloatString, velocity.x);
+			animator.SetFloat (velocityYFloatString, velocity.z);
+		}
+	}
 
 	public override void Move(Vector3 position) {
 		agent.destination = position;
+		if (currentCover != null) {
+			currentCover.isUsedNow = false;
+			currentCover = null;
+		}
 	}
 
-	public void MoveToNearestEdge() {
-		NavMeshHit hit;
-		agent.FindClosestEdge (out hit);
-		if (hit.hit) {
-			agent.destination = hit.position + MathHelper.RandomVector3(0.1f, 0.3f);
+	public void MoveToNearestCover() {
+		//NavMeshHit hit;
+		//agent.FindClosestEdge (out hit);
+		//if (hit.hit) {
+		//	agent.destination = hit.position + MathHelper.RandomVector3(0.1f, 0.3f);
+		//}
+
+		BotCoverPosition coverPosition = BotPositionsInfo.GetNearestCover (transform.position);
+		if (coverPosition != null) {
+			coverPosition.isUsedNow = true;
+			agent.destination = coverPosition.position;
+			currentCover = coverPosition;
 		}
 	}
 
@@ -105,6 +198,8 @@ public class HumanoidCharacter : INonPlayerCharacter {
 		} else if (shooter.IsJammed ()) {
 			status = HumanoidCharacterShootStatus.JAMMED;
 		}
+
+		EventManager.RunEventListeners<Events.HumanoidCharacter.Shoot> (target, status);
 
 		return status;
 	}
@@ -195,6 +290,69 @@ public class HumanoidCharacter : INonPlayerCharacter {
 		}
 
 		return visionData;
+	}
+
+	public void WalkSoundEvent() {
+		//Debug.LogError ("WALK");
+		if (stepTimer > stepDelay && shouldMove) {
+			PlayFootStepAudio ();
+			stepTimer = 0.0f;
+		}
+	}
+
+	private void PlayFootStepAudio()
+	{
+		//if(m_FootstepSounds.GetLength(0) > 0) {
+		// pick & play a random footstep sound from the array,
+		// excluding sound at index 0
+		//    int n = Random.Range(1, m_FootstepSounds.Length);
+		//     m_AudioSource.clip = m_FootstepSounds[n];
+		//     m_AudioSource.PlayOneShot(m_AudioSource.clip);
+		// move picked sound to index 0 so it's not picked next time
+		//    m_FootstepSounds[n] = m_FootstepSounds[0];
+		//    m_FootstepSounds[0] = m_AudioSource.clip;
+		//}
+
+		RaycastHit[] hits = Physics.RaycastAll (transform.position + new Vector3(0.0f, 0.5f, 0.0f), Vector3.down, 2.4f);
+		RaycastHit neededHit = new RaycastHit ();
+		bool neededHitFound = false;
+		foreach (RaycastHit hit in hits) {
+			if (hit.transform.root.tag != "Character") {
+				if (hit.transform.GetComponent<Renderer> () == null) {
+					continue;
+				}
+				if (hit.triangleIndex == -1) {
+					continue;
+				}
+				neededHit = hit;
+				neededHitFound = true;
+				break;
+			}
+		}
+		if (neededHitFound) {
+			Material material = MaterialManager.instance.GetMaterialFromRaycast (neededHit);
+			if (material == null) {
+				return;
+			} 
+			SoundMaterialType type = SoundManager.instance.GetSoundMaterialType (material);
+			if (type != null) {
+				List<string> clips;
+				//if (landing) {
+				//	clips = type.landingClipNames;
+				//} else if (isRunning) {
+				//	clips = type.runClipNames;
+				//} else {
+					clips = type.walkClipNames;
+				//}
+				string clip = clips [Random.Range (0, clips.Count)];
+				SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (clip);
+				data.volume = stepVolume;
+				data.spatialBlend = 1.0f;
+				data.minDistance = stepSoundMinDistance;
+				data.maxDistance = stepSoundMaxDistance;
+				SoundManager.instance.CreateSound (data, transform.position, transform);
+			}
+		}
 	}
 
 }

@@ -123,7 +123,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 						targetHeight = crouchHeight;
 					} else {
 						float radius = characterController.radius;
-						bool isHitToOpaque = Physics.CheckBox (m_Camera.position + new Vector3 (0.0f, radius * 2.0f, 0.0f), new Vector3 (radius, radius, radius));
+						float height = characterController.height;
+						bool isHitToOpaque = Physics.CheckBox (
+							m_Camera.position + new Vector3 (0.0f, height + radius, 0.0f), 
+							new Vector3 (radius, radius * 2.0f, radius)
+						);
 						if (!isHitToOpaque) {
 							targetHeight = startHeight;
 						} else {
@@ -143,8 +147,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 					float radius = characterController.radius;
 					float height = characterController.height;
 					bool isHitToOpaque = Physics.CheckBox (
-						m_Camera.position + new Vector3 (0.0f, height * 0.8f, 0.0f), 
-						new Vector3 (radius, radius, radius)
+						m_Camera.position + new Vector3 (0.0f, height + radius, 0.0f), 
+						new Vector3 (radius, radius * 2.0f, radius)
 					);
 					if (!isHitToOpaque) {
 						targetHeight = startHeight;

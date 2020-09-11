@@ -16,6 +16,8 @@ public class LocationStartSettings {
 	public string sceneName;
 	public List<EquipmentItem> items = new List<EquipmentItem>();
 	public string nextLocationName = "";
+	public bool guideUnlocked = false;
+	public int guidePrice = 9500;
 }
 
 [System.Serializable]
@@ -54,6 +56,7 @@ namespace Events.GameLogic {
 	class NewLocationLoaded {}
 	class BoostPointChanged {}
 	class PlayerDeath {}
+	class CurrentPointsChanged {}
 }
 
 [System.Serializable]
@@ -179,6 +182,7 @@ public class GameLogic : MonoBehaviour {
 		player.transform.position = Vector3.zero;
 
 		yield return new WaitForEndOfFrame ();
+		yield return new WaitForEndOfFrame ();
 
 		foreach (int itemIndex in data.items) {
 			EquipmentItem item = currentLocationSettings.items [itemIndex];
@@ -194,6 +198,12 @@ public class GameLogic : MonoBehaviour {
 				boostHandler.boostApplier.Apply (playerData);
 			}
 		}
+
+		yield return new WaitForEndOfFrame ();
+		yield return new WaitForEndOfFrame ();
+
+		GraphicsSettings.instance.Data = GraphicsSettings.instance.Data;
+		MaterialManager.instance.ChangeMode (MaterialManager.instance.currentMode);
 	}
 
 	public static bool LaunchLocation(PlayerStartData data) {
@@ -302,6 +312,8 @@ public class GameLogic : MonoBehaviour {
 		instance.currentEXP += GetRaidReward ();
 		instance.currentEXP = Mathf.Min (instance.currentEXP, 9999);
 		GUIInventories.instance.DisableMouseLook ();
+		FadeOutPostProcessing.instance.FadeOut ();
+		yield return new WaitForSeconds (2.0f);
 
 		AsyncOperation operation = SceneManager.LoadSceneAsync (afterDeathScene);
 		while (true) {
@@ -330,6 +342,8 @@ public class GameLogic : MonoBehaviour {
 		instance.currentEXP += GetRaidReward ();
 		instance.currentEXP = Mathf.Min (instance.currentEXP, 9999);
 		GUIInventories.instance.DisableMouseLook ();
+		FadeOutPostProcessing.instance.FadeOut ();
+		yield return new WaitForSeconds (2.0f);
 
 		AsyncOperation operation = SceneManager.LoadSceneAsync (afterDeathScene);
 		while (true) {
@@ -347,4 +361,15 @@ public class GameLogic : MonoBehaviour {
 	public static void PlayerEscaping() {
 		instance.StartCoroutine (instance.SetSceneAfterEscape ());
 	}
+
+	public static int GetCurrentEXP() {
+		return instance.currentEXP;
+	}
+
+	public static void SetCurrentEXP(int currentEXP) {
+		instance.currentEXP = currentEXP;
+		EventManager.RunEventListeners<Events.GameLogic.CurrentPointsChanged> ();
+		instance.Save ();
+	}
+
 }

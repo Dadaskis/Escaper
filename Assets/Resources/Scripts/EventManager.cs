@@ -51,7 +51,7 @@ public class EventManager : MonoBehaviour {
 
 	public delegate EventData EventMethodType(EventData args);
 
-	class Event {
+	public class LocalEvent {
 		public List<EventMethodType> methods = new List<EventMethodType>();
 
 		public void AddListener (EventMethodType method) {
@@ -74,10 +74,20 @@ public class EventManager : MonoBehaviour {
 				}
 			}
 		}
+
+		public EventData Invoke(EventData args) {
+			EventData data = new EventData ();
+			Invoke (args, ref data);
+			return data;
+		}
+
+		public EventData Invoke(params object[] args) {
+			return Invoke (new EventData(args));
+		}
 	}
 
 
-	private Dictionary<string, Event> events;
+	private Dictionary<string, LocalEvent> events;
 
 	private static EventManager manager;
 
@@ -97,16 +107,16 @@ public class EventManager : MonoBehaviour {
 
 	void Init() {
 		if (events == null) {
-			events = new Dictionary<string, Event>();
+			events = new Dictionary<string, LocalEvent>();
 		}
 	}
 
 	public static void AddEventListener(string name, EventMethodType listener) {
-		Event thisEvent = null;
+		LocalEvent thisEvent = null;
 		if (instance.events.TryGetValue (name, out thisEvent)) {
 			thisEvent.AddListener (listener);
 		} else {
-			thisEvent = new Event ();
+			thisEvent = new LocalEvent ();
 			thisEvent.AddListener (listener);
 			instance.events.Add (name, thisEvent);
 		}
@@ -122,7 +132,7 @@ public class EventManager : MonoBehaviour {
 			return;
 		}
 
-		Event thisEvent = null;
+		LocalEvent thisEvent = null;
 
 		if(instance.events.TryGetValue(name, out thisEvent)) {
 			thisEvent.RemoveListener (listener);			
@@ -135,7 +145,7 @@ public class EventManager : MonoBehaviour {
 	}
 
 	public static EventData RunEventListeners(string name, params object[] args) {
-		Event thisEvent = null;
+		LocalEvent thisEvent = null;
 		EventData returnValues = new EventData ();
 		if (instance.events.TryGetValue (name, out thisEvent)) {
 			thisEvent.Invoke (new EventData(args), ref returnValues);

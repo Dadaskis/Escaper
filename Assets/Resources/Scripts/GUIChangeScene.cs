@@ -6,9 +6,15 @@ using UnityEngine.SceneManagement;
 public class GUIChangeScene : MonoBehaviour {
 
 	public string sceneName = "";
+	public float waitSeconds = 0.0f;
+
+	IEnumerator ChangeSceneAfterSeconds() {
+		yield return new WaitForSeconds (waitSeconds);
+		SceneManager.LoadScene (sceneName);
+	}
 
 	public void ChangeScene() {
-		SceneManager.LoadScene (sceneName);
+		StartCoroutine (ChangeSceneAfterSeconds ());
 	}
 
 }

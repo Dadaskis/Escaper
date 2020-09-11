@@ -1,7 +1,6 @@
 ﻿Shader "Custom/CharacterAdvanced" {
 	Properties {
 		_DiffuseMap ("Diffuse map (UV0)", 2D) = "white" {}
-		[Normal] _NormalMap ("Normal map (UV0)", 2D) = "white" {}
 		_SpecularMap ("Specular map (UV0)", 2D) = "white" {}
 		_DisplacementMap ("Displacement map (UV0)", 2D) = "white" {}
 		_DetailMap ("Detail map (UV0)", 2D) = "white" {}
@@ -33,7 +32,6 @@
         #pragma shader_feature __ _DISPLACEMENT
 
 		sampler2D _DiffuseMap;
-		sampler2D _NormalMap;
 		sampler2D _SpecularMap;
 		sampler2D _DisplacementMap;
 		sampler2D _DetailMap;
@@ -54,24 +52,19 @@
 			float4 diffuseColor = tex2D(_DiffuseMap, IN.uv_DiffuseMap);
 			float4 detailAmbientOcclusionColor = tex2D(_DetailAmbientOcclusionMap, IN.uv2_DetailAmbientOcclusionMap);
 
-			float4 detailMapColor = tex2D(_DetailMap, IN.uv_DiffuseMap * _DetailScale);
+			float detailMapColor = tex2D(_DetailMap, IN.uv_DiffuseMap * _DetailScale).r;
 			detailMapColor *= 2;
 
 			o.Albedo = diffuseColor.rgb * detailAmbientOcclusionColor.r;
 			o.Albedo *= detailMapColor;
 			 
 			#ifdef _NORMAL 
-				float4 normalColor = tex2D(_NormalMap, IN.uv_DiffuseMap);
 				float4 detailNormalColor = tex2D(_DetailNormalMap, IN.uv2_DetailAmbientOcclusionMap);
 				//detailNormalColor.z /= _NormalPower;
 				//detailNormalColor = normalize(detailNormalColor);
 				//normalColor += detailNormalColor - 0.5; 
 				float3 detailNormal = UnpackNormal(detailNormalColor);
-				o.Normal = UnpackNormal(normalColor);
-				detailNormal.z /= _NormalPower;
-				detailNormal = normalize(detailNormal);
-				o.Normal += detailNormal;
-				o.Normal = normalize(detailNormal);
+				o.Normal = detailNormal;
 				//o.Normal.z /= _NormalPower;
 				//o.Normal = normalize(o.Normal);
 			#endif

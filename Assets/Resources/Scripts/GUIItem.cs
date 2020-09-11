@@ -58,13 +58,13 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 	public Image background;
 	public Color selectedColor;
 	public Color notSelectedColor;
+	public GUISlot bindedSlot = null;
+	public GUIInventorySlots bindedInventorySlots = null;
+	public GUIContainer bindedContainer = null;
 
 	private RectTransform rectTransform;
 	private Canvas canvas;
 	private GUIInventorySlots previousSlots;
-	private GUISlot bindedSlot = null;
-	private GUIInventorySlots bindedInventorySlots = null;
-	private GUIContainer bindedContainer = null;
 	private SerializableTransform serializableTransform;
 
 	public class PlacedInContainerEvent : UnityEvent<GUIContainer> {}
@@ -80,7 +80,10 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 		serializableTransform = GetComponent<SerializableTransform> ();
 		saveName += serializableTransform.saveName + "Item";
 		background = GetComponent<Image> ();
-		inventory.items.Add (this);
+
+		if (!inventory.items.Contains (this)) {
+			inventory.items.Add (this);
+		}
 	}
 
 	void Update() {
@@ -209,18 +212,27 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 		}
 	}
 
-	public void OnBeginDrag (PointerEventData eventData) {
-		if (selectable) {
-			return;
-		}
+	public void ClearEverythingAfterItem() {
 		ClearSlotsAfterItem ();
+		ClearContainerAfterItem ();
+	}
 
+	public void ClearContainerAfterItem() {
 		if (bindedContainer != null) {
 			rectTransform.SetParent (inventory.transform, true);
 			rectTransform.anchorMax = Vector2.zero;
 			bindedContainer.SetItem (null);
+			bindedContainer.image.enabled = true;
 			Resize ();
 		}
+	}
+
+	public void OnBeginDrag (PointerEventData eventData) {
+		if (selectable) {
+			return;
+		}
+
+		ClearEverythingAfterItem ();
 
 		foreach (GUIContainer container in inventory.containers) {
 			if (container.CheckWhitelist (this) && container.contains == null) {
@@ -332,6 +344,7 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 		bindedContainer = container;
 		inventory = container.inventory;
 		placedInContainerEvent.Invoke (container);
+		container.image.enabled = false;
 	}
 
 	public void OnEndDrag (PointerEventData eventData) {

@@ -49,17 +49,22 @@ public class WeaponGUIItemEventHandler : SerializableMonoBehaviour {
 			handler.UpdateText ();
 
 			List<GUIContainer> containers = Player.instance.inventory.containers;
+			int placedInSlot = -1;
 			foreach (GUIContainer container in containers) {
 				GUIContainerWeaponEventHandler weaponHandler = container.GetComponent<GUIContainerWeaponEventHandler> ();
 				if (weaponHandler != null) {
 					if (container.contains == null) {
 						item.ClearSlotsAfterItem ();
 						item.BindToContainer (container);
+						placedInSlot = weaponHandler.weaponSlot;
+						break;
 					}
 				}
 			}
 
-			Player.instance.weaponSlots.TakeWeapon (1);
+			if (Player.instance.weaponSlots.currentSlot == -1 && placedInSlot != -1) {
+				Player.instance.weaponSlots.TakeWeapon (placedInSlot);
+			}
 		}
 
 		return new EventData ();

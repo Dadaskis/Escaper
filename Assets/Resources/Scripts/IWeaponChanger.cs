@@ -8,7 +8,7 @@ public class IWeaponChanger : MonoBehaviour {
 	[HideInInspector] public int slot;
 	[HideInInspector] public int currentAmmo = 0;
 
-	public virtual void SetWeapon(string weaponClass) {}
+	public virtual float SetWeapon(string weaponClass) { return 0.0f; }
 
 	public virtual IWeapon GetWeapon() { 
 		return null;

@@ -10,12 +10,13 @@ public class GUIArmorChecker : MonoBehaviour {
 	public Text text;
 
 	void Start(){
-		Player.instance.character.onArmorChange.AddListener (ArmorChanged);
+		Player.instance.character.onArmorChange.AddListener(ArmorChanged);
 		textToDisable.SetActive (false);
 		iconToDisable.SetActive (false);
 	}
 
-	void ArmorChanged(int armor){
+	EventData ArmorChanged(EventData args){
+		int armor = args.Get<int> (0);
 		if (armor <= 0) {
 			textToDisable.SetActive (false);
 			iconToDisable.SetActive (false);
@@ -24,5 +25,6 @@ public class GUIArmorChecker : MonoBehaviour {
 			iconToDisable.SetActive (true);
 			text.text = "" + armor;
 		}
+		return new EventData ();
 	}
 }

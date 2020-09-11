@@ -7,11 +7,13 @@ public class HealthTextUpdate : MonoBehaviour {
 	public Text text;
 
 	void Start() {
-		Player.instance.character.onHealthChange.AddListener (OnHealthChange);
+		Player.instance.character.onHealthChange.AddListener(OnHealthChange);
 		text.text = Player.instance.character.Health.ToString ();
 	}
 
-	void OnHealthChange(int health) {
+	EventData OnHealthChange(EventData args) {
+		int health = args.Get<int> (0);
 		text.text = health.ToString ();
+		return new EventData ();
 	}
 }

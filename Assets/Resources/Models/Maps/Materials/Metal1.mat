@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Metal1
-  m_Shader: {fileID: 41, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 5, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _DETAIL_MULX2
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
@@ -21,6 +21,10 @@ Material:
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Detail:
+        m_Texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
+        m_Scale: {x: 7, y: 7}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
         m_Texture: {fileID: 2800000, guid: 6a3835422f90564469c2d006ac7e270b, type: 3}
@@ -43,7 +47,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 65897abc656caf74eaa35e6039be4b75, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8e2c6b905b96a4542b19ef2efb210bf0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -67,7 +71,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _GlossMapScale: 0.578
+    - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
     - _Metallic: 0

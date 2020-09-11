@@ -109,8 +109,8 @@ public class SoundManager : MonoBehaviour {
 		GameObject soundObject = Instantiate (soundObjectPrefab);
 		SoundObject sound = soundObject.GetComponent<SoundObject> ();
 		sound.SetClip (soundData);
-		soundObject.transform.position = position;
 		soundObject.transform.SetParent (parent);
+		soundObject.transform.position = position;
 	}
 
 }

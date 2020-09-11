@@ -73,22 +73,22 @@ Material:
     - _DstBlend: 0
     - _FogDistance: 300
     - _FogPower: -1.27
-    - _FogRefractionPower: 2.18
+    - _FogRefractionPower: 0.54
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
-    - _NoiseDepthMultiplier: 2.57
-    - _NoiseDepthOffset: -1.86
-    - _NoiseFogMultiplier: 0.31
-    - _NoiseFogOffset: 0.64
+    - _NoiseDepthMultiplier: 2.83
+    - _NoiseDepthOffset: -1.72
+    - _NoiseFogMultiplier: 0.17
+    - _NoiseFogOffset: 0.57
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _RefractionDepthMultiplier: 2.37
     - _RefractionDepthOffset: 0.04
     - _RefractionMix: 0.015
-    - _RefractionPower: 0.23
+    - _RefractionPower: 0.01
     - _RefractionUVMultiplier: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

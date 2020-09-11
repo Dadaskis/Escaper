@@ -98,7 +98,7 @@ public class Corpse : IUsableObject {
 	}
 
 	public override void Use () {
-		if (character == null) {
+		if (character == null || character.killed) {
 			if (!GUIInventories.instance.corpseInventoryOpened) {
 				used = true;
 				GUIInventories.OpenCorpseInventory (true);
@@ -114,7 +114,7 @@ public class Corpse : IUsableObject {
 	}
 
 	public override string ShowText () {
-		if (character != null) {
+		if (!character.killed) {
 			return "";
 		}
 		return "[" + ConvertInputKey ("Use") + "] Loot the corpse";

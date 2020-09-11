@@ -27,23 +27,34 @@ public class GUIEquipmentAdder : MonoBehaviour {
 				Destroy (item.gameObject);
 			}
 		}
-		inventory.items.Clear ();
+		inventory.items = new List<GUIItem> ();
 		yield return new WaitForEndOfFrame ();
 		LocationStartSettings settings = GameLogic.GetCurrentLocationSettings ();
-		int index = 0;
+		List<EquipmentItem> addedItems = new List<EquipmentItem> ();
+		Dictionary<EquipmentItem, GUIItem> equipmentDataToItem = new Dictionary<EquipmentItem, GUIItem> ();
 		foreach (EquipmentItem item in settings.items) {
 			GUIItem itemObject = inventory.AddItem (ItemManager.GetItem (item.name));
 			if (itemObject != null) {
-				itemObject.selectable = true;
-				itemObject.selectedColor = selectedColor;
-				itemObject.notSelectedColor = notSelectedColor;
-				if (itemObject.background != null) {
-					itemObject.background.color = notSelectedColor;
-				}
-				itemObject.additionalDataText.text = item.price.ToString();
-				itemToIndex [itemObject] = index;
-				Debug.LogError (itemObject + " " + index);
+				addedItems.Add (item);
+				equipmentDataToItem [item] = itemObject;
 			}
+		}
+
+		yield return new WaitForEndOfFrame ();
+
+		int index = 0;
+		foreach (EquipmentItem item in addedItems) {
+			GUIItem itemObject = equipmentDataToItem [item];
+
+			itemObject.selectable = true;
+			itemObject.selectedColor = selectedColor;
+			itemObject.notSelectedColor = notSelectedColor;
+			if (itemObject.background != null) {
+				itemObject.background.color = notSelectedColor;
+			}
+			itemObject.additionalDataText.text = item.price.ToString();
+			itemToIndex [itemObject] = index;
+
 			index++;
 		}
 	}

@@ -8,8 +8,6 @@ namespace Events {
 }
 
 public class IFirearm : IWeapon {
-	public int currentDurability = 600;
-	public int maxDurability = 600;
 	public string modelPath;
 	public string idleOverrideNameFP = "WeaponIdle";
 	public string idleAnimationFindNameFP = "WeaponIdle";
@@ -550,6 +548,14 @@ public class IFirearm : IWeapon {
 			return -1.0f;
 		}
 		StartCoroutine (PlayAnimation (takeoutOverrideNameFP, drawClipFP.length));
+		return drawClipFP.length;
+	}
+
+	public override float Draw () {
+		if (animationPlaying) {
+			return -1.0f;
+		}
+		StartCoroutine (PlayAnimation (drawOverrideNameFP, drawClipFP.length));
 		return drawClipFP.length;
 	}
 }

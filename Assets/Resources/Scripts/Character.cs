@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 namespace Events.Character {
 	class Killed {}
+	class HealthChanged {} 
 }
 
 public class Character : MonoBehaviour {
@@ -25,11 +26,13 @@ public class Character : MonoBehaviour {
 			return health;
 		}
 		set {
+			int previousHealth = health;
 			health = value;
 			if (health > maxHealth) {
 				maxHealth = health;
 			}
 			onHealthChange.Invoke (health);
+			EventManager.RunEventListeners<Events.Character.HealthChanged> (this, health, previousHealth);
 		}
 	}
 
@@ -51,14 +54,10 @@ public class Character : MonoBehaviour {
 		}
 	}
 
-	public class HealthChangeEvent : UnityEvent<int> {}
-	public HealthChangeEvent onHealthChange = new HealthChangeEvent ();
-
-	public class ArmorChangeEvent : UnityEvent<int> {}
-	public ArmorChangeEvent onArmorChange = new ArmorChangeEvent ();
-
-	public class DeathEvent : UnityEvent {}
-	public DeathEvent onDeath = new DeathEvent();
+	public EventManager.LocalEvent onHealthChange = new EventManager.LocalEvent();
+	public EventManager.LocalEvent onArmorChange = new EventManager.LocalEvent();
+	public EventManager.LocalEvent onDeath = new EventManager.LocalEvent();
+	public EventManager.LocalEvent onDamage = new EventManager.LocalEvent();
 
 	public Ragdollizer ragdoll;
 
@@ -79,15 +78,27 @@ public class Character : MonoBehaviour {
 	}
 
 	public void Damage(int count, Character character) {
+		if (killed) {
+			return;
+		}
 		if (armor < 0) {
-			health -= count;
+			Health = Health - count;
 			if (health < 0) {
 				EventManager.RunEventListeners <Events.Character.Killed> (this, character);
 				Kill ();
 				onDeath.Invoke ();
+				if (ragdoll != null) {
+					foreach (Rigidbody body in ragdoll.bodies) {
+						if (body != null) {
+							body.AddForce ((body.position - character.raycaster.position).normalized * 4.0f, ForceMode.Impulse);
+						}
+					}
+				}
 				return;
 			}
+			//HealthChange change = onHealthChange;
 			onHealthChange.Invoke (health);
+			onDamage.Invoke (count, character);
 		} else {
 			armor--;
 			onArmorChange.Invoke (armor);
@@ -103,19 +114,21 @@ public class Character : MonoBehaviour {
 		health -= count;
 		if (health < 0) {
 			Kill ();
-			onDeath.Invoke ();
+			onDeath.Invoke();
 			return;
 		}
 		onHealthChange.Invoke (health);
 	}
 
 	public void Kill() {
-		Debug.Log ("Character killed. Faction: " + faction);
-		if (!godMode) {
-			killed = true;
-			CharacterManager.Characters.Remove (this);
-			if (ragdoll != null) {
-				ragdoll.EnableRagdoll ();
+		if (!killed) {
+			Debug.Log ("Character killed. Faction: " + faction);
+			if (!godMode) {
+				killed = true;
+				CharacterManager.Characters.Remove (this);
+				if (ragdoll != null) {
+					ragdoll.EnableRagdoll ();
+				}
 			}
 		}
 	}

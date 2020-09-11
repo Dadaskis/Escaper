@@ -12,9 +12,9 @@ namespace Events.GUIInventories {
 public class GUIInventories : MonoBehaviour {
 
 	public static GUIInventories instance;
-	public GUIDisableMouseLookOnInput inventoryMouseLookDisabler;
 	public bool corpseInventoryOpened = false;
 	public bool normalInventoryOpened = false;
+	public bool restrictInventoryOpening = false;
 	public FirstPersonController controller;
 
 	public void DisableMouseLook() {
@@ -25,6 +25,7 @@ public class GUIInventories : MonoBehaviour {
 		if (controller != null) {
 			controller.enableMouseLook = false;
 			controller.mouseLook.SetCursorLock (false);
+			controller.mouseLook.UpdateCursorLock ();
 		}
 	}
 
@@ -36,6 +37,7 @@ public class GUIInventories : MonoBehaviour {
 		if (controller != null) {
 			controller.enableMouseLook = true;
 			controller.mouseLook.SetCursorLock (true);
+			controller.mouseLook.UpdateCursorLock ();
 		}
 	}
 
@@ -44,6 +46,9 @@ public class GUIInventories : MonoBehaviour {
 	}
 
 	public static void OpenNormalInventory(bool switchMouseLook = false) {
+		if (instance.restrictInventoryOpening) {
+			return;
+		}
 		EventManager.RunEventListeners<Events.GUIInventories.OpenNormalInventory> ();
 		GUICorpseInventorySwitch.instance.EnableNormalInventory ();	
 		instance.gameObject.SetActive (true);
@@ -57,6 +62,9 @@ public class GUIInventories : MonoBehaviour {
 	}
 
 	public static void OpenCorpseInventory(bool switchMouseLook = false) {
+		if (instance.restrictInventoryOpening) {
+			return;
+		}
 		EventManager.RunEventListeners<Events.GUIInventories.OpenCorpseInventory> ();
 		GUICorpseInventorySwitch.instance.EnableCorpseInventory ();
 		instance.gameObject.SetActive (true);

@@ -60,6 +60,18 @@ public class GraphicsSettings : MonoBehaviour {
 				ambientOcclusion.active = false;
 			}
 
+			if (data.isFastMode && (!data.bloomEnabled && !data.chromaticAberrationEnabled && !data.grainEnabled && !data.vignetteEnabled)) {
+				PostProcessLayer layer = FindObjectOfType<PostProcessLayer> ();
+				if (layer != null) {
+					layer.enabled = false;
+				}
+			} else {
+				PostProcessLayer layer = FindObjectOfType<PostProcessLayer> ();
+				if (layer != null) {
+					layer.enabled = true;
+				}
+			}
+
 			QualitySettings.masterTextureLimit = data.textureQuality;
 
 			//Light[] lights = FindObjectsOfType<Light> ();

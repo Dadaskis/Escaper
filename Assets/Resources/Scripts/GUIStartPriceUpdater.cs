@@ -28,6 +28,10 @@ public class GUIStartPriceUpdater : MonoBehaviour {
 		return new EventData ();
 	}
 
+	void OnEnable() {
+		UpdateText ();
+	}
+
 	void Start() {
 		EventManager.AddEventListener<Events.GUIItem.Selected> (UpdateOnEvent);
 		EventManager.AddEventListener<Events.GameLogic.BoostPointChanged> (UpdateOnEvent);

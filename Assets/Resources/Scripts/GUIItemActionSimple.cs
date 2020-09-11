@@ -15,7 +15,14 @@ public class GUIItemActionSimple : GUIItemActionBase {
 			Transform head = Player.instance.character.raycaster;
 			itemObject.transform.position = head.position + head.forward;
 
+			Rigidbody body = itemObject.GetComponent<Rigidbody>();
+			if(body != null) {
+				body.AddForce(head.forward, ForceMode.Impulse);
+			}
+
 			EventManager.RunEventListeners<Events.GUIItemActionSimple.Drop>(item, itemObject);
+
+			item.ClearEverythingAfterItem();
 
 			Destroy(item.gameObject);
 		});

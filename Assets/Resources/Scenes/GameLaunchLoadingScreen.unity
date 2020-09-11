@@ -212,11 +212,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114089430052115128, guid: 2ce8ded486b45d8418b161c0680d9058,
-        type: 2}
-      propertyPath: boostHandlers.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4738835574972424, guid: 2ce8ded486b45d8418b161c0680d9058, type: 2}
       propertyPath: m_LocalPosition.x
       value: 99.36
@@ -247,38 +242,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4738835574972424, guid: 2ce8ded486b45d8418b161c0680d9058, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114089430052115128, guid: 2ce8ded486b45d8418b161c0680d9058,
-        type: 2}
-      propertyPath: boostHandlers.Array.data[0].boostName
-      value: Health
-      objectReference: {fileID: 0}
-    - target: {fileID: 114089430052115128, guid: 2ce8ded486b45d8418b161c0680d9058,
-        type: 2}
-      propertyPath: boostHandlers.Array.data[0].boostApplier
-      value: 
-      objectReference: {fileID: 1327195267}
-    - target: {fileID: 114089430052115128, guid: 2ce8ded486b45d8418b161c0680d9058,
-        type: 2}
-      propertyPath: boostHandlers.Array.data[1].boostName
-      value: RunSpeed
-      objectReference: {fileID: 0}
-    - target: {fileID: 114089430052115128, guid: 2ce8ded486b45d8418b161c0680d9058,
-        type: 2}
-      propertyPath: boostHandlers.Array.data[1].boostApplier
-      value: 
-      objectReference: {fileID: 1327195268}
-    - target: {fileID: 114089430052115128, guid: 2ce8ded486b45d8418b161c0680d9058,
-        type: 2}
-      propertyPath: boostHandlers.Array.data[2].boostName
-      value: AnotherLive
-      objectReference: {fileID: 0}
-    - target: {fileID: 114089430052115128, guid: 2ce8ded486b45d8418b161c0680d9058,
-        type: 2}
-      propertyPath: boostHandlers.Array.data[2].boostApplier
-      value: 
-      objectReference: {fileID: 1327195269}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ce8ded486b45d8418b161c0680d9058, type: 2}
   m_IsPrefabParent: 0
@@ -460,49 +425,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1327195266 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1414322105141524, guid: 2ce8ded486b45d8418b161c0680d9058,
-    type: 2}
-  m_PrefabInternal: {fileID: 326468985}
---- !u!114 &1327195267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1327195266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ff12254f027f0c459af7e439c9d6581, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthOnPoint: 100
---- !u!114 &1327195268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1327195266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc811e78e506a3e46b32f3ac22330f8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runModifier: 1.3
---- !u!114 &1327195269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1327195266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bb09e4180a01d54aa71114e57cd2156, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lives: 0
 --- !u!1 &1659984769
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,7 +579,7 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: 0
+  m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3

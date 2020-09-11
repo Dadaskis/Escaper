@@ -13,7 +13,6 @@ public class GameLaunchLoadingScreenSceneChanger : MonoBehaviour {
 	IEnumerator LoadScene() {
 		AsyncOperation operation = SceneManager.LoadSceneAsync (sceneName);
 		while (true) {
-			Debug.LogError (operation.progress);
 			if (operation.isDone) {
 				break;
 			}

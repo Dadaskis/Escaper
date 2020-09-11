@@ -18,10 +18,11 @@ public class RootMovingNavAgent : MonoBehaviour {
 	Vector3 rootVelocity = Vector3.zero;
 
 	void Start() {
-		navAgent.updatePosition = false;
+		//navAgent.updatePosition = false;
 	}
 
 	void Update() {
+		/*
 		Vector3 worldDeltaPosition = navAgent.nextPosition - transform.position;
 
 		float dx = Vector3.Dot (transform.right, worldDeltaPosition);
@@ -44,13 +45,14 @@ public class RootMovingNavAgent : MonoBehaviour {
 		animator.SetBool (moveBoolString, shouldMove);
 		animator.SetFloat (velocityXFloatString, velocity.x);
 		animator.SetFloat (velocityYFloatString, velocity.y);
+		*/
 
 		//if (worldDeltaPosition.magnitude > navAgent.radius) {
 		//	transform.position = navAgent.nextPosition + 0.9f * worldDeltaPosition;
 		//}
 	}
 
-	private Vector3 tempRootPosition = Vector3.zero;
+	//private Vector3 tempRootPosition = Vector3.zero;
 
 	void OnAnimatorMove() {
 		//Vector3 position = animator.rootPosition;
@@ -65,7 +67,7 @@ public class RootMovingNavAgent : MonoBehaviour {
 			transform.position = position;
 		}
 		*/
-		transform.position = navAgent.nextPosition;
+		//transform.position = navAgent.nextPosition;
 		//navAgent.speed = Mathf.Abs((tempRootPosition - animator.rootPosition).magnitude * rootMotionSpeed) + addSpeed;
 
 		//tempRootPosition = animator.rootPosition;

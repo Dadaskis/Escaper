@@ -13,6 +13,7 @@ public class GUIItemInfoWindow : MonoBehaviour {
 		name.text = item.fullName;
 		description.text = item.description;
 		icon.sprite = item.icon.sprite;
+		transform.SetAsLastSibling ();
 	}
 
 }

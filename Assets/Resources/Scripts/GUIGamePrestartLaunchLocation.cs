@@ -8,12 +8,19 @@ public class GUIGamePrestartLaunchLocation : MonoBehaviour {
 
 	public GameObject window;
 
-	public void LaunchTheLocation() {
+	public float waitSeconds = 0.0f;
+
+	IEnumerator LaunchTheLocationAfterAwaiting() {
+		yield return new WaitForSeconds (waitSeconds);
 		PlayerStartData data = new PlayerStartData ();
 		data.items = equipment.GetSelectedItemIndexes ();
 		if (!GameLogic.LaunchLocation (data)) {
 			window.SetActive (true);
 		}
+	}
+
+	public void LaunchTheLocation() {
+		StartCoroutine (LaunchTheLocationAfterAwaiting ());
 	}
 
 }

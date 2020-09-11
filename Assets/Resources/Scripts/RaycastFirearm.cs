@@ -16,9 +16,13 @@ public class RaycastFirearm : IFirearm {
 	public float minYRecoil = 2.0f;
 	public float maxZRecoil = 2.0f;
 	public float minZRecoil = 2.0f;
+	public float hitRigidbodyForceMultiplier = 1.0f;
 	public GameObject tracerPrefab;
 	public GameObject decalPrefab;
 	public GameObject particlesPrefab;
+	public float hitVolume = 1.0f;
+	public float hitMinDistance = 1.0f;
+	public float hitMaxDistance = 12.0f;
 
 	public List<GameObject> onHitObjects;
 
@@ -36,6 +40,8 @@ public class RaycastFirearm : IFirearm {
 			return;
 		}
 
+		EventManager.RunEventListeners<Events.IWeapon.Shot> (this);
+
 		if (firstPerson) {
 			CameraPuncher.instance.Punch (
 				new Vector3 (
@@ -49,11 +55,11 @@ public class RaycastFirearm : IFirearm {
 
 			Vector3 hitPos = hit.point;
 
-			IDamagable part = hit.collider.GetComponent<IDamagable> ();
-
 			GameObject tracer = Instantiate (tracerPrefab);
 			TracerObject tracerObject = tracer.GetComponent<TracerObject> ();
 			tracerObject.SetLineSettings (this.owner.raycaster.position, hitPos);
+
+			IDamagable part = hit.collider.GetComponent<IDamagable> ();
 			
 			if (part == null) {
 				GameObject decalObject = Instantiate (decalPrefab);
@@ -68,9 +74,37 @@ public class RaycastFirearm : IFirearm {
 				ParticleSystem particles = particlesObject.GetComponent<ParticleSystem> ();
 				particles.Play ();
 				Destroy (particlesObject, particles.main.duration * 2.0f);
+
+				Material material = MaterialManager.instance.GetMaterialFromRaycast (hit);
+				if (material != null) {
+					SoundMaterialType type = SoundManager.instance.GetSoundMaterialType (material);
+					if (type != null) {
+						List<string> clips;
+						//if (landing) {
+						//	clips = type.landingClipNames;
+						//} else if (isRunning) {
+						//	clips = type.runClipNames;
+						//} else {
+						clips = type.hitClipNames;
+						//}
+						if (clips.Count > 0) {
+							string clip = clips [Random.Range (0, clips.Count)];
+							SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (clip);
+							data.volume = hitVolume;
+							data.minDistance = hitMinDistance;
+							data.maxDistance = hitMaxDistance;
+							SoundManager.instance.CreateSound (data, hit.point);
+						}
+					}
+				} 
+
 			} else {
 				//part.character.ragdoll.EnableRagdoll ();
 				part.Damage (damage, this.owner);
+			}
+
+			if (hit.rigidbody != null) {
+				hit.rigidbody.AddForce (-hit.normal * hitRigidbodyForceMultiplier, ForceMode.Impulse);
 			}
 
 			EventManager.RunEventListeners<Events.RaycastFirearmBulletHit> (hitPos);
@@ -109,6 +143,28 @@ public class RaycastFirearm : IFirearm {
 					} 
 
 					if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Map")) {
+						Material material = MaterialManager.instance.GetMaterialFromRaycast (hit);
+						if (material != null) {
+							SoundMaterialType type = SoundManager.instance.GetSoundMaterialType (material);
+							if (type != null) {
+								List<string> clips;
+								//if (landing) {
+								//	clips = type.landingClipNames;
+								//} else if (isRunning) {
+								//	clips = type.runClipNames;
+								//} else {
+								clips = type.hitClipNames;
+								//}
+								if (clips.Count > 0) {
+									string clip = clips [Random.Range (0, clips.Count)];
+									SoundObjectData data = SoundManager.instance.GetBasicSoundObjectData (clip);
+									data.volume = hitVolume;
+									data.minDistance = hitMinDistance;
+									data.maxDistance = hitMaxDistance;
+									SoundManager.instance.CreateSound (data, hit.point);
+								}
+							}
+						} 
 						break;
 					}
 

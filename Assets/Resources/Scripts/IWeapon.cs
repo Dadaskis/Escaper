@@ -22,14 +22,16 @@ public class AnimationClipOverrides : List<KeyValuePair<AnimationClip, Animation
 namespace Events.IWeapon {
 	class PrimaryFire {}
 	class Reload {}
+	class Shot {}
 }
 	
 public class IWeapon : MonoBehaviour {
-
 	public string weaponClass = "";
 	public int slot = -1;
 	public IAmmoFiller ammoFiller = null;
 	public string ammoType = "";
+	public int currentDurability = 600;
+	public int maxDurability = 600;
 	public bool animationPlaying = false;
 	public Animator animator = null;
 	public AnimatorOverrideController animatorOverride;
@@ -100,10 +102,12 @@ public class IWeapon : MonoBehaviour {
 				animator = GetComponentInParent <Animator> ();
 			}
 		}
-		animatorOverride = new AnimatorOverrideController (animator.runtimeAnimatorController);
-		animator.runtimeAnimatorController = animatorOverride;
-		animationOverrides = new AnimationClipOverrides (animatorOverride.overridesCount);
-		UpdateAnimations ();
+		if (animator != null) {
+			animatorOverride = new AnimatorOverrideController (animator.runtimeAnimatorController);
+			animator.runtimeAnimatorController = animatorOverride;
+			animationOverrides = new AnimationClipOverrides (animatorOverride.overridesCount);
+			UpdateAnimations ();
+		}
 		CustomStartOnEnd ();
 	}
 
@@ -127,5 +131,6 @@ public class IWeapon : MonoBehaviour {
 	public virtual void MagCheck () {}
 	public virtual void ApplyAnimationOverrides (ref AnimationClipOverrides overrides) {}
 	public virtual float Takeout() { return 1.0f; }
+	public virtual float Draw() { return 1.0f; }
 
 }
