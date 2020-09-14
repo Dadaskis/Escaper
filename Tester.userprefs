@@ -1,6 +1,6 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\HumanoidAIAgressiveState.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs">
     <Files>
       <File FileName="Assets\Resources\Scripts\WeaponNearWallPushBack.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\InertialMoving.cs" Line="1" Column="1" />
@@ -8,13 +8,12 @@
       <File FileName="Assets\Resources\Scripts\TransformIdleAnimationGenerator.cs" Line="1" Column="1" />
       <File FileName="Assets\Editor\MaterialManager\MaterialManagerEditor.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\Screenshot.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Shaders\CharacterAdvanced.shader" Line="1" Column="1" />
       <File FileName="Assets\Resources\Shaders\Glass.shader" Line="1" Column="1" />
       <File FileName="Assets\Resources\Shaders\CollimatorSightGlass.shader" Line="1" Column="1" />
       <File FileName="Assets\DecalSystem\Plugins\DecalSystem\Decal.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\GUIFastModeRendererApply.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\GUIAdvancedRendererApply.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIRendererModeDropdown.cs" Line="15" Column="68" />
+      <File FileName="Assets\Resources\Scripts\GUIRendererModeDropdown.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\PlaySyncAnimators.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\WeaponShooterTP.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\WeaponShooter.cs" Line="1" Column="1" />
@@ -28,7 +27,6 @@
       <File FileName="Assets\Resources\Scripts\AmmoItemData.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\ItemAmmoFiller.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\WeaponPhysicalItemEventHandler.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\PhysicalItem.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\ItemManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\SpriteManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\ThirdPersonWeaponChanger.cs" Line="1" Column="1" />
@@ -38,7 +36,6 @@
       <File FileName="Assets\Resources\Scripts\GUIOpenInventoryOnInput.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\GUIVolumeSlider.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\InputData.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\InputManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\SoundManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\InSightDisabler.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\GUIEquipmentAdder.cs" Line="1" Column="1" />
@@ -61,7 +58,6 @@
       <File FileName="Assets\Resources\Scripts\LightmapManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\WeaponItemData.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\GameLaunchLoadingScreenSceneChanger.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\InitializeLightmapManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\IPlayerBoost.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\HealthBoostHandler.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\GUIStartPriceUpdater.cs" Line="1" Column="1" />
@@ -71,10 +67,10 @@
       <File FileName="Assets\Resources\Scripts\DestroyableObject.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\DamageRadius.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\PlaySoundOnAwake.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\EventManager.cs" Line="73" Column="1" />
+      <File FileName="Assets\Resources\Scripts\EventManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\AnotherLiveBoostHandler.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\AppearPoint.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" Line="151" Column="79" />
       <File FileName="Assets\Resources\Scripts\PostProcessingCaller.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Shaders\Pain.shader" Line="1" Column="1" />
       <File FileName="Assets\Resources\Shaders\UnderWaterPostProcessing.shader" Line="1" Column="1" />
@@ -103,7 +99,7 @@
       <File FileName="Assets\Resources\Scripts\WeaponGUIItemEventHandler.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\FirstPersonWeaponChanger.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\GUIInventories.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\IWeapon.cs" Line="25" Column="15" />
+      <File FileName="Assets\Resources\Scripts\IWeapon.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\IFirearm.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\AnimatedItemPlayer.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\Character.cs" Line="1" Column="1" />
@@ -113,24 +109,35 @@
       <File FileName="Assets\Resources\Scripts\BotPositionsInfoVoxel.cs" Line="1" Column="1" />
       <File FileName="Assets\Editor\IWeapon\IFirearmEditor.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\RootMovingNavAgent.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GameLogic.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GraphicsSettings.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Shaders\LUTColorGrading.shader" Line="22" Column="30" />
+      <File FileName="Assets\Resources\Shaders\LUTColorGrading.shader" Line="1" Column="1" />
       <File FileName="Assets\PostProcessing\Runtime\PostProcessLayer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\MaterialManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\GUIPlaySound.cs" Line="11" Column="24" />
-      <File FileName="Assets\Resources\Scripts\MissedPostProcessing.cs" Line="12" Column="2" />
-      <File FileName="Assets\Resources\Scripts\PainPostProcessing.cs" Line="12" Column="40" />
-      <File FileName="Assets\Resources\Scripts\RaycastFirearm.cs" Line="43" Column="62" />
+      <File FileName="Assets\Resources\Scripts\GUIPlaySound.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\MissedPostProcessing.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\PainPostProcessing.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\RaycastFirearm.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\GUIEnableCursor.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\HumanoidCharacter.cs" Line="60" Column="18" />
-      <File FileName="Assets\Resources\Scripts\HumanoidAIAwaitingState.cs" Line="41" Column="40" />
-      <File FileName="Assets\Resources\Scripts\HumanoidAIPatrollingState.cs" Line="45" Column="40" />
-      <File FileName="Assets\Resources\Scripts\HumanoidAIAgressiveState.cs" Line="30" Column="2" />
-      <File FileName="Assets\Resources\Scripts\PatrolPointsManager.cs" Line="20" Column="16" />
-      <File FileName="Assets\Resources\Scripts\PatrolPoint.cs" Line="9" Column="3" />
-      <File FileName="Assets\Resources\Scripts\View.cs" Line="6" Column="2" />
+      <File FileName="Assets\Resources\Scripts\HumanoidCharacter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\HumanoidAIAwaitingState.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\HumanoidAIPatrollingState.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\HumanoidAIAgressiveState.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\PatrolPointsManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\PatrolPoint.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\View.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\MapTriggerManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\MapTriggerCaller.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\IMapTriggerCallable.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\MapButton.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\PhysicalItem.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\ActivateCallerMapCallable.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\ObjectMover.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\ActivateObjectMoverMapCallable.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\InputManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\MaterialManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Shaders\CharacterAdvanced.shader" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GameLogic.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\GraphicsSettings.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\InitializeLightmapManager.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

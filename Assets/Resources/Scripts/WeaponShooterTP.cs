@@ -31,6 +31,12 @@ public class WeaponShooterTP : MonoBehaviour {
 		return false;
 	}
 
+	void Update() {
+		if (weapon == null) {
+			CheckWeapon ();
+		}
+	}
+
 	public void Shoot(GameObject target, Vector3 customHitPosition = default(Vector3)) {
 		if (CheckWeapon ()) {
 			weapon.target = target;

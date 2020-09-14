@@ -62,6 +62,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 		public float physicsPushPower = 1.0f;
 
+		public float crouchDetectHeightMultiplier = 1.0f;
+		public float crouchDetectRadiusMultiplier = 1.0f;
+
         // Use this for initialization
         private void Start()
         {
@@ -122,8 +125,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 						isCrouching = true;
 						targetHeight = crouchHeight;
 					} else {
-						float radius = characterController.radius;
-						float height = characterController.height;
+						float radius = characterController.radius * crouchDetectRadiusMultiplier;
+						float height = characterController.height * crouchDetectHeightMultiplier;
 						bool isHitToOpaque = Physics.CheckBox (
 							m_Camera.position + new Vector3 (0.0f, height + radius, 0.0f), 
 							new Vector3 (radius, radius * 2.0f, radius)
@@ -144,8 +147,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 				}
 
 				if (isCrouching && !isPressedCrouching) {
-					float radius = characterController.radius;
-					float height = characterController.height;
+					float radius = characterController.radius * crouchDetectRadiusMultiplier;
+					float height = characterController.height * crouchDetectHeightMultiplier;
 					bool isHitToOpaque = Physics.CheckBox (
 						m_Camera.position + new Vector3 (0.0f, height + radius, 0.0f), 
 						new Vector3 (radius, radius * 2.0f, radius)

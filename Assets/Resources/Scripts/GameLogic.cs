@@ -133,10 +133,6 @@ public class GameLogic : MonoBehaviour {
 		Load ();
 	}
 
-	void Start() {
-		EventManager.RunEventListeners<Events.GameLogic.NewLocationLoaded> ();
-	}
-
 	public static LocationStartSettings SetCurrentLocationSettings(string locationName) {
 		LocationStartSettings settings;
 		if (instance.locationStartSettings.TryGetValue (locationName, out settings)) {
@@ -202,8 +198,8 @@ public class GameLogic : MonoBehaviour {
 		yield return new WaitForEndOfFrame ();
 		yield return new WaitForEndOfFrame ();
 
+		MaterialManager.instance.Load ();
 		GraphicsSettings.instance.Data = GraphicsSettings.instance.Data;
-		MaterialManager.instance.ChangeMode (MaterialManager.instance.currentMode);
 	}
 
 	public static bool LaunchLocation(PlayerStartData data) {

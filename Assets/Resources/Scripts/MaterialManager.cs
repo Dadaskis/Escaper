@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.Rendering.PostProcessing;
+using Newtonsoft.Json;
 
 public enum ShaderQuality {
 	LOW,
@@ -62,6 +63,12 @@ public class MaterialVariablesData {
 	public bool blacklisted = false;
 }
 
+[System.Serializable]
+public class MaterialManagerSaveData {
+	public ShaderQuality currentQuality;
+	public MaterialMode currentMode;
+}
+
 [ExecuteInEditMode]
 public class MaterialManager : MonoBehaviour {
 
@@ -74,6 +81,31 @@ public class MaterialManager : MonoBehaviour {
 	public MaterialMode currentMode;
 
 	public static MaterialManager instance;
+
+	public void Save() {
+		try {
+			MaterialManagerSaveData data = new MaterialManagerSaveData ();
+			data.currentMode = currentMode;
+			data.currentQuality = currentQuality;
+			string json = JsonConvert.SerializeObject(data);
+			System.IO.File.WriteAllText("Saves/MaterialManager.settings", json);
+		} catch(System.Exception ex) {
+			Debug.LogError (ex);
+		}
+	}
+
+	public void Load() {
+		try {
+			string json = System.IO.File.ReadAllText("Saves/MaterialManager.settings");
+			MaterialManagerSaveData data = JsonConvert.DeserializeObject<MaterialManagerSaveData>(json);
+			currentMode = data.currentMode;
+			currentQuality = data.currentQuality;
+			ChangeQuality(currentQuality);
+			ChangeMode (currentMode);
+		} catch(System.Exception ex) {
+			Debug.LogError (ex);
+		}
+	}
 
 	void Awake() {
 		Initialize ();
@@ -131,18 +163,50 @@ public class MaterialManager : MonoBehaviour {
 			}
 		}
 		currentQuality = quality;
+		Save ();
+	}
+
+	IEnumerator ChangeCamerasRenderingPath() {
+		int counter = 0;
+		while (true) {
+			bool isRightPath = true;
+
+			foreach (Camera camera in Camera.allCameras) {
+				if (currentMode == MaterialMode.ADVANCED) {
+					camera.renderingPath = RenderingPath.DeferredShading;
+				} else if (currentMode == MaterialMode.FAST) {
+					camera.renderingPath = RenderingPath.Forward;
+				}
+			}
+
+			foreach (Camera camera in Camera.allCameras) {
+				if (currentMode == MaterialMode.ADVANCED) {
+					if (camera.actualRenderingPath != RenderingPath.DeferredShading) {
+						isRightPath = false;
+					}
+				} else if (currentMode == MaterialMode.FAST) {
+					if (camera.actualRenderingPath != RenderingPath.Forward) {
+						isRightPath = false;
+					}
+				}
+				Debug.LogError (camera.actualRenderingPath);
+			}
+
+			if (isRightPath == false) {
+				yield return new WaitForSeconds (0.1f);
+				counter = 0;
+			} else {
+				counter++;
+				if (counter > 10) {
+					break;
+				}
+			}
+		}
 	}
 
 	public void ChangeMode(MaterialMode mode = MaterialMode.UNDEFINED) {
 		if (mode == MaterialMode.UNDEFINED) {
 			mode = currentMode;
-		}
-
-		if (mode == MaterialMode.ADVANCED) {
-			Camera.main.renderingPath = RenderingPath.DeferredShading;
-		} else if (mode == MaterialMode.FAST) {
-			Camera.main.renderingPath = RenderingPath.Forward;
-			ChangeQuality (ShaderQuality.LOW);
 		}
 
 		foreach (MaterialVariablesData data in materialsSettings) {
@@ -161,9 +225,16 @@ public class MaterialManager : MonoBehaviour {
 			GraphicsSettingsData data = GraphicsSettings.instance.Data;
 			data.enableRealtimeShadows = false;
 			data.enableAmbientOcclusion = false;
+			ChangeQuality (ShaderQuality.LOW);
 
 			GraphicsSettings.instance.Data = data;
-		} 
+		}
+
+		currentMode = mode;
+
+		StartCoroutine (ChangeCamerasRenderingPath ());
+
+		Save ();
 	}
 
 	public void RegisterMaterialsAndTextures() { 

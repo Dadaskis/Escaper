@@ -2851,7 +2851,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 0c45a753e87bb7b48b61da62319c5ce6, type: 3}
   m_Controller: {fileID: 9100000, guid: 2c2fbce932759184faf79aec41216c7c, type: 2}
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -2884,6 +2884,8 @@ MonoBehaviour:
   slot: -1
   ammoFiller: {fileID: 114021314374088468}
   ammoType: Pistol0
+  currentDurability: 600
+  maxDurability: 600
   animationPlaying: 0
   animator: {fileID: 95480639694327050}
   animatorOverride: {fileID: 22100000, guid: 49c0b09f44ef06245b3ab7ca9054fded, type: 2}
@@ -2898,8 +2900,6 @@ MonoBehaviour:
   currentAnimationSpeed: 1
   target: {fileID: 0}
   overrideTargetHitPosition: {x: 0, y: 0, z: 0}
-  currentDurability: 600
-  maxDurability: 600
   modelPath: Assets/Resources/Models/Weapons/DI-SP-1.FirstPerson.fbx
   idleOverrideNameFP: WeaponIdle
   idleAnimationFindNameFP: WeaponIdle
@@ -3011,12 +3011,16 @@ MonoBehaviour:
   minYRecoil: 2
   maxZRecoil: 2
   minZRecoil: 2
+  hitRigidbodyForceMultiplier: 1
   tracerPrefab: {fileID: 1556062566840354, guid: ad1eb231807634a429c85500a1da3dd8,
     type: 2}
   decalPrefab: {fileID: 1049813923105726, guid: 4373950484bfe77478c7d7753c9c3be4,
     type: 2}
   particlesPrefab: {fileID: 1078946714281044, guid: b4f5763e21a4072429f8bf353ab8d7b9,
     type: 2}
+  hitVolume: 1
+  hitMinDistance: 1
+  hitMaxDistance: 12
   onHitObjects: []
 --- !u!137 &137127668724161490
 SkinnedMeshRenderer:
@@ -4145,7 +4149,7 @@ SkinnedMeshRenderer:
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
-  m_UpdateWhenOffscreen: 0
+  m_UpdateWhenOffscreen: 1
   m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300044, guid: 0c45a753e87bb7b48b61da62319c5ce6, type: 3}
   m_Bones:
@@ -4329,7 +4333,7 @@ SkinnedMeshRenderer:
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
-  m_UpdateWhenOffscreen: 0
+  m_UpdateWhenOffscreen: 1
   m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300004, guid: 0c45a753e87bb7b48b61da62319c5ce6, type: 3}
   m_Bones:

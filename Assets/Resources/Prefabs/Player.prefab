@@ -8817,7 +8817,7 @@ Transform:
   m_GameObject: {fileID: 1275136348499346}
   m_LocalRotation: {x: -0.0008726645, y: 0, z: 0, w: 0.9999997}
   m_LocalPosition: {x: 0, y: 0.8999996, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 4658702934583776}
   m_Father: {fileID: 4101738313629688}
@@ -8856,7 +8856,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1463439828905582}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.3525012, y: 0.54, z: 0.26}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4023051757729972}
@@ -19179,6 +19179,8 @@ MonoBehaviour:
   - Turning2
   - Turning3
   physicsPushPower: 1
+  crouchDetectHeightMultiplier: 1
+  crouchDetectRadiusMultiplier: 1
 --- !u!114 &114468379335787372
 MonoBehaviour:
   m_ObjectHideFlags: 1

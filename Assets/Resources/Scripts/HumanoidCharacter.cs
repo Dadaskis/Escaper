@@ -60,6 +60,7 @@ public class HumanoidCharacter : INonPlayerCharacter {
 			stateMachineAI.SetTrigger ("ChangeState");
 		}	
 		stateMachineAI.SetTrigger (stateName);
+		currentState = stateName;
 	}
 
 	public virtual EventData GoOnHit(EventData args) {
@@ -75,11 +76,13 @@ public class HumanoidCharacter : INonPlayerCharacter {
 			currentCover.isUsedNow = false;
 		}
 		if (shooter != null) {
-			Rigidbody body = shooter.weapon.GetComponent<Rigidbody> ();
-			if (body != null) {
-				shooter.weapon.transform.SetParent (null, true);
-				body.isKinematic = false;
-				body.useGravity = true;
+			if (shooter.weapon != null) {
+				Rigidbody body = shooter.weapon.GetComponent<Rigidbody> ();
+				if (body != null) {
+					shooter.weapon.transform.SetParent (null, true);
+					body.isKinematic = false;
+					body.useGravity = true;
+				}
 			}
 		}
 		return new EventData ();

@@ -60,7 +60,13 @@ public class GraphicsSettings : MonoBehaviour {
 				ambientOcclusion.active = false;
 			}
 
-			if (data.isFastMode && (!data.bloomEnabled && !data.chromaticAberrationEnabled && !data.grainEnabled && !data.vignetteEnabled)) {
+			if (data.isFastMode && 
+					(!data.bloomEnabled 
+					&& !data.chromaticAberrationEnabled
+					&& !data.grainEnabled 
+					&& !data.vignetteEnabled 
+					&& data.antialiasing == PostProcessLayer.Antialiasing.None)
+			) {
 				PostProcessLayer layer = FindObjectOfType<PostProcessLayer> ();
 				if (layer != null) {
 					layer.enabled = false;

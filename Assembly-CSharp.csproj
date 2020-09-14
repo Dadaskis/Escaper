@@ -142,6 +142,8 @@
      <Compile Include="Assets\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
      <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Util.cs" />
      <Compile Include="Assets\ProCore\ProGrids\MonoBehaviour\pg_IgnoreSnap.cs" />
+     <Compile Include="Assets\Resources\Scripts\ActivateCallerMapCallable.cs" />
+     <Compile Include="Assets\Resources\Scripts\ActivateObjectMoverMapCallable.cs" />
      <Compile Include="Assets\Resources\Scripts\AmbientPlayer.cs" />
      <Compile Include="Assets\Resources\Scripts\AmmoGUIItemEventHandler.cs" />
      <Compile Include="Assets\Resources\Scripts\AmmoItemData.cs" />
@@ -262,6 +264,7 @@
      <Compile Include="Assets\Resources\Scripts\IAmmoFiller.cs" />
      <Compile Include="Assets\Resources\Scripts\IDamagable.cs" />
      <Compile Include="Assets\Resources\Scripts\IFirearm.cs" />
+     <Compile Include="Assets\Resources\Scripts\IMapTriggerCallable.cs" />
      <Compile Include="Assets\Resources\Scripts\INonPlayerCharacter.cs" />
      <Compile Include="Assets\Resources\Scripts\IPlayerBoost.cs" />
      <Compile Include="Assets\Resources\Scripts\IUsableObject.cs" />
@@ -280,7 +283,10 @@
      <Compile Include="Assets\Resources\Scripts\LootBox.cs" />
      <Compile Include="Assets\Resources\Scripts\MainMenuCameraRotator.cs" />
      <Compile Include="Assets\Resources\Scripts\MainMenuOnClick.cs" />
+     <Compile Include="Assets\Resources\Scripts\MapButton.cs" />
      <Compile Include="Assets\Resources\Scripts\MapObject.cs" />
+     <Compile Include="Assets\Resources\Scripts\MapTriggerCaller.cs" />
+     <Compile Include="Assets\Resources\Scripts\MapTriggerManager.cs" />
      <Compile Include="Assets\Resources\Scripts\MarkAsNotDeletableOnLoad.cs" />
      <Compile Include="Assets\Resources\Scripts\MaterialManager.cs" />
      <Compile Include="Assets\Resources\Scripts\MathHelper.cs" />
@@ -295,6 +301,7 @@
      <Compile Include="Assets\Resources\Scripts\NAF\LightVoxelColliderPainter.cs" />
      <Compile Include="Assets\Resources\Scripts\NAF\Lightmapper.cs" />
      <Compile Include="Assets\Resources\Scripts\NullifyTransform.cs" />
+     <Compile Include="Assets\Resources\Scripts\ObjectMover.cs" />
      <Compile Include="Assets\Resources\Scripts\OpenOnUse.cs" />
      <Compile Include="Assets\Resources\Scripts\PainPostProcessing.cs" />
      <Compile Include="Assets\Resources\Scripts\PatrolPoint.cs" />
@@ -329,6 +336,7 @@
      <Compile Include="Assets\Resources\Scripts\SmoothInfrontPlacer.cs" />
      <Compile Include="Assets\Resources\Scripts\SoundManager.cs" />
      <Compile Include="Assets\Resources\Scripts\SoundObject.cs" />
+     <Compile Include="Assets\Resources\Scripts\SpriteAnimation.cs" />
      <Compile Include="Assets\Resources\Scripts\SpriteManager.cs" />
      <Compile Include="Assets\Resources\Scripts\ThirdPersonWeaponChanger.cs" />
      <Compile Include="Assets\Resources\Scripts\Timer.cs" />

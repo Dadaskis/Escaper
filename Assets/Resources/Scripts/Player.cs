@@ -64,15 +64,17 @@ public class Player : MonoBehaviour {
 			if (hit.distance < pickupDistance) {
 				IUsableObject obj = hit.transform.root.GetComponentInChildren<IUsableObject> ();
 				if (obj != null) {
-					if (usageText != null && usagePanel != null) {
-						string text = obj.ShowText ();
-						if (text.Length > 1) { 
-							usagePanel.SetActive (true);
-							usageText.text = text;
+					if (obj.enabled) {
+						if (usageText != null && usagePanel != null) {
+							string text = obj.ShowText ();
+							if (text.Length > 1) { 
+								usagePanel.SetActive (true);
+								usageText.text = text;
+							}
 						}
-					}
-					if (InputManager.GetButtonDown ("Use")) {
-						obj.Use ();
+						if (InputManager.GetButtonDown ("Use")) {
+							obj.Use ();
+						}
 					}
 				}
 			}
