@@ -1,0 +1,21 @@
+10 meters. Time (seconds) to complete...
+Run (without boosts): 2.49
+Run (boosted 2 times): 1.43
+Crouching: 9.98
+Walking: 4.95
+
+...
+
+1 meter, time in seconds to complete:
+Run (without boosts): 0.249
+Run (boosted 2 times): 0.143
+Crouching: 0.998
+Walking: 0.495
+
+...
+
+Player height (meters):
+Standing: 1.8
+Crouching: 1.0
+
+Player width in meters: 0.5

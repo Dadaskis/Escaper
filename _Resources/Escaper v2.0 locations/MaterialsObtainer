@@ -1,0 +1,16 @@
+import bpy
+
+sceneName = "Test20"
+
+file = open("G:/Other Stuff/Archive/ModelStuff/Escaper v2.0 locations/_MaterialsData " + sceneName +" .txt", "w")
+
+for material in bpy.data.materials:
+    imageTexture = material.node_tree.nodes.get("Image Texture")
+    if imageTexture != None: 
+        print(material.name)
+        print(imageTexture.image.name)
+        file.write(sceneName + "-" + material.name)
+        file.write("\n")
+        file.write(imageTexture.image.name)
+        file.write("\n")
+    
