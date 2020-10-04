@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WeaponGUIItemEventHandlerData { 
 	public int currentAmmo = 0;
+	public int currentDurability = 0;
 }
 
 [RequireComponent(typeof(SerializableTransform))]
@@ -11,6 +12,7 @@ public class WeaponGUIItemEventHandler : SerializableMonoBehaviour {
 
 	public GUIItem item;
 	public int currentAmmo = 0;
+	public int currentDurability = 0;
 	public static bool initializedFirst = false;
 
 	void PlacedInContainer(GUIContainer container) {
@@ -32,6 +34,7 @@ public class WeaponGUIItemEventHandler : SerializableMonoBehaviour {
 			WeaponPhysicalItemEventHandler physicalWeaponHandler = itemObject.GetComponent<WeaponPhysicalItemEventHandler> ();
 			if (physicalWeaponHandler != null) {
 				physicalWeaponHandler.currentAmmo = currentAmmo;
+				physicalWeaponHandler.currentDurability = currentDurability;
 			}
 		}
 		return new EventData ();
@@ -46,6 +49,7 @@ public class WeaponGUIItemEventHandler : SerializableMonoBehaviour {
 			IWeapon weaponObject = weaponData.firstPerson.GetComponent<IWeapon> ();
 			WeaponGUIItemEventHandler handler = item.GetComponent<WeaponGUIItemEventHandler> ();
 			handler.currentAmmo = weaponObject.maxAmmo;
+			handler.currentDurability = weaponObject.maxDurability;
 			handler.UpdateText ();
 
 			List<GUIContainer> containers = Player.instance.inventory.containers;
@@ -90,7 +94,8 @@ public class WeaponGUIItemEventHandler : SerializableMonoBehaviour {
 		}
 		if(weapon != null) {
 			IWeapon weaponData = weapon.GetComponent<IWeapon> ();
-			item.additionalDataText.text = currentAmmo + "/" + weaponData.maxAmmo;
+			//item.additionalDataText.text = currentAmmo + "/" + weaponData.maxAmmo;
+			item.additionalDataText.text = ((int)(((float)currentDurability / (float)weaponData.maxDurability) * 100.0f)) + "%";
 		}
 	}
 

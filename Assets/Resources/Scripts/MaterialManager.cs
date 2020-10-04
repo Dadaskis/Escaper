@@ -291,7 +291,7 @@ public class MaterialManager : MonoBehaviour {
 					}
 				}
 				int materialIndex;
-				if (materialsSettingsIndex.TryGetValue (material.name, out materialIndex)) {
+				if (materialsSettingsIndex.TryGetValue (material.name + material.GetInstanceID(), out materialIndex)) {
 					MaterialVariablesData existData = materialsSettings[materialIndex];
 					int textureIndex = 0;
 					foreach (TextureSettingsData textureData in data.textures) {

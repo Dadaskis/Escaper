@@ -6,6 +6,7 @@ public class WeaponPhysicalItemEventHandler : MonoBehaviour {
 
 	public PhysicalItem item;
 	public int currentAmmo = 0;
+	public int currentDurability = 0;
 
 	void SetData(GUIItem item, ItemData itemData) {
 		WeaponItemData weaponItemData = itemData as WeaponItemData;
@@ -13,8 +14,10 @@ public class WeaponPhysicalItemEventHandler : MonoBehaviour {
 		IWeapon weapon = GetComponent<IWeapon> ();
 		if (weapon != null) {
 			currentAmmo = Mathf.Max (currentAmmo, weapon.currentAmmo);
+			currentDurability = Mathf.Max (currentDurability, weapon.currentDurability);
 		}
 		weaponUIData.currentAmmo = currentAmmo;
+		weaponUIData.currentDurability = currentDurability;
 		weaponUIData.UpdateText ();
 	}
 

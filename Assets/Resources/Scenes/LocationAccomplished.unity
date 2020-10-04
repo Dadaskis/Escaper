@@ -38,12 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731837, g: 0.13414831, b: 0.121078566, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -1298,6 +1298,7 @@ GameObject:
   - component: {fileID: 764056484}
   - component: {fileID: 764056483}
   - component: {fileID: 764056487}
+  - component: {fileID: 764056488}
   m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
@@ -1398,6 +1399,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 764056488}
+        m_MethodName: OnPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &764056485
@@ -1445,6 +1457,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 180597442}
+--- !u!114 &764056488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 764056481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1493d73d2489ff4fb7ecfa7958f25ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &802376570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,6 +1960,7 @@ GameObject:
   - component: {fileID: 1227561268}
   - component: {fileID: 1227561267}
   - component: {fileID: 1227561270}
+  - component: {fileID: 1227561266}
   m_Layer: 0
   m_Name: NextLocation
   m_TagString: Untagged
@@ -1963,6 +1987,18 @@ RectTransform:
   m_AnchoredPosition: {x: -15, y: 9}
   m_SizeDelta: {x: 138.59998, y: 23.299988}
   m_Pivot: {x: 1, y: 0}
+--- !u!114 &1227561266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1227561264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0f22eba664fc5b4ba3076cc639c5917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 180597442}
 --- !u!114 &1227561267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2001,7 +2037,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1227561268}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1227561266}
+        m_MethodName: OnPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1227561270}
+        m_MethodName: OnPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1227561268

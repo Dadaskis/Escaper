@@ -95,7 +95,7 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 6b945ca4cd6f7284a9d8104890dd2439, type: 2}
   sprite: {fileID: 21300000, guid: b63d7357f0b4c1e41bd9765653238176, type: 3}
   maxAngle: 15
-  pushDistance: 0.01
+  pushDistance: 0.03
   affectedLayers:
     serializedVersion: 2
     m_Bits: 4294967295

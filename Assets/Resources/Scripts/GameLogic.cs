@@ -18,6 +18,8 @@ public class LocationStartSettings {
 	public string nextLocationName = "";
 	public bool guideUnlocked = false;
 	public int guidePrice = 9500;
+	public bool unlocked = false;
+	public List<string> unlockOnComplete = new List<string>();
 }
 
 [System.Serializable]
@@ -81,6 +83,7 @@ public class GameLogic : MonoBehaviour {
 	public LocationStartSettings currentLocationSettings;
 	public int currentEXP;
 	public GameObject playerObject;
+	public GameObject fadeOutUIPrefab;
 	public int killedByPlayer = 0;
 	public string afterDeathScene = "";
 	public PlayerStatus playerStatus;
@@ -142,6 +145,7 @@ public class GameLogic : MonoBehaviour {
 			instance.currentLocationSettings = settings;
 			return settings;
 		}
+		Debug.LogError ("Cant set " + locationName);
 		return null;
 	}
 
@@ -163,7 +167,7 @@ public class GameLogic : MonoBehaviour {
 		return startPrice;
 	}
 
-	IEnumerator SetLocationScene(PlayerStartData data) {
+	IEnumerator SetLocationScene(PlayerStartData data, bool fromMainMenu = true) {
 		AsyncOperation operation = SceneManager.LoadSceneAsync (currentLocationSettings.sceneName);
 		while (true) {
 			Debug.LogError (operation.progress);
@@ -174,24 +178,41 @@ public class GameLogic : MonoBehaviour {
 		}
 		yield return operation;
 
-		GameObject player = Instantiate (playerObject);
-		player.transform.position = Vector3.zero;
+		if (fromMainMenu) {
+			GameObject player = Instantiate (playerObject);
+			player.transform.position = Vector3.zero;
+		} else {
+			Player.instance.transform.position = Vector3.zero;
+			Player.instance.gameObject.SetActive (true);
+			FadeOutPostProcessing fadeOut = Player.instance.camera.GetComponent<FadeOutPostProcessing> ();
+			fadeOut.started = false;
+			fadeOut.timer = 0.0f;
+			fadeOut.caller.enabled = false;
+			Instantiate (fadeOutUIPrefab, Player.instance.uiCanvas.transform);
+			yield return new WaitForEndOfFrame ();
+			yield return new WaitForEndOfFrame ();
+			LocationColorGradingData.ChangeColorGradingToCurrent ();
+		}
 
 		yield return new WaitForEndOfFrame ();
 		yield return new WaitForEndOfFrame ();
 
-		foreach (int itemIndex in data.items) {
-			EquipmentItem item = currentLocationSettings.items [itemIndex];
-			GUIItem itemUI = Player.instance.inventory.AddItem (ItemManager.GetItem(item.name));
-			EventManager.RunEventListeners<Events.GameLogic.AddedItemToThePlayer> (itemUI);
+		if (fromMainMenu) {
+			foreach (int itemIndex in data.items) {
+				EquipmentItem item = currentLocationSettings.items [itemIndex];
+				GUIItem itemUI = Player.instance.inventory.AddItem (ItemManager.GetItem (item.name));
+				EventManager.RunEventListeners<Events.GameLogic.AddedItemToThePlayer> (itemUI);
+			}
 		}
 
 		EventManager.RunEventListeners<Events.GameLogic.NewLocationLoaded> ();
 
-		foreach (PlayerBoostHandler boostHandler in boostHandlers) {
-			PlayerBoostData playerData;
-			if(boostData.TryGetValue(boostHandler.boostName, out playerData)) {
-				boostHandler.boostApplier.Apply (playerData);
+		if (fromMainMenu) {
+			foreach (PlayerBoostHandler boostHandler in boostHandlers) {
+				PlayerBoostData playerData;
+				if (boostData.TryGetValue (boostHandler.boostName, out playerData)) {
+					boostHandler.boostApplier.Apply (playerData);
+				}
 			}
 		}
 
@@ -200,6 +221,16 @@ public class GameLogic : MonoBehaviour {
 
 		MaterialManager.instance.Load ();
 		GraphicsSettings.instance.Data = GraphicsSettings.instance.Data;
+
+		while (Player.instance.controller.enableMouseLook == false) {
+			Debug.LogError (Player.instance.controller.enableMouseLook);
+			yield return new WaitForSeconds (0.1f);
+			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = false;
+			GUIInventories.Close ();
+			yield return new WaitForSeconds (0.1f);
+		}
+
 	}
 
 	public static bool LaunchLocation(PlayerStartData data) {
@@ -339,6 +370,9 @@ public class GameLogic : MonoBehaviour {
 		instance.currentEXP = Mathf.Min (instance.currentEXP, 9999);
 		GUIInventories.instance.DisableMouseLook ();
 		FadeOutPostProcessing.instance.FadeOut ();
+		foreach (string locationName in GetCurrentLocationSettings ().unlockOnComplete) {
+			instance.locationStartSettings [locationName].unlocked = true;
+		}
 		yield return new WaitForSeconds (2.0f);
 
 		AsyncOperation operation = SceneManager.LoadSceneAsync (afterDeathScene);
@@ -350,7 +384,7 @@ public class GameLogic : MonoBehaviour {
 		}
 		yield return operation;
 
-		Destroy (Player.instance.gameObject);
+		Player.instance.gameObject.SetActive (false);
 		Save ();
 	}
 
@@ -366,6 +400,11 @@ public class GameLogic : MonoBehaviour {
 		instance.currentEXP = currentEXP;
 		EventManager.RunEventListeners<Events.GameLogic.CurrentPointsChanged> ();
 		instance.Save ();
+	}
+
+	public static void StartNextLocation() {
+		SetCurrentLocationSettings (GetCurrentLocationSettings ().nextLocationName);
+		instance.StartCoroutine (instance.SetLocationScene (null, false));
 	}
 
 }

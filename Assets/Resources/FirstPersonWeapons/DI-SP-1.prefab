@@ -2884,8 +2884,8 @@ MonoBehaviour:
   slot: -1
   ammoFiller: {fileID: 114021314374088468}
   ammoType: Pistol0
-  currentDurability: 600
-  maxDurability: 600
+  currentDurability: 200
+  maxDurability: 200
   animationPlaying: 0
   animator: {fileID: 95480639694327050}
   animatorOverride: {fileID: 22100000, guid: 49c0b09f44ef06245b3ab7ca9054fded, type: 2}
@@ -2928,8 +2928,8 @@ MonoBehaviour:
   punchOverrideNameFP: WeaponPunch
   punchNotHitAnimationFindNameFP: WeaponPunchHit
   punchHitAnimationFindNameFP: WeaponPunchNotHit
-  punchNotHitClipFP: {fileID: 7400022, guid: 0c45a753e87bb7b48b61da62319c5ce6, type: 3}
-  punchHitClipFP: {fileID: 7400024, guid: 0c45a753e87bb7b48b61da62319c5ce6, type: 3}
+  punchNotHitClipFP: {fileID: 7400024, guid: 0c45a753e87bb7b48b61da62319c5ce6, type: 3}
+  punchHitClipFP: {fileID: 7400022, guid: 0c45a753e87bb7b48b61da62319c5ce6, type: 3}
   saveOverrideNameFP: WeaponSave
   saveAnimationFindNameFP: WeaponSave
   saveJammedAnimationFindNameFP: WeaponJammedSave

@@ -19,8 +19,10 @@ public class LightmapManager : MonoBehaviour {
 		foreach (Light light in lights) {
 			if (light.isBaked) {
 				bakedLights.Add (light);
-				GameObject obj = Instantiate (light.gameObject);
-				Light realtimeLight = obj.GetComponent<Light> ();
+				GameObject obj = new GameObject ();
+				obj.transform.position = light.transform.position;
+				obj.transform.rotation = light.transform.rotation;
+				Light realtimeLight = obj.AddComponent<Light> ();
 				//realtimeLight.lightmapBakeType = LightmapBakeType.Realtime;
 				//realtimeLight.
 				realtimeLight.bounceIntensity = light.bounceIntensity;

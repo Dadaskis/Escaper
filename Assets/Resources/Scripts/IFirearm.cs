@@ -414,13 +414,15 @@ public class IFirearm : IWeapon {
 
 		if (firstPerson) {
 			PlayTurningSound ();
-			RaycastHit hit = Player.instance.character.Raycast ();
+			//RaycastHit hit = Player.instance.character.Raycast ();
+			RaycastHit hit;
+			bool status = Physics.BoxCast (Player.instance.character.raycaster.position, Vector3.one, Player.instance.character.raycaster.forward, out hit);
 			AnimationClip currentClip = null;
-			if (hit.distance > punchHitDistanceCheck) {
+			if (!status || hit.distance > punchHitDistanceCheck) {
 				ChangeAnimation (punchOverrideNameFP, punchNotHitClipFP);
 				currentClip = punchNotHitClipFP;
 				PunchNotHit (hit);
-			} else {
+			} else if(status) {
 				ChangeAnimation (punchOverrideNameFP, punchHitClipFP);
 				currentClip = punchHitClipFP;
 				PunchHit (hit);
@@ -540,6 +542,8 @@ public class IFirearm : IWeapon {
 				data.spatialBlend = 0.0f;
 			}
 			SoundManager.instance.CreateSound (data, Vector3.zero, transform);
+
+			GUIAmmoText.instance.ShowText (this);
 		}
 	}
 

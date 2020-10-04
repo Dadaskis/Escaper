@@ -318,7 +318,6 @@ public class GUIItem : SerializableMonoBehaviour, IBeginDragHandler, IDragHandle
 		inventory = slot.inventory.inventory;
 		if (inventory != previousInventory) {
 			rectTransform.SetParent (inventory.transform, true);
-			Debug.LogError (previousInventory);
 			if (previousInventory != null) {
 				previousInventory.items.Remove (this);
 			}

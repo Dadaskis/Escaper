@@ -229,10 +229,14 @@ public class RaycastFirearm : IFirearm {
 	}
 
 	public override void PunchHit (RaycastHit hit) {
-
+		CharacterDamagablePart part = hit.collider.GetComponent<CharacterDamagablePart> ();
+		Debug.LogError ("Hit: " + hit.collider);
+		if (part != null) {
+			part.Damage (100000, this.owner);
+		}
 	}
 
 	public override void PunchNotHit (RaycastHit hit) {
-
+		Debug.LogError ("Not hit: " + hit.collider);
 	}
 }

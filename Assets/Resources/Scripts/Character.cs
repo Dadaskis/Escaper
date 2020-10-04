@@ -141,6 +141,9 @@ public class Character : MonoBehaviour {
 		RaycastHit resultHit = new RaycastHit ();
 		resultHit.distance = 1000000.0f;
 		foreach (RaycastHit hit in raycastHits) {
+			if (hit.collider.isTrigger) {
+				continue;
+			}
 			if (hit.transform.root.name != transform.root.name) {
 				if (hit.distance < resultHit.distance) {
 					resultHit = hit;

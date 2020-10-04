@@ -14,6 +14,7 @@ public class GraphicsSettingsData {
 	public int textureQuality = 0;
 	public bool enableRealtimeShadows = false;
 	public bool enableAmbientOcclusion = false;
+	public bool enableVolumetricLighting = false;
 	public ShaderQuality shadersQuality = ShaderQuality.LOW;
 	public PostProcessLayer.Antialiasing antialiasing = PostProcessLayer.Antialiasing.None;
 	public bool isHDREnabled = false;
@@ -55,9 +56,17 @@ public class GraphicsSettings : MonoBehaviour {
 			if (!data.isFastMode) {
 				AmbientOcclusion ambientOcclusion = settings.GetSetting<AmbientOcclusion> ();
 				ambientOcclusion.active = data.enableAmbientOcclusion;
+
+				if (data.enableRealtimeShadows) {
+					VolumetricLightRenderer volumetricLight = Camera.main.GetComponent<VolumetricLightRenderer> ();
+					volumetricLight.enabled = data.enableVolumetricLighting;
+				}
 			} else {
 				AmbientOcclusion ambientOcclusion = settings.GetSetting<AmbientOcclusion> ();
 				ambientOcclusion.active = false;
+
+				VolumetricLightRenderer volumetricLight = Camera.main.GetComponent<VolumetricLightRenderer> ();
+				volumetricLight.enabled = false;
 			}
 
 			if (data.isFastMode && 

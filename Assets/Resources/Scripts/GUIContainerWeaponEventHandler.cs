@@ -14,16 +14,26 @@ public class GUIContainerWeaponEventHandler : MonoBehaviour {
 			IWeapon weapon = data.Get<IWeapon> (1);
 			//handler.item.additionalDataText.text = weapon.currentAmmo + "/" + weapon.maxAmmo;
 			handler.currentAmmo = weapon.currentAmmo;
+			handler.currentDurability = weapon.currentDurability;
 			handler.UpdateText();
 		}
 		return new EventData ();
 	}
 
+	IEnumerator CheckAmmoUpdateAndStop(IWeapon weapon) {
+		int ammo = weapon.currentAmmo;
+		while (ammo == weapon.currentAmmo) {
+			yield return new WaitForSeconds (0.3f);
+		}
+		handler.currentAmmo = weapon.currentAmmo;
+		handler.currentDurability = weapon.currentDurability;
+		handler.UpdateText();
+	}
+
 	EventData SlotAtReload(EventData data) {
 		if (data.Get<int> (0) == weaponSlot) {
 			IWeapon weapon = data.Get<IWeapon> (1);
-			handler.currentAmmo = weapon.currentAmmo;
-			handler.UpdateText();
+			StartCoroutine (CheckAmmoUpdateAndStop (weapon));
 		}
 		return new EventData ();
 	}

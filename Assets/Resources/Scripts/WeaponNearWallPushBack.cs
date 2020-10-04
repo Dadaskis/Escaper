@@ -22,7 +22,7 @@ public class WeaponNearWallPushBack : MonoBehaviour {
 	}
 
 	void Update () {
-		RaycastHit hit = Player.instance.character.Raycast ();	
+		RaycastHit hit = Player.instance.character.Raycast ();
 		if (hit.distance < minDistance) {
 			Vector3 position = myTransform.localPosition;
 			position.z = Mathf.Lerp(position.z, -(minDistance - hit.distance), Time.deltaTime * speed);

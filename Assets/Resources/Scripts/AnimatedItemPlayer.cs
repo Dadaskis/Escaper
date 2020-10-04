@@ -49,6 +49,8 @@ public class AnimatedItemPlayer : MonoBehaviour {
 		yield return new WaitForSeconds (seconds);
 		yield return new WaitForEndOfFrame ();
 
+		previousWeapon.restrictUsing = true;
+
 		AnimatedItem item = items [name];
 		GameObject itemGameObject = Instantiate (item.prefab, weaponChanger.weaponHolder);
 		Animator animator = itemGameObject.GetComponent<Animator> ();
@@ -74,6 +76,7 @@ public class AnimatedItemPlayer : MonoBehaviour {
 
 		instance.weaponChanger.restrictChanging = false;
 		GUIInventories.instance.restrictInventoryOpening = false;
+		previousWeapon.restrictUsing = false;
 
 		if (previousWeapon != null) {
 			previousWeapon.Draw ();

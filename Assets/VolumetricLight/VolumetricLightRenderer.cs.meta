@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: eaebc15e2bc1bf54d97758e21cac531e
+timeCreated: 1600108958
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - CalculateFogShader: {fileID: 4800000, guid: a85105a5640152d4da9b3e0cfd39787c,
+      type: 3}
+  - BlurShader: {fileID: 4800000, guid: 0c86e8a85a130374db1636247558a561, type: 3}
+  - DownscaleDepthShader: {fileID: 4800000, guid: a8d9b69abf4636f43953e2735506a31d,
+      type: 3}
+  - ApplyFogShader: {fileID: 4800000, guid: 64ea486b48f54e643956c4906ee07a73, type: 3}
+  - NoiseTexture: {fileID: 2800000, guid: 471c0f0cfd1a2574dbf0354febec5cd0, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

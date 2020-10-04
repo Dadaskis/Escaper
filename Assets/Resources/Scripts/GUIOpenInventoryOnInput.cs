@@ -6,11 +6,12 @@ public class GUIOpenInventoryOnInput : MonoBehaviour {
 
 	public GameObject objectToEnable;
 	public string inputName;
+	public string openMenuInputName;
 
 	void Update () {
 		if (InputManager.GetButtonDown (inputName) == true) {
 			if (GUIInventories.instance.corpseInventoryOpened) {
-				GUIInventories.OpenNormalInventory (true);
+				GUIInventories.Close ();
 			} else if (GUIInventories.instance.normalInventoryOpened) {
 				GUIInventories.Close ();
 				//if (GUIInventories.instance.inventoryMouseLookDisabler.isOpened) {
@@ -18,6 +19,11 @@ public class GUIOpenInventoryOnInput : MonoBehaviour {
 				//}
 			} else {
 				GUIInventories.OpenNormalInventory ();
+			}
+		}
+		if (InputManager.GetButtonDown (openMenuInputName) == true) {
+			if (GUIInventories.instance.corpseInventoryOpened || GUIInventories.instance.normalInventoryOpened) {
+				GUIInventories.Close (false);
 			}
 		}
 	}

@@ -13,6 +13,7 @@ public class GUIAdvancedRendererApply : MonoBehaviour {
 	public Toggle ambientOcclusionActive;
 	public Toggle isHDRActive;
 	public Toggle dynamicShadowsActive;
+	public Toggle volumetricLightActive;
 	public GUIQualityController texturesQuality;
 	public GUIQualityController antialiasingApplied;
 	public GUIQualityController materialsQuality;
@@ -28,6 +29,7 @@ public class GUIAdvancedRendererApply : MonoBehaviour {
 		data.textureQuality = texturesQuality.quality;
 		data.enableRealtimeShadows = dynamicShadowsActive.isOn;
 		data.enableAmbientOcclusion = ambientOcclusionActive.isOn;
+		data.enableVolumetricLighting = volumetricLightActive.isOn;
 		switch (antialiasingApplied.quality) {
 		case 0:
 			data.antialiasing = PostProcessLayer.Antialiasing.None;

@@ -244,6 +244,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114421139418611002, guid: 2ce8ded486b45d8418b161c0680d9058,
+        type: 2}
+      propertyPath: colorGradingList.Array.data[0].colorGrading
+      value: 
+      objectReference: {fileID: 2100000, guid: a845ef053c8b31744ae81d704ba1bae8, type: 2}
+    - target: {fileID: 114421139418611002, guid: 2ce8ded486b45d8418b161c0680d9058,
+        type: 2}
+      propertyPath: colorGradingList.Array.data[1].colorGrading
+      value: 
+      objectReference: {fileID: 2100000, guid: 23c739f7c97249d4ca04e3797b1ce6ae, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ce8ded486b45d8418b161c0680d9058, type: 2}
   m_IsPrefabParent: 0
@@ -579,7 +589,7 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: 0
+  m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3

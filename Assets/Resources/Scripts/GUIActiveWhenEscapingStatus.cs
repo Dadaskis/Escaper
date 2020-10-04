@@ -14,4 +14,8 @@ public class GUIActiveWhenEscapingStatus : MonoBehaviour {
 		}
 	}
 
+	public void OnPress() {
+		GameLogic.StartNextLocation ();
+	}
+
 }

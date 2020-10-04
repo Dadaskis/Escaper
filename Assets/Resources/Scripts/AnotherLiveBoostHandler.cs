@@ -13,14 +13,8 @@ public class AnotherLiveBoostHandler : IPlayerBoost {
 	EventData OnPlayerDeath(EventData args) {
 		if (lives > 0) {
 			lives--;
-			Player.instance.character.Health = Player.instance.character.MaxHealth;
 
-			AppearPoint[] points = FindObjectsOfType<AppearPoint> ();
-			AppearPoint point = points[Random.Range(0, points.Length - 1)];
-			Player.instance.transform.position = point.transform.position + new Vector3(0.0f, 1.8f, 0.0f);
-
-			Player.instance.killed = false;
-			Player.instance.character.enabled = true;
+			AnotherLivePostProcessing.instance.StartEffect ();
 
 			return new EventData (true);
 		}
