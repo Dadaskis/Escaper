@@ -1,1 +1,1 @@
-{"isFastMode":true,"bloomEnabled":false,"vignetteEnabled":false,"grainEnabled":false,"chromaticAberrationEnabled":false,"textureQuality":-139,"enableRealtimeShadows":false,"enableAmbientOcclusion":false,"shadersQuality":0,"antialiasing":0,"isHDREnabled":false}
+{"isFastMode":false,"bloomEnabled":true,"vignetteEnabled":true,"grainEnabled":true,"chromaticAberrationEnabled":true,"textureQuality":0,"enableRealtimeShadows":true,"enableAmbientOcclusion":true,"enableVolumetricLighting":true,"shadersQuality":3,"antialiasing":2,"isHDREnabled":true}
