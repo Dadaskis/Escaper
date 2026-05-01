@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 6cb4a9e10073f5943a1bd2acc5fde264
-timeCreated: 1594864592
+guid: e8c8b0a88a640ec419ae28950db4afc2
+timeCreated: 1777667929
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -170,14 +170,15 @@ ModelImporter:
     7400014: Agressive_0|WeaponJammedIdle
     7400016: Agressive_0|WeaponJammedSave
     7400018: Agressive_0|WeaponJamming
-    7400020: Agressive_0|WeaponOrigin
-    7400022: Agressive_0|WeaponPunchHit
-    7400024: Agressive_0|WeaponPunchNotHit
-    7400026: Agressive_0|WeaponReload
-    7400028: Agressive_0|WeaponSave
-    7400030: Agressive_0|WeaponShoot
-    7400032: Agressive_0|WeaponUnjamming
-    7400034: Camera|WeaponOrigin
+    7400020: Agressive_0|WeaponMagCheck
+    7400022: Agressive_0|WeaponOrigin
+    7400024: Agressive_0|WeaponPunchHit
+    7400026: Agressive_0|WeaponPunchNotHit
+    7400028: Agressive_0|WeaponReload
+    7400030: Agressive_0|WeaponSave
+    7400032: Agressive_0|WeaponShoot
+    7400034: Agressive_0|WeaponUnjamming
+    7400036: Camera|WeaponOrigin
     9500000: //RootNode
     13700000: Agressive_0:Male_generic
     13700002: Agressive_0:Male_generic.001

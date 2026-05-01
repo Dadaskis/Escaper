@@ -42,7 +42,7 @@ public class WeaponManager : MonoBehaviour {
 				Debug.Log ("[WeaponManager] Registered weapon: " + data.name);
 				weapons [data.name] = data;
 			} else {
-				Debug.LogError ("[WeaponManager] Cant create weapon data, third person version is not exist: " + firstPersonPrefabPair.Key);
+				Debug.LogError ("[WeaponManager] Can't create a weapon data, the third person version does not exist: " + firstPersonPrefabPair.Key);
 			}
 		}
 

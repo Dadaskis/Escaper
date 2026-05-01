@@ -284,9 +284,9 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 1
-    animationRotationError: 0.5
-    animationPositionError: 0.5
-    animationScaleError: 0.5
+    animationRotationError: 0.005
+    animationPositionError: 0.005
+    animationScaleError: 0.005
     animationWrapMode: 0
     extraExposedTransformPaths: []
     clipAnimations:
