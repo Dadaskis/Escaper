@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4D8D6104-992A-5F36-C9EC-BA45C2673035}</ProjectGuid>
+    <ProjectGuid>{A95E522D-7B9D-F64C-F9BB-9DD32E99F85C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -19,7 +19,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_7;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_32;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;UNITY_POST_PROCESSING_STACK_V2</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_7;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;UNITY_POST_PROCESSING_STACK_V2</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -39,10 +39,10 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>D:/Games/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/5.6.7f1/Editor/Data/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>D:/Games/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/5.6.7f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +150,7 @@
      <Compile Include="Assets\Resources\Scripts\AmmoPhysicalItemEventHandler.cs" />
      <Compile Include="Assets\Resources\Scripts\AnimatedItemPlayer.cs" />
      <Compile Include="Assets\Resources\Scripts\AnotherLiveBoostHandler.cs" />
+     <Compile Include="Assets\Resources\Scripts\AnotherLivePostProcessing.cs" />
      <Compile Include="Assets\Resources\Scripts\AppearPoint.cs" />
      <Compile Include="Assets\Resources\Scripts\AwakeAndStartDisabledChildrens.cs" />
      <Compile Include="Assets\Resources\Scripts\BotPositionsInfo.cs" />
@@ -184,6 +185,7 @@
      <Compile Include="Assets\Resources\Scripts\GUIActiveWhenEscapingStatus.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIAdvancedRendererApply.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIAfterRaidStatsValuesSetup.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIAmmoText.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIArmorChecker.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIBoostAddPoint.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIBoostDecreasePoint.cs" />
@@ -196,6 +198,8 @@
      <Compile Include="Assets\Resources\Scripts\GUIControlsTab.cs" />
      <Compile Include="Assets\Resources\Scripts\GUICorpseInventorySwitch.cs" />
      <Compile Include="Assets\Resources\Scripts\GUICustomUtility.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIDestroyPlayer.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUIDisableIfLocationLocked.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIDisableMouseLookOnInput.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIDisableOnInput.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIDragable.cs" />
@@ -243,6 +247,7 @@
      <Compile Include="Assets\Resources\Scripts\GUISaveGame.cs" />
      <Compile Include="Assets\Resources\Scripts\GUISetCurrentLocationSettings.cs" />
      <Compile Include="Assets\Resources\Scripts\GUISetTextCurrentEXP.cs" />
+     <Compile Include="Assets\Resources\Scripts\GUISetTextToInputKey.cs" />
      <Compile Include="Assets\Resources\Scripts\GUISlot.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIStartPriceUpdater.cs" />
      <Compile Include="Assets\Resources\Scripts\GUITab.cs" />
@@ -280,6 +285,8 @@
      <Compile Include="Assets\Resources\Scripts\ItemManager.cs" />
      <Compile Include="Assets\Resources\Scripts\LadderObject.cs" />
      <Compile Include="Assets\Resources\Scripts\LightmapManager.cs" />
+     <Compile Include="Assets\Resources\Scripts\LocationColorGrading.cs" />
+     <Compile Include="Assets\Resources\Scripts\LocationColorGradingData.cs" />
      <Compile Include="Assets\Resources\Scripts\LootBox.cs" />
      <Compile Include="Assets\Resources\Scripts\MainMenuCameraRotator.cs" />
      <Compile Include="Assets\Resources\Scripts\MainMenuOnClick.cs" />
@@ -287,6 +294,7 @@
      <Compile Include="Assets\Resources\Scripts\MapObject.cs" />
      <Compile Include="Assets\Resources\Scripts\MapTriggerCaller.cs" />
      <Compile Include="Assets\Resources\Scripts\MapTriggerManager.cs" />
+     <Compile Include="Assets\Resources\Scripts\MapTriggerOnPlayer.cs" />
      <Compile Include="Assets\Resources\Scripts\MarkAsNotDeletableOnLoad.cs" />
      <Compile Include="Assets\Resources\Scripts\MaterialManager.cs" />
      <Compile Include="Assets\Resources\Scripts\MathHelper.cs" />
@@ -320,6 +328,7 @@
      <Compile Include="Assets\Resources\Scripts\RemoveEvent.cs" />
      <Compile Include="Assets\Resources\Scripts\ResourceUtility.cs" />
      <Compile Include="Assets\Resources\Scripts\RootMovingNavAgent.cs" />
+     <Compile Include="Assets\Resources\Scripts\Rope.cs" />
      <Compile Include="Assets\Resources\Scripts\RunSpeedBoostHandler.cs" />
      <Compile Include="Assets\Resources\Scripts\Screenshot.cs" />
      <Compile Include="Assets\Resources\Scripts\SerializableData.cs" />
@@ -336,6 +345,7 @@
      <Compile Include="Assets\Resources\Scripts\SmoothInfrontPlacer.cs" />
      <Compile Include="Assets\Resources\Scripts\SoundManager.cs" />
      <Compile Include="Assets\Resources\Scripts\SoundObject.cs" />
+     <Compile Include="Assets\Resources\Scripts\SpawnHumanoidCharacterCallable.cs" />
      <Compile Include="Assets\Resources\Scripts\SpriteAnimation.cs" />
      <Compile Include="Assets\Resources\Scripts\SpriteManager.cs" />
      <Compile Include="Assets\Resources\Scripts\ThirdPersonWeaponChanger.cs" />
@@ -446,6 +456,8 @@
      <Compile Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Util\G_FloatString.cs" />
      <Compile Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Util\G_Intstring.cs" />
      <Compile Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Util\G_Singleton.cs" />
+     <Compile Include="Assets\VolumetricLight\VolumetricLight.cs" />
+     <Compile Include="Assets\VolumetricLight\VolumetricLightRenderer.cs" />
      <None Include="Assets\Resources\Shaders\Pain.shader" />
      <None Include="Assets\Resources\Shaders\ProjectorAdditive.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\FinalPass.shader" />
@@ -461,6 +473,7 @@
      <None Include="Assets\PostProcessing\Shaders\Builtins\Bloom.shader" />
      <None Include="Assets\Resources\Shaders\CollimatorSightMark.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\CopyStdFromDoubleWide.shader" />
+     <None Include="Assets\Resources\Shaders\Grass.shader" />
      <None Include="Assets\PostProcessing\Shaders\xRLib.hlsl" />
      <None Include="Assets\DeferredCustomLights\_ReadMe.txt" />
      <None Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Font\Roboto\LICENSE.txt" />
@@ -486,6 +499,7 @@
      <None Include="Assets\InkPainter\Shader\Effective\HeightToColor.shader" />
      <None Include="Assets\Resources\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\PostProcessing\Shaders\API\Vulkan.hlsl" />
+     <None Include="Assets\VolumetricLight\CalculateLightshafts.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\GrainBaker.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\ExposureHistogram.hlsl" />
      <None Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Font\Northwest-Bold\ERIC-TIRADO-NORTHWEST-LICENSE.txt" />
@@ -513,6 +527,7 @@
      <None Include="Assets\InkPainter\Shader\Effective\ReverseUV.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVO.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\DepthOfField.hlsl" />
+     <None Include="Assets\VolumetricLight\Blur.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\FastApproximateAntialiasing.hlsl" />
      <None Include="Assets\InkPainter\Shader\Effective\HeightDrip.shader" />
      <None Include="Assets\PostProcessing\Editor\Unity.Postprocessing.Editor.asmdef" />
@@ -532,8 +547,11 @@
      <None Include="Assets\DeferredDecals\DecalShaderNormalsOnly.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\Texture2DLerp.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\DeferredFog.shader" />
+     <None Include="Assets\VolumetricLight\DownscaleDepth.shader" />
+     <None Include="Assets\Resources\Shaders\LightSpot.shader" />
      <None Include="Assets\Resources\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
      <None Include="Assets\Resources\Shaders\FadeOut.shader" />
+     <None Include="Assets\VolumetricLight\ApplyLightShafts.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\CopyStdFromTexArray.shader" />
      <None Include="Assets\PostProcessing\Runtime\Unity.Postprocessing.Runtime.asmdef" />
      <None Include="Assets\PostProcessing\Shaders\API\D3D9.hlsl" />
@@ -576,33 +594,33 @@
      <None Include="Assets\Tayx\Graphy - Ultimate Stats Monitor\Shaders\GraphMobile.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\ExposureHistogram.compute" />
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Games/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Hub/Editor/5.6.7f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>D:/Games/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Hub/Editor/5.6.7f1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>D:/Games/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Hub/Editor/5.6.7f1/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>D:/Games/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Hub/Editor/5.6.7f1/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
- <HintPath>D:/Games/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Hub/Editor/5.6.7f1/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
- <HintPath>D:/Games/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Hub/Editor/5.6.7f1/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
- <HintPath>D:/Games/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Hub/Editor/5.6.7f1/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>D:/Games/Unity Projects/FPS Tester/Tester/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+ <HintPath>D:/UnityProjects/Escaper/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{297A7529-7E1C-81F2-D01D-5BCA2FC1339A}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{45FEB5EC-6C55-C9C9-0712-88D49B1DE20C}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

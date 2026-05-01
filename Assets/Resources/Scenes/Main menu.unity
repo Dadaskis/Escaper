@@ -27172,7 +27172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_graphyMode: 0
-  m_enableOnStartup: 1
+  m_enableOnStartup: 0
   m_keepAlive: 1
   m_background: 1
   m_backgroundColor: {r: 0, g: 0, b: 0, a: 0.3}
@@ -27236,7 +27236,7 @@ Canvas:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1319978364}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}

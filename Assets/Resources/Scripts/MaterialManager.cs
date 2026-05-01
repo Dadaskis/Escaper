@@ -144,6 +144,14 @@ public class MaterialManager : MonoBehaviour {
 				continue;
 			}
 
+			/*
+			 * Well, look, it broke how decals look and probably results in even worse
+			 * visual glitches than that. And, even back in the day, when I was using an iGPU
+			 * while I was developing this thing, I don't think a shader-switching logic like that
+			 * even boosted performance as much. So... Given the fact I don't really wanna
+			 * develop that thing for eternity, I'll just disable that logic entirely because
+			 * who cares anyway?
+
 			ShaderSettingsData shaderSettingsData = shaderSettings [data.shader];
 
 			foreach (TextureSettingsData textureData in data.textures) {
@@ -161,6 +169,7 @@ public class MaterialManager : MonoBehaviour {
 					data.material.DisableKeyword (keyWordData.keyWord);
 				}
 			}
+			*/
 		}
 		currentQuality = quality;
 		Save ();
@@ -214,11 +223,19 @@ public class MaterialManager : MonoBehaviour {
 				continue;
 			}
 
+			/*
+			 * Well, look, it broke how decals look and probably results in even worse
+			 * visual glitches than that. And, even back in the day, when I was using an iGPU
+			 * while I was developing this thing, I don't think a shader-switching logic like that
+			 * even boosted performance as much. So... Given the fact I don't really wanna
+			 * develop that thing for eternity, I'll just disable that logic entirely because
+			 * who cares anyway?
 			if (mode == MaterialMode.ADVANCED) {
 				data.material.shader = Shader.Find (data.advancedShaderName);
 			} else if (mode == MaterialMode.FAST) {
 				data.material.shader = Shader.Find (data.fastShaderName);
 			}
+			*/
 		}
 
 		if (mode == MaterialMode.FAST) {

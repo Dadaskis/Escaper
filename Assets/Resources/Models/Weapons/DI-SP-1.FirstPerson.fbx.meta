@@ -269,7 +269,7 @@ ModelImporter:
     13700040: PlayerHands0
   materials:
     importMaterials: 1
-    materialName: 0
+    materialName: 1
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
