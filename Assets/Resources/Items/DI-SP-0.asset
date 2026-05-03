@@ -14,7 +14,7 @@ MonoBehaviour:
   prefabUI: {fileID: 1269399987675464, guid: 5d29ea52e10802145b99cad868965eed, type: 2}
   physicalPrefab: {fileID: 1483232581560472, guid: 300afc85d1ca3d04285b780185443ef6,
     type: 2}
-  icon: {fileID: 21300000, guid: dfbd877bf9e4b964793ce79a076f4d00, type: 3}
+  icon: {fileID: 21300000, guid: 36544d693ebc6b14686d4f49e685717b, type: 3}
   actionType: Simple
   nameText: DI-SP-0
   tag: Weapon
