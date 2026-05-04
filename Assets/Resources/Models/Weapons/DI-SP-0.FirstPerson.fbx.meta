@@ -81,6 +81,19 @@ ModelImporter:
     100146: WeaponMag_end
     100148: WeaponMain
     100150: WeaponMain_end
+    100152: 0
+    100154: 1
+    100156: 2
+    100158: 3
+    100160: __Ammo
+    100162: __BulletDrop
+    100164: __Offset
+    100166: __ShootParticlePosition
+    100168: DI-SP-1
+    100170: PlayerHands0
+    100172: Sun
+    100174: WeaponAmmoBolt
+    100176: WeaponAmmoBolt_end
     400000: __Sight
     400002: Agressive_0
     400004: Agressive_0:Male_generic
@@ -157,9 +170,28 @@ ModelImporter:
     400146: WeaponMag_end
     400148: WeaponMain
     400150: WeaponMain_end
+    400152: 0
+    400154: 1
+    400156: 2
+    400158: 3
+    400160: __Ammo
+    400162: __BulletDrop
+    400164: __Offset
+    400166: __ShootParticlePosition
+    400168: DI-SP-1
+    400170: PlayerHands0
+    400172: Sun
+    400174: WeaponAmmoBolt
+    400176: WeaponAmmoBolt_end
     4300000: Agressive_0:Male_generic.001
     4300002: Agressive_0:Male_generic
     4300004: DI-SP-0
+    4300006: DI-SP-1
+    4300008: 3
+    4300010: 2
+    4300012: 1
+    4300014: 0
+    4300016: PlayerHands0
     7400000: BulletSpawn|WeaponUnjamming
     7400002: Agressive_0|Empty
     7400004: Agressive_0|IARReload.001
@@ -179,10 +211,21 @@ ModelImporter:
     7400032: Agressive_0|WeaponShoot
     7400034: Agressive_0|WeaponUnjamming
     7400036: Camera|WeaponOrigin
+    7400038: Agressive_0|WeaponIdle
+    7400040: Agressive_0|WeaponIdle.002
+    7400042: Agressive_0|WeaponJammingShoot
+    7400044: __BulletDrop|WeaponUnjamming
+    7400046: Camera|WeaponIdle
     9500000: //RootNode
     13700000: Agressive_0:Male_generic
     13700002: Agressive_0:Male_generic.001
     13700004: DI-SP-0
+    13700006: 0
+    13700008: 1
+    13700010: 2
+    13700012: 3
+    13700014: DI-SP-1
+    13700016: PlayerHands0
   materials:
     importMaterials: 1
     materialName: 0

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f756ea0399b4a6d45b1e7aa0038d19eb, type: 3}
+  m_Name: AP-5
+  m_EditorClassIdentifier: 
+  prefabUI: {fileID: 1269399987675464, guid: 5d29ea52e10802145b99cad868965eed, type: 2}
+  physicalPrefab: {fileID: 1842057883855496, guid: 621565592553b334d80f365c1da591ae,
+    type: 2}
+  icon: {fileID: 21300000, guid: b5fd4f8b5fdcdc341b605a412c4061fa, type: 3}
+  actionType: Simple
+  nameText: AP-5
+  tag: Weapon
+  additionalText: 0/0
+  showName: AP-5
+  fullName: AP-5
+  description: Very friendly semiautomatic pistol
+  size: {x: 7, y: 3}
+  weaponClass: AP-5

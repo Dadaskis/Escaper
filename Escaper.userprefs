@@ -3,7 +3,8 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\IFirearm.cs">
     <Files>
       <File FileName="Assets\Resources\Scripts\WeaponManager.cs" Line="45" Column="53" />
-      <File FileName="Assets\Resources\Scripts\IFirearm.cs" Line="448" Column="1" />
+      <File FileName="Assets\Resources\Scripts\IFirearm.cs" Line="448" Column="52" />
+      <File FileName="Assets\Resources\Scripts\RaycastFirearm.cs" Line="12" Column="33" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
