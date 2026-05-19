@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f756ea0399b4a6d45b1e7aa0038d19eb, type: 3}
+  m_Name: AS-12K
+  m_EditorClassIdentifier: 
+  prefabUI: {fileID: 1269399987675464, guid: 5d29ea52e10802145b99cad868965eed, type: 2}
+  physicalPrefab: {fileID: 1457944215893902, guid: 340ef8ed0197a0e48ac3ca9064d1e0c9,
+    type: 2}
+  icon: {fileID: 21300000, guid: f8a3ba8ae8595614885c51808b13efd8, type: 3}
+  actionType: Simple
+  nameText: AS-12K
+  tag: Weapon
+  additionalText: 0/0
+  showName: AS-12K
+  fullName: AS-12K
+  description: Very friendly semiautomatic shotgun
+  size: {x: 7, y: 4}
+  weaponClass: AS-12K
